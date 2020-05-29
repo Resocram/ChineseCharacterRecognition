@@ -32,7 +32,7 @@ $("#chinese7").click(function() {
 
 $("#next").click(function() {
     numRounds++;
-    assign(Math.floor(Math.random() * 2715))
+
     update();
 })
 
@@ -44,6 +44,7 @@ function update() {
         answers.push(simpAnswer);
     }
     $(`#prev`).text(`Previous Answers: ${answers}`)
+    assign(Math.floor(Math.random() * 2715))
 }
 
 function guess(num) {
@@ -51,7 +52,6 @@ function guess(num) {
     if ((guess === (simpAnswer)) || (guess === (tradAnswer))) {
 
         $("#response").text("Correct!").fadeIn('slow').delay(100).fadeOut('slow')
-        assign(Math.floor(Math.random() * 2715));
         numRounds++;
         numCorrect++;
         update();
