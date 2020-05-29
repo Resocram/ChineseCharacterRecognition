@@ -45,6 +45,7 @@ function update() {
     }
     $(`#prev`).text(`Previous Answers: ${answers}`)
     assign(Math.floor(Math.random() * 1000))
+    console.log("NEW ONE")
 }
 
 function guess(num) {
