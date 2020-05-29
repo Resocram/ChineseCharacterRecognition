@@ -1,0 +1,2 @@
+# chinese
+My chinese test
