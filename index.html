@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Chinese test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-6 align-self-center">
+                <h1>Pinyin</h1>
+                <p class="test" id="pinyin"></p>
+            </div>
+            <div class="col-6" style="margin: 0; padding:0;">
+                <h1>Definition</h1>
+                <p class="test" id="definition"></p>
+            </div>
+
+
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <h1>Your Guess</h1>
+                <div class="drawingBoard loading"><span>Loading...</span></div>
+                <div class="commands">
+                    <div class="cmd cmdUndo">Undo</div>
+                    <div class="cmd cmdClear">Clear</div><br/>
+                </div>
+            </div>
+            <div class="col-9">
+                <h1>Recognized characters</h1>
+                <div class="row">
+                    <div class="chinese" id="chinese0"></div>
+                    <div class="chinese" id="chinese1"></div>
+                    <div class="chinese" id="chinese2"></div>
+                    <div class="chinese" id="chinese3"></div>
+                    <div class="chinese" id="chinese4"></div>
+                    <div class="chinese" id="chinese5"></div>
+                    <div class="chinese" id="chinese6"></div>
+                    <div class="chinese" id="chinese7"></div>
+                </div>
+                <h3 id="response" style="margin-top: 5%"></h3>
+
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col-1 offset-7">
+                <button type="button" class="btn btn-dark" id="next">Next</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-5">
+                <h2 id="score">Score: </h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <h2 id="prev">Previous Answers: </h2>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hanzi-writer@2.2/dist/hanzi-writer.min.js"></script>
+    <script type="text/javascript" src="chinese.js"></script>
+    <script src='./dist/hanzilookup.min.js'></script>
+    <script type="text/javascript" src="index.js"></script>
+    </script>
+</body>
+
+</html>

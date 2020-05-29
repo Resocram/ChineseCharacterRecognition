@@ -1,0 +1,57 @@
+.drawingBoard {
+    width: 250px;
+    height: 250px;
+    cursor: crosshair;
+    clear: both;
+    overflow: hidden;
+    background-color: #fafafa;
+}
+
+.drawingBoard span {
+    display: none;
+}
+
+.drawingBoard.loading {
+    background-color: #f0f0f0;
+}
+
+.drawingBoard.loading span {
+    display: inline;
+    color: #606060;
+}
+
+.commands {
+    width: 250px;
+    margin-top: 3px;
+}
+
+.cmd {
+    width: 122px;
+    background-color: #fce7c0;
+    text-align: center;
+    cursor: default;
+    padding: 3px;
+    color: #606060;
+}
+
+.cmd.cmdUndo {
+    float: right;
+}
+
+.cmd:hover {
+    background-color: #f1d7a6;
+}
+
+.chinese {
+    height: 70px;
+    width: 70px;
+    font-size: 48px;
+}
+
+.hanziLookupChars {
+    margin-bottom: 20px;
+}
+
+.test {
+    font-size: 20px;
+}
