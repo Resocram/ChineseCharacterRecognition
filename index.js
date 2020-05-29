@@ -44,7 +44,7 @@ function update() {
         answers.push(simpAnswer);
     }
     $(`#prev`).text(`Previous Answers: ${answers}`)
-    assign(Math.floor(Math.random() * 2715))
+    assign(Math.floor(Math.random() * 1000))
 }
 
 function guess(num) {
