@@ -67,8 +67,9 @@ function guess(num) {
 
 $(document).ready(function() {
     // Only fetch data (large, takes long) when the page has loaded
-    _filesToLoad = 1;
+    _filesToLoad = 2;
     HanziLookup.init("mmah", "https://raw.githubusercontent.com/gugray/HanziLookupJS/master/dist/mmah.json", fileLoaded);
+    HanziLookup.init("orig", "https://raw.githubusercontent.com/gugray/HanziLookupJS/master/dist/orig.json", fileLoaded);
     assign(Math.floor(Math.random() * difficulty));
 });
 
@@ -120,18 +121,26 @@ function lookup() {
     // Decompose character from drawing board
     var analyzedChar = new HanziLookup.AnalyzedCharacter(_drawingBoard.cloneStrokes());
     // Look up with original HanziLookup data
-
+    var matcherOrig = new HanziLookup.Matcher("orig");
+    matcherOrig.match(analyzedChar, 8, function(matches) {
+        showResultsORIG(matches);
+    });
     // Look up with MMAH data
     var matcherMMAH = new HanziLookup.Matcher("mmah");
     matcherMMAH.match(analyzedChar, 8, function(matches) {
-        showResults(matches);
+        showResultsMMAH(matches);
     });
 }
 
 // Populates UI with (ordered) Hanzi matches
-function showResults(matches) {
+function showResultsMMAH(matches) {
     for (let i = 0; i != matches.length; i++) {
         $(`#chinese${i}`).text(`${matches[i].character}`);
+    }
+}
 
+function showResultsORIG(matches) {
+    for (let i = 0; i != matches.length; i++) {
+        $(`#chinese${i+8}`).text(`${matches[i].character}`);
     }
 }
