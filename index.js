@@ -2,6 +2,7 @@ let _filesToLoad;
 let _drawingBoard;
 let simpAnswer;
 let tradAnswer;
+let difficulty = 1000;
 let numRounds = 0;
 let numCorrect = 0;
 let answers = []
@@ -32,7 +33,6 @@ $("#chinese7").click(function() {
 
 $("#next").click(function() {
     numRounds++;
-
     update();
 })
 
@@ -43,22 +43,24 @@ function update() {
     } else {
         answers.push(simpAnswer);
     }
-    $(`#prev`).text(`Previous Answers: ${answers}`)
-    assign(Math.floor(Math.random() * 1000))
-    console.log("updated definition")
+    $(`#prev`).text(`${answers}`)
+    assign(Math.floor(Math.random() * difficulty))
+    _drawingBoard.clearCanvas();
+    _drawingBoard.redraw();
+    lookup();
 }
 
 function guess(num) {
     let guess = $(`#chinese${num}`).text();
     if ((guess === (simpAnswer)) || (guess === (tradAnswer))) {
 
-        $("#response").text("Correct!").fadeIn('slow').delay(100).fadeOut('slow')
+        $("#response").text("Correct!").show().fadeOut('slow')
         numRounds++;
         numCorrect++;
         update();
 
     } else {
-        $("#response").text("Try again!").show().fadeIn('slow').delay(100).fadeOut('slow');
+        $("#response").text("Try again!").show().fadeOut('slow');
     }
 
 }
@@ -67,7 +69,7 @@ $(document).ready(function() {
     // Only fetch data (large, takes long) when the page has loaded
     _filesToLoad = 1;
     HanziLookup.init("mmah", "https://raw.githubusercontent.com/gugray/HanziLookupJS/master/dist/mmah.json", fileLoaded);
-    assign(Math.floor(Math.random() * 2715));
+    assign(Math.floor(Math.random() * difficulty));
 });
 
 
@@ -83,6 +85,7 @@ function assign(number) {
     if (answers.indexOf("F") !== -1) {
         tradAnswer = answers[answers.indexOf("F") + 1]
     }
+    simpAnswer.css
 }
 
 

@@ -46,6 +46,7 @@
     height: 70px;
     width: 70px;
     font-size: 48px;
+    cursor: pointer;
 }
 
 .hanziLookupChars {
