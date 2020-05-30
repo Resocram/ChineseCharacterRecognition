@@ -2,72 +2,55 @@ let _filesToLoad;
 let _drawingBoard;
 let simpAnswer;
 let tradAnswer;
+let numbers = [];
 let difficulty = 1000;
 let numRounds = 0;
 let numCorrect = 0;
-let answers = []
-$("#chinese0").click(function() {
-    guess(0);
+$(".chinese").click(function(e) {
+    guess(e.target.id[e.target.id.length - 1])
 })
-$("#chinese1").click(function() {
-    guess(1);
-})
-$("#chinese2").click(function() {
-    guess(2);
-})
-$("#chinese3").click(function() {
-    guess(3);
-})
-$("#chinese4").click(function() {
-    guess(4);
-})
-$("#chinese5").click(function() {
-    guess(5);
-})
-$("#chinese6").click(function() {
-    guess(6);
-})
-$("#chinese7").click(function() {
-    guess(7);
-})
-$("#chinese8").click(function() {
-    guess(8);
-})
-$("#chinese9").click(function() {
-    guess(9);
-})
-$("#chinese10").click(function() {
-    guess(10);
-})
-$("#chinese11").click(function() {
-    guess(11);
-})
-$("#chinese12").click(function() {
-    guess(12);
-})
-$("#chinese13").click(function() {
-    guess(13);
-})
-$("#chinese14").click(function() {
-    guess(14);
-})
-$("#chinese15").click(function() {
-    guess(15);
-})
+
 
 $("#next").click(function() {
     numRounds++;
     update();
 })
+$("#prev").click(function(e) {
+    let word = e.target.innerText[0] === '(' ? e.target.innerText[1] : e.target.innerText[0];
+    let idNumber = e.target.id[e.target.id.length - 1];
+    console.log();
+    $('#char').empty();
+    $('#animate').css('visibility', 'visible')
+
+    let writer = HanziWriter.create('char', word, {
+        width: 100,
+        height: 100,
+        padding: 5,
+        strokeAnimationSpeed: 1,
+        delayBetweenStrokes: 200,
+        showOutline: true
+    });
+
+    $('#animate').click(function() {
+        writer.animateCharacter();
+    })
+    $('#char-pinyin').html(`<h3>Pinyin:</h3> <p>${numbers[idNumber].pinyin}</p>`)
+    $('#char-def').html(`<h3>Definition:</h3> <p>${numbers[idNumber].definition}</p>`)
+
+})
+
+
+
 
 function update() {
     $(`#score`).text(`Score: ${numCorrect} / ${numRounds}`)
+    let currentText = $(`#prev`).html();
+
     if (simpAnswer !== tradAnswer) {
-        answers.push(`${simpAnswer}(${tradAnswer})`)
+        $(`#prev`).html(`${currentText} <p class = "answers" id = answers-${numRounds}>${simpAnswer}</p><p class = "answers" id = answers-${numRounds}>(${tradAnswer}),<\p>`);
     } else {
-        answers.push(simpAnswer);
+        $(`#prev`).html(`${currentText} <p class = "answers" id = answers-${numRounds} >${simpAnswer},<\p>`);
     }
-    $(`#prev`).text(`${answers}`)
     assign(Math.floor(Math.random() * difficulty))
     _drawingBoard.clearCanvas();
     _drawingBoard.redraw();
@@ -110,6 +93,8 @@ function assign(number) {
     if (answers.indexOf("F") !== -1) {
         tradAnswer = answers[answers.indexOf("F") + 1]
     }
+    numbers[numRounds + 1] = dataArray[number];
+
     simpAnswer.css
 }
 

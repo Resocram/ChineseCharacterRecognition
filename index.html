@@ -70,12 +70,17 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-12">
+            <div class="col-7" style="flex-wrap:wrap;">
                 <h2 style>Previous Answers</h2>
-                <h3 id="prev">
-                    <p>不</p>
-                    <p>不</p>
-                </h3>
+                <h3 id="prev" style="display:flex; flex-direction:row;flex-wrap:wrap;"></h3>
+            </div>
+            <div class="col-5" id="learning">
+                <div class="row">
+                    <h4 id="char"></h4>
+                    <div id="char-pinyin"></div>
+                </div>
+                <div id="char-def"></div>
+                <button type="button" class="btn btn-dark" id="animate">Animate</button>
             </div>
         </div>
     </div>

@@ -56,3 +56,11 @@
 .test {
     font-size: 20px;
 }
+
+#animate {
+    visibility: hidden;
+}
+
+.answers {
+    cursor: pointer;
+}
