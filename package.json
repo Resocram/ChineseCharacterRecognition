@@ -1,0 +1,23 @@
+{
+  "name": "chinese",
+  "version": "1.0.0",
+  "description": "My chinese test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Resocram/chinese.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Resocram/chinese/issues"
+  },
+  "homepage": "https://github.com/Resocram/chinese#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "request": "^2.88.2"
+  }
+}

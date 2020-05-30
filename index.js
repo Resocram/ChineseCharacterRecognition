@@ -45,7 +45,7 @@ function update() {
     }
     $(`#prev`).text(`Previous Answers: ${answers}`)
     assign(Math.floor(Math.random() * 1000))
-    console.log("NEW ONE")
+    console.log("updated definition")
 }
 
 function guess(num) {
@@ -75,17 +75,9 @@ $(document).ready(function() {
 function assign(number) {
 
     let fields = dataArray[number];
-    let firstBracket = fields.FIELD3.indexOf("[");
-    let secondBracket = fields.FIELD3.indexOf("]");
-    let pinyin = fields.FIELD3.substring(firstBracket + 1, secondBracket)
-    let definition = fields.FIELD3.replace(/,/g, "").replace(/;/g, "").split(" ")
-
-    definition = definition.filter(string => checkWord(string))
-    definition.join(', ');
-
-    $("#pinyin").text(pinyin);
-    $("#definition").text(definition);
-    let answers = fields.FIELD2;
+    $("#pinyin").text(fields.pinyin);
+    $("#definition").text(fields.definition);
+    let answers = fields.char;
     simpAnswer = answers[0];
     tradAnswer = answers[0];
     if (answers.indexOf("F") !== -1) {
@@ -93,18 +85,6 @@ function assign(number) {
     }
 }
 
-function checkWord(word) {
-    for (let i = 0; i < word.length; i++) {
-        if (!valid(word.charAt(i))) {
-            return false;
-        }
-    }
-    return true;
-}
-
-function valid(char) {
-    return ((char >= 'a' && char <= 'z') || (char >= 'A' && char <= 'Z'))
-}
 
 // Initializes mini-app once all scripts have loaded
 function fileLoaded(success) {
