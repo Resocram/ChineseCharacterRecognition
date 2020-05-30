@@ -7,7 +7,7 @@ let difficulty = 1000;
 let numRounds = 0;
 let numCorrect = 0;
 $(".chinese").click(function(e) {
-    guess(e.target.id[e.target.id.length - 1])
+    guess(e.target.id.substring(7))
 })
 
 
@@ -16,26 +16,27 @@ $("#next").click(function() {
     update();
 })
 $("#prev").click(function(e) {
-    let word = e.target.innerText[0] === '(' ? e.target.innerText[1] : e.target.innerText[0];
-    let idNumber = e.target.id[e.target.id.length - 1];
-    console.log();
-    $('#char').empty();
-    $('#animate').css('visibility', 'visible')
+    if (e.target.id !== "prev") {
+        let word = e.target.innerText[0] === '(' ? e.target.innerText[1] : e.target.innerText[0];
+        let idNumber = e.target.id.substring(8);
+        $('#char').empty();
+        $('#animate').css('visibility', 'visible')
 
-    let writer = HanziWriter.create('char', word, {
-        width: 100,
-        height: 100,
-        padding: 5,
-        strokeAnimationSpeed: 1,
-        delayBetweenStrokes: 200,
-        showOutline: true
-    });
+        let writer = HanziWriter.create('char', word, {
+            width: 100,
+            height: 100,
+            padding: 5,
+            strokeAnimationSpeed: 1,
+            delayBetweenStrokes: 200,
+            showOutline: true
+        });
 
-    $('#animate').click(function() {
-        writer.animateCharacter();
-    })
-    $('#char-pinyin').html(`<h3>Pinyin:</h3> <p>${numbers[idNumber].pinyin}</p>`)
-    $('#char-def').html(`<h3>Definition:</h3> <p>${numbers[idNumber].definition}</p>`)
+        $('#animate').click(function() {
+            writer.animateCharacter();
+        })
+        $('#char-pinyin').html(`<h3>Pinyin:</h3> <p>${numbers[idNumber].pinyin}</p>`)
+        $('#char-def').html(`<h3>Definition:</h3> <p>${numbers[idNumber].definition}</p>`)
+    }
 
 })
 
@@ -59,6 +60,7 @@ function update() {
 
 function guess(num) {
     let guess = $(`#chinese${num}`).text();
+    console.log(guess);
     if ((guess === (simpAnswer)) || (guess === (tradAnswer))) {
 
         $("#response").text("Correct!").show().fadeOut('slow')
@@ -73,10 +75,11 @@ function guess(num) {
 }
 
 $(document).ready(function() {
+
     // Only fetch data (large, takes long) when the page has loaded
     _filesToLoad = 2;
-    HanziLookup.init("mmah", "https://raw.githubusercontent.com/gugray/HanziLookupJS/master/dist/mmah.json", fileLoaded);
-    HanziLookup.init("orig", "https://raw.githubusercontent.com/gugray/HanziLookupJS/master/dist/orig.json", fileLoaded);
+    HanziLookup.init("mmah", "https://raw.githubusercontent.com/Resocram/chinese/master/dist/mmah.json", fileLoaded);
+    HanziLookup.init("orig", "https://raw.githubusercontent.com/Resocram/chinese/master/dist/orig.json", fileLoaded);
     assign(Math.floor(Math.random() * difficulty));
 });
 
