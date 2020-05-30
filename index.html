@@ -23,21 +23,11 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container-fluid">
         <div class="row justify-content-center">
-            <div class="col-6 align-self-center">
+            <div class="col-2 offset-1">
                 <h1>Pinyin</h1>
                 <p class="test" id="pinyin"></p>
-            </div>
-            <div class="col-6" style="margin: 0; padding:0;">
-                <h1>Definition</h1>
-                <p class="test" id="definition"></p>
-            </div>
-
-
-        </div>
-        <div class="row">
-            <div class="col-3">
                 <h1>Your Guess</h1>
                 <div class="drawingBoard loading"><span>Loading...</span></div>
                 <div class="commands">
@@ -45,8 +35,21 @@
                     <div class="cmd cmdClear">Clear</div><br/>
                 </div>
             </div>
-            <div class="col-9">
-                <h1>Recognized characters (Library 1)</h1>
+            <div class="col-2 offset-1" style="margin: 0; padding:0;">
+                <h1>Definition</h1>
+                <p class="test" id="definition"></p>
+                <h3 id="response" style="margin-top: 50%"></h3>
+            </div>
+            <div class="col-6" style="margin: 0; padding:0;">
+                <h1>Example words</h1>
+                <p class="test" id="example"></p>
+            </div>
+
+
+        </div>
+        <div class="row">
+            <div class="col-4 offset-1">
+                <h2>Recognized characters (Library 1)</h2>
                 <div class="row">
                     <div class="chinese" id="chinese0"></div>
                     <div class="chinese" id="chinese1"></div>
@@ -57,7 +60,7 @@
                     <div class="chinese" id="chinese6"></div>
                     <div class="chinese" id="chinese7"></div>
                 </div>
-                <h1>Recognized characters (Library 2)</h1>
+                <h2>Recognized characters (Library 2)</h2>
                 <div class="row">
                     <div class="chinese" id="chinese8"></div>
                     <div class="chinese" id="chinese9"></div>
@@ -68,26 +71,10 @@
                     <div class="chinese" id="chinese14"></div>
                     <div class="chinese" id="chinese15"></div>
                 </div>
-                <h3 id="response" style="margin-top: 5%"></h3>
-
-            </div>
-        </div>
-        <div class="row ">
-            <div class="col-1 offset-7">
+                <h2 id="score">Score: </h2>
                 <button type="button" class="btn btn-dark" id="next">Next</button>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-5">
-                <h2 id="score">Score: </h2>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-7" style="flex-wrap:wrap;">
-                <h2 style>Previous Answers</h2>
-                <h3 id="prev" style="display:flex; flex-direction:row;flex-wrap:wrap; "></h3>
-            </div>
-            <div class="col-5" id="learning">
+            <div class="col-2">
                 <div class="row">
                     <h4 id="char"></h4>
                     <div id="char-pinyin"></div>
@@ -95,14 +82,18 @@
                 <div id="char-def"></div>
                 <button type="button" class="btn btn-dark" id="animate">Animate</button>
             </div>
+            <div class="col-5" style="flex-wrap:wrap;">
+                <h2 style>Previous Answers</h2>
+                <h3 id="prev" style="display:flex; flex-direction:row;flex-wrap:wrap; "></h3>
+            </div>
         </div>
     </div>
-    </div>
+
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/hanzi-writer@2.2/dist/hanzi-writer.min.js"></script>
-    <script type="text/javascript" src="newChinese.js"></script>
+    <script type="text/javascript" src="newChinesev2.js"></script>
     <script src='./dist/hanzilookup.min.js'></script>
     <script type="text/javascript" src="index.js"></script>
     </script>

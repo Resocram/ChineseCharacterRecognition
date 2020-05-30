@@ -90,15 +90,23 @@ function assign(number) {
     let fields = dataArray[number];
     $("#pinyin").text(fields.pinyin);
     $("#definition").text(fields.definition);
+    $("#example").empty();
+    let length = fields.exampleWord.length > 3 ? 3 : fields.exampleWord.length;
     let answers = fields.char;
     simpAnswer = answers[0];
     tradAnswer = answers[0];
     if (answers.indexOf("F") !== -1) {
         tradAnswer = answers[answers.indexOf("F") + 1]
     }
+    for (let i = 0; i < length; i++) {
+        let currentText = $("#example").html();
+        let word = fields.exampleWord[i];
+        $("#example").html(`${currentText} <p>${word.char.replace(simpAnswer,"__").replace(tradAnswer, "__")} [${word.pinyin}] ${word.definition}</p>`)
+    }
+
+
     numbers[numRounds + 1] = dataArray[number];
 
-    simpAnswer.css
 }
 
 
