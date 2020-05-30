@@ -30,6 +30,30 @@ $("#chinese6").click(function() {
 $("#chinese7").click(function() {
     guess(7);
 })
+$("#chinese8").click(function() {
+    guess(8);
+})
+$("#chinese9").click(function() {
+    guess(9);
+})
+$("#chinese10").click(function() {
+    guess(10);
+})
+$("#chinese11").click(function() {
+    guess(11);
+})
+$("#chinese12").click(function() {
+    guess(12);
+})
+$("#chinese13").click(function() {
+    guess(13);
+})
+$("#chinese14").click(function() {
+    guess(14);
+})
+$("#chinese15").click(function() {
+    guess(15);
+})
 
 $("#next").click(function() {
     numRounds++;
