@@ -34,8 +34,23 @@ $("#prev").click(function(e) {
         $('#animate').click(function() {
             writer.animateCharacter();
         })
-        $('#char-pinyin').html(`<h3>Pinyin:</h3> <p>${numbers[idNumber].pinyin}</p>`)
-        $('#char-def').html(`<h3>Definition:</h3> <p>${numbers[idNumber].definition}</p>`)
+
+        let clicked = numbers[idNumber];
+        $('#char-pinyin').html(`<h4>Pinyin:</h4> <p>${clicked.pinyin}</p>`)
+        $('#char-def').html(`<h4>Definition:</h4> <p>${clicked.definition}</p>`)
+        $("#char-form").html(`<h4>Character Formation: </h4>`);
+        for (let i = 0; i < clicked.charForm.length; i++) {
+            let innerArray = clicked.charForm[i];
+            let current = $("#char-form").html()
+            $("#char-form").html(`${current} 
+                <p >
+                ${innerArray.char} [${innerArray.pinyin}] ${innerArray.def}
+                </p>
+                `)
+
+        }
+
+        //$('#char-form').html(`<h3>Definition:</h3> <p>${numbers[idNumber].definition}</p>`)
     }
 
 })
