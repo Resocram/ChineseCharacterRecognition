@@ -44,7 +44,7 @@ $("#prev").click(function(e) {
             let current = $("#char-form").html()
             $("#char-form").html(`${current} 
                 <p >
-                ${innerArray.char} [${innerArray.pinyin}] ${innerArray.de}
+                ${innerArray.char} [${innerArray.pinyin}] ${innerArray.def}
                 </p>
                 `)
 
