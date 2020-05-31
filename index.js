@@ -44,7 +44,7 @@ $("#prev").click(function(e) {
             let current = $("#char-form").html()
             $("#char-form").html(`${current} 
                 <p >
-                ${innerArray.char} [${innerArray.pinyin}] ${innerArray.def}
+                ${innerArray.char} [${innerArray.pinyin}] ${innerArray.de}
                 </p>
                 `)
 
@@ -75,7 +75,6 @@ function update() {
 
 function guess(num) {
     let guess = $(`#chinese${num}`).text();
-    console.log(guess);
     if ((guess === (simpAnswer)) || (guess === (tradAnswer))) {
 
         $("#response").text("Correct!").show().fadeOut('slow')
