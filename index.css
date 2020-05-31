@@ -43,10 +43,11 @@
 }
 
 .chinese {
-    height: 70px;
-    width: 70px;
+    height: 50px;
+    width: 50px;
     font-size: 36px;
     cursor: pointer;
+    margin: 0;
 }
 
 .hanziLookupChars {
