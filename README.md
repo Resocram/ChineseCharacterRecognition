@@ -1,5 +1,6 @@
 # Chinese Character Recognition!
 **Version 1.0.0**
+
 Chinese Character Recognition is a character recognition game that is played in the web browser. The main purpose of this website was to improve my chinese skills =D.
 
 ## Starting the game
