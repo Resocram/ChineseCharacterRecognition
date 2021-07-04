@@ -73,8 +73,13 @@
                 </div>
                 <h3 id="score">Score: </h3>
                 <button type="button" class="btn btn-dark" id="next">Next</button>
+                <form>
+                    <label for="difficulty">Difficulty (How many characters to test, 1-1000):</label>
+                    <input type ="text" id="difficulty" name="difficulty">
+                    <input type ="reset" id="reset">
+                </form>
             </div>
-            <div class="col-3">
+            <div class="col-3" id = "explanation">
                 <div class="row">
                     <h5 id="char"></h5>
                     <div id="char-pinyin"></div>

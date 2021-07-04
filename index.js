@@ -6,6 +6,16 @@ let numbers = [];
 let difficulty = 1000;
 let numRounds = 0;
 let numCorrect = 0;
+let charArray = []
+
+$("#reset").click(function(e) {
+    tempDiff = $("#difficulty").val()
+    if (!isNaN(tempDiff) && tempDiff >= 1 && tempDiff <= 1000){
+        difficulty = tempDiff
+    }
+    generatePermutation(difficulty)
+    reset()    
+})
 $(".chinese").click(function(e) {
     guess(e.target.id.substring(7))
 })
@@ -20,6 +30,7 @@ $("#prev").click(function(e) {
         let word = e.target.innerText[0] === '(' ? e.target.innerText[1] : e.target.innerText[0];
         let idNumber = e.target.id.substring(8);
         $('#char').empty();
+        $('#explanation').css('visibility', 'visible')
         $('#animate').css('visibility', 'visible')
 
         let writer = HanziWriter.create('char', word, {
@@ -35,7 +46,8 @@ $("#prev").click(function(e) {
             writer.animateCharacter();
         })
 
-        let clicked = numbers[idNumber];
+        let clicked = charArray[idNumber];
+
         $('#char-pinyin').html(`<h4>Pinyin:</h4> <p>${clicked.pinyin}</p>`)
         $('#char-def').html(`<h4>Definition:</h4> <p>${clicked.definition}</p>`)
         $("#char-form").html(`<h4>Character Formation: </h4>`);
@@ -49,14 +61,32 @@ $("#prev").click(function(e) {
                 `)
 
         }
-
-        //$('#char-form').html(`<h3>Definition:</h3> <p>${numbers[idNumber].definition}</p>`)
     }
 
 })
 
+function generatePermutation(difficulty){
+    let temp = []
+    for (let i = 0; i < difficulty; i++){
+        temp.push(i);
+    }
+    for (let i = difficulty-1; i > 1; i--){
+        let j = (Math.floor(Math.random()*10000000)) % (i+1)
+        let k = temp[j]
+        temp[j] = temp[i]
+        temp[i] = k
+    }
+    numbers=temp
+}
 
-
+function reset(){
+    numCorrect = 0 
+    numRounds = 0
+    update()
+    $(`#prev`).html("")
+    $('#explanation').css('visibility', 'hidden')
+    $('#animate').css('visibility', 'hidden')
+}
 
 function update() {
     $(`#score`).text(`Score: ${numCorrect} / ${numRounds}`)
@@ -67,7 +97,11 @@ function update() {
     } else {
         $(`#prev`).html(`${currentText} <p class = "answers" id = answers-${numRounds} >${simpAnswer},<\p>`);
     }
-    assign(Math.floor(Math.random() * difficulty))
+    assign(numbers[numRounds%numbers.length])
+    if (numRounds%numbers.length == numbers.length-1){
+        generatePermutation(difficulty)
+    }
+
     _drawingBoard.clearCanvas();
     _drawingBoard.redraw();
     lookup();
@@ -94,13 +128,13 @@ $(document).ready(function() {
     _filesToLoad = 2;
     HanziLookup.init("mmah", "https://raw.githubusercontent.com/Resocram/chinese/master/dist/mmah.json", fileLoaded);
     HanziLookup.init("orig", "https://raw.githubusercontent.com/Resocram/chinese/master/dist/orig.json", fileLoaded);
-    assign(Math.floor(Math.random() * difficulty));
+    generatePermutation(difficulty)
+    assign(numbers[numRounds%numbers.length])
 });
 
 
 //Assigns definition and pinyin to chosen word
 function assign(number) {
-
     let fields = dataArray[number];
     $("#pinyin").text(fields.pinyin);
     $("#definition").text(fields.definition);
@@ -118,9 +152,7 @@ function assign(number) {
         $("#example").html(`${currentText} <p>${word.char.replace(simpAnswer,"__").replace(tradAnswer, "__")} [${word.pinyin}] ${word.definition}</p>`)
     }
 
-
-    numbers[numRounds + 1] = dataArray[number];
-
+    charArray[numRounds + 1] = dataArray[number]
 }
 
 
