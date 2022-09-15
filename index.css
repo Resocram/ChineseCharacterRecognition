@@ -24,7 +24,6 @@
     width: 250px;
     margin-top: 3px;
 }
-
 .cmd {
     width: 122px;
     background-color: #fce7c0;
@@ -43,25 +42,36 @@
 }
 
 .chinese {
-    height: 50px;
-    width: 50px;
-    font-size: 36px;
+    padding:5px;
+    font-size: 30px;
     cursor: pointer;
-    margin: 0;
+}
+.button{
+    width: 75px;
+    height:30px;
 }
 
 .hanziLookupChars {
     margin-bottom: 20px;
 }
 
+.header {
+    font-size: 23px;
+}
+
 .test {
-    font-size: 20px;
+    font-size: 15px;
 }
 
-#animate {
-    visibility: hidden;
+#animate{
+    display: none;
 }
 
+#hide{
+    display: none;
+}
 .answers {
     cursor: pointer;
+    padding:5px;
+    font-size: 30px;
 }

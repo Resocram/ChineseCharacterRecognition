@@ -30,8 +30,9 @@ $("#prev").click(function(e) {
         let word = e.target.innerText[0] === '(' ? e.target.innerText[1] : e.target.innerText[0];
         let idNumber = e.target.id.substring(8);
         $('#char').empty();
-        $('#explanation').css('visibility', 'visible')
-        $('#animate').css('visibility', 'visible')
+        $('#explanation').css('display', 'block')
+        $('#animate').css('display', 'block')
+        $('#hide').css('display', 'block')
 
         let writer = HanziWriter.create('char', word, {
             width: 100,
@@ -45,12 +46,17 @@ $("#prev").click(function(e) {
         $('#animate').click(function() {
             writer.animateCharacter();
         })
+        $('#hide').click(function() {
+            $('#explanation').css('display', 'none')
+            $('#animate').css('display', 'none')
+            $('#hide').css('display', 'none')
+        })
 
         let clicked = charArray[idNumber];
 
-        $('#char-pinyin').html(`<h4>Pinyin:</h4> <p>${clicked.pinyin}</p>`)
-        $('#char-def').html(`<h4>Definition:</h4> <p>${clicked.definition}</p>`)
-        $("#char-form").html(`<h4>Character Formation: </h4>`);
+        $('#char-pinyin').html(`<h4 class="header">Pinyin:</h4> <p>${clicked.pinyin}</p>`)
+        $('#char-def').html(`<h4 class="header">Definition:</h4> <p>${clicked.definition}</p>`)
+        $("#char-form").html(`<h4 class="header">Character Formation: </h4>`);
         for (let i = 0; i < clicked.charForm.length; i++) {
             let innerArray = clicked.charForm[i];
             let current = $("#char-form").html()
@@ -84,8 +90,9 @@ function reset(){
     numRounds = 0
     update()
     $(`#prev`).html("")
-    $('#explanation').css('visibility', 'hidden')
-    $('#animate').css('visibility', 'hidden')
+    $('#explanation').css('display', 'none')
+    $('#animate').css('display', 'none')
+    $('#hide').css('display', 'none')
 }
 
 function update() {
