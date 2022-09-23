@@ -24,20 +24,9 @@
     width: 250px;
     margin-top: 3px;
 }
-.cmd {
-    width: 122px;
-    background-color: #fce7c0;
-    text-align: center;
-    cursor: default;
-    padding: 3px;
-    color: #606060;
-}
 
-.cmd.cmdUndo {
-    float: right;
-}
 
-.cmd:hover {
+.button:hover {
     background-color: #f1d7a6;
 }
 

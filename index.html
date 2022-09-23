@@ -48,8 +48,9 @@
             <h3 class="header">Your Guess</h3>
                 <div class="drawingBoard loading"><span>Loading...</span></div>
                 <div class="commands">
-                    <div class="cmd cmdUndo">Undo</div>
-                    <div class="cmd cmdClear">Clear</div><br/>
+                    <button type="button" class="button cmdUndo">Undo</button>
+                    <button type="button" class="button cmdClear">Clear</button>
+                    <button type="button" class="button" id="next">Next</button>
                 </div>
             </div>
             <div class="col-xl-3 offset-1">
@@ -69,7 +70,7 @@
         </div>
         <div class="row">
             <div class="col-xl-5 offset-1" style="flex-wrap:wrap;">
-                <button type="button" class="button" id="next">Next</button>
+                
                 <h2 class="header">Previous Answers</h2>
                 <h3 class="header" id="prev" style="display:flex; flex-direction:row;flex-wrap:wrap; "></h3>
             </div>
