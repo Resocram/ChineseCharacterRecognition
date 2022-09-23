@@ -25,14 +25,17 @@
 <body>
     <div class="container-fluid">
         <div class="row justify-content-center">
-            <div class="col-sm-1 offset-1">
-                <h3 class="header">Pinyin</h3>
-                <p class="test" id="pinyin"></p>
-                <h3 id="response" style="padding-top:2vw;"></h3>
-            </div>
-            <div class="col-sm-2 offset-1">
-                <h3 class="header">Definition</h3>
-                <p class="test" id="definition"></p>
+            <div class="col-sm-4 offset-1">
+                <div class="row">
+                    <div class="col-6">
+                        <h3 class="header">Pinyin</h3>
+                        <p class="test" id="pinyin"></p>
+                    </div>
+                    <div class="col-6">
+                        <h3 class="header">Definition</h3>
+                        <p class="test" id="definition"></p>
+                    </div>
+                </div>
             </div>
             <div class="col-sm-6 offset-1">
                 <h3 class="header">Example words</h3>
@@ -41,7 +44,7 @@
         </div>
         <div class="row">
             <div class="col-xl-2 offset-1">
-            
+                <h3 id="response"></h3>
             <h3 class="header">Your Guess</h3>
                 <div class="drawingBoard loading"><span>Loading...</span></div>
                 <div class="commands">
@@ -50,7 +53,7 @@
                 </div>
             </div>
             <div class="col-xl-3 offset-1">
-                <h2 class="header">Recognized characters (Library 1)</h3>
+                <h2 class="header">Recognized characters</h3>
                 <div class="row">
                     <div class="chinese" id="chinese0"></div>
                     <div class="chinese" id="chinese1"></div>
@@ -61,22 +64,12 @@
                     <div class="chinese" id="chinese6"></div>
                     <div class="chinese" id="chinese7"></div>
                 </div>
-                <h2 class="header">Recognized characters (Library 2)</h3>
-                <div class="row">
-                    <div class="chinese" id="chinese8"></div>
-                    <div class="chinese" id="chinese9"></div>
-                    <div class="chinese" id="chinese10"></div>
-                    <div class="chinese" id="chinese11"></div>
-                    <div class="chinese" id="chinese12"></div>
-                    <div class="chinese" id="chinese13"></div>
-                    <div class="chinese" id="chinese14"></div>
-                    <div class="chinese" id="chinese15"></div>
-                </div>
             </div>
             </div>
         </div>
         <div class="row">
             <div class="col-xl-5 offset-1" style="flex-wrap:wrap;">
+                <button type="button" class="button" id="next">Next</button>
                 <h2 class="header">Previous Answers</h2>
                 <h3 class="header" id="prev" style="display:flex; flex-direction:row;flex-wrap:wrap; "></h3>
             </div>
@@ -102,7 +95,6 @@
         <div class="row">
             <div class="col-7 offset-1">
                 <h3 class="header" id="score">Score: </h3>
-                <button type="button" class="button" id="next">Next</button>
                 <form>
                     <label for="difficulty" class="test">Difficulty (How many characters to test, 1-1000):</label>
                     <input type ="text" class="test" id="difficulty" name="difficulty">

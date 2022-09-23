@@ -23,7 +23,7 @@ $(".chinese").click(function(e) {
 
 $("#next").click(function() {
     numRounds++;
-    update();
+    update(false);
 })
 $("#prev").click(function(e) {
     if (e.target.id !== "prev") {
@@ -88,21 +88,21 @@ function generatePermutation(difficulty){
 function reset(){
     numCorrect = 0 
     numRounds = 0
-    update()
+    update(false)
     $(`#prev`).html("")
     $('#explanation').css('display', 'none')
     $('#animate').css('display', 'none')
     $('#hide').css('display', 'none')
 }
 
-function update() {
+function update(correct) {
     $(`#score`).text(`Score: ${numCorrect} / ${numRounds}`)
     let currentText = $(`#prev`).html();
-
+    let colour = correct ? "green" : "red";
     if (simpAnswer !== tradAnswer) {
-        $(`#prev`).html(`${currentText} <p class = "answers" id = answers-${numRounds}>${simpAnswer}</p><p class = "answers" id = answers-${numRounds}>(${tradAnswer}),<\p>`);
+        $(`#prev`).html(`${currentText} <p style="text-decoration:underline; text-decoration-color:${colour}" class = "answers" id = answers-${numRounds}>${simpAnswer}</p><p class = "answers" id = answers-${numRounds}>(${tradAnswer}),<\p>`);
     } else {
-        $(`#prev`).html(`${currentText} <p class = "answers" id = answers-${numRounds} >${simpAnswer},<\p>`);
+        $(`#prev`).html(`${currentText} <p style="text-decoration:underline; text-decoration-color:${colour}" class = "answers" id = answers-${numRounds} >${simpAnswer},<\p>`);
     }
     assign(numbers[numRounds%numbers.length])
     if (numRounds%numbers.length == numbers.length-1){
@@ -117,13 +117,14 @@ function update() {
 function guess(num) {
     let guess = $(`#chinese${num}`).text();
     if ((guess === (simpAnswer)) || (guess === (tradAnswer))) {
-
+        $("#response").css('color','green')
         $("#response").text("Correct!").show().fadeOut('slow')
         numRounds++;
         numCorrect++;
-        update();
+        update(true);
 
     } else {
+        $("#response").css('color','red')
         $("#response").text("Try again!").show().fadeOut('slow');
     }
 
@@ -196,24 +197,32 @@ function lookup() {
     // Look up with original HanziLookup data
     var matcherOrig = new HanziLookup.Matcher("orig");
     matcherOrig.match(analyzedChar, 8, function(matches) {
-        showResultsORIG(matches);
+        first = matches.map(char => char.character)
+        showResults()
     });
     // Look up with MMAH data
     var matcherMMAH = new HanziLookup.Matcher("mmah");
     matcherMMAH.match(analyzedChar, 8, function(matches) {
-        showResultsMMAH(matches);
+        second = matches.map(char => char.character)
+        showResults()
     });
+
 }
 
-// Populates UI with (ordered) Hanzi matches
-function showResultsMMAH(matches) {
-    for (let i = 0; i != matches.length; i++) {
-        $(`#chinese${i}`).text(`${matches[i].character}`);
+first = []
+second = []
+function showResults(){
+    var displaying = new Set()
+    let i, l = Math.min(first.length, second.length);
+    var result = []
+    for (i = 0; i < l; i++) {
+        result.push(first[i], second[i]);
     }
-}
+    result.push(...first.slice(l), ...second.slice(l));
+    displaying = new Set(result)
+    newArray = Array.from(displaying)
+    for (let i = 0; i < newArray.length && i < 8; i++){
+        $(`#chinese${i}`).text(`${newArray[i]}`);
+    }
 
-function showResultsORIG(matches) {
-    for (let i = 0; i != matches.length; i++) {
-        $(`#chinese${i+8}`).text(`${matches[i].character}`);
-    }
 }
