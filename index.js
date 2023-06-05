@@ -4,6 +4,7 @@ let simpAnswer;
 let tradAnswer;
 let numbers = [];
 let difficulty = 1000;
+let lowerbound = 0;
 let numRounds = 0;
 let numCorrect = 0;
 let charArray = []
@@ -11,9 +12,13 @@ let charArray = []
 $("#reset").click(function(e) {
     tempDiff = $("#difficulty").val()
     if (!isNaN(tempDiff) && tempDiff >= 1 && tempDiff <= 1000){
-        difficulty = tempDiff
+        difficulty = Number(tempDiff)
     }
-    generatePermutation(difficulty)
+    tempLowerbound = $("#lowerbound").val()
+    if (!isNaN(tempLowerbound) && tempLowerbound >= 1 && tempLowerbound <= 1000){
+        lowerbound = Number(tempLowerbound)
+    }
+    generatePermutation(lowerbound,difficulty)
     reset()    
 })
 $(".chinese").click(function(e) {
@@ -71,9 +76,10 @@ $("#prev").click(function(e) {
 
 })
 
-function generatePermutation(difficulty){
+function generatePermutation(lowerbound,difficulty){
+
     let temp = []
-    for (let i = 0; i < difficulty; i++){
+    for (let i = lowerbound; i < lowerbound+difficulty; i++){
         temp.push(i);
     }
     for (let i = difficulty-1; i > 1; i--){
@@ -106,7 +112,7 @@ function update(correct) {
     }
     assign(numbers[numRounds%numbers.length])
     if (numRounds%numbers.length == numbers.length-1){
-        generatePermutation(difficulty)
+        generatePermutation(lowerbound,difficulty)
     }
 
     _drawingBoard.clearCanvas();
@@ -136,7 +142,7 @@ $(document).ready(function() {
     _filesToLoad = 2;
     HanziLookup.init("mmah", "https://raw.githubusercontent.com/Resocram/chinese/master/dist/mmah.json", fileLoaded);
     HanziLookup.init("orig", "https://raw.githubusercontent.com/Resocram/chinese/master/dist/orig.json", fileLoaded);
-    generatePermutation(difficulty)
+    generatePermutation(lowerbound,difficulty)
     assign(numbers[numRounds%numbers.length])
 });
 
