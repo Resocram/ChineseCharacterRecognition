@@ -14,6 +14,7 @@ export default function HomePage() {
   const [problem, setProblem] = useState(DATA[1]);
   const [numCorrect, setNumCorrect] = useState(0);
   const [numRounds, setNumRounds] = useState(0);
+  const [strokes, setStrokes] = useState([]);
 
   // Define canvasRef using useRef
   const canvasRef = useRef(null);
@@ -37,9 +38,9 @@ export default function HomePage() {
       <Definition definition={problem.definition} />
       <ExampleWords words={problem.exampleWord} />
       {/* Pass canvasRef as a ref to the Canvas component */}
-      <Canvas ref={canvasRef} />
+      <Canvas ref={canvasRef} strokes={strokes} setStrokes={setStrokes}/>
       <Buttons onUndo={handleUndo} onClear={handleClear} />
-      <Guesses strokes={canvasRef.current?.getStrokesArray()} />
+      <Guesses strokes={strokes} />
       <Answers />
       <Score numCorrect={numCorrect} numRounds={numRounds} />
       <DifficultySetter />

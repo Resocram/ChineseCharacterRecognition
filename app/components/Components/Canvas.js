@@ -6,7 +6,6 @@ class Canvas extends Component {
         this.canvasRef = React.createRef();
         this.state = {
             isDrawing: false,
-            strokes: [], // Array to store strokes that gets captured 50ms
             currentStrokes: [], // Array to store the current strokes being drawn
             position: { clientX: 0, clientY: 0 },
         };
@@ -42,8 +41,8 @@ class Canvas extends Component {
               clientY: event.clientY,
             },
             currentStrokes: [...prevState.currentStrokes,[currentPoint]],
-            strokes: [...prevState.strokes, []], // Add a new empty array to strokes
-          }));
+        }));
+        this.props.setStrokes([...this.props.strokes,[[currentPoint.x,currentPoint.y],[currentPoint.x,currentPoint.y]]]);
         this.captureInterval = setInterval(() => this.capturePoint(), 50); // Capture points every 50ms
     };
 
@@ -96,21 +95,21 @@ class Canvas extends Component {
     capturePoint = () => {
         if (!this.state.isDrawing) return;
         const { offsetX, offsetY } = this.getMousePosition(this.state.position);
-        const currentPoint = { x: offsetX, y: offsetY };
+        const currentPoint = [offsetX, offsetY];
     
-        this.setState((prevState) => {
-            const { strokes } = prevState;
-            const lastStroke = strokes[strokes.length - 1] || [];
-            const lastPoint = lastStroke[lastStroke.length - 1];
-    
-            if (!lastPoint || lastPoint.x !== currentPoint.x || lastPoint.y !== currentPoint.y) {
-                lastStroke.push(currentPoint);
-                return { strokes: [...strokes.slice(0, -1), lastStroke] };
-            }
-    
-            return null; // No state update needed
-        });
-        console.log(this.state.strokes)
+
+        const strokes = this.props.strokes;
+        const lastStroke = strokes[strokes.length - 1] || [];
+        const lastPoint = lastStroke[lastStroke.length - 1];
+        if (!lastPoint){
+            lastStroke.push(currentPoint);
+            lastStroke.push(currentPoint);
+            this.props.setStrokes([...strokes.slice(0, -1), lastStroke])
+        }
+        else if (lastPoint[0] !== currentPoint[0] || lastPoint[1] !== currentPoint[1]) {
+            lastStroke.push(currentPoint);
+            this.props.setStrokes([...strokes.slice(0, -1), lastStroke])
+        }
     };
 
     getMousePosition(event) {
@@ -126,8 +125,8 @@ class Canvas extends Component {
         this.setState(() => ({
             isDrawing: false,
             currentStrokes: [], // Clear the current stroke
-            strokes: []
         }));
+        this.props.setStrokes([])
         clearInterval(this.captureInterval); // Stop capturing points
 
     }
@@ -141,14 +140,13 @@ class Canvas extends Component {
     undoButton = () => {
         this.setState((prevState) => {
             return { 
-                currentStrokes: prevState.currentStrokes.slice(0,-1),
-                strokes:prevState.strokes.slice(0,-1) 
+                currentStrokes: prevState.currentStrokes.slice(0,-1)
             };
         }, () => {
             // The following code will run after the state update is complete
             // Clear the canvas
             this.clearCanvas();
-    
+            this.props.setStrokes(this.props.strokes.slice(0,-1))
             // Redraw the remaining strokes
             this.state.currentStrokes.forEach((stroke) => {
                 for (let i = 0; i < stroke.length - 1; i++) {

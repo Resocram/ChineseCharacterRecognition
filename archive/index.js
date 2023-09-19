@@ -199,6 +199,7 @@ function fileLoaded(success) {
 // Fetches hand-drawn input from drawing board and looks up Hanzi
 function lookup() {
     // Decompose character from drawing board
+    console.log(_drawingBoard.cloneStrokes());
     var analyzedChar = new HanziLookup.AnalyzedCharacter(_drawingBoard.cloneStrokes());
     // Look up with original HanziLookup data
     var matcherOrig = new HanziLookup.Matcher("orig");
