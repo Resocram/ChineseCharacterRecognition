@@ -199,18 +199,22 @@ function fileLoaded(success) {
 // Fetches hand-drawn input from drawing board and looks up Hanzi
 function lookup() {
     // Decompose character from drawing board
+    console.log("strokes: ");
     console.log(_drawingBoard.cloneStrokes());
     var analyzedChar = new HanziLookup.AnalyzedCharacter(_drawingBoard.cloneStrokes());
+    console.log(analyzedChar)
     // Look up with original HanziLookup data
     var matcherOrig = new HanziLookup.Matcher("orig");
     matcherOrig.match(analyzedChar, 8, function(matches) {
         first = matches.map(char => char.character)
+        console.log(first)
         showResults()
     });
     // Look up with MMAH data
     var matcherMMAH = new HanziLookup.Matcher("mmah");
     matcherMMAH.match(analyzedChar, 8, function(matches) {
         second = matches.map(char => char.character)
+        console.log(second)
         showResults()
     });
 
