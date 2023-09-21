@@ -1,4 +1,3 @@
-// Inside Guesser component
 import React from 'react';
 
 export default function Buttons({ onUndo, onClear }) {

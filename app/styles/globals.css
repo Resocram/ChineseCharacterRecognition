@@ -1,7 +1,5 @@
 html,
 body {
-  padding: 0;
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
@@ -11,9 +9,6 @@ a {
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
-}
 
 @media (prefers-color-scheme: dark) {
   html {
@@ -23,4 +18,95 @@ a {
     color: white;
     background: black;
   }
+}
+
+.horizontal-list {
+    display: flex;
+    flex-direction: row;
+}
+
+.chinese {
+    padding: 5px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+#canvas {
+  border: 2px solid black; 
+  display: inline-block; 
+  cursor: crosshair;
+}
+
+/* Add left padding to all headers */
+#main{
+  margin-left: 15px;
+}
+
+.pinyin-definition-container {
+  display: flex;
+  align-items: center; /* Align vertically if necessary */
+}
+
+/* Add margin-left to the definition component */
+.pinyin-definition-container .definition{
+  margin-left: 25%; /* Adjust the margin as needed */
+}
+
+#recognized-characters{
+  margin-left:0%
+}
+
+h1{
+  font-size: 35px;
+}
+
+/* Your CSS file */
+h2 {
+  font-size: 28px;
+  margin: 0;
+}
+
+p {
+  margin-top: 5px;
+  font-size:20px;
+  text-align: left;
+  margin-left: 27px;
+}
+
+.canvas-buttons-container, h2, .horizontal-list {
+  margin-left: 20px;
+}
+
+.canvas-buttons-container{
+  display:inline-block;
+}
+
+.outer-canvas-buttons-guesses-container {
+  display: flex; /* Use flexbox */
+  flex-direction: row; /* Arrange children horizontally */
+  align-items: flex-start; /* Align children vertically in the center */
+}
+
+/* Buttons component */
+.button {
+  padding: 6px 15px;
+  font-size: 15px; /* Match the font size with the existing CSS */
+  background-color: #F0F0F0; /* Match the button background color with the existing style */
+  color: #000; /* Match the button text color with the existing style */
+  border: 2px solid #000; /* Black border */
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #0056b3; /* Match the hover background color with the existing style */
+}
+
+/* Center the buttons horizontally */
+.commands {
+  justify-content: space-between;
+  display: flex;
+}
+
+.chinese:hover {
+  background-color: #f0f0f0; /* Change to your preferred color */
 }

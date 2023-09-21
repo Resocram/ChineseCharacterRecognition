@@ -13,8 +13,6 @@ export default function DailyPage() {
 
     return (
         <div>
-            {console.log(dailyProblem)}
-            Daily Challenge 
             <Pinyin pinyin={dailyProblem.pinyin}/>
             <Definition definition={dailyProblem.definition}/>
             <ExampleWords words={dailyProblem.exampleWord}/>

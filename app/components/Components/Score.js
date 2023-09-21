@@ -3,7 +3,7 @@ export default function Score(props) {
 
     return (
         <div>
-            <h3 className="header">Score: {(props.numRounds > 0) && score}</h3>
+            <h2 className="header">Score: {(props.numRounds > 0) && score}</h2>
         </div>
     );
 }

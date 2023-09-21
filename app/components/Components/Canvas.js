@@ -125,16 +125,16 @@ class Canvas extends Component {
     }
 
     clearButton = () => {
+        this.props.setStrokes([]);
         this.clearCanvas();
-        this.setState(() => ({
+        this.setState({
             isDrawing: false,
             currentStrokes: [], // Clear the current stroke
             strokes: []
-        }));
-        this.props.setStrokes([])
+        });
+        
         clearInterval(this.captureInterval); // Stop capturing points
-
-    }
+    };
     clearCanvas = () => {
         const canvas = this.canvasRef.current;
         const ctx = canvas.getContext('2d');
@@ -149,11 +149,8 @@ class Canvas extends Component {
                 strokes: prevState.strokes.slice(0,-1)
             };
         }, () => {
-            // The following code will run after the state update is complete
-            // Clear the canvas
             this.clearCanvas();
             this.props.setStrokes(this.props.strokes.slice(0,-1))
-            // Redraw the remaining strokes
             this.state.currentStrokes.forEach((stroke) => {
                 for (let i = 0; i < stroke.length - 1; i++) {
                     const startPoint = stroke[i];
@@ -166,8 +163,8 @@ class Canvas extends Component {
 
     render() {
         return (
-            <div style={{ border: "2px solid black", display: "inline-block" }}>
-                <canvas ref={this.canvasRef} width={300} height={300}></canvas>
+            <div>
+                <canvas id="canvas" ref={this.canvasRef} width={300} height={300}></canvas>
             </div>
         );
     }

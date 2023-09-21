@@ -1,4 +1,4 @@
-import { useState, useRef } from "react"; // Import useRef
+import React, { Component } from "react";
 import { DATA } from "../../src/data/wordBank";
 import Pinyin from "../Components/Pinyin";
 import Definition from "../Components/Definition";
@@ -10,45 +10,88 @@ import Score from "../Components/Score";
 import DifficultySetter from "../Components/DifficultySetter";
 import Answers from "../Components/Answers";
 
-export default function HomePage() {
-  const [problem, setProblem] = useState(DATA[1]);
-  const [numCorrect, setNumCorrect] = useState(0);
-  const [numRounds, setNumRounds] = useState(0);
-  const [strokes, setStrokes] = useState([]);
+class HomePage extends Component {
+  constructor(props) {
+    super(props);
+    this.canvasRef = React.createRef();
+    this.state = {
+      difficulty: 1,
+      problems: [DATA[0]],
+      numCorrect: 0,
+      numRounds: 1,
+      strokes: [],
+    };
 
-  // Define canvasRef using useRef
-  const canvasRef = useRef(null);
+  }
 
-  const handleUndo = () => {
-    // Call undoLastStroke function from Canvas component
-    // You can access the Canvas component instance using a ref
-    canvasRef.current.undoButton();
+  setStrokes = (newStrokes) => {
+    this.setState({ strokes: newStrokes });
   };
 
-  const handleClear = () => {
-    // Call clearCanvas function from Canvas component
-    // You can access the Canvas component instance using a ref
-    canvasRef.current.clearButton();
+  clearCanvas = () => {
+    this.canvasRef.current.clearButton();
   };
 
-  return (
-    <div>
-      Chinese Character Recognition
-      <Pinyin pinyin={problem.pinyin} />
-      <Definition definition={problem.definition} />
-      <ExampleWords words={problem.exampleWord} />
-      {/* Pass canvasRef as a ref to the Canvas component */}
-      <Canvas ref={canvasRef} strokes={strokes} setStrokes={setStrokes}/>
-      <Buttons onUndo={handleUndo} onClear={handleClear} />
-      <Guesses strokes={strokes} />
-      <Answers />
-      <Score numCorrect={numCorrect} numRounds={numRounds} />
-      <DifficultySetter />
-    </div>
-  );
+  // Add a method to undo the last stroke
+  undoStroke = () => {
+    this.canvasRef.current.undoButton();
+  };
+
+  shuffleArray(array) {
+    const slicedArray = [...array];
+  
+    // Shuffle the sliced array
+    for (let i = slicedArray.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [slicedArray[i], slicedArray[j]] = [slicedArray[j], slicedArray[i]];
+    }
+  
+    return slicedArray;
+  }
+
+  componentDidMount() {
+    // Fetch matches initially
+    this.setState(
+      {
+        problems: this.shuffleArray(DATA.slice(0,this.state.difficulty))
+      }
+    )
 }
 
+  render() {
+    const {
+      problems,
+      numRounds,
+      strokes,
+      difficulty,
+      numCorrect,
+    } = this.state;
 
+    return (
+      <div>
+        <h1>Chinese Character Recognition</h1>
+        <div className="pinyin-definition-container">
+          <Pinyin pinyin={problems[numRounds - 1].pinyin} />
+          <div className="definition">
+            <Definition definition={problems[numRounds - 1].definition} />
+          </div>
+        </div>
+        <ExampleWords char={problems[numRounds-1].char} words={problems[numRounds - 1].exampleWord} />
+        <div className="outer-canvas-buttons-guesses-container">
+          <div className="canvas-buttons-container">
+            <Canvas ref={this.canvasRef} strokes={strokes} setStrokes={this.setStrokes} />
+            <Buttons onUndo={this.undoStroke} onClear={this.clearCanvas} />
+          </div>
+          <div>
+            <Guesses strokes={strokes} />
+          </div>
+        </div>
+        <Answers />
+        <Score numCorrect={numCorrect} numRounds={numRounds} />
+        <DifficultySetter />
+      </div>
+    );
+  }
+}
 
-
-
+export default HomePage;
