@@ -162,9 +162,13 @@ class Canvas extends Component {
     };
 
     render() {
+        console.log(this.props.showResults)
         return (
-            <div>
+            <div style={{ position: 'relative' }}>
                 <canvas id="canvas" ref={this.canvasRef} width={300} height={300}></canvas>
+                <div className={`popup ${this.props.showResults ? "fade-in" : "fade-out"} ${this.props.isCorrectGuess ? "correct-popup" : "incorrect-popup"}`}>
+                    {this.props.isCorrectGuess ? "Correct" : "Try Again"}
+                </div>
             </div>
         );
     }

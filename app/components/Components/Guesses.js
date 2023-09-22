@@ -61,8 +61,7 @@ class Guesses extends Component {
         this.setState({results:[...uniqueSet]});
     
     }
-
-
+    
     render() {
         return (
             <div>
@@ -70,7 +69,7 @@ class Guesses extends Component {
                     <h2>Recognized Characters</h2>
                     <div className="horizontal-list">
                         {this.state.results.map((char, index) => (
-                            <span key={index} className="chinese">
+                            <span key={index} className="chinese" onClick={() => this.props.guess(char)}>
                                 {char}
                             </span>
                         ))}

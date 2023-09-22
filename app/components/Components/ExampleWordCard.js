@@ -1,6 +1,6 @@
 export default function ExampleWordCard(props) {
     let answers = props.char;
-    let simpAnswer = answers;
+    let simpAnswer = answers[0];
     let tradAnswer = answers;
     if (answers.indexOf("F") !== -1) {
         tradAnswer = answers[answers.indexOf("F") + 1]

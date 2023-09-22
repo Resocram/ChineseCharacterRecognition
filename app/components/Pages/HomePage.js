@@ -15,11 +15,13 @@ class HomePage extends Component {
     super(props);
     this.canvasRef = React.createRef();
     this.state = {
-      difficulty: 1,
+      difficulty: 1000,
       problems: [DATA[0]],
       numCorrect: 0,
       numRounds: 1,
       strokes: [],
+      isCorrectGuess: false,
+      showResults: false
     };
 
   }
@@ -28,6 +30,36 @@ class HomePage extends Component {
     this.setState({ strokes: newStrokes });
   };
 
+  guess = (char) => {
+    const { problems, numRounds } = this.state;
+
+    const isCorrect = problems[numRounds - 1].char.includes(char);
+
+    if (this.fadeTimeout) {
+      clearTimeout(this.fadeTimeout);
+    }
+
+    this.setState({
+      isCorrectGuess: isCorrect,
+      showResults: true,
+    });
+
+    if (isCorrect) {
+      this.setState((prevState) => ({
+        numCorrect: prevState.numCorrect + 1,
+        numRounds: prevState.numRounds + 1,
+        strokes: []
+      }));
+      this.clearCanvas()
+    }
+
+    this.fadeTimeout = setTimeout(() => {
+      this.setState({
+        showResults: false,
+      });
+    }, 500);
+
+  };
   clearCanvas = () => {
     this.canvasRef.current.clearButton();
   };
@@ -36,6 +68,14 @@ class HomePage extends Component {
   undoStroke = () => {
     this.canvasRef.current.undoButton();
   };
+
+  nextCharacter =() => {
+    this.setState((prevState) => ({
+      numRounds: prevState.numRounds + 1,
+      strokes: [],
+    }));
+    this.clearCanvas()
+  }
 
   shuffleArray(array) {
     const slicedArray = [...array];
@@ -65,6 +105,9 @@ class HomePage extends Component {
       strokes,
       difficulty,
       numCorrect,
+      isCorrectGuess,
+      showResults,
+    
     } = this.state;
 
     return (
@@ -79,12 +122,13 @@ class HomePage extends Component {
         <ExampleWords char={problems[numRounds-1].char} words={problems[numRounds - 1].exampleWord} />
         <div className="outer-canvas-buttons-guesses-container">
           <div className="canvas-buttons-container">
-            <Canvas ref={this.canvasRef} strokes={strokes} setStrokes={this.setStrokes} />
-            <Buttons onUndo={this.undoStroke} onClear={this.clearCanvas} />
+            <Canvas ref={this.canvasRef} strokes={strokes} setStrokes={this.setStrokes} showResults={showResults} isCorrectGuess={isCorrectGuess}/>
+            <Buttons onUndo={this.undoStroke} onClear={this.clearCanvas} onNext={this.nextCharacter} />
           </div>
           <div>
-            <Guesses strokes={strokes} />
-          </div>
+            <Guesses answer ={problems[numRounds-1]} strokes={strokes} guess={this.guess} />
+
+          </div> 
         </div>
         <Answers />
         <Score numCorrect={numCorrect} numRounds={numRounds} />

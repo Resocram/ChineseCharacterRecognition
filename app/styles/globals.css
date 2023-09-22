@@ -27,7 +27,7 @@ a {
 
 .chinese {
     padding: 5px;
-    font-size: 30px;
+    font-size: 35px;
     cursor: pointer;
 }
 
@@ -37,19 +37,17 @@ a {
   cursor: crosshair;
 }
 
-/* Add left padding to all headers */
 #main{
   margin-left: 15px;
 }
 
 .pinyin-definition-container {
   display: flex;
-  align-items: center; /* Align vertically if necessary */
+  align-items: center; 
 }
 
-/* Add margin-left to the definition component */
 .pinyin-definition-container .definition{
-  margin-left: 25%; /* Adjust the margin as needed */
+  margin-left: 25%; 
 }
 
 #recognized-characters{
@@ -60,7 +58,6 @@ h1{
   font-size: 35px;
 }
 
-/* Your CSS file */
 h2 {
   font-size: 28px;
   margin: 0;
@@ -82,31 +79,63 @@ p {
 }
 
 .outer-canvas-buttons-guesses-container {
-  display: flex; /* Use flexbox */
-  flex-direction: row; /* Arrange children horizontally */
-  align-items: flex-start; /* Align children vertically in the center */
+  display: flex; 
+  flex-direction: row; 
+  align-items: flex-start; 
 }
 
-/* Buttons component */
 .button {
   padding: 6px 15px;
-  font-size: 15px; /* Match the font size with the existing CSS */
-  background-color: #F0F0F0; /* Match the button background color with the existing style */
-  color: #000; /* Match the button text color with the existing style */
-  border: 2px solid #000; /* Black border */
+  font-size: 15px; 
+  background-color: #F0F0F0; 
+  color: #000; 
+  border: 2px solid #000; 
   cursor: pointer;
 }
 
 .button:hover {
-  background-color: #0056b3; /* Match the hover background color with the existing style */
+  background-color: #0056b3; 
 }
 
-/* Center the buttons horizontally */
 .commands {
   justify-content: space-between;
   display: flex;
 }
 
 .chinese:hover {
-  background-color: #f0f0f0; /* Change to your preferred color */
+  background-color: #f0f0f0; 
+}
+
+.popup{
+  font-size: 28px;
+  margin: 0;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+
+}
+
+.correct-popup {
+  color: green; /* Set the text color to green for correct guesses */
+}
+.incorrect-popup {
+  color: red; /* Set the text color to green for correct guesses */
+}
+
+
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.5s linear;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s linear;
 }
