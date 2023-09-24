@@ -1,8 +1,8 @@
-export default function Pinyin(props) {
+export default function Pinyin({pinyin}) {
     return (
         <div>
             <h2 className="header">Pinyin</h2>
-            <p>{props.pinyin}</p>
+            <p>{pinyin}</p>
         </div>
     );
 }

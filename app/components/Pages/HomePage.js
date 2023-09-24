@@ -9,6 +9,9 @@ import Buttons from "../Components/Buttons";
 import Score from "../Components/Score";
 import DifficultySetter from "../Components/DifficultySetter";
 import Answers from "../Components/Answers";
+import CharPreview from "../Components/CharPreview"
+import RangeSlider from "../Components/CharacterFormation"
+import HanziWriter from 'hanzi-writer';
 
 class HomePage extends Component {
   constructor(props) {
@@ -21,7 +24,11 @@ class HomePage extends Component {
       numRounds: 1,
       strokes: [],
       isCorrectGuess: false,
-      showResults: false
+      showResults: false,
+      prevAnswers: [],
+      showPreview: false,
+      hanziWriter: null,
+      charPreview: null,
     };
 
   }
@@ -32,7 +39,7 @@ class HomePage extends Component {
 
   guess = (char) => {
     const { problems, numRounds } = this.state;
-
+    
     const isCorrect = problems[numRounds - 1].char.includes(char);
 
     if (this.fadeTimeout) {
@@ -48,9 +55,10 @@ class HomePage extends Component {
       this.setState((prevState) => ({
         numCorrect: prevState.numCorrect + 1,
         numRounds: prevState.numRounds + 1,
-        strokes: []
+        strokes: [],
+        prevAnswers: [...prevState.prevAnswers,{answer:problems[numRounds-1],correct:true}]
       }));
-      this.clearCanvas()
+      this.clearButton()
     }
 
     this.fadeTimeout = setTimeout(() => {
@@ -60,23 +68,49 @@ class HomePage extends Component {
     }, 500);
 
   };
-  clearCanvas = () => {
+  clearButton = () => {
     this.canvasRef.current.clearButton();
   };
 
   // Add a method to undo the last stroke
-  undoStroke = () => {
+  undoButton = () => {
     this.canvasRef.current.undoButton();
   };
 
-  nextCharacter =() => {
+  nextButton =() => {
+    const { problems, numRounds } = this.state;
     this.setState((prevState) => ({
       numRounds: prevState.numRounds + 1,
       strokes: [],
+      prevAnswers: [...prevState.prevAnswers,{answer:problems[numRounds-1],correct:false}]
     }));
-    this.clearCanvas()
+    this.clearButton()
   }
 
+  prevChar = (char, trad) => {
+    let word = char.answer.char.charAt(0);
+    if (trad) {
+      word = trad;
+      
+    }
+    this.setState(() => ({
+      showPreview: true,
+      charPreview: char
+    }));
+    this.state.hanziWriter.setCharacter(word)
+
+  };
+
+  hideButton =() => {
+    this.setState(() => ({
+      showPreview: false
+    }));
+  }
+
+
+  animateButton = () => {
+    this.state.hanziWriter.animateCharacter()
+  }
   shuffleArray(array) {
     const slicedArray = [...array];
   
@@ -91,12 +125,24 @@ class HomePage extends Component {
 
   componentDidMount() {
     // Fetch matches initially
+    const options = {
+      width: 100,
+      height: 100,
+      padding: 5,
+      strokeAnimationSpeed: 1,
+      delayBetweenStrokes: 200,
+      showOutline: true,
+    }
+
     this.setState(
       {
-        problems: this.shuffleArray(DATA.slice(0,this.state.difficulty))
+        problems: this.shuffleArray(DATA.slice(0,this.state.difficulty)),
+        hanziWriter: new HanziWriter('char-preview',options)
       }
     )
-}
+  }
+
+
 
   render() {
     const {
@@ -107,7 +153,9 @@ class HomePage extends Component {
       numCorrect,
       isCorrectGuess,
       showResults,
-    
+      prevAnswers,    
+      showPreview,
+      charPreview,
     } = this.state;
 
     return (
@@ -115,22 +163,25 @@ class HomePage extends Component {
         <h1>Chinese Character Recognition</h1>
         <div className="pinyin-definition-container">
           <Pinyin pinyin={problems[numRounds - 1].pinyin} />
-          <div className="definition">
-            <Definition definition={problems[numRounds - 1].definition} />
-          </div>
+          <Definition definition={problems[numRounds - 1].definition} />
+          <ExampleWords char={problems[numRounds-1].char} words={problems[numRounds - 1].exampleWord} />
         </div>
-        <ExampleWords char={problems[numRounds-1].char} words={problems[numRounds - 1].exampleWord} />
+        
         <div className="outer-canvas-buttons-guesses-container">
           <div className="canvas-buttons-container">
             <Canvas ref={this.canvasRef} strokes={strokes} setStrokes={this.setStrokes} showResults={showResults} isCorrectGuess={isCorrectGuess}/>
-            <Buttons onUndo={this.undoStroke} onClear={this.clearCanvas} onNext={this.nextCharacter} />
+            <Buttons onUndo={this.undoButton} onClear={this.clearButton} onNext={this.nextButton} />
           </div>
           <div>
             <Guesses answer ={problems[numRounds-1]} strokes={strokes} guess={this.guess} />
 
           </div> 
         </div>
-        <Answers />
+        <div className="answers-animate-container">
+          <Answers prevAnswers={prevAnswers} onPrevChar={this.prevChar} />
+          <CharPreview showPreview={showPreview} onHide={this.hideButton} onAnimate={this.animateButton} char={charPreview}/>
+        </div>
+        
         <Score numCorrect={numCorrect} numRounds={numRounds} />
         <DifficultySetter />
       </div>

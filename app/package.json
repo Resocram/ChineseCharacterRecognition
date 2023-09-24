@@ -9,9 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "fa": "^1.0.1",
+    "hanzi-writer": "^3.6.0",
     "next": "13.4.19",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-icons": "^4.11.0"
   },
   "devDependencies": {
     "eslint": "8.49.0",

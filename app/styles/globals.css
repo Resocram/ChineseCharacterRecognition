@@ -43,12 +43,21 @@ a {
 
 .pinyin-definition-container {
   display: flex;
-  align-items: center; 
+  align-items: stretch;
+  justify-content: space-between;
+}
+.pinyin-definition-container > div:nth-child(1) {
+  flex: 0 0 10%; /* 10% of the available space */
 }
 
-.pinyin-definition-container .definition{
-  margin-left: 25%; 
+.pinyin-definition-container > div:nth-child(2) {
+  flex: 0 0 20%; /* 10% of the available space */
 }
+
+.pinyin-definition-container > div:nth-child(3) {
+  flex: 0 0 70%; /* 80% of the available space */
+}
+
 
 #recognized-characters{
   margin-left:0%
@@ -123,10 +132,10 @@ p {
 }
 
 .correct-popup {
-  color: green; /* Set the text color to green for correct guesses */
+  color: green; 
 }
 .incorrect-popup {
-  color: red; /* Set the text color to green for correct guesses */
+  color: red; 
 }
 
 
@@ -138,4 +147,40 @@ p {
 .fade-out {
   opacity: 0;
   transition: opacity 0.5s linear;
+}
+
+.underline-green {
+  text-decoration: underline green;
+}
+
+.underline-red {
+  text-decoration: underline red;
+}
+.horizontal-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.answers-animate-container {
+  display: flex; 
+  justify-content: space-between; 
+}
+
+.half-width {
+  flex: 0 0 50%;
+}
+
+.hidden {
+  display: none;
+}
+
+.char-preview-container {
+  display: flex;
+  align-items: center; /* Vertically center the items */
+}
+
+#char-preview {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
 }

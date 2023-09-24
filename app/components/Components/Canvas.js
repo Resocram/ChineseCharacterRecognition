@@ -162,7 +162,6 @@ class Canvas extends Component {
     };
 
     render() {
-        console.log(this.props.showResults)
         return (
             <div style={{ position: 'relative' }}>
                 <canvas id="canvas" ref={this.canvasRef} width={300} height={300}></canvas>

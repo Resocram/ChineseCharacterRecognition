@@ -388,7 +388,7 @@
     },
     {
         "pinyin": "zhè",
-        "char": "这(F這)",
+        "char": "这(這)",
         "definition": "this, the, here",
         "charForm": [{
                 "char": "辶",
@@ -514,7 +514,7 @@
     },
     {
         "pinyin": "lái",
-        "char": "来(F來)",
+        "char": "来(來)",
         "definition": "come, coming; return, returning",
         "charForm": [{
                 "char": "未",
@@ -598,7 +598,7 @@
     },
     {
         "pinyin": "guó",
-        "char": "国(F國)",
+        "char": "国(國)",
         "definition": "nation, country, nation-state",
         "charForm": [{
                 "char": "囗",
@@ -640,7 +640,7 @@
     },
     {
         "pinyin": "gè",
-        "char": "个(F個,箇)",
+        "char": "个(個,箇)",
         "definition": "numerary adjunct, piece; single",
         "charForm": [{
                 "char": "人",
@@ -724,7 +724,7 @@
     },
     {
         "pinyin": "shuō",
-        "char": "说(F說)",
+        "char": "说(說)",
         "definition": "speak, say, talk; scold, upbraid",
         "charForm": [{
                 "char": "讠",
@@ -766,7 +766,7 @@
     },
     {
         "pinyin": "men",
-        "char": "们(F們)",
+        "char": "们(們)",
         "definition": "adjunct pronoun indicate plural",
         "charForm": [{
                 "char": "亻",
@@ -808,7 +808,7 @@
     },
     {
         "pinyin": "wèi",
-        "char": "为(F為)",
+        "char": "为(為)",
         "definition": "do, handle, govern, act; be",
         "charForm": [{
                 "char": "丶",
@@ -1148,7 +1148,7 @@
     },
     {
         "pinyin": "shí",
-        "char": "时(F時)",
+        "char": "时(時)",
         "definition": "time, season; era, age, period",
         "charForm": [{
                 "char": "日",
@@ -1519,7 +1519,7 @@
     },
     {
         "pinyin": "huì",
-        "char": "会(F會)",
+        "char": "会(會)",
         "definition": "assemble, meet together; meeting",
         "charForm": [{
                 "char": "人",
@@ -1597,7 +1597,7 @@
     },
     {
         "pinyin": "zhe",
-        "char": "着(F著)",
+        "char": "着(著)",
         "definition": "make move, take action",
         "charForm": [{
                 "char": "羊",
@@ -1717,7 +1717,7 @@
     },
     {
         "pinyin": "guò",
-        "char": "过(F過)",
+        "char": "过(過)",
         "definition": "pass, pass through, go across",
         "charForm": [{
                 "char": "辶",
@@ -1801,7 +1801,7 @@
     },
     {
         "pinyin": "xué",
-        "char": "学(F學)",
+        "char": "学(學)",
         "definition": "learning, knowledge; school",
         "charForm": [{
                 "char": "子",
@@ -1848,7 +1848,7 @@
     },
     {
         "pinyin": "duì",
-        "char": "对(F對)",
+        "char": "对(對)",
         "definition": "correct, right; facing, opposed",
         "charForm": [{
                 "char": "又",
@@ -2436,7 +2436,7 @@
     },
     {
         "pinyin": "méi",
-        "char": "没(F沒)",
+        "char": "没(沒)",
         "definition": "not, have not, none; drown, sink",
         "charForm": [{
                 "char": "氵",
@@ -2604,7 +2604,7 @@
     },
     {
         "pinyin": "hái",
-        "char": "还(F還)",
+        "char": "还(還)",
         "definition": "still, yet, also, besides",
         "charForm": [{
                 "char": "辶",
@@ -2781,7 +2781,7 @@
     },
     {
         "pinyin": "zhǐ",
-        "char": "只(F祇)",
+        "char": "只(祇)",
         "definition": "only, just, simply",
         "charForm": [{
                 "char": "口",
@@ -3033,7 +3033,7 @@
     },
     {
         "pinyin": "wú",
-        "char": "无(F無)",
+        "char": "无(無)",
         "definition": "negative, no, not; KangXi radical 71",
         "charForm": [{
                 "char": "一",
@@ -3075,7 +3075,7 @@
     },
     {
         "pinyin": "kāi",
-        "char": "开(F開)",
+        "char": "开(開)",
         "definition": "open; initiate, begin, start",
         "charForm": [{
                 "char": "一",
@@ -3552,7 +3552,7 @@
     },
     {
         "pinyin": "jiàn",
-        "char": "见(F見)",
+        "char": "见(見)",
         "definition": "see, observe, behold; perceive",
         "charForm": [{
                 "char": "冂",
@@ -3594,7 +3594,7 @@
     },
     {
         "pinyin": "jīng",
-        "char": "经(F經)",
+        "char": "经(經)",
         "definition": "classic works; pass through",
         "charForm": [{
                 "char": "纟",
@@ -3636,7 +3636,7 @@
     },
     {
         "pinyin": "tóu",
-        "char": "头(F頭)",
+        "char": "头(頭)",
         "definition": "head; top; chief, first; boss",
         "charForm": [{
                 "char": "⺀",
@@ -3910,7 +3910,7 @@
     },
     {
         "pinyin": "cóng",
-        "char": "从(F從)",
+        "char": "从(從)",
         "definition": "from, by, since, whence, through",
         "charForm": [{
                 "char": "人",
@@ -3952,7 +3952,7 @@
     },
     {
         "pinyin": "dòng",
-        "char": "动(F動)",
+        "char": "动(動)",
         "definition": "move, happen; movement, action",
         "charForm": [{
                 "char": "云",
@@ -3994,7 +3994,7 @@
     },
     {
         "pinyin": "liǎng",
-        "char": "两(F兩)",
+        "char": "两(兩)",
         "definition": "two, both, pair, couple; ounce",
         "charForm": [{
                 "char": "一",
@@ -4041,7 +4041,7 @@
     },
     {
         "pinyin": "cháng",
-        "char": "长(F長)",
+        "char": "长(長)",
         "definition": "long; length; excel in; leader",
         "charForm": [{
             "char": "一",
@@ -4161,7 +4161,7 @@
     },
     {
         "pinyin": "yàng",
-        "char": "样(F樣)",
+        "char": "样(樣)",
         "definition": "shape, form, pattern, style",
         "charForm": [{
                 "char": "木",
@@ -4203,7 +4203,7 @@
     },
     {
         "pinyin": "xiàn",
-        "char": "现(F現)",
+        "char": "现(現)",
         "definition": "appear, manifest, become visible",
         "charForm": [{
                 "char": "王",
@@ -4287,7 +4287,7 @@
     },
     {
         "pinyin": "jiāng",
-        "char": "将(F將)",
+        "char": "将(將)",
         "definition": "will, going to, future; general",
         "charForm": [{
                 "char": "丬",
@@ -4492,7 +4492,7 @@
     },
     {
         "pinyin": "yǔ",
-        "char": "与(F與)",
+        "char": "与(與)",
         "definition": "and; with; to; for; give, grant",
         "charForm": [{
             "char": "一",
@@ -4617,7 +4617,7 @@
     },
     {
         "pinyin": "jìn",
-        "char": "进(F進)",
+        "char": "进(進)",
         "definition": "advance, make progress, enter",
         "charForm": [{
                 "char": "辶",
@@ -4785,7 +4785,7 @@
     },
     {
         "pinyin": "shí",
-        "char": "实(F實)",
+        "char": "实(實)",
         "definition": "real, true; honest, sincere",
         "charForm": [{
                 "char": "宀",
@@ -4995,7 +4995,7 @@
     },
     {
         "pinyin": "diǎn",
-        "char": "点(F點)",
+        "char": "点(點)",
         "definition": "dot, speck, spot; point, degree",
         "charForm": [{
                 "char": "占",
@@ -5168,7 +5168,7 @@
     },
     {
         "pinyin": "zhǒng",
-        "char": "种(F種)",
+        "char": "种(種)",
         "definition": "seed; race, breed; to plant",
         "charForm": [{
                 "char": "禾",
@@ -5210,7 +5210,7 @@
     },
     {
         "pinyin": "shēng",
-        "char": "声(F聲)",
+        "char": "声(聲)",
         "definition": "sound, voice, noise; tone; music",
         "charForm": [{
             "char": "士",
@@ -5366,7 +5366,7 @@
     },
     {
         "pinyin": "huà",
-        "char": "话(F話)",
+        "char": "话(話)",
         "definition": "speech, talk, language; dialect",
         "charForm": [{
                 "char": "讠",
@@ -5408,7 +5408,7 @@
     },
     {
         "pinyin": "ér",
-        "char": "儿(F兒)",
+        "char": "儿(兒)",
         "definition": "son, child; KangXi radical 10",
         "charForm": [{
                 "char": "丿",
@@ -5770,7 +5770,7 @@
     },
     {
         "pinyin": "wèn",
-        "char": "问(F問)",
+        "char": "问(問)",
         "definition": "ask about, inquire after",
         "charForm": [{
                 "char": "门",
@@ -5848,7 +5848,7 @@
     },
     {
         "pinyin": "jī",
-        "char": "机(F機)",
+        "char": "机(機)",
         "definition": "desk; machine; moment",
         "charForm": [{
                 "char": "木",
@@ -5890,7 +5890,7 @@
     },
     {
         "pinyin": "gěi",
-        "char": "给(F給)",
+        "char": "给(給)",
         "definition": "give; by, for",
         "charForm": [{
                 "char": "纟",
@@ -6058,7 +6058,7 @@
     },
     {
         "pinyin": "yè",
-        "char": "业(F業)",
+        "char": "业(業)",
         "definition": "profession, business; GB radical 111",
         "charForm": [{
             "char": "一",
@@ -6136,7 +6136,7 @@
     },
     {
         "pinyin": "jiān",
-        "char": "间(F間)",
+        "char": "间(間)",
         "definition": "midpoint, space; place, locality",
         "charForm": [{
                 "char": "门",
@@ -6220,7 +6220,7 @@
     },
     {
         "pinyin": "shén",
-        "char": "什(F甚)",
+        "char": "什(甚)",
         "definition": "file of ten soldiers; mixed, miscellaneous",
         "charForm": [{
                 "char": "亻",
@@ -6556,7 +6556,7 @@
     },
     {
         "pinyin": "diàn",
-        "char": "电(F電)",
+        "char": "电(電)",
         "definition": "electricity; electric; lightning",
         "charForm": [{
                 "char": "曰",
@@ -6682,7 +6682,7 @@
     },
     {
         "pinyin": "mén",
-        "char": "门(F門)",
+        "char": "门(門)",
         "definition": "gate, door, entrance, opening",
         "charForm": [{
                 "char": "丶",
@@ -6808,7 +6808,7 @@
     },
     {
         "pinyin": "dōng",
-        "char": "东(F東)",
+        "char": "东(東)",
         "definition": "east, eastern, eastward",
         "charForm": [{
                 "char": "七",
@@ -7228,7 +7228,7 @@
     },
     {
         "pinyin": "tīng",
-        "char": "听(F聽)",
+        "char": "听(聽)",
         "definition": "hear; understand; obey, comply",
         "charForm": [{
                 "char": "口",
@@ -7306,7 +7306,7 @@
     },
     {
         "pinyin": "qì",
-        "char": "气(F氣)",
+        "char": "气(氣)",
         "definition": "steam, vapor; KangXi radical 84",
         "charForm": [{
             "char": "亻",
@@ -7462,7 +7462,7 @@
     },
     {
         "pinyin": "guān",
-        "char": "关(F關)",
+        "char": "关(關)",
         "definition": "frontier pass; close; relation",
         "charForm": [{
                 "char": "丷",
@@ -7546,7 +7546,7 @@
     },
     {
         "pinyin": "nèi",
-        "char": "内(F內)",
+        "char": "内(內)",
         "definition": "inside",
         "charForm": [{
                 "char": "冂",
@@ -7704,7 +7704,7 @@
     },
     {
         "pinyin": "què",
-        "char": "却(F卻)",
+        "char": "却(卻)",
         "definition": "still, but; decline; retreat",
         "charForm": [{
                 "char": "去",
@@ -7788,7 +7788,7 @@
     },
     {
         "pinyin": "jūn",
-        "char": "军(F軍)",
+        "char": "军(軍)",
         "definition": "army, military; soldiers, troops",
         "charForm": [{
                 "char": "冖",
@@ -7830,7 +7830,7 @@
     },
     {
         "pinyin": "chǎn",
-        "char": "产(F產)",
+        "char": "产(產)",
         "definition": "give birth, bring forth, produce",
         "charForm": [{
                 "char": "亠",
@@ -8112,7 +8112,7 @@
     },
     {
         "pinyin": "wàn",
-        "char": "万(F萬)",
+        "char": "万(萬)",
         "definition": "ten thousand; innumerable",
         "charForm": [{
             "char": "一",
@@ -8232,7 +8232,7 @@
     },
     {
         "pinyin": "tǐ",
-        "char": "体(F體)",
+        "char": "体(體)",
         "definition": "body; group, class, body, unit; inferior",
         "charForm": [{
                 "char": "亻",
@@ -8274,7 +8274,7 @@
     },
     {
         "pinyin": "bié",
-        "char": "别(F別,彆)",
+        "char": "别(別,彆)",
         "definition": "separate, other; do not",
         "charForm": [{
                 "char": "另",
@@ -8316,7 +8316,7 @@
     },
     {
         "pinyin": "chù",
-        "char": "处(F處)",
+        "char": "处(處)",
         "definition": "place, locale; department",
         "charForm": [{
                 "char": "夂",
@@ -8358,7 +8358,7 @@
     },
     {
         "pinyin": "zǒng",
-        "char": "总(F總)",
+        "char": "总(總)",
         "definition": "collect; overall, altogether",
         "charForm": [{
                 "char": "丷",
@@ -8405,7 +8405,7 @@
     },
     {
         "pinyin": "cái",
-        "char": "才(F纔)",
+        "char": "才(纔)",
         "definition": "talent, ability; just, only",
         "charForm": [{
             "char": "扌",
@@ -8441,7 +8441,7 @@
     },
     {
         "pinyin": "chǎng",
-        "char": "场(F場)",
+        "char": "场(場)",
         "definition": "open space, field, market",
         "charForm": [{
                 "char": "土",
@@ -8483,7 +8483,7 @@
     },
     {
         "pinyin": "shī",
-        "char": "师(F師)",
+        "char": "师(師)",
         "definition": "teacher, master, specialist",
         "charForm": [{
                 "char": "刂",
@@ -8525,7 +8525,7 @@
     },
     {
         "pinyin": "shū",
-        "char": "书(F書)",
+        "char": "书(書)",
         "definition": "book, letter, document; writings",
         "charForm": [{
             "char": "丨",
@@ -8645,7 +8645,7 @@
     },
     {
         "pinyin": "yuán",
-        "char": "员(F員)",
+        "char": "员(員)",
         "definition": "member; personnel, staff member",
         "charForm": [{
                 "char": "口",
@@ -8897,7 +8897,7 @@
     },
     {
         "pinyin": "huá",
-        "char": "华(F華)",
+        "char": "华(華)",
         "definition": "flowery; illustrious; Chinese",
         "charForm": [{
                 "char": "化",
@@ -8939,7 +8939,7 @@
     },
     {
         "pinyin": "bào",
-        "char": "报(F報)",
+        "char": "报(報)",
         "definition": "report, tell, announce",
         "charForm": [{
                 "char": "扌",
@@ -9038,7 +9038,7 @@
     },
     {
         "pinyin": "mǎ",
-        "char": "马(F馬)",
+        "char": "马(馬)",
         "definition": "horse; surname; KangXi radical 187",
         "charForm": [{
             "char": "一",
@@ -9116,7 +9116,7 @@
     },
     {
         "pinyin": "zhāng",
-        "char": "张(F張)",
+        "char": "张(張)",
         "definition": "stretch, extend, expand; sheet",
         "charForm": [{
                 "char": "弓",
@@ -9200,7 +9200,7 @@
     },
     {
         "pinyin": "nán",
-        "char": "难(F難)",
+        "char": "难(難)",
         "definition": "difficult, arduous, hard; unable",
         "charForm": [{
                 "char": "又",
@@ -9284,7 +9284,7 @@
     },
     {
         "pinyin": "shù",
-        "char": "数(F數)",
+        "char": "数(數)",
         "definition": "number; several, count; fate",
         "charForm": [{
                 "char": "娄",
@@ -9494,7 +9494,7 @@
     },
     {
         "pinyin": "chē",
-        "char": "车(F車)",
+        "char": "车(車)",
         "definition": "cart, vehicle; carry in cart",
         "charForm": [{
                 "char": "七",
@@ -9572,7 +9572,7 @@
     },
     {
         "pinyin": "yīng",
-        "char": "应(F應)",
+        "char": "应(應)",
         "definition": "should, ought to, must",
         "charForm": [{
                 "char": "广",
@@ -10244,7 +10244,7 @@
     },
     {
         "pinyin": "jì",
-        "char": "计(F計)",
+        "char": "计(計)",
         "definition": "plan, plot; strategem; scheme",
         "charForm": [{
                 "char": "讠",
@@ -10584,7 +10584,7 @@
     },
     {
         "pinyin": "qīn",
-        "char": "亲(F親)",
+        "char": "亲(親)",
         "definition": "relatives, parents; intimate the hazel nut or filbert tree a thorny tree",
         "charForm": [{
                 "char": "立",
@@ -10792,7 +10792,7 @@
     },
     {
         "pinyin": "wù",
-        "char": "务(F務)",
+        "char": "务(務)",
         "definition": "affairs, business; must, should",
         "charForm": [{
                 "char": "夂",
@@ -11227,7 +11227,7 @@
     },
     {
         "pinyin": "jì",
-        "char": "记(F記)",
+        "char": "记(記)",
         "definition": "record; keep in mind, remember",
         "charForm": [{
                 "char": "讠",
@@ -11269,7 +11269,7 @@
     },
     {
         "pinyin": "biān",
-        "char": "边(F邊)",
+        "char": "边(邊)",
         "definition": "edge, margin, side, border",
         "charForm": [{
                 "char": "辶",
@@ -11358,7 +11358,7 @@
     },
     {
         "pinyin": "fēng",
-        "char": "风(F風)",
+        "char": "风(風)",
         "definition": "wind; air; manners, atmosphere",
         "charForm": [{
                 "char": "几",
@@ -11400,7 +11400,7 @@
     },
     {
         "pinyin": "zhàn",
-        "char": "战(F戰)",
+        "char": "战(戰)",
         "definition": "war, fighting, battle",
         "charForm": [{
                 "char": "占",
@@ -11568,7 +11568,7 @@
     },
     {
         "pinyin": "xǔ",
-        "char": "许(F許)",
+        "char": "许(許)",
         "definition": "allow, permit; promise; betroth",
         "charForm": [{
                 "char": "讠",
@@ -11684,7 +11684,7 @@
     },
     {
         "pinyin": "jué",
-        "char": "觉(F覺)",
+        "char": "觉(覺)",
         "definition": "to wake up from sleep; conscious",
         "charForm": [{
                 "char": "⺍",
@@ -11966,7 +11966,7 @@
     },
     {
         "pinyin": "tí",
-        "char": "题(F題)",
+        "char": "题(題)",
         "definition": "forehead; title, headline; theme",
         "charForm": [{
                 "char": "是",
@@ -12149,7 +12149,7 @@
     },
     {
         "pinyin": "tǒng",
-        "char": "统(F統)",
+        "char": "统(統)",
         "definition": "govern, command, control; unite",
         "charForm": [{
                 "char": "纟",
@@ -12275,7 +12275,7 @@
     },
     {
         "pinyin": "qǐng",
-        "char": "请(F請)",
+        "char": "请(請)",
         "definition": "ask, request; invite; please",
         "charForm": [{
                 "char": "讠",
@@ -12359,7 +12359,7 @@
     },
     {
         "pinyin": "ài",
-        "char": "爱(F愛)",
+        "char": "爱(愛)",
         "definition": "love, be fond of, like",
         "charForm": [{
                 "char": "友",
@@ -12406,7 +12406,7 @@
     },
     {
         "pinyin": "ràng",
-        "char": "让(F讓)",
+        "char": "让(讓)",
         "definition": "allow, permit, yield, concede",
         "charForm": [{
                 "char": "讠",
@@ -12448,7 +12448,7 @@
     },
     {
         "pinyin": "rèn",
-        "char": "认(F認)",
+        "char": "认(認)",
         "definition": "recognize, know, understand",
         "charForm": [{
                 "char": "讠",
@@ -12532,7 +12532,7 @@
     },
     {
         "pinyin": "lùn",
-        "char": "论(F論)",
+        "char": "论(論)",
         "definition": "debate; discuss; discourse",
         "charForm": [{
                 "char": "讠",
@@ -12574,7 +12574,7 @@
     },
     {
         "pinyin": "bǎi",
-        "char": "百(F佰)",
+        "char": "百(佰)",
         "definition": "one hundred; numerous, many",
         "charForm": [{
                 "char": "一",
@@ -12658,7 +12658,7 @@
     },
     {
         "pinyin": "yì",
-        "char": "义(F義)",
+        "char": "义(義)",
         "definition": "right conduct, righteousness",
         "charForm": [{
                 "char": "丶",
@@ -12868,7 +12868,7 @@
     },
     {
         "pinyin": "shù",
-        "char": "术(F術)",
+        "char": "术(術)",
         "definition": "art, skill, special feat; method, technique",
         "charForm": [{
                 "char": "木",
@@ -12910,7 +12910,7 @@
     },
     {
         "pinyin": "jié",
-        "char": "结(F結)",
+        "char": "结(結)",
         "definition": "knot, tie; join, connect",
         "charForm": [{
                 "char": "纟",
@@ -13356,7 +13356,7 @@
     },
     {
         "pinyin": "lián",
-        "char": "连(F連)",
+        "char": "连(連)",
         "definition": "join, connect; continuous; even",
         "charForm": [{
                 "char": "辶",
@@ -13398,7 +13398,7 @@
     },
     {
         "pinyin": "yuǎn",
-        "char": "远(F遠)",
+        "char": "远(遠)",
         "definition": "distant, remote, far; profound",
         "charForm": [{
                 "char": "辶",
@@ -13440,7 +13440,7 @@
     },
     {
         "pinyin": "zī",
-        "char": "资(F資)",
+        "char": "资(資)",
         "definition": "property; wealth; capital",
         "charForm": [{
                 "char": "次",
@@ -13482,7 +13482,7 @@
     },
     {
         "pinyin": "duì",
-        "char": "队(F隊)",
+        "char": "队(隊)",
         "definition": "team, group; army unit",
         "charForm": [{
                 "char": "阝",
@@ -13566,7 +13566,7 @@
     },
     {
         "pinyin": "dài",
-        "char": "带(F帶)",
+        "char": "带(帶)",
         "definition": "belt, girdle, band, strap, zone",
         "charForm": [{
                 "char": "卅",
@@ -13697,7 +13697,7 @@
     },
     {
         "pinyin": "tiáo",
-        "char": "条(F條)",
+        "char": "条(條)",
         "definition": "clause, condition; string, stripe",
         "charForm": [{
                 "char": "夂",
@@ -13781,7 +13781,7 @@
     },
     {
         "pinyin": "biàn",
-        "char": "变(F變)",
+        "char": "变(變)",
         "definition": "change, transform, alter; rebel",
         "charForm": [{
                 "char": "亦",
@@ -13823,7 +13823,7 @@
     },
     {
         "pinyin": "lián",
-        "char": "联(F聯)",
+        "char": "联(聯)",
         "definition": "connect, join; associate, ally",
         "charForm": [{
                 "char": "耳",
@@ -13912,7 +13912,7 @@
     },
     {
         "pinyin": "quán",
-        "char": "权(F權)",
+        "char": "权(權)",
         "definition": "power, right, authority",
         "charForm": [{
                 "char": "木",
@@ -14038,7 +14038,7 @@
     },
     {
         "pinyin": "gāi",
-        "char": "该(F該)",
+        "char": "该(該)",
         "definition": "should, ought to, need to",
         "charForm": [{
                 "char": "讠",
@@ -14080,7 +14080,7 @@
     },
     {
         "pinyin": "lǐng",
-        "char": "领(F領)",
+        "char": "领(領)",
         "definition": "neck; collar; lead, guide",
         "charForm": [{
                 "char": "令",
@@ -14122,7 +14122,7 @@
     },
     {
         "pinyin": "chuán",
-        "char": "传(F傳)",
+        "char": "传(傳)",
         "definition": "summon; propagate, transmit",
         "charForm": [{
                 "char": "亻",
@@ -14248,7 +14248,7 @@
     },
     {
         "pinyin": "hóng",
-        "char": "红(F紅)",
+        "char": "红(紅)",
         "definition": "red, vermillion; blush, flush",
         "charForm": [{
                 "char": "纟",
@@ -14332,7 +14332,7 @@
     },
     {
         "pinyin": "jué",
-        "char": "决(F決)",
+        "char": "决(決)",
         "definition": "decide, determine, judge",
         "charForm": [{
                 "char": "冫",
@@ -14463,7 +14463,7 @@
     },
     {
         "pinyin": "dá",
-        "char": "达(F達)",
+        "char": "达(達)",
         "definition": "arrive at, reach; intelligent; smooth, slippery",
         "charForm": [{
                 "char": "辶",
@@ -14505,7 +14505,7 @@
     },
     {
         "pinyin": "bàn",
-        "char": "办(F辦)",
+        "char": "办(辦)",
         "definition": "manage, do, handle; deal with",
         "charForm": [{
                 "char": "力",
@@ -14547,7 +14547,7 @@
     },
     {
         "pinyin": "yùn",
-        "char": "运(F運)",
+        "char": "运(運)",
         "definition": "run; simplified form of 運 luck, fortune; ship, transport",
         "charForm": [{
                 "char": "辶",
@@ -14893,7 +14893,7 @@
     },
     {
         "pinyin": "qiáng",
-        "char": "强(F強,彊)",
+        "char": "强(強,彊)",
         "definition": "strong, powerful, energetic",
         "charForm": [{
                 "char": "弓",
@@ -15091,7 +15091,7 @@
     },
     {
         "pinyin": "qū",
-        "char": "区(F區)",
+        "char": "区(區)",
         "definition": "area, district, region, ward",
         "charForm": [{
                 "char": "匸",
@@ -15295,7 +15295,7 @@
     },
     {
         "pinyin": "zhuǎn",
-        "char": "转(F轉)",
+        "char": "转(轉)",
         "definition": "shift, move, turn",
         "charForm": [{
                 "char": "车",
@@ -15463,7 +15463,7 @@
     },
     {
         "pinyin": "zhòng",
-        "char": "众(F眾)",
+        "char": "众(眾)",
         "definition": "multitude, crowd; masses, public",
         "charForm": [{
                 "char": "人",
@@ -15557,7 +15557,7 @@
     },
     {
         "pinyin": "qīng",
-        "char": "轻(F輕)",
+        "char": "轻(輕)",
         "definition": "light; easy, simple; gentle",
         "charForm": [{
                 "char": "车",
@@ -15730,7 +15730,7 @@
     },
     {
         "pinyin": "yǔ",
-        "char": "语(F語)",
+        "char": "语(語)",
         "definition": "language, words; saying, expression",
         "charForm": [{
                 "char": "讠",
@@ -15903,7 +15903,7 @@
     },
     {
         "pinyin": "mǎn",
-        "char": "满(F滿)",
+        "char": "满(滿)",
         "definition": "fill; full, satisfied",
         "charForm": [{
                 "char": "氵",
@@ -16076,7 +16076,7 @@
     },
     {
         "pinyin": "xiě",
-        "char": "写(F寫)",
+        "char": "写(寫)",
         "definition": "write; draw, sketch; compose",
         "charForm": [{
                 "char": "冖",
@@ -16160,7 +16160,7 @@
     },
     {
         "pinyin": "shí",
-        "char": "识(F識)",
+        "char": "识(識)",
         "definition": "recognize, understand, know",
         "charForm": [{
                 "char": "讠",
@@ -16202,7 +16202,7 @@
     },
     {
         "pinyin": "jí",
-        "char": "极(F極)",
+        "char": "极(極)",
         "definition": "extreme, utmost, furthest, final",
         "charForm": [{
                 "char": "木",
@@ -16280,7 +16280,7 @@
     },
     {
         "pinyin": "huáng",
-        "char": "黄(F黃)",
+        "char": "黄(黃)",
         "definition": "yellow; surname",
         "charForm": [{
                 "char": "由",
@@ -16421,7 +16421,7 @@
     },
     {
         "pinyin": "liǎn",
-        "char": "脸(F臉)",
+        "char": "脸(臉)",
         "definition": "face; cheek; reputation",
         "charForm": [{
                 "char": "⺼",
@@ -16463,7 +16463,7 @@
     },
     {
         "pinyin": "qián",
-        "char": "钱(F錢)",
+        "char": "钱(錢)",
         "definition": "money, currency, coins",
         "charForm": [{
                 "char": "钅",
@@ -16505,7 +16505,7 @@
     },
     {
         "pinyin": "dǎng",
-        "char": "党(F黨)",
+        "char": "党(黨)",
         "definition": "political party, gang, faction",
         "charForm": [{
                 "char": "尚",
@@ -16715,7 +16715,7 @@
     },
     {
         "pinyin": "shè",
-        "char": "设(F設)",
+        "char": "设(設)",
         "definition": "build; establish; display",
         "charForm": [{
                 "char": "讠",
@@ -16841,7 +16841,7 @@
     },
     {
         "pinyin": "shuāng",
-        "char": "双(F雙)",
+        "char": "双(雙)",
         "definition": "set of two, pair, couple; both",
         "charForm": [{
                 "char": "又",
@@ -17056,7 +17056,7 @@
     },
     {
         "pinyin": "qiān",
-        "char": "千(F仟)",
+        "char": "千(仟)",
         "definition": "thousand; many, numerous; very; (Cant.) a cheater, swindler",
         "charForm": [{
                 "char": "丿",
@@ -17418,7 +17418,7 @@
     },
     {
         "pinyin": "guǎng",
-        "char": "广(F廣)",
+        "char": "广(廣)",
         "definition": "wide, extensive, broad; rad. 53",
         "charForm": [{
                 "char": "丶",
@@ -17502,7 +17502,7 @@
     },
     {
         "pinyin": "yì",
-        "char": "议(F議)",
+        "char": "议(議)",
         "definition": "consult, talk over, discuss",
         "charForm": [{
                 "char": "讠",
@@ -17796,7 +17796,7 @@
     },
     {
         "pinyin": "jì",
-        "char": "际(F際)",
+        "char": "际(際)",
         "definition": "border, boundary, juncture",
         "charForm": [{
                 "char": "阝",
@@ -17838,7 +17838,7 @@
     },
     {
         "pinyin": "zé",
-        "char": "则(F則)",
+        "char": "则(則)",
         "definition": "rule, law, regulation; grades",
         "charForm": [{
                 "char": "贝",
@@ -17922,7 +17922,7 @@
     },
     {
         "pinyin": "dān",
-        "char": "单(F單)",
+        "char": "单(單)",
         "definition": "single, individual, only; lone",
         "charForm": [{
             "char": "丷",
@@ -17958,7 +17958,7 @@
     },
     {
         "pinyin": "jù",
-        "char": "据(F據)",
+        "char": "据(據)",
         "definition": "to occupy, take possession of; a base, position",
         "charForm": [{
                 "char": "扌",
@@ -18000,7 +18000,7 @@
     },
     {
         "pinyin": "dǎo",
-        "char": "导(F導)",
+        "char": "导(導)",
         "definition": "direct, guide, lead, conduct",
         "charForm": [{
                 "char": "巳",
@@ -18168,7 +18168,7 @@
     },
     {
         "pinyin": "wǎng",
-        "char": "网(F網)",
+        "char": "网(網)",
         "definition": "net; network; KangXi radical 122",
         "charForm": [{
                 "char": "冂",
@@ -18346,7 +18346,7 @@
     },
     {
         "pinyin": "zhuān",
-        "char": "专(F專,耑)",
+        "char": "专(專,耑)",
         "definition": "monopolize, take sole possession",
         "charForm": [{
             "char": "一",
@@ -18549,8 +18549,8 @@
         ]
     },
     {
-        "pinyin": "shuí",
-        "char": "谁(F誰)",
+        "pinyin": "shéi",
+        "char": "谁(誰)",
         "definition": "who? whom? whose? anyone?",
         "charForm": [{
                 "char": "讠",
@@ -18634,7 +18634,7 @@
     },
     {
         "pinyin": "dú",
-        "char": "读(F讀)",
+        "char": "读(讀)",
         "definition": "read, study; pronounce",
         "charForm": [{
                 "char": "讠",
@@ -18718,7 +18718,7 @@
     },
     {
         "pinyin": "fēi",
-        "char": "飞(F飛)",
+        "char": "飞(飛)",
         "definition": "fly; go quickly; dart; high",
         "charForm": [],
         "exampleWord": [{
@@ -18750,7 +18750,7 @@
     },
     {
         "pinyin": "guān",
-        "char": "观(F觀)",
+        "char": "观(觀)",
         "definition": "see, observe, view; appearance",
         "charForm": [{
                 "char": "又",
@@ -18792,7 +18792,7 @@
     },
     {
         "pinyin": "zhēng",
-        "char": "争(F爭)",
+        "char": "争(爭)",
         "definition": "dispute, fight, contend, strive",
         "charForm": [{
                 "char": "⺈",
@@ -18923,7 +18923,7 @@
     },
     {
         "pinyin": "zǔ",
-        "char": "组(F組)",
+        "char": "组(組)",
         "definition": "class; section, department",
         "charForm": [{
                 "char": "纟",
@@ -19049,7 +19049,7 @@
     },
     {
         "pinyin": "shì",
-        "char": "视(F視)",
+        "char": "视(視)",
         "definition": "look at, inspect, observe, see",
         "charForm": [{
                 "char": "礻",
@@ -19091,7 +19091,7 @@
     },
     {
         "pinyin": "jì",
-        "char": "济(F濟)",
+        "char": "济(濟)",
         "definition": "help, aid, relieve; ferry, cross",
         "charForm": [{
                 "char": "氵",
@@ -19175,7 +19175,7 @@
     },
     {
         "pinyin": "lí",
-        "char": "离(F離)",
+        "char": "离(離)",
         "definition": "rare beast; strange; elegant",
         "charForm": [{
                 "char": "禸",
@@ -19222,7 +19222,7 @@
     },
     {
         "pinyin": "suī",
-        "char": "虽(F雖)",
+        "char": "虽(雖)",
         "definition": "although, even if",
         "charForm": [{
                 "char": "口",
@@ -19348,7 +19348,7 @@
     },
     {
         "pinyin": "biān",
-        "char": "编(F編)",
+        "char": "编(編)",
         "definition": "knit, weave; arrange; compile",
         "charForm": [{
                 "char": "纟",
@@ -19390,7 +19390,7 @@
     },
     {
         "pinyin": "bǎo",
-        "char": "宝(F寶)",
+        "char": "宝(寶)",
         "definition": "treasure, jewel; precious, rare",
         "charForm": [{
                 "char": "宀",
@@ -19432,7 +19432,7 @@
     },
     {
         "pinyin": "tán",
-        "char": "谈(F談)",
+        "char": "谈(談)",
         "definition": "talk; conversation; surname",
         "charForm": [{
                 "char": "讠",
@@ -19636,7 +19636,7 @@
     },
     {
         "pinyin": "suí",
-        "char": "随(F隨)",
+        "char": "随(隨)",
         "definition": "follow, listen to, submit to",
         "charForm": [{
                 "char": "阝",
@@ -19762,7 +19762,7 @@
     },
     {
         "pinyin": "jiàn",
-        "char": "剑(F劍)",
+        "char": "剑(劍)",
         "definition": "sword, dagger, saber",
         "charForm": [{
                 "char": "佥",
@@ -19804,7 +19804,7 @@
     },
     {
         "pinyin": "jiǎng",
-        "char": "讲(F講)",
+        "char": "讲(講)",
         "definition": "explain; discuss; talk",
         "charForm": [{
                 "char": "讠",
@@ -19882,7 +19882,7 @@
     },
     {
         "pinyin": "shā",
-        "char": "杀(F殺)",
+        "char": "杀(殺)",
         "definition": "kill, slaughter, murder; hurt",
         "charForm": [{
                 "char": "乂",
@@ -20050,7 +20050,7 @@
     },
     {
         "pinyin": "diào",
-        "char": "调(F調)",
+        "char": "调(調)",
         "definition": "transfer, move, change; tune",
         "charForm": [{
                 "char": "讠",
@@ -20260,7 +20260,7 @@
     },
     {
         "pinyin": "tuán",
-        "char": "团(F團)",
+        "char": "团(團)",
         "definition": "sphere, ball, circle; mass, lump",
         "charForm": [{
                 "char": "囗",
@@ -20338,7 +20338,7 @@
     },
     {
         "pinyin": "zhōng",
-        "char": "终(F終)",
+        "char": "终(終)",
         "definition": "end; finally, in the end",
         "charForm": [{
                 "char": "纟",
@@ -20380,7 +20380,7 @@
     },
     {
         "pinyin": "lè",
-        "char": "乐(F樂)",
+        "char": "乐(樂)",
         "definition": "happy, glad; enjoyable; music",
         "charForm": [{
                 "char": "小",
@@ -20464,7 +20464,7 @@
     },
     {
         "pinyin": "jí",
-        "char": "级(F級)",
+        "char": "级(級)",
         "definition": "level, rank, class; grade",
         "charForm": [{
                 "char": "纟",
@@ -20884,7 +20884,7 @@
     },
     {
         "pinyin": "jǔ",
-        "char": "举(F舉)",
+        "char": "举(舉)",
         "definition": "raise, lift up; recommend",
         "charForm": [{
                 "char": "兴",
@@ -20968,7 +20968,7 @@
     },
     {
         "pinyin": "zhèng",
-        "char": "证(F證,証)",
+        "char": "证(證,証)",
         "definition": "prove, confirm, verify; proof",
         "charForm": [{
                 "char": "讠",
@@ -21136,7 +21136,7 @@
     },
     {
         "pinyin": "fèi",
-        "char": "费(F費)",
+        "char": "费(費)",
         "definition": "expenses, expenditures, fee",
         "charForm": [{
                 "char": "弗",
@@ -21214,7 +21214,7 @@
     },
     {
         "pinyin": "ěr",
-        "char": "尔(F爾)",
+        "char": "尔(爾)",
         "definition": "you; that, those; final particle",
         "charForm": [{
                 "char": "⺈",
@@ -21340,7 +21340,7 @@
     },
     {
         "pinyin": "rè",
-        "char": "热(F熱)",
+        "char": "热(熱)",
         "definition": "hot; heat; fever; restless; zeal",
         "charForm": [{
                 "char": "执",
@@ -21466,7 +21466,7 @@
     },
     {
         "pinyin": "xiǎng",
-        "char": "响(F響)",
+        "char": "响(響)",
         "definition": "make sound, make noise; sound",
         "charForm": [{
                 "char": "口",
@@ -21508,7 +21508,7 @@
     },
     {
         "pinyin": "chēng",
-        "char": "称(F稱)",
+        "char": "称(稱)",
         "definition": "call; name, brand; address; say",
         "charForm": [{
                 "char": "禾",
@@ -21550,7 +21550,7 @@
     },
     {
         "pinyin": "xìng",
-        "char": "兴(F興)",
+        "char": "兴(興)",
         "definition": "thrive, prosper, flourish",
         "charForm": [{
                 "char": "⺍",
@@ -21639,7 +21639,7 @@
     },
     {
         "pinyin": "yuē",
-        "char": "约(F約)",
+        "char": "约(約)",
         "definition": "treaty, agreement, covenant",
         "charForm": [{
                 "char": "纟",
@@ -21681,7 +21681,7 @@
     },
     {
         "pinyin": "yáng",
-        "char": "阳(F陽)",
+        "char": "阳(陽)",
         "definition": "'male' principle; light; sun",
         "charForm": [{
                 "char": "阝",
@@ -21765,7 +21765,7 @@
     },
     {
         "pinyin": "jīng",
-        "char": "惊(F驚)",
+        "char": "惊(驚)",
         "definition": "frighten, surprise, startle",
         "charForm": [{
                 "char": "忄",
@@ -21807,7 +21807,7 @@
     },
     {
         "pinyin": "ma",
-        "char": "吗(F嗎)",
+        "char": "吗(嗎)",
         "definition": "final interrogative particle",
         "charForm": [{
                 "char": "口",
@@ -21960,7 +21960,7 @@
     },
     {
         "pinyin": "hàn",
-        "char": "汉(F漢)",
+        "char": "汉(漢)",
         "definition": "Chinese people; Chinese language",
         "charForm": [{
                 "char": "氵",
@@ -22044,7 +22044,7 @@
     },
     {
         "pinyin": "hào",
-        "char": "号(F號)",
+        "char": "号(號)",
         "definition": "mark, sign; symbol; number",
         "charForm": [{
                 "char": "口",
@@ -22086,7 +22086,7 @@
     },
     {
         "pinyin": "jué",
-        "char": "绝(F絕)",
+        "char": "绝(絕)",
         "definition": "to cut, sever, break off, terminate",
         "charForm": [{
                 "char": "纟",
@@ -22128,7 +22128,7 @@
     },
     {
         "pinyin": "xuǎn",
-        "char": "选(F選)",
+        "char": "选(選)",
         "definition": "choose, select; elect; election",
         "charForm": [{
                 "char": "辶",
@@ -22212,7 +22212,7 @@
     },
     {
         "pinyin": "cān",
-        "char": "参(F參)",
+        "char": "参(參)",
         "definition": "take part in, intervene; ginseng",
         "charForm": [{
                 "char": "彡",
@@ -22301,7 +22301,7 @@
     },
     {
         "pinyin": "yà",
-        "char": "亚(F亞)",
+        "char": "亚(亞)",
         "definition": "Asia; second",
         "charForm": [{
                 "char": "一",
@@ -22390,7 +22390,7 @@
     },
     {
         "pinyin": "shāng",
-        "char": "伤(F傷)",
+        "char": "伤(傷)",
         "definition": "wound, injury; fall ill from",
         "charForm": [{
                 "char": "亻",
@@ -22432,7 +22432,7 @@
     },
     {
         "pinyin": "lèi",
-        "char": "类(F類)",
+        "char": "类(類)",
         "definition": "class, group, kind, category",
         "charForm": [{
                 "char": "米",
@@ -22474,7 +22474,7 @@
     },
     {
         "pinyin": "bèi",
-        "char": "备(F備)",
+        "char": "备(備)",
         "definition": "prepare, ready, perfect",
         "charForm": [{
                 "char": "夂",
@@ -22516,7 +22516,7 @@
     },
     {
         "pinyin": "huān",
-        "char": "欢(F歡)",
+        "char": "欢(歡)",
         "definition": "happy, pleased, glad; joy; enjoy",
         "charForm": [{
                 "char": "又",
@@ -22642,7 +22642,7 @@
     },
     {
         "pinyin": "shì",
-        "char": "势(F勢)",
+        "char": "势(勢)",
         "definition": "power, force; tendency",
         "charForm": [{
                 "char": "执",
@@ -22768,7 +22768,7 @@
     },
     {
         "pinyin": "duàn",
-        "char": "断(F斷)",
+        "char": "断(斷)",
         "definition": "sever, cut off; interrupt",
         "charForm": [{
                 "char": "⿺米",
@@ -22815,7 +22815,7 @@
     },
     {
         "pinyin": "chén",
-        "char": "陈(F陳)",
+        "char": "陈(陳)",
         "definition": "exhibit, display; plead; a surname",
         "charForm": [{
                 "char": "阝",
@@ -22899,7 +22899,7 @@
     },
     {
         "pinyin": "nóng",
-        "char": "农(F農)",
+        "char": "农(農)",
         "definition": "agriculture, farming; farmer",
         "charForm": [{
             "char": "冖",
@@ -23029,7 +23029,7 @@
     },
     {
         "pinyin": "niàn",
-        "char": "念(F唸)",
+        "char": "念(唸)",
         "definition": "think of, recall, study",
         "charForm": [{
                 "char": "今",
@@ -23113,7 +23113,7 @@
     },
     {
         "pinyin": "nǎo",
-        "char": "脑(F腦)",
+        "char": "脑(腦)",
         "definition": "brain",
         "charForm": [{
                 "char": "⺼",
@@ -23160,7 +23160,7 @@
     },
     {
         "pinyin": "guī",
-        "char": "规(F規)",
+        "char": "规(規)",
         "definition": "rules, regulations, customs, law",
         "charForm": [{
                 "char": "夫",
@@ -23328,7 +23328,7 @@
     },
     {
         "pinyin": "mā",
-        "char": "妈(F媽)",
+        "char": "妈(媽)",
         "definition": "mother, mama",
         "charForm": [{
                 "char": "女",
@@ -23370,7 +23370,7 @@
     },
     {
         "pinyin": "gāng",
-        "char": "刚(F剛)",
+        "char": "刚(剛)",
         "definition": "hard, tough, rigid, strong",
         "charForm": [{
                 "char": "冈",
@@ -23454,7 +23454,7 @@
     },
     {
         "pinyin": "xiǎn",
-        "char": "显(F顯)",
+        "char": "显(顯)",
         "definition": "manifest, display; evident, clear",
         "charForm": [{
                 "char": "日",
@@ -23574,7 +23574,7 @@
     },
     {
         "pinyin": "lù",
-        "char": "陆(F陸)",
+        "char": "陆(陸)",
         "definition": "land, continental; army",
         "charForm": [{
                 "char": "阝",
@@ -23683,7 +23683,7 @@
     },
     {
         "pinyin": "què",
-        "char": "确(F確)",
+        "char": "确(確)",
         "definition": "sure, certain; real, true",
         "charForm": [{
                 "char": "石",
@@ -23940,7 +23940,7 @@
     },
     {
         "pinyin": "zé",
-        "char": "泽(F澤)",
+        "char": "泽(澤)",
         "definition": "marsh, swamp; grace, brilliance",
         "charForm": [{
             "char": "氵",
@@ -23976,7 +23976,7 @@
     },
     {
         "pinyin": "jǐn",
-        "char": "紧(F緊)",
+        "char": "紧(緊)",
         "definition": "tense, tight, taut; firm, secure",
         "charForm": [{
                 "char": "⿰又",
@@ -24023,7 +24023,7 @@
     },
     {
         "pinyin": "bāng",
-        "char": "帮(F幫)",
+        "char": "帮(幫)",
         "definition": "help, assist; defend; shoe upper",
         "charForm": [{
                 "char": "邦",
@@ -24065,7 +24065,7 @@
     },
     {
         "pinyin": "xiàn",
-        "char": "线(F線)",
+        "char": "线(線)",
         "definition": "line, thread, wire; clue",
         "charForm": [{
                 "char": "纟",
@@ -24149,7 +24149,7 @@
     },
     {
         "pinyin": "yuàn",
-        "char": "愿(F願)",
+        "char": "愿(願)",
         "definition": "sincere, honest, virtuous",
         "charForm": [{
                 "char": "原",
@@ -24322,7 +24322,7 @@
     },
     {
         "pinyin": "yáng",
-        "char": "杨(F楊)",
+        "char": "杨(楊)",
         "definition": "willow, poplar, aspen; surname",
         "charForm": [{
                 "char": "木",
@@ -24442,7 +24442,7 @@
     },
     {
         "pinyin": "jié",
-        "char": "节(F節)",
+        "char": "节(節)",
         "definition": "knot, node, joint; section",
         "charForm": [{
             "char": "艹",
@@ -24514,7 +24514,7 @@
     },
     {
         "pinyin": "zhuāng",
-        "char": "装(F裝)",
+        "char": "装(裝)",
         "definition": "dress, clothes, attire; fill",
         "charForm": [{
                 "char": "壮",
@@ -24760,7 +24760,7 @@
     },
     {
         "pinyin": "suì",
-        "char": "岁(F歲)",
+        "char": "岁(歲)",
         "definition": "year; age; harvest",
         "charForm": [{
                 "char": "山",
@@ -25012,7 +25012,7 @@
     },
     {
         "pinyin": "yán",
-        "char": "严(F嚴)",
+        "char": "严(嚴)",
         "definition": "strict, rigorous, rigid; stern",
         "charForm": [{
                 "char": "亚",
@@ -25054,7 +25054,7 @@
     },
     {
         "pinyin": "tiě",
-        "char": "铁(F鐵)",
+        "char": "铁(鐵)",
         "definition": "iron; strong, solid, firm",
         "charForm": [{
                 "char": "钅",
@@ -25474,7 +25474,7 @@
     },
     {
         "pinyin": "wén",
-        "char": "闻(F聞)",
+        "char": "闻(聞)",
         "definition": "hear; smell; make known; news",
         "charForm": [{
                 "char": "门",
@@ -25552,7 +25552,7 @@
     },
     {
         "pinyin": "jì",
-        "char": "纪(F紀)",
+        "char": "纪(紀)",
         "definition": "record, annal, historical account",
         "charForm": [{
                 "char": "纟",
@@ -25594,7 +25594,7 @@
     },
     {
         "pinyin": "jiǎo",
-        "char": "脚(F腳)",
+        "char": "脚(腳)",
         "definition": "leg, foot; base, leg, foundation",
         "charForm": [{
                 "char": "⺼",
@@ -25672,7 +25672,7 @@
     },
     {
         "pinyin": "sū",
-        "char": "苏(F蘇)",
+        "char": "苏(蘇)",
         "definition": "revive, resurrect; a species of thyme; transliteration of 'Soviet'",
         "charForm": [{
                 "char": "艹",
@@ -25714,7 +25714,7 @@
     },
     {
         "pinyin": "biāo",
-        "char": "标(F標)",
+        "char": "标(標)",
         "definition": "mark, symbol, label, sign; stand the bole of a tree",
         "charForm": [{
                 "char": "木",
@@ -25756,7 +25756,7 @@
     },
     {
         "pinyin": "fàn",
-        "char": "饭(F飯)",
+        "char": "饭(飯)",
         "definition": "cooked rice; food, meal",
         "charForm": [{
                 "char": "饣",
@@ -25882,7 +25882,7 @@
     },
     {
         "pinyin": "yī",
-        "char": "医(F醫)",
+        "char": "医(醫)",
         "definition": "cure, heal; doctor, medical",
         "charForm": [{
                 "char": "匸",
@@ -26050,7 +26050,7 @@
     },
     {
         "pinyin": "kuàng",
-        "char": "况(F況)",
+        "char": "况(況)",
         "definition": "condition, situation; furthermore",
         "charForm": [{
                 "char": "冫",
@@ -26134,7 +26134,7 @@
     },
     {
         "pinyin": "ruǎn",
-        "char": "软(F軟)",
+        "char": "软(軟)",
         "definition": "soft, flexible, pliable; weak",
         "charForm": [{
                 "char": "车",
@@ -26338,7 +26338,7 @@
     },
     {
         "pinyin": "jī",
-        "char": "击(F擊)",
+        "char": "击(擊)",
         "definition": "strike, hit, beat; attack, fight",
         "charForm": [{
             "char": "凵",
@@ -26374,7 +26374,7 @@
     },
     {
         "pinyin": "jǐn",
-        "char": "仅(F僅)",
+        "char": "仅(僅)",
         "definition": "only, merely, solely, just",
         "charForm": [{
                 "char": "亻",
@@ -26589,7 +26589,7 @@
     },
     {
         "pinyin": "xù",
-        "char": "续(F續)",
+        "char": "续(續)",
         "definition": "continue, carry on; succeed",
         "charForm": [{
                 "char": "纟",
@@ -26631,7 +26631,7 @@
     },
     {
         "pinyin": "dú",
-        "char": "独(F獨)",
+        "char": "独(獨)",
         "definition": "alone, single, solitary, only",
         "charForm": [{
                 "char": "犭",
@@ -26673,7 +26673,7 @@
     },
     {
         "pinyin": "luó",
-        "char": "罗(F羅)",
+        "char": "罗(羅)",
         "definition": "net for catching birds; gauze",
         "charForm": [{
                 "char": "罒",
@@ -26715,7 +26715,7 @@
     },
     {
         "pinyin": "mǎi",
-        "char": "买(F買)",
+        "char": "买(買)",
         "definition": "buy, purchase; bribe, persuade",
         "charForm": [{
                 "char": "乛",
@@ -26757,7 +26757,7 @@
     },
     {
         "pinyin": "hù",
-        "char": "户(F戶)",
+        "char": "户(戶)",
         "definition": "door; family",
         "charForm": [{
                 "char": "丶",
@@ -26799,7 +26799,7 @@
     },
     {
         "pinyin": "hù",
-        "char": "护(F護)",
+        "char": "护(護)",
         "definition": "protect, guard, defend, shelter",
         "charForm": [{
                 "char": "扌",
@@ -26967,7 +26967,7 @@
     },
     {
         "pinyin": "zé",
-        "char": "责(F責)",
+        "char": "责(責)",
         "definition": "one's responsibility, duty",
         "charForm": [{
                 "char": "龶",
@@ -27009,7 +27009,7 @@
     },
     {
         "pinyin": "xiàng",
-        "char": "项(F項)",
+        "char": "项(項)",
         "definition": "neck, nape of neck; sum; funds",
         "charForm": [{
                 "char": "工",
@@ -27171,7 +27171,7 @@
     },
     {
         "pinyin": "wèi",
-        "char": "卫(F衛)",
+        "char": "卫(衛)",
         "definition": "guard, protect, defend",
         "charForm": [{
                 "char": "乛",
@@ -27255,7 +27255,7 @@
     },
     {
         "pinyin": "tú",
-        "char": "图(F圖)",
+        "char": "图(圖)",
         "definition": "diagram; chart, map, picture",
         "charForm": [{
                 "char": "囗",
@@ -27339,7 +27339,7 @@
     },
     {
         "pinyin": "luàn",
-        "char": "乱(F亂)",
+        "char": "乱(亂)",
         "definition": "confusion, state of chaos, revolt",
         "charForm": [{
                 "char": "舌",
@@ -27381,7 +27381,7 @@
     },
     {
         "pinyin": "Liú",
-        "char": "刘(F劉)",
+        "char": "刘(劉)",
         "definition": "surname; kill, destroy",
         "charForm": [{
                 "char": "文",
@@ -27423,7 +27423,7 @@
     },
     {
         "pinyin": "yé",
-        "char": "爷(F爺)",
+        "char": "爷(爺)",
         "definition": "father, grandfather",
         "charForm": [{
                 "char": "父",
@@ -27465,7 +27465,7 @@
     },
     {
         "pinyin": "lóng",
-        "char": "龙(F龍)",
+        "char": "龙(龍)",
         "definition": "dragon; symbolic of emperor",
         "charForm": [{
                 "char": "尤",
@@ -27633,7 +27633,7 @@
     },
     {
         "pinyin": "cuò",
-        "char": "错(F錯)",
+        "char": "错(錯)",
         "definition": "error, blunder, mistake; wrong",
         "charForm": [{
                 "char": "钅",
@@ -27759,7 +27759,7 @@
     },
     {
         "pinyin": "chuàng",
-        "char": "创(F創)",
+        "char": "创(創)",
         "definition": "establish, create; knife cut",
         "charForm": [{
                 "char": "仓",
@@ -28089,7 +28089,7 @@
     },
     {
         "pinyin": "shù",
-        "char": "树(F樹)",
+        "char": "树(樹)",
         "definition": "tree; plant; set up, establish",
         "charForm": [{
                 "char": "木",
@@ -28242,7 +28242,7 @@
     },
     {
         "pinyin": "líng",
-        "char": "灵(F靈)",
+        "char": "灵(靈)",
         "definition": "spirit, soul; spiritual world",
         "charForm": [{
                 "char": "彐",
@@ -28284,7 +28284,7 @@
     },
     {
         "pinyin": "zhí",
-        "char": "职(F職)",
+        "char": "职(職)",
         "definition": "duty, profession; office, post",
         "charForm": [{
                 "char": "耳",
@@ -28326,7 +28326,7 @@
     },
     {
         "pinyin": "xiāng",
-        "char": "乡(F鄉)",
+        "char": "乡(鄉)",
         "definition": "country; rural; village",
         "charForm": [],
         "exampleWord": [{
@@ -28358,7 +28358,7 @@
     },
     {
         "pinyin": "xì",
-        "char": "细(F細)",
+        "char": "细(細)",
         "definition": "fine, tiny; slender, thin",
         "charForm": [{
                 "char": "纟",
@@ -28400,7 +28400,7 @@
     },
     {
         "pinyin": "sù",
-        "char": "诉(F訴)",
+        "char": "诉(訴)",
         "definition": "accuse; sue; inform; narrate",
         "charForm": [{
                 "char": "讠",
@@ -28442,7 +28442,7 @@
     },
     {
         "pinyin": "tài",
-        "char": "态(F態)",
+        "char": "态(態)",
         "definition": "manner, bearing, attitude",
         "charForm": [{
                 "char": "太",
@@ -28562,7 +28562,7 @@
     },
     {
         "pinyin": "bǐ",
-        "char": "笔(F筆)",
+        "char": "笔(筆)",
         "definition": "writing brush; write; stroke",
         "charForm": [{
                 "char": "⺮",
@@ -28735,7 +28735,7 @@
     },
     {
         "pinyin": "kuài",
-        "char": "块(F塊)",
+        "char": "块(塊)",
         "definition": "piece, lump; dollar",
         "charForm": [{
                 "char": "土",
@@ -28981,7 +28981,7 @@
     },
     {
         "pinyin": "zhì",
-        "char": "质(F質)",
+        "char": "质(質)",
         "definition": "matter, material, substance",
         "charForm": [{
                 "char": "厂",
@@ -29106,7 +29106,7 @@
     },
     {
         "pinyin": "wān",
-        "char": "湾(F灣)",
+        "char": "湾(灣)",
         "definition": "bay, cove, inlet, bend of stream",
         "charForm": [{
                 "char": "氵",
@@ -29232,7 +29232,7 @@
     },
     {
         "pinyin": "wéi",
-        "char": "韦(F韋)",
+        "char": "韦(韋)",
         "definition": "tanned leather; surname; simplified form of KangXi radical number 178",
         "charForm": [{
                 "char": "三",
@@ -29316,7 +29316,7 @@
     },
     {
         "pinyin": "wéi",
-        "char": "围(F圍)",
+        "char": "围(圍)",
         "definition": "surround, encircle, corral",
         "charForm": [{
                 "char": "囗",
@@ -29358,7 +29358,7 @@
     },
     {
         "pinyin": "jìng",
-        "char": "静(F靜)",
+        "char": "静(靜)",
         "definition": "quiet, still, motionless; gentle",
         "charForm": [{
                 "char": "青",
@@ -29442,7 +29442,7 @@
     },
     {
         "pinyin": "yuán",
-        "char": "园(F園)",
+        "char": "园(園)",
         "definition": "garden; park, orchard",
         "charForm": [{
                 "char": "囗",
@@ -29568,7 +29568,7 @@
     },
     {
         "pinyin": "jí",
-        "char": "辑(F輯)",
+        "char": "辑(輯)",
         "definition": "gather up, collect; edit, compile",
         "charForm": [{
                 "char": "车",
@@ -29736,7 +29736,7 @@
     },
     {
         "pinyin": "gòu",
-        "char": "够(F夠)",
+        "char": "够(夠)",
         "definition": "enough, adequate",
         "charForm": [{
                 "char": "句",
@@ -29778,7 +29778,7 @@
     },
     {
         "pinyin": "sài",
-        "char": "赛(F賽)",
+        "char": "赛(賽)",
         "definition": "compete, contend; contest, race",
         "charForm": [{
                 "char": "宀",
@@ -29904,7 +29904,7 @@
     },
     {
         "pinyin": "jiào",
-        "char": "较(F較)",
+        "char": "较(較)",
         "definition": "compare; comparatively, more",
         "charForm": [{
                 "char": "车",
@@ -29988,7 +29988,7 @@
     },
     {
         "pinyin": "lóu",
-        "char": "楼(F樓)",
+        "char": "楼(樓)",
         "definition": "building of two or more stories",
         "charForm": [{
                 "char": "木",
@@ -30072,7 +30072,7 @@
     },
     {
         "pinyin": "sūn",
-        "char": "孙(F孫)",
+        "char": "孙(孫)",
         "definition": "grandchild, descendent; surname",
         "charForm": [{
                 "char": "子",
@@ -30198,7 +30198,7 @@
     },
     {
         "pinyin": "shī",
-        "char": "诗(F詩)",
+        "char": "诗(詩)",
         "definition": "poetry; poem, verse, ode",
         "charForm": [{
                 "char": "讠",
@@ -30408,7 +30408,7 @@
     },
     {
         "pinyin": "dí",
-        "char": "敌(F敵)",
+        "char": "敌(敵)",
         "definition": "enemy, foe, rival; resist",
         "charForm": [{
                 "char": "舌",
@@ -30450,7 +30450,7 @@
     },
     {
         "pinyin": "shì",
-        "char": "试(F試)",
+        "char": "试(試)",
         "definition": "test, try, experiment",
         "charForm": [{
                 "char": "讠",
@@ -30492,7 +30492,7 @@
     },
     {
         "pinyin": "xiè",
-        "char": "谢(F謝)",
+        "char": "谢(謝)",
         "definition": "thank; decline",
         "charForm": [{
                 "char": "讠",
@@ -30576,7 +30576,7 @@
     },
     {
         "pinyin": "huái",
-        "char": "怀(F懷)",
+        "char": "怀(懷)",
         "definition": "bosom, breast; carry in bosom",
         "charForm": [{
                 "char": "忄",
@@ -30618,7 +30618,7 @@
     },
     {
         "pinyin": "gù",
-        "char": "顾(F顧)",
+        "char": "顾(顧)",
         "definition": "look back; look at; look after",
         "charForm": [{
                 "char": "厄",
@@ -30660,7 +30660,7 @@
     },
     {
         "pinyin": "yàn",
-        "char": "验(F驗)",
+        "char": "验(驗)",
         "definition": "test, examine, inspect; verify",
         "charForm": [{
                 "char": "马",
@@ -30702,7 +30702,7 @@
     },
     {
         "pinyin": "yíng",
-        "char": "营(F營)",
+        "char": "营(營)",
         "definition": "encampment, barracks; manage",
         "charForm": [{
                 "char": "艹",
@@ -30833,7 +30833,7 @@
     },
     {
         "pinyin": "yǎng",
-        "char": "养(F養)",
+        "char": "养(養)",
         "definition": "raise, rear, bring up; support",
         "charForm": [{
                 "char": "羊",
@@ -30875,7 +30875,7 @@
     },
     {
         "pinyin": "lì",
-        "char": "丽(F麗)",
+        "char": "丽(麗)",
         "definition": "beautiful, magnificent, elegant",
         "charForm": [{
                 "char": "一",
@@ -31199,7 +31199,7 @@
     },
     {
         "pinyin": "è",
-        "char": "恶(F惡)",
+        "char": "恶(惡)",
         "definition": "evil, wicked, bad, foul",
         "charForm": [{
                 "char": "亚",
@@ -31367,7 +31367,7 @@
     },
     {
         "pinyin": "wéi",
-        "char": "维(F維)",
+        "char": "维(維)",
         "definition": "maintain, preserve, safeguard",
         "charForm": [{
                 "char": "纟",
@@ -31409,7 +31409,7 @@
     },
     {
         "pinyin": "jiàn",
-        "char": "渐(F漸)",
+        "char": "渐(漸)",
         "definition": "gradually",
         "charForm": [{
                 "char": "氵",
@@ -31430,7 +31430,7 @@
     },
     {
         "pinyin": "shèng",
-        "char": "胜(F勝)",
+        "char": "胜(勝)",
         "definition": "victory; excel, be better than",
         "charForm": [{
                 "char": "⺼",
@@ -31615,7 +31615,7 @@
     },
     {
         "pinyin": "yì",
-        "char": "异(F異)",
+        "char": "异(異)",
         "definition": "different, unusual, strange",
         "charForm": [{
                 "char": "巳",
@@ -31783,7 +31783,7 @@
     },
     {
         "pinyin": "fù",
-        "char": "负(F負)",
+        "char": "负(負)",
         "definition": "load, burden; carry, bear",
         "charForm": [{
                 "char": "⺈",
@@ -31993,7 +31993,7 @@
     },
     {
         "pinyin": "yín",
-        "char": "银(F銀)",
+        "char": "银(銀)",
         "definition": "silver; cash, money, wealth",
         "charForm": [{
                 "char": "钅",
@@ -32077,7 +32077,7 @@
     },
     {
         "pinyin": "zhèn",
-        "char": "阵(F陣)",
+        "char": "阵(陣)",
         "definition": "column, row or file of troops",
         "charForm": [{
                 "char": "阝",
@@ -32208,7 +32208,7 @@
     },
     {
         "pinyin": "céng",
-        "char": "层(F層)",
+        "char": "层(層)",
         "definition": "storey, layer, floor, stratum",
         "charForm": [{
                 "char": "尸",
@@ -32376,7 +32376,7 @@
     },
     {
         "pinyin": "zhī",
-        "char": "织(F織)",
+        "char": "织(織)",
         "definition": "weave, knit; organize, unite",
         "charForm": [{
                 "char": "纟",
@@ -32418,7 +32418,7 @@
     },
     {
         "pinyin": "yào",
-        "char": "药(F藥)",
+        "char": "药(藥)",
         "definition": "leaf of Dahurian angelica plant; medicine",
         "charForm": [{
                 "char": "艹",
@@ -32460,7 +32460,7 @@
     },
     {
         "pinyin": "guǎn",
-        "char": "馆(F館)",
+        "char": "馆(館)",
         "definition": "public building",
         "charForm": [{
                 "char": "饣",
@@ -32638,7 +32638,7 @@
     },
     {
         "pinyin": "xí",
-        "char": "习(F習)",
+        "char": "习(習)",
         "definition": "practice; flapping wings",
         "charForm": [{
             "char": "冫",
@@ -32716,7 +32716,7 @@
     },
     {
         "pinyin": "jiǎn",
-        "char": "简(F簡)",
+        "char": "简(簡)",
         "definition": "simple, terse, succinct, a letter",
         "charForm": [{
                 "char": "⺮",
@@ -32847,7 +32847,7 @@
     },
     {
         "pinyin": "guī",
-        "char": "归(F歸)",
+        "char": "归(歸)",
         "definition": "return; return to, revert to",
         "charForm": [{
             "char": "彐",
@@ -33009,7 +33009,7 @@
     },
     {
         "pinyin": "huàn",
-        "char": "换(F換)",
+        "char": "换(換)",
         "definition": "change",
         "charForm": [{
                 "char": "扌",
@@ -33261,7 +33261,7 @@
     },
     {
         "pinyin": "sī",
-        "char": "丝(F絲)",
+        "char": "丝(絲)",
         "definition": "silk; fine thread; wire; strings",
         "charForm": [{
                 "char": "⿰",
@@ -33387,7 +33387,7 @@
     },
     {
         "pinyin": "láo",
-        "char": "劳(F勞)",
+        "char": "劳(勞)",
         "definition": "labor, toil, do manual work",
         "charForm": [{
                 "char": "艹",
@@ -33434,7 +33434,7 @@
     },
     {
         "pinyin": "fù",
-        "char": "妇(F婦)",
+        "char": "妇(婦)",
         "definition": "married women; woman; wife",
         "charForm": [{
                 "char": "女",
@@ -33764,7 +33764,7 @@
     },
     {
         "pinyin": "píng",
-        "char": "评(F評)",
+        "char": "评(評)",
         "definition": "appraise, criticize, evaluate",
         "charForm": [{
                 "char": "讠",
@@ -33895,7 +33895,7 @@
     },
     {
         "pinyin": "luò",
-        "char": "络(F絡)",
+        "char": "络(絡)",
         "definition": "enmesh, wrap around; web, net",
         "charForm": [{
                 "char": "纟",
@@ -34021,7 +34021,7 @@
     },
     {
         "pinyin": "huán",
-        "char": "环(F環)",
+        "char": "环(環)",
         "definition": "jade ring or bracelet; ring",
         "charForm": [{
                 "char": "王",
@@ -34063,7 +34063,7 @@
     },
     {
         "pinyin": "lǐ",
-        "char": "礼(F禮)",
+        "char": "礼(禮)",
         "definition": "social custom; manners; courtesy",
         "charForm": [{
                 "char": "礻",
@@ -34231,7 +34231,7 @@
     },
     {
         "pinyin": "yā",
-        "char": "压(F壓)",
+        "char": "压(壓)",
         "definition": "press; oppress; crush; pressure",
         "charForm": [{
                 "char": "厂",
@@ -34445,7 +34445,7 @@
     },
     {
         "pinyin": "jiǎng",
-        "char": "奖(F獎)",
+        "char": "奖(獎)",
         "definition": "prize, reward; give award to",
         "charForm": [{
                 "char": "⿰丬夕",
@@ -34539,7 +34539,7 @@
     },
     {
         "pinyin": "gǎn",
-        "char": "赶(F趕)",
+        "char": "赶(趕)",
         "definition": "pursue, follow; expel, drive away",
         "charForm": [{
                 "char": "走",
@@ -34623,7 +34623,7 @@
     },
     {
         "pinyin": "lán",
-        "char": "兰(F蘭)",
+        "char": "兰(蘭)",
         "definition": "orchid; elegant, graceful",
         "charForm": [{
                 "char": "丷",
@@ -34665,7 +34665,7 @@
     },
     {
         "pinyin": "lù",
-        "char": "录(F錄)",
+        "char": "录(錄)",
         "definition": "copy, write down, record",
         "charForm": [{
                 "char": "彐",
@@ -34707,7 +34707,7 @@
     },
     {
         "pinyin": "huà",
-        "char": "画(F畫)",
+        "char": "画(畫)",
         "definition": "a painting, picture, drawing; to draw",
         "charForm": [{
                 "char": "一",
@@ -34801,7 +34801,7 @@
     },
     {
         "pinyin": "dùn",
-        "char": "顿(F頓)",
+        "char": "顿(頓)",
         "definition": "pause, stop; bow, kowtow; arrange",
         "charForm": [{
                 "char": "屯",
@@ -34843,7 +34843,7 @@
     },
     {
         "pinyin": "yì",
-        "char": "艺(F藝)",
+        "char": "艺(藝)",
         "definition": "art; talent, ability; craft",
         "charForm": [{
                 "char": "艹",
@@ -35011,7 +35011,7 @@
     },
     {
         "pinyin": "yì",
-        "char": "亿(F億)",
+        "char": "亿(億)",
         "definition": "hundred million; many",
         "charForm": [{
                 "char": "亻",
@@ -35142,7 +35142,7 @@
     },
     {
         "pinyin": "jì",
-        "char": "继(F繼)",
+        "char": "继(繼)",
         "definition": "continue, maintain, carry on",
         "charForm": [{
                 "char": "纟",
@@ -35356,7 +35356,7 @@
     },
     {
         "pinyin": "yōu",
-        "char": "优(F優)",
+        "char": "优(優)",
         "definition": "superior, excellent; actor",
         "charForm": [{
                 "char": "亻",
@@ -35435,7 +35435,7 @@
     },
     {
         "pinyin": "xiǎn",
-        "char": "险(F險)",
+        "char": "险(險)",
         "definition": "narrow pass, strategic point",
         "charForm": [{
                 "char": "阝",
@@ -35519,7 +35519,7 @@
     },
     {
         "pinyin": "jiē",
-        "char": "阶(F階)",
+        "char": "阶(階)",
         "definition": "stairs, steps; rank, degree",
         "charForm": [{
                 "char": "阝",
@@ -35561,7 +35561,7 @@
     },
     {
         "pinyin": "dān",
-        "char": "担(F擔)",
+        "char": "担(擔)",
         "definition": "carry, bear, undertake",
         "charForm": [{
                 "char": "扌",
@@ -35729,7 +35729,7 @@
     },
     {
         "pinyin": "fǎng",
-        "char": "访(F訪)",
+        "char": "访(訪)",
         "definition": "visit; ask, inquire",
         "charForm": [{
                 "char": "讠",
@@ -35939,7 +35939,7 @@
     },
     {
         "pinyin": "tǎo",
-        "char": "讨(F討)",
+        "char": "讨(討)",
         "definition": "to discuss; ask for, beg; demand; dun; marry",
         "charForm": [{
                 "char": "讠",
@@ -35981,7 +35981,7 @@
     },
     {
         "pinyin": "lín",
-        "char": "临(F臨)",
+        "char": "临(臨)",
         "definition": "draw near, approach; descend",
         "charForm": [{
                 "char": "⿰丨",
@@ -36023,7 +36023,7 @@
     },
     {
         "pinyin": "Wú",
-        "char": "吴(F吳)",
+        "char": "吴(吳)",
         "definition": "name of warring state; surname",
         "charForm": [{
                 "char": "口",
@@ -36065,7 +36065,7 @@
     },
     {
         "pinyin": "yáo",
-        "char": "摇(F搖)",
+        "char": "摇(搖)",
         "definition": "wag, swing, wave; shake; scull",
         "charForm": [{
                 "char": "扌",
@@ -36201,7 +36201,7 @@
     },
     {
         "pinyin": "liàn",
-        "char": "练(F練)",
+        "char": "练(練)",
         "definition": "to practice, drill, exercise, train",
         "charForm": [{
                 "char": "纟",
@@ -36243,7 +36243,7 @@
     },
     {
         "pinyin": "gòu",
-        "char": "构(F構)",
+        "char": "构(構)",
         "definition": "frame, building, structure",
         "charForm": [{
                 "char": "木",
@@ -36411,7 +36411,7 @@
     },
     {
         "pinyin": "chǎng",
-        "char": "厂(F廠)",
+        "char": "厂(廠)",
         "definition": "factory, workshop; radical 27",
         "charForm": [],
         "exampleWord": [{
@@ -36485,7 +36485,7 @@
     },
     {
         "pinyin": "xié",
-        "char": "协(F協)",
+        "char": "协(協)",
         "definition": "be united; cooperate",
         "charForm": [{
                 "char": "十",
@@ -36574,7 +36574,7 @@
     },
     {
         "pinyin": "huī",
-        "char": "挥(F揮)",
+        "char": "挥(揮)",
         "definition": "direct; wipe away; squander",
         "charForm": [{
                 "char": "扌",
@@ -36658,7 +36658,7 @@
     },
     {
         "pinyin": "qí",
-        "char": "齐(F齊)",
+        "char": "齐(齊)",
         "definition": "even, uniform, of equal length",
         "charForm": [{
             "char": "文",
@@ -36736,7 +36736,7 @@
     },
     {
         "pinyin": "wēn",
-        "char": "温(F溫)",
+        "char": "温(溫)",
         "definition": "lukewarm",
         "charForm": [{
                 "char": "氵",
@@ -36909,7 +36909,7 @@
     },
     {
         "pinyin": "zhǐ",
-        "char": "纸(F紙)",
+        "char": "纸(紙)",
         "definition": "paper",
         "charForm": [{
                 "char": "纟",
@@ -37035,7 +37035,7 @@
     },
     {
         "pinyin": "dǐng",
-        "char": "顶(F頂)",
+        "char": "顶(頂)",
         "definition": "top, summit, peak; to carry on the head",
         "charForm": [{
                 "char": "丁",
@@ -37077,7 +37077,7 @@
     },
     {
         "pinyin": "xún",
-        "char": "寻(F尋)",
+        "char": "寻(尋)",
         "definition": "seek, search, look for; ancient",
         "charForm": [{
                 "char": "彐",
@@ -37119,7 +37119,7 @@
     },
     {
         "pinyin": "nìng",
-        "char": "宁(F寧)",
+        "char": "宁(寧)",
         "definition": "calm, peaceful, serene; healthy",
         "charForm": [{
                 "char": "宀",
@@ -37371,7 +37371,7 @@
     },
     {
         "pinyin": "mài",
-        "char": "卖(F賣)",
+        "char": "卖(賣)",
         "definition": "sell; betray; show off",
         "charForm": [{
                 "char": "十",
@@ -37413,7 +37413,7 @@
     },
     {
         "pinyin": "shùn",
-        "char": "顺(F順)",
+        "char": "顺(順)",
         "definition": "obey, submit to, go along with",
         "charForm": [{
                 "char": "川",
@@ -37497,7 +37497,7 @@
     },
     {
         "pinyin": "mèng",
-        "char": "梦(F夢)",
+        "char": "梦(夢)",
         "definition": "dream; visionary; wishful",
         "charForm": [{
                 "char": "林",
@@ -37539,7 +37539,7 @@
     },
     {
         "pinyin": "jù",
-        "char": "剧(F劇)",
+        "char": "剧(劇)",
         "definition": "theatrical plays, opera, drama",
         "charForm": [{
                 "char": "居",
@@ -37801,7 +37801,7 @@
     },
     {
         "pinyin": "jiān",
-        "char": "坚(F堅)",
+        "char": "坚(堅)",
         "definition": "hard, strong, firm; resolute",
         "charForm": [{
                 "char": "⿰又",
@@ -37932,7 +37932,7 @@
     },
     {
         "pinyin": "zá",
-        "char": "杂(F雜)",
+        "char": "杂(雜)",
         "definition": "mixed, blended; mix, mingle",
         "charForm": [{
                 "char": "九",
@@ -37974,7 +37974,7 @@
     },
     {
         "pinyin": "guì",
-        "char": "贵(F貴)",
+        "char": "贵(貴)",
         "definition": "expensive, costly, valuable",
         "charForm": [{
                 "char": "贝",
@@ -38194,7 +38194,7 @@
     },
     {
         "pinyin": "jiù",
-        "char": "旧(F舊)",
+        "char": "旧(舊)",
         "definition": "old, ancient; former, past",
         "charForm": [{
                 "char": "丨",
@@ -38530,7 +38530,7 @@
     },
     {
         "pinyin": "jī",
-        "char": "积(F積)",
+        "char": "积(積)",
         "definition": "accumulate, store up, amass",
         "charForm": [{
                 "char": "禾",
@@ -38614,7 +38614,7 @@
     },
     {
         "pinyin": "xiàn",
-        "char": "县(F縣)",
+        "char": "县(縣)",
         "definition": "county, district, subdivision",
         "charForm": [{
                 "char": "且",
@@ -38708,7 +38708,7 @@
     },
     {
         "pinyin": "bà",
-        "char": "罢(F罷)",
+        "char": "罢(罷)",
         "definition": "cease, finish, stop; give up",
         "charForm": [{
                 "char": "罒",
@@ -38834,7 +38834,7 @@
     },
     {
         "pinyin": "yáng",
-        "char": "扬(F揚)",
+        "char": "扬(揚)",
         "definition": "scatter, spread; praise",
         "charForm": [{
                 "char": "扌",
@@ -39160,7 +39160,7 @@
     },
     {
         "pinyin": "tuō",
-        "char": "脱(F脫)",
+        "char": "脱(脫)",
         "definition": "take off",
         "charForm": [{
                 "char": "⺼",
@@ -39286,7 +39286,7 @@
     },
     {
         "pinyin": "dàn",
-        "char": "弹(F彈)",
+        "char": "弹(彈)",
         "definition": "pellet, bullet, shot, shell",
         "charForm": [{
                 "char": "弓",
@@ -39454,7 +39454,7 @@
     },
     {
         "pinyin": "Dèng",
-        "char": "邓(F鄧)",
+        "char": "邓(鄧)",
         "definition": "surname",
         "charForm": [{
                 "char": "又",
@@ -39496,7 +39496,7 @@
     },
     {
         "pinyin": "xiān",
-        "char": "鲜(F鮮)",
+        "char": "鲜(鮮)",
         "definition": "fresh; delicious; attractive",
         "charForm": [{
                 "char": "鱼",
@@ -39580,7 +39580,7 @@
     },
     {
         "pinyin": "bì",
-        "char": "毕(F畢)",
+        "char": "毕(畢)",
         "definition": "end, finish, conclude; completed",
         "charForm": [{
                 "char": "比",
@@ -39706,7 +39706,7 @@
     },
     {
         "pinyin": "ōu",
-        "char": "欧(F歐)",
+        "char": "欧(歐)",
         "definition": "translit.: Europe; ohm; surname",
         "charForm": [{
                 "char": "区",
@@ -39832,7 +39832,7 @@
     },
     {
         "pinyin": "dǎo",
-        "char": "岛(F島)",
+        "char": "岛(島)",
         "definition": "island",
         "charForm": [{
                 "char": "鸟",
@@ -40005,7 +40005,7 @@
     },
     {
         "pinyin": "zài",
-        "char": "载(F載)",
+        "char": "载(載)",
         "definition": "load; carry; transport, convey",
         "charForm": [{
                 "char": "哉",
@@ -40047,7 +40047,7 @@
     },
     {
         "pinyin": "bài",
-        "char": "败(F敗)",
+        "char": "败(敗)",
         "definition": "be defeated, decline, fail",
         "charForm": [{
                 "char": "贝",
@@ -40089,7 +40089,7 @@
     },
     {
         "pinyin": "qiāng",
-        "char": "枪(F槍)",
+        "char": "枪(槍)",
         "definition": "spear, lance; gun, rifle",
         "charForm": [{
                 "char": "木",
@@ -40131,7 +40131,7 @@
     },
     {
         "pinyin": "shì",
-        "char": "适(F適)",
+        "char": "适(適)",
         "definition": "go, reach; appropriate, suitable",
         "charForm": [{
                 "char": "辶",
@@ -40173,7 +40173,7 @@
     },
     {
         "pinyin": "xū",
-        "char": "虚(F虛)",
+        "char": "虚(虛)",
         "definition": "false",
         "charForm": [{
                 "char": "虍",
@@ -40215,7 +40215,7 @@
     },
     {
         "pinyin": "yù",
-        "char": "预(F預)",
+        "char": "预(預)",
         "definition": "prepare, arrange; in advance",
         "charForm": [{
                 "char": "予",
@@ -40383,7 +40383,7 @@
     },
     {
         "pinyin": "fēn",
-        "char": "纷(F紛)",
+        "char": "纷(紛)",
         "definition": "in disorder, scattered, tangled",
         "charForm": [{
                 "char": "纟",
@@ -40503,7 +40503,7 @@
     },
     {
         "pinyin": "xiāo",
-        "char": "销(F銷)",
+        "char": "销(銷)",
         "definition": "melt, fuse; market, sell",
         "charForm": [{
                 "char": "钅",
@@ -40587,7 +40587,7 @@
     },
     {
         "pinyin": "yú",
-        "char": "鱼(F魚)",
+        "char": "鱼(魚)",
         "definition": "fish; surname; KangXi radical 195",
         "charForm": [{
                 "char": "一",
@@ -40760,7 +40760,7 @@
     },
     {
         "pinyin": "pán",
-        "char": "盘(F盤)",
+        "char": "盘(盤)",
         "definition": "tray, plate, dish; examine",
         "charForm": [{
                 "char": "舟",
@@ -40880,7 +40880,7 @@
     },
     {
         "pinyin": "xùn",
-        "char": "讯(F訊)",
+        "char": "讯(訊)",
         "definition": "inquire; ask; examine; reproach",
         "charForm": [{
                 "char": "讠",
@@ -41053,7 +41053,7 @@
     },
     {
         "pinyin": "Zhào",
-        "char": "赵(F趙)",
+        "char": "赵(趙)",
         "definition": "surname; ancient state",
         "charForm": [{
                 "char": "走",
@@ -41221,7 +41221,7 @@
     },
     {
         "pinyin": "dēng",
-        "char": "灯(F燈)",
+        "char": "灯(燈)",
         "definition": "lantern, lamp",
         "charForm": [{
                 "char": "火",
@@ -41305,7 +41305,7 @@
     },
     {
         "pinyin": "zhuàng",
-        "char": "状(F狀)",
+        "char": "状(狀)",
         "definition": "form; appearance; shape; official",
         "charForm": [{
                 "char": "丬",
@@ -41640,7 +41640,7 @@
     },
     {
         "pinyin": "dìng",
-        "char": "订(F訂)",
+        "char": "订(訂)",
         "definition": "draw up agreement; arrange",
         "charForm": [{
                 "char": "讠",
@@ -41781,7 +41781,7 @@
     },
     {
         "pinyin": "zhèn",
-        "char": "镇(F鎮)",
+        "char": "镇(鎮)",
         "definition": "town, market place; suppress",
         "charForm": [{
                 "char": "钅",
@@ -42027,7 +42027,7 @@
     },
     {
         "pinyin": "mà",
-        "char": "骂(F罵)",
+        "char": "骂(罵)",
         "definition": "accuse, blame, curse, scold",
         "charForm": [{
                 "char": "⿰口口",
@@ -42079,7 +42079,7 @@
     },
     {
         "pinyin": "shū",
-        "char": "输(F輸)",
+        "char": "输(輸)",
         "definition": "transport, carry, haul",
         "charForm": [{
                 "char": "车",
@@ -42247,7 +42247,7 @@
     },
     {
         "pinyin": "cí",
-        "char": "词(F詞)",
+        "char": "词(詞)",
         "definition": "words; phrase, expression",
         "charForm": [{
                 "char": "讠",
@@ -42331,7 +42331,7 @@
     },
     {
         "pinyin": "lèi",
-        "char": "泪(F淚)",
+        "char": "泪(淚)",
         "definition": "tears; weep, cry",
         "charForm": [{
                 "char": "氵",
@@ -42415,7 +42415,7 @@
     },
     {
         "pinyin": "cái",
-        "char": "财(F財)",
+        "char": "财(財)",
         "definition": "wealth, valuables, riches",
         "charForm": [{
                 "char": "贝",
@@ -43038,7 +43038,7 @@
     },
     {
         "pinyin": "shěn",
-        "char": "审(F審)",
+        "char": "审(審)",
         "definition": "examine, investigate; judge",
         "charForm": [{
                 "char": "宀",
@@ -43122,7 +43122,7 @@
     },
     {
         "pinyin": "qiáng",
-        "char": "墙(F牆)",
+        "char": "墙(牆)",
         "definition": "wall",
         "charForm": [{
                 "char": "土",
@@ -43206,7 +43206,7 @@
     },
     {
         "pinyin": "shèng",
-        "char": "圣(F聖)",
+        "char": "圣(聖)",
         "definition": "holy, sacred",
         "charForm": [{
                 "char": "又",
@@ -43290,7 +43290,7 @@
     },
     {
         "pinyin": "yuè",
-        "char": "跃(F躍)",
+        "char": "跃(躍)",
         "definition": "skip, jump, frolic",
         "charForm": [{
                 "char": "足",
@@ -43416,7 +43416,7 @@
     },
     {
         "pinyin": "zhí",
-        "char": "执(F執)",
+        "char": "执(執)",
         "definition": "hold in hand; keep; carry out",
         "charForm": [{
                 "char": "扌",
@@ -43542,7 +43542,7 @@
     },
     {
         "pinyin": "xiǎo",
-        "char": "晓(F曉)",
+        "char": "晓(曉)",
         "definition": "dawn, daybreak; clear, explicit",
         "charForm": [{
                 "char": "日",
@@ -43662,7 +43662,7 @@
     },
     {
         "pinyin": "qiáo",
-        "char": "桥(F橋)",
+        "char": "桥(橋)",
         "definition": "bridge; beam, crosspiece",
         "charForm": [{
                 "char": "木",
@@ -43704,7 +43704,7 @@
     },
     {
         "pinyin": "bèi",
-        "char": "辈(F輩)",
+        "char": "辈(輩)",
         "definition": "generation, lifetime; class",
         "charForm": [{
                 "char": "非",
@@ -43746,7 +43746,7 @@
     },
     {
         "pinyin": "shǎn",
-        "char": "闪(F閃)",
+        "char": "闪(閃)",
         "definition": "flash; avoid, dodge, evade",
         "charForm": [{
                 "char": "门",
@@ -43788,7 +43788,7 @@
     },
     {
         "pinyin": "yǐn",
-        "char": "隐(F隱)",
+        "char": "隐(隱)",
         "definition": "hide, conceal; hidden, secret",
         "charForm": [{
                 "char": "阝",
@@ -43830,7 +43830,7 @@
     },
     {
         "pinyin": "jìn",
-        "char": "劲(F勁)",
+        "char": "劲(勁)",
         "definition": "strong, unyielding, tough, power",
         "charForm": [{
             "char": "力",
@@ -43866,7 +43866,7 @@
     },
     {
         "pinyin": "nào",
-        "char": "闹(F鬧)",
+        "char": "闹(鬧)",
         "definition": "quarrel; dispute hotly",
         "charForm": [{
                 "char": "门",
@@ -44055,7 +44055,7 @@
     },
     {
         "pinyin": "jiān",
-        "char": "监(F監)",
+        "char": "监(監)",
         "definition": "supervise, control, direct",
         "charForm": [{
             "char": "皿",
@@ -44091,7 +44091,7 @@
     },
     {
         "pinyin": "tīng",
-        "char": "厅(F廳)",
+        "char": "厅(廳)",
         "definition": "hall, central room",
         "charForm": [{
                 "char": "厂",
@@ -44133,7 +44133,7 @@
     },
     {
         "pinyin": "kù",
-        "char": "库(F庫)",
+        "char": "库(庫)",
         "definition": "armory, treasury, storehouse",
         "charForm": [{
                 "char": "广",
@@ -44343,7 +44343,7 @@
     },
     {
         "pinyin": "qìng",
-        "char": "庆(F慶)",
+        "char": "庆(慶)",
         "definition": "congratulate, celebrate",
         "charForm": [{
                 "char": "广",
@@ -44385,7 +44385,7 @@
     },
     {
         "pinyin": "lǜ",
-        "char": "绿(F綠)",
+        "char": "绿(綠)",
         "definition": "green; chlorine",
         "charForm": [{
                 "char": "纟",
@@ -44637,7 +44637,7 @@
     },
     {
         "pinyin": "é",
-        "char": "额(F額)",
+        "char": "额(額)",
         "definition": "forehead; tablet, plaque; fixed",
         "charForm": [{
                 "char": "客",
@@ -44679,7 +44679,7 @@
     },
     {
         "pinyin": "wù",
-        "char": "误(F誤)",
+        "char": "误(誤)",
         "definition": "err, make mistake; interfere",
         "charForm": [{
                 "char": "讠",
@@ -44763,7 +44763,7 @@
     },
     {
         "pinyin": "nà",
-        "char": "纳(F納)",
+        "char": "纳(納)",
         "definition": "admit, take, receive, accept",
         "charForm": [{
                 "char": "纟",
@@ -44889,7 +44889,7 @@
     },
     {
         "pinyin": "yí",
-        "char": "遗(F遺)",
+        "char": "遗(遺)",
         "definition": "lose; articles lost; omit",
         "charForm": [{
                 "char": "辶",
@@ -45062,7 +45062,7 @@
     },
     {
         "pinyin": "lǔ",
-        "char": "鲁(F魯)",
+        "char": "鲁(魯)",
         "definition": "foolish, stupid, rash; vulgar",
         "charForm": [{
                 "char": "鱼",
@@ -45146,7 +45146,7 @@
     },
     {
         "pinyin": "huò",
-        "char": "货(F貨)",
+        "char": "货(貨)",
         "definition": "goods, commodities, products",
         "charForm": [{
                 "char": "化",
@@ -45230,7 +45230,7 @@
     },
     {
         "pinyin": "huǎn",
-        "char": "缓(F緩)",
+        "char": "缓(緩)",
         "definition": "slow, leisurely; to postpone, delay",
         "charForm": [{
                 "char": "纟",
@@ -45272,7 +45272,7 @@
     },
     {
         "pinyin": "wěi",
-        "char": "伟(F偉)",
+        "char": "伟(偉)",
         "definition": "great, robust; extraordinary",
         "charForm": [{
                 "char": "亻",
@@ -45356,7 +45356,7 @@
     },
     {
         "pinyin": "zhuāng",
-        "char": "庄(F莊)",
+        "char": "庄(莊)",
         "definition": "village, hamlet; villa, manor",
         "charForm": [{
                 "char": "广",
@@ -45482,7 +45482,7 @@
     },
     {
         "pinyin": "shāo",
-        "char": "烧(F燒)",
+        "char": "烧(燒)",
         "definition": "burn; bake; heat; roast",
         "charForm": [{
                 "char": "火",
@@ -45566,7 +45566,7 @@
     },
     {
         "pinyin": "qiǎng",
-        "char": "抢(F搶)",
+        "char": "抢(搶)",
         "definition": "plunder, rob, take by force",
         "charForm": [{
                 "char": "扌",
@@ -45692,7 +45692,7 @@
     },
     {
         "pinyin": "xì",
-        "char": "戏(F戲)",
+        "char": "戏(戲)",
         "definition": "theatrical play, show",
         "charForm": [{
                 "char": "又",
@@ -45860,7 +45860,7 @@
     },
     {
         "pinyin": "wèi",
-        "char": "谓(F謂)",
+        "char": "谓(謂)",
         "definition": "say, tell; call, name; be called",
         "charForm": [{
                 "char": "讠",
@@ -45986,7 +45986,7 @@
     },
     {
         "pinyin": "kè",
-        "char": "课(F課)",
+        "char": "课(課)",
         "definition": "lesson; course; classwork",
         "charForm": [{
                 "char": "讠",
@@ -46196,7 +46196,7 @@
     },
     {
         "pinyin": "yóu",
-        "char": "邮(F郵)",
+        "char": "邮(郵)",
         "definition": "postal, mail; post office",
         "charForm": [{
                 "char": "由",
@@ -46238,7 +46238,7 @@
     },
     {
         "pinyin": "róng",
-        "char": "荣(F榮)",
+        "char": "荣(榮)",
         "definition": "glory, honor; flourish, prosper",
         "charForm": [{
                 "char": "艹",
@@ -46327,7 +46327,7 @@
     },
     {
         "pinyin": "yōng",
-        "char": "拥(F擁)",
+        "char": "拥(擁)",
         "definition": "embrace, hug, squeeze; crowd",
         "charForm": [{
                 "char": "扌",
@@ -46369,7 +46369,7 @@
     },
     {
         "pinyin": "xiàn",
-        "char": "献(F獻)",
+        "char": "献(獻)",
         "definition": "offer, present; show, display",
         "charForm": [{
                 "char": "南",
@@ -46537,7 +46537,7 @@
     },
     {
         "pinyin": "tàn",
-        "char": "叹(F嘆)",
+        "char": "叹(嘆)",
         "definition": "sigh, admire",
         "charForm": [{
                 "char": "口",
@@ -46663,7 +46663,7 @@
     },
     {
         "pinyin": "yīn",
-        "char": "阴(F陰)",
+        "char": "阴(陰)",
         "definition": "'female' principle; dark; secret",
         "charForm": [{
                 "char": "阝",
@@ -46789,7 +46789,7 @@
     },
     {
         "pinyin": "héng",
-        "char": "横(F橫)",
+        "char": "横(橫)",
         "definition": "across",
         "charForm": [{
                 "char": "木",
@@ -46967,7 +46967,7 @@
     },
     {
         "pinyin": "qiān",
-        "char": "签(F簽)",
+        "char": "签(簽)",
         "definition": "sign, endorse; slip of paper",
         "charForm": [{
                 "char": "⺮",
@@ -47177,7 +47177,7 @@
     },
     {
         "pinyin": "lún",
-        "char": "轮(F輪)",
+        "char": "轮(輪)",
         "definition": "wheel; revolve, turn; recur",
         "charForm": [{
                 "char": "车",
@@ -47397,7 +47397,7 @@
     },
     {
         "pinyin": "xùn",
-        "char": "训(F訓)",
+        "char": "训(訓)",
         "definition": "teach, instruct; exegesis",
         "charForm": [{
                 "char": "讠",
@@ -47439,7 +47439,7 @@
     },
     {
         "pinyin": "yuán",
-        "char": "圆(F圓)",
+        "char": "圆(圓)",
         "definition": "circle; round, circular; complete",
         "charForm": [{
                 "char": "囗",
@@ -47523,7 +47523,7 @@
     },
     {
         "pinyin": "shì",
-        "char": "释(F釋)",
+        "char": "释(釋)",
         "definition": "interprete, elucidate; release",
         "charForm": [{
             "char": "釆",
@@ -47559,7 +47559,7 @@
     },
     {
         "pinyin": "zhū",
-        "char": "诸(F諸)",
+        "char": "诸(諸)",
         "definition": "various, all, these; surname",
         "charForm": [{
                 "char": "讠",
@@ -47685,7 +47685,7 @@
     },
     {
         "pinyin": "duó",
-        "char": "夺(F奪)",
+        "char": "夺(奪)",
         "definition": "take by force, rob, snatch",
         "charForm": [{
                 "char": "大",
@@ -47863,7 +47863,7 @@
     },
     {
         "pinyin": "cè",
-        "char": "测(F測)",
+        "char": "测(測)",
         "definition": "measure, estimate, conjecture",
         "charForm": [{
                 "char": "氵",
@@ -47989,7 +47989,7 @@
     },
     {
         "pinyin": "gài",
-        "char": "盖(F蓋)",
+        "char": "盖(蓋)",
         "definition": "cover, hide, protect",
         "charForm": [{
                 "char": "羊",
@@ -48073,7 +48073,7 @@
     },
     {
         "pinyin": "yuè",
-        "char": "阅(F閱)",
+        "char": "阅(閱)",
         "definition": "examine, inspect, review, read",
         "charForm": [{
                 "char": "门",
@@ -48115,7 +48115,7 @@
     },
     {
         "pinyin": "gòu",
-        "char": "购(F購)",
+        "char": "购(購)",
         "definition": "buy, purchase; hire",
         "charForm": [{
                 "char": "贝",
@@ -48199,7 +48199,7 @@
     },
     {
         "pinyin": "zòng",
-        "char": "纵(F縱)",
+        "char": "纵(縱)",
         "definition": "indulge in, give free reign to",
         "charForm": [{
                 "char": "纟",
@@ -48325,7 +48325,7 @@
     },
     {
         "pinyin": "guà",
-        "char": "挂(F掛)",
+        "char": "挂(掛)",
         "definition": "hang, suspend; suspense",
         "charForm": [{
                 "char": "扌",
@@ -48409,7 +48409,7 @@
     },
     {
         "pinyin": "zé",
-        "char": "择(F擇)",
+        "char": "择(擇)",
         "definition": "select, choose, pick out",
         "charForm": [{
             "char": "扌",
@@ -48650,7 +48650,7 @@
     },
     {
         "pinyin": "yù",
-        "char": "誉(F譽)",
+        "char": "誉(譽)",
         "definition": "fame, reputation; praise",
         "charForm": [{
                 "char": "兴",
@@ -48796,7 +48796,7 @@
     },
     {
         "pinyin": "jiǎn",
-        "char": "检(F檢)",
+        "char": "检(檢)",
         "definition": "check; examine",
         "charForm": [{
                 "char": "木",
@@ -48838,7 +48838,7 @@
     },
     {
         "pinyin": "gōng",
-        "char": "宫(F宮)",
+        "char": "宫(宮)",
         "definition": "palace",
         "charForm": [{
                 "char": "宀",
@@ -48880,7 +48880,7 @@
     },
     {
         "pinyin": "yí",
-        "char": "仪(F儀)",
+        "char": "仪(儀)",
         "definition": "ceremony, rites gifts; admire",
         "charForm": [{
                 "char": "亻",
@@ -49090,7 +49090,7 @@
     },
     {
         "pinyin": "bǎi",
-        "char": "摆(F擺)",
+        "char": "摆(擺)",
         "definition": "put, place; display; swing, sway",
         "charForm": [{
                 "char": "扌",
@@ -49132,7 +49132,7 @@
     },
     {
         "pinyin": "ào",
-        "char": "奥(F奧)",
+        "char": "奥(奧)",
         "definition": "mysterious, obscure, profound",
         "charForm": [{
                 "char": "⿵宀米",
@@ -49268,7 +49268,7 @@
     },
     {
         "pinyin": "miè",
-        "char": "灭(F滅)",
+        "char": "灭(滅)",
         "definition": "extinguish; wipe out, exterminate",
         "charForm": [{
                 "char": "一",
@@ -49384,7 +49384,7 @@
     },
     {
         "pinyin": "lǜ",
-        "char": "虑(F慮)",
+        "char": "虑(慮)",
         "definition": "be concerned, worry about",
         "charForm": [{
                 "char": "虍",
@@ -49510,7 +49510,7 @@
     },
     {
         "pinyin": "kuān",
-        "char": "宽(F寬)",
+        "char": "宽(寬)",
         "definition": "broad, wide; spacious, vast",
         "charForm": [{
                 "char": "宀",
@@ -49673,7 +49673,7 @@
     },
     {
         "pinyin": "shào",
-        "char": "绍(F紹)",
+        "char": "绍(紹)",
         "definition": "continue, carry on; join",
         "charForm": [{
                 "char": "纟",
@@ -49715,7 +49715,7 @@
     },
     {
         "pinyin": "bǔ",
-        "char": "补(F補)",
+        "char": "补(補)",
         "definition": "mend, patch, fix, repair, restore",
         "charForm": [{
                 "char": "衤",
@@ -49952,7 +49952,7 @@
     },
     {
         "pinyin": "zàn",
-        "char": "赞(F贊)",
+        "char": "赞(贊)",
         "definition": "help, support, assist, aid",
         "charForm": [{
                 "char": "兟",
@@ -50124,7 +50124,7 @@
     },
     {
         "pinyin": "wěn",
-        "char": "稳(F穩)",
+        "char": "稳(穩)",
         "definition": "stable, firm, solid, steady",
         "charForm": [{
                 "char": "禾",
@@ -50208,7 +50208,7 @@
     },
     {
         "pinyin": "lì",
-        "char": "厉(F厲)",
+        "char": "厉(厲)",
         "definition": "whetstone; grind, sharpen; whet",
         "charForm": [{
                 "char": "厂",
@@ -50250,7 +50250,7 @@
     },
     {
         "pinyin": "jiè",
-        "char": "届(F屆)",
+        "char": "届(屆)",
         "definition": "numerary adjunct for time, term",
         "charForm": [{
                 "char": "尸",
@@ -50292,7 +50292,7 @@
     },
     {
         "pinyin": "jì",
-        "char": "迹(F跡)",
+        "char": "迹(跡)",
         "definition": "traces, impressions, footprints",
         "charForm": [{
                 "char": "辶",
@@ -50496,7 +50496,7 @@
     },
     {
         "pinyin": "jī",
-        "char": "鸡(F雞)",
+        "char": "鸡(雞)",
         "definition": "chicken",
         "charForm": [{
                 "char": "又",
@@ -50664,7 +50664,7 @@
     },
     {
         "pinyin": "yì",
-        "char": "忆(F憶)",
+        "char": "忆(憶)",
         "definition": "remember, reflect upon; memory",
         "charForm": [{
                 "char": "忄",
@@ -50921,7 +50921,7 @@
     },
     {
         "pinyin": "chéng",
-        "char": "诚(F誠)",
+        "char": "诚(誠)",
         "definition": "sincere, honest; true, real",
         "charForm": [{
                 "char": "讠",
@@ -51005,7 +51005,7 @@
     },
     {
         "pinyin": "jiǎn",
-        "char": "减(F減)",
+        "char": "减(減)",
         "definition": "decrease, subtract, diminish",
         "charForm": [{
                 "char": "冫",
@@ -51096,7 +51096,7 @@
     },
     {
         "pinyin": "zhēn",
-        "char": "针(F針)",
+        "char": "针(針)",
         "definition": "needle; pin; tack; acupuncture",
         "charForm": [{
                 "char": "钅",
@@ -51180,7 +51180,7 @@
     },
     {
         "pinyin": "jìng",
-        "char": "竞(F競)",
+        "char": "竞(競)",
         "definition": "contend, vie, compete",
         "charForm": [{
                 "char": "立",
@@ -51568,7 +51568,7 @@
     },
     {
         "pinyin": "lún",
-        "char": "伦(F倫)",
+        "char": "伦(倫)",
         "definition": "normal human relationships",
         "charForm": [{
                 "char": "亻",
@@ -51652,7 +51652,7 @@
     },
     {
         "pinyin": "gāng",
-        "char": "钢(F鋼)",
+        "char": "钢(鋼)",
         "definition": "steel; hard, strong, tough",
         "charForm": [{
                 "char": "钅",
@@ -51694,7 +51694,7 @@
     },
     {
         "pinyin": "nuò",
-        "char": "诺(F諾)",
+        "char": "诺(諾)",
         "definition": "promise; assent, approve",
         "charForm": [{
                 "char": "讠",
@@ -51736,7 +51736,7 @@
     },
     {
         "pinyin": "cán",
-        "char": "残(F殘)",
+        "char": "残(殘)",
         "definition": "injure, spoil; oppress; broken",
         "charForm": [{
                 "char": "歹",
@@ -51904,7 +51904,7 @@
     },
     {
         "pinyin": "zāi",
-        "char": "灾(F災)",
+        "char": "灾(災)",
         "definition": "calamity, disaster, catastrophe",
         "charForm": [{
                 "char": "宀",
@@ -52030,7 +52030,7 @@
     },
     {
         "pinyin": "qiáo",
-        "char": "乔(F喬)",
+        "char": "乔(喬)",
         "definition": "tall, lofty; proud, stately",
         "charForm": [{
             "char": "夭",
@@ -52239,7 +52239,7 @@
     },
     {
         "pinyin": "liáng",
-        "char": "粮(F糧)",
+        "char": "粮(糧)",
         "definition": "food, grain, provisions",
         "charForm": [{
                 "char": "米",
@@ -52323,7 +52323,7 @@
     },
     {
         "pinyin": "yì",
-        "char": "译(F譯)",
+        "char": "译(譯)",
         "definition": "translate; decode; encode",
         "charForm": [{
             "char": "讠",
@@ -52448,7 +52448,7 @@
     },
     {
         "pinyin": "móu",
-        "char": "谋(F謀)",
+        "char": "谋(謀)",
         "definition": "plan, scheme; strategem",
         "charForm": [{
                 "char": "讠",
@@ -52490,7 +52490,7 @@
     },
     {
         "pinyin": "chǔ",
-        "char": "础(F礎)",
+        "char": "础(礎)",
         "definition": "foundation stone, plinth",
         "charForm": [{
                 "char": "石",
@@ -52574,7 +52574,7 @@
     },
     {
         "pinyin": "sǔn",
-        "char": "损(F損)",
+        "char": "损(損)",
         "definition": "diminish; impair; injure",
         "charForm": [{
                 "char": "扌",
@@ -52658,7 +52658,7 @@
     },
     {
         "pinyin": "liàng",
-        "char": "辆(F輛)",
+        "char": "辆(輛)",
         "definition": "numerary adjunct for vehicles",
         "charForm": [{
                 "char": "车",
@@ -52700,7 +52700,7 @@
     },
     {
         "pinyin": "jìng",
-        "char": "净(F凈)",
+        "char": "净(凈)",
         "definition": "clean, pure; cleanse",
         "charForm": [{
                 "char": "冫",
@@ -53083,7 +53083,7 @@
     },
     {
         "pinyin": "dàng",
-        "char": "荡(F蕩)",
+        "char": "荡(蕩)",
         "definition": "pond, pool; wash away, cleanse",
         "charForm": [{
                 "char": "艹",
@@ -53256,7 +53256,7 @@
     },
     {
         "pinyin": "fèn",
-        "char": "奋(F奮)",
+        "char": "奋(奮)",
         "definition": "strive, exert effort; arouse",
         "charForm": [{
                 "char": "大",
@@ -53298,7 +53298,7 @@
     },
     {
         "pinyin": "dǎn",
-        "char": "胆(F膽)",
+        "char": "胆(膽)",
         "definition": "gall bladder; bravery, courage",
         "charForm": [{
                 "char": "⺼",
@@ -53340,7 +53340,7 @@
     },
     {
         "pinyin": "qì",
-        "char": "弃(F棄)",
+        "char": "弃(棄)",
         "definition": "reject, abandon, discard",
         "charForm": [{
                 "char": "亠",
@@ -53387,7 +53387,7 @@
     },
     {
         "pinyin": "fán",
-        "char": "烦(F煩)",
+        "char": "烦(煩)",
         "definition": "bother, vex, trouble; troublesome",
         "charForm": [{
                 "char": "火",
@@ -53471,7 +53471,7 @@
     },
     {
         "pinyin": "yóu",
-        "char": "犹(F猶)",
+        "char": "犹(猶)",
         "definition": "like, similar to, just like, as",
         "charForm": [{
                 "char": "犭",
@@ -53513,7 +53513,7 @@
     },
     {
         "pinyin": "shuì",
-        "char": "税(F稅)",
+        "char": "税(稅)",
         "definition": "taxes",
         "charForm": [{
                 "char": "禾",
@@ -53681,7 +53681,7 @@
     },
     {
         "pinyin": "fēng",
-        "char": "锋(F鋒)",
+        "char": "锋(鋒)",
         "definition": "point of spear, sharp point",
         "charForm": [{
                 "char": "钅",
@@ -53759,7 +53759,7 @@
     },
     {
         "pinyin": "yáo",
-        "char": "遥(F遙)",
+        "char": "遥(遙)",
         "definition": "far away, distant, remote",
         "charForm": [{
                 "char": "辶",
@@ -54011,7 +54011,7 @@
     },
     {
         "pinyin": "guàn",
-        "char": "惯(F慣)",
+        "char": "惯(慣)",
         "definition": "habit, custom; habitually, usual",
         "charForm": [{
                 "char": "忄",
@@ -54053,7 +54053,7 @@
     },
     {
         "pinyin": "píng",
-        "char": "凭(F憑)",
+        "char": "凭(憑)",
         "definition": "lean on, depend on, rely on",
         "charForm": [{
                 "char": "任",
@@ -54231,7 +54231,7 @@
     },
     {
         "pinyin": "bì",
-        "char": "币(F幣)",
+        "char": "币(幣)",
         "definition": "currency, coins, legal tender",
         "charForm": [{
                 "char": "丿",
@@ -54273,7 +54273,7 @@
     },
     {
         "pinyin": "qǐ",
-        "char": "启(F啟)",
+        "char": "启(啟)",
         "definition": "open; begin, commence; explain",
         "charForm": [{
                 "char": "户",
@@ -54315,7 +54315,7 @@
     },
     {
         "pinyin": "mǎ",
-        "char": "码(F碼)",
+        "char": "码(碼)",
         "definition": "number, numerals; yard; symbol",
         "charForm": [{
                 "char": "石",
@@ -54561,7 +54561,7 @@
     },
     {
         "pinyin": "qióng",
-        "char": "穷(F窮)",
+        "char": "穷(窮)",
         "definition": "poor, destitute, impoverished",
         "charForm": [{
                 "char": "穴",
@@ -54603,7 +54603,7 @@
     },
     {
         "pinyin": "pō",
-        "char": "颇(F頗)",
+        "char": "颇(頗)",
         "definition": "lean one side; very, rather",
         "charForm": [{
                 "char": "皮",
@@ -54645,7 +54645,7 @@
     },
     {
         "pinyin": "qīng",
-        "char": "倾(F傾)",
+        "char": "倾(傾)",
         "definition": "upset, pour out, overflow",
         "charForm": [{
                 "char": "亻",
@@ -54729,7 +54729,7 @@
     },
     {
         "pinyin": "Hán",
-        "char": "韩(F韓)",
+        "char": "韩(韓)",
         "definition": "fence; surname; Korea",
         "charForm": [{
                 "char": "龺",
@@ -54771,7 +54771,7 @@
     },
     {
         "pinyin": "mào",
-        "char": "贸(F貿)",
+        "char": "贸(貿)",
         "definition": "trade, barter; mixed; rashly",
         "charForm": [{
                 "char": "卯",
@@ -54897,7 +54897,7 @@
     },
     {
         "pinyin": "piāo",
-        "char": "飘(F飄)",
+        "char": "飘(飄)",
         "definition": "whirlwind, cyclone; floating",
         "charForm": [{
                 "char": "票",
@@ -55054,7 +55054,7 @@
     },
     {
         "pinyin": "cè",
-        "char": "侧(F側)",
+        "char": "侧(側)",
         "definition": "side; incline, slant, lean",
         "charForm": [{
                 "char": "亻",
@@ -55279,7 +55279,7 @@
     },
     {
         "pinyin": "shǎng",
-        "char": "赏(F賞)",
+        "char": "赏(賞)",
         "definition": "reward, grant, bestow; appreciate",
         "charForm": [{
                 "char": "尚",
@@ -55489,7 +55489,7 @@
     },
     {
         "pinyin": "chún",
-        "char": "纯(F純)",
+        "char": "纯(純)",
         "definition": "pure, clean, simple",
         "charForm": [{
                 "char": "纟",
@@ -55531,7 +55531,7 @@
     },
     {
         "pinyin": "bì",
-        "char": "闭(F閉)",
+        "char": "闭(閉)",
         "definition": "shut, close; obstruct, block up",
         "charForm": [{
                 "char": "门",
@@ -55573,7 +55573,7 @@
     },
     {
         "pinyin": "liáng",
-        "char": "凉(F涼)",
+        "char": "凉(涼)",
         "definition": "cool, cold; disheartened",
         "charForm": [{
                 "char": "冫",
@@ -55615,7 +55615,7 @@
     },
     {
         "pinyin": "sǎo",
-        "char": "扫(F掃)",
+        "char": "扫(掃)",
         "definition": "sweep, clear away; exterminate",
         "charForm": [{
                 "char": "扌",
@@ -55783,7 +55783,7 @@
     },
     {
         "pinyin": "tiē",
-        "char": "贴(F貼)",
+        "char": "贴(貼)",
         "definition": "paste to, stick on; attached to",
         "charForm": [{
                 "char": "贝",
@@ -55867,7 +55867,7 @@
     },
     {
         "pinyin": "gǔn",
-        "char": "滚(F滾)",
+        "char": "滚(滾)",
         "definition": "turn",
         "charForm": [{
                 "char": "氵",
@@ -55909,7 +55909,7 @@
     },
     {
         "pinyin": "yuán",
-        "char": "缘(F緣)",
+        "char": "缘(緣)",
         "definition": "hem, margin; reason, cause; fate",
         "charForm": [{
                 "char": "纟",
@@ -55993,7 +55993,7 @@
     },
     {
         "pinyin": "bèi",
-        "char": "贝(F貝)",
+        "char": "贝(貝)",
         "definition": "sea shell; money, currency",
         "charForm": [{
                 "char": "冂",
@@ -56035,7 +56035,7 @@
     },
     {
         "pinyin": "rùn",
-        "char": "润(F潤)",
+        "char": "润(潤)",
         "definition": "soft, moist; sleek; freshen",
         "charForm": [{
                 "char": "氵",
@@ -56151,7 +56151,7 @@
     },
     {
         "pinyin": "kuò",
-        "char": "扩(F擴)",
+        "char": "扩(擴)",
         "definition": "expand, enlarge, stretch",
         "charForm": [{
                 "char": "扌",
@@ -56193,7 +56193,7 @@
     },
     {
         "pinyin": "lán",
-        "char": "栏(F欄)",
+        "char": "栏(欄)",
         "definition": "railing, balustrade; animal pan",
         "charForm": [{
                 "char": "木",
@@ -56361,7 +56361,7 @@
     },
     {
         "pinyin": "xià",
-        "char": "吓(F嚇)",
+        "char": "吓(嚇)",
         "definition": "scare, frighten; intimidate",
         "charForm": [{
                 "char": "口",
@@ -56529,7 +56529,7 @@
     },
     {
         "pinyin": "liǎ",
-        "char": "俩(F倆)",
+        "char": "俩(倆)",
         "definition": "two, pair",
         "charForm": [{
                 "char": "亻",
@@ -56571,7 +56571,7 @@
     },
     {
         "pinyin": "lán",
-        "char": "蓝(F藍)",
+        "char": "蓝(藍)",
         "definition": "blue; indigo plant; surname",
         "charForm": [{
                 "char": "艹",
@@ -56613,7 +56613,7 @@
     },
     {
         "pinyin": "xián",
-        "char": "闲(F閑)",
+        "char": "闲(閑)",
         "definition": "fence, guard; defend; idle time",
         "charForm": [{
                 "char": "门",
@@ -56697,7 +56697,7 @@
     },
     {
         "pinyin": "jìng",
-        "char": "镜(F鏡)",
+        "char": "镜(鏡)",
         "definition": "mirror; lens; glass; glasses",
         "charForm": [{
                 "char": "钅",
@@ -56781,7 +56781,7 @@
     },
     {
         "pinyin": "qí",
-        "char": "骑(F騎)",
+        "char": "骑(騎)",
         "definition": "ride horseback; mount; cavalry",
         "charForm": [{
                 "char": "马",
@@ -57027,7 +57027,7 @@
     },
     {
         "pinyin": "yán",
-        "char": "颜(F顏)",
+        "char": "颜(顏)",
         "definition": "face, facial appearance",
         "charForm": [{
                 "char": "彦",
@@ -57069,7 +57069,7 @@
     },
     {
         "pinyin": "pín",
-        "char": "贫(F貧)",
+        "char": "贫(貧)",
         "definition": "poor, impoverished, needy",
         "charForm": [{
                 "char": "分",
@@ -57153,7 +57153,7 @@
     },
     {
         "pinyin": "zhù",
-        "char": "驻(F駐)",
+        "char": "驻(駐)",
         "definition": "to be stationed at, reside at; to stop",
         "charForm": [{
                 "char": "马",
@@ -57279,7 +57279,7 @@
     },
     {
         "pinyin": "jié",
-        "char": "杰(F傑)",
+        "char": "杰(傑)",
         "definition": "hero; heroic, outstanding",
         "charForm": [{
                 "char": "木",
@@ -57321,7 +57321,7 @@
     },
     {
         "pinyin": "pū",
-        "char": "扑(F撲)",
+        "char": "扑(撲)",
         "definition": "pound, beat, strike; attack",
         "charForm": [{
                 "char": "扌",
@@ -57363,7 +57363,7 @@
     },
     {
         "pinyin": "zhuàng",
-        "char": "壮(F壯)",
+        "char": "壮(壯)",
         "definition": "big, large; robust; name of tribe",
         "charForm": [{
                 "char": "丬",
@@ -57405,7 +57405,7 @@
     },
     {
         "pinyin": "sà",
-        "char": "萨(F薩)",
+        "char": "萨(薩)",
         "definition": "Buddhist gods or immortals",
         "charForm": [{
                 "char": "艹",
@@ -57499,7 +57499,7 @@
     },
     {
         "pinyin": "yōu",
-        "char": "忧(F憂)",
+        "char": "忧(憂)",
         "definition": "sad, grieved; grief, melancholy",
         "charForm": [{
                 "char": "忄",
@@ -57583,7 +57583,7 @@
     },
     {
         "pinyin": "yù",
-        "char": "狱(F獄)",
+        "char": "狱(獄)",
         "definition": "prison, jail; case; lawsuit",
         "charForm": [{
                 "char": "犭",
@@ -57677,7 +57677,7 @@
     },
     {
         "pinyin": "fèng",
-        "char": "凤(F鳳)",
+        "char": "凤(鳳)",
         "definition": "male phoenix; symbol of joy",
         "charForm": [{
                 "char": "几",
@@ -57761,7 +57761,7 @@
     },
     {
         "pinyin": "chù",
-        "char": "触(F觸)",
+        "char": "触(觸)",
         "definition": "butt, ram, gore; touch",
         "charForm": [{
                 "char": "角",
@@ -57803,7 +57803,7 @@
     },
     {
         "pinyin": "liàn",
-        "char": "恋(F戀)",
+        "char": "恋(戀)",
         "definition": "love; long for, yearn for; love",
         "charForm": [{
                 "char": "亦",
@@ -57845,7 +57845,7 @@
     },
     {
         "pinyin": "qǐ",
-        "char": "岂(F豈)",
+        "char": "岂(豈)",
         "definition": "how? what?",
         "charForm": [{
                 "char": "山",
@@ -58065,7 +58065,7 @@
     },
     {
         "pinyin": "xiá",
-        "char": "侠(F俠)",
+        "char": "侠(俠)",
         "definition": "chivalrous person; knight-errant",
         "charForm": [{
                 "char": "亻",
@@ -58164,7 +58164,7 @@
     },
     {
         "pinyin": "chí",
-        "char": "迟(F遲)",
+        "char": "迟(遲)",
         "definition": "late, tardy; slow; delay",
         "charForm": [{
                 "char": "辶",
@@ -58206,7 +58206,7 @@
     },
     {
         "pinyin": "huī",
-        "char": "辉(F輝)",
+        "char": "辉(輝)",
         "definition": "brightness, luster, brilliance",
         "charForm": [{
                 "char": "光",
@@ -58332,7 +58332,7 @@
     },
     {
         "pinyin": "suō",
-        "char": "缩(F縮)",
+        "char": "缩(縮)",
         "definition": "contract, draw in, reduce",
         "charForm": [{
                 "char": "纟",
@@ -58416,7 +58416,7 @@
     },
     {
         "pinyin": "xiāo",
-        "char": "萧(F蕭)",
+        "char": "萧(蕭)",
         "definition": "common artemisia; dejected",
         "charForm": [{
                 "char": "艹",
@@ -58584,7 +58584,7 @@
     },
     {
         "pinyin": "cí",
-        "char": "辞(F辭)",
+        "char": "辞(辭)",
         "definition": "words, speech, expression, phrase",
         "charForm": [{
                 "char": "舌",
@@ -58668,7 +58668,7 @@
     },
     {
         "pinyin": "líng",
-        "char": "龄(F齡)",
+        "char": "龄(齡)",
         "definition": "age; years",
         "charForm": [{
                 "char": "齿",
@@ -58710,7 +58710,7 @@
     },
     {
         "pinyin": "jìng",
-        "char": "径(F徑)",
+        "char": "径(徑)",
         "definition": "narrow path; diameter; direct",
         "charForm": [{
                 "char": "彳",
@@ -58799,7 +58799,7 @@
     },
     {
         "pinyin": "lài",
-        "char": "赖(F賴)",
+        "char": "赖(賴)",
         "definition": "rely, depend on; accuse falsely",
         "charForm": [{
                 "char": "剌",
@@ -58883,7 +58883,7 @@
     },
     {
         "pinyin": "fèn",
-        "char": "愤(F憤)",
+        "char": "愤(憤)",
         "definition": "resent, hate; indignant",
         "charForm": [{
                 "char": "忄",
@@ -59051,7 +59051,7 @@
     },
     {
         "pinyin": "xún",
-        "char": "询(F詢)",
+        "char": "询(詢)",
         "definition": "inquire into, ask about; consult",
         "charForm": [{
                 "char": "讠",
@@ -59093,7 +59093,7 @@
     },
     {
         "pinyin": "cǎn",
-        "char": "惨(F慘)",
+        "char": "惨(慘)",
         "definition": "sad, pitiful, wretched; cruel",
         "charForm": [{
                 "char": "忄",
@@ -59135,7 +59135,7 @@
     },
     {
         "pinyin": "mài",
-        "char": "麦(F麥)",
+        "char": "麦(麥)",
         "definition": "wheat, barley, oats; simplified form of KangXi radical number 199",
         "charForm": [{
                 "char": "龶",
@@ -59303,7 +59303,7 @@
     },
     {
         "pinyin": "téng",
-        "char": "腾(F騰)",
+        "char": "腾(騰)",
         "definition": "fly; gallop; run; prance; rise",
         "charForm": [{
                 "char": "朕",
@@ -59476,7 +59476,7 @@
     },
     {
         "pinyin": "wū",
-        "char": "乌(F烏)",
+        "char": "乌(烏)",
         "definition": "crow, rook, raven; black, dark",
         "charForm": [{
             "char": "丿",
@@ -59554,7 +59554,7 @@
     },
     {
         "pinyin": "gǎng",
-        "char": "岗(F崗)",
+        "char": "岗(崗)",
         "definition": "post; position",
         "charForm": [{
                 "char": "山",
@@ -59638,7 +59638,7 @@
     },
     {
         "pinyin": "pū",
-        "char": "铺(F鋪)",
+        "char": "铺(鋪)",
         "definition": "shop, store; place sleep, bed",
         "charForm": [{
                 "char": "钅",
@@ -59764,7 +59764,7 @@
     },
     {
         "pinyin": "dǎng",
-        "char": "挡(F擋)",
+        "char": "挡(擋)",
         "definition": "obstruct, impede; stop; resist",
         "charForm": [{
                 "char": "扌",
@@ -60225,7 +60225,7 @@
     },
     {
         "pinyin": "zhàng",
-        "char": "帐(F帳)",
+        "char": "帐(帳)",
         "definition": "tent; screen, mosquito net",
         "charForm": [{
                 "char": "巾",
@@ -60408,7 +60408,7 @@
     },
     {
         "pinyin": "zhū",
-        "char": "猪(F豬)",
+        "char": "猪(豬)",
         "definition": "pig, hog, wild boar",
         "charForm": [{
                 "char": "犭",
@@ -60534,7 +60534,7 @@
     },
     {
         "pinyin": "quàn",
-        "char": "劝(F勸)",
+        "char": "劝(勸)",
         "definition": "recommend, advise, urge",
         "charForm": [{
                 "char": "又",
@@ -60618,7 +60618,7 @@
     },
     {
         "pinyin": "zhù",
-        "char": "筑(F築)",
+        "char": "筑(築)",
         "definition": "ancient lute; build",
         "charForm": [{
                 "char": "⺮",
@@ -60885,7 +60885,7 @@
     },
     {
         "pinyin": "jǐ",
-        "char": "挤(F擠)",
+        "char": "挤(擠)",
         "definition": "crowd, squeeze, push against",
         "charForm": [{
                 "char": "扌",
@@ -61053,7 +61053,7 @@
     },
     {
         "pinyin": "jié",
-        "char": "洁(F潔)",
+        "char": "洁(潔)",
         "definition": "clean, purify, pure",
         "charForm": [{
                 "char": "氵",
@@ -61299,7 +61299,7 @@
     },
     {
         "pinyin": "zhèng",
-        "char": "郑(F鄭)",
+        "char": "郑(鄭)",
         "definition": "state in today's Henan; surname",
         "charForm": [{
                 "char": "关",
@@ -61341,7 +61341,7 @@
     },
     {
         "pinyin": "míng",
-        "char": "鸣(F鳴)",
+        "char": "鸣(鳴)",
         "definition": "cry of bird or animal; make sound",
         "charForm": [{
                 "char": "口",
@@ -61467,7 +61467,7 @@
     },
     {
         "pinyin": "kē",
-        "char": "颗(F顆)",
+        "char": "颗(顆)",
         "definition": "grain, kernel",
         "charForm": [{
                 "char": "果",
@@ -61761,7 +61761,7 @@
     },
     {
         "pinyin": "sàng",
-        "char": "丧(F喪)",
+        "char": "丧(喪)",
         "definition": "mourning; mourn; funeral",
         "charForm": [{
             "char": "亡",
@@ -62133,7 +62133,7 @@
     },
     {
         "pinyin": "làn",
-        "char": "烂(F爛)",
+        "char": "烂(爛)",
         "definition": "rotten, spoiled, decayed",
         "charForm": [{
                 "char": "火",
@@ -62175,7 +62175,7 @@
     },
     {
         "pinyin": "piàn",
-        "char": "骗(F騙)",
+        "char": "骗(騙)",
         "definition": "swindle, cheat out of, defraud",
         "charForm": [{
                 "char": "马",
@@ -62259,7 +62259,7 @@
     },
     {
         "pinyin": "yè",
-        "char": "页(F頁)",
+        "char": "页(頁)",
         "definition": "page, sheet, leaf; rad. no. 181",
         "charForm": [{
             "char": "贝",
@@ -62373,7 +62373,7 @@
     },
     {
         "pinyin": "shī",
-        "char": "尸(F屍)",
+        "char": "尸(屍)",
         "definition": "corpse; to impersonate the dead; to preside; KangXi radical 44",
         "charForm": [{
             "char": "丿",
@@ -62493,7 +62493,7 @@
     },
     {
         "pinyin": "liáo",
-        "char": "疗(F療)",
+        "char": "疗(療)",
         "definition": "be healed, cured, recover",
         "charForm": [{
                 "char": "疒",
@@ -62577,7 +62577,7 @@
     },
     {
         "pinyin": "chén",
-        "char": "尘(F塵)",
+        "char": "尘(塵)",
         "definition": "dust, dirt, ashes, cinders",
         "charForm": [{
                 "char": "小",
@@ -63075,7 +63075,7 @@
     },
     {
         "pinyin": "yǐn",
-        "char": "饮(F飲)",
+        "char": "饮(飲)",
         "definition": "drink; swallow; kind of drink",
         "charForm": [{
                 "char": "饣",
@@ -63580,7 +63580,7 @@
     },
     {
         "pinyin": "bīn",
-        "char": "宾(F賓)",
+        "char": "宾(賓)",
         "definition": "guest, visitor; surname; submit",
         "charForm": [{
                 "char": "宀",
@@ -63622,7 +63622,7 @@
     },
     {
         "pinyin": "xù",
-        "char": "绪(F緒)",
+        "char": "绪(緒)",
         "definition": "end of thread; thread, clue",
         "charForm": [{
                 "char": "纟",
@@ -63874,7 +63874,7 @@
     },
     {
         "pinyin": "zéi",
-        "char": "贼(F賊)",
+        "char": "贼(賊)",
         "definition": "thief, traitor; kill",
         "charForm": [{
                 "char": "贝",
@@ -64215,7 +64215,7 @@
     },
     {
         "pinyin": "fèi",
-        "char": "废(F廢)",
+        "char": "废(廢)",
         "definition": "abrogate, terminate, discard",
         "charForm": [{
                 "char": "广",
@@ -64341,7 +64341,7 @@
     },
     {
         "pinyin": "xiáng",
-        "char": "详(F詳)",
+        "char": "详(詳)",
         "definition": "detailed, complete, thorough",
         "charForm": [{
                 "char": "讠",
@@ -64383,7 +64383,7 @@
     },
     {
         "pinyin": "tāng",
-        "char": "汤(F湯)",
+        "char": "汤(湯)",
         "definition": "hot water; soup, gravy, broth",
         "charForm": [{
                 "char": "氵",
@@ -64425,7 +64425,7 @@
     },
     {
         "pinyin": "chè",
-        "char": "彻(F徹)",
+        "char": "彻(徹)",
         "definition": "penetrate, pervade; penetrating",
         "charForm": [{
                 "char": "彳",
@@ -64551,7 +64551,7 @@
     },
     {
         "pinyin": "hōng",
-        "char": "轰(F轟)",
+        "char": "轰(轟)",
         "definition": "rumble, explosion, blast",
         "charForm": [{
                 "char": "车",
@@ -64635,7 +64635,7 @@
     },
     {
         "pinyin": "lián",
-        "char": "怜(F憐)",
+        "char": "怜(憐)",
         "definition": "pity, sympathize",
         "charForm": [{
                 "char": "忄",
@@ -64803,7 +64803,7 @@
     },
     {
         "pinyin": "niǎo",
-        "char": "鸟(F鳥)",
+        "char": "鸟(鳥)",
         "definition": "bird; KangXi radical 196",
         "charForm": [],
         "exampleWord": [{
@@ -64919,7 +64919,7 @@
     },
     {
         "pinyin": "huǐ",
-        "char": "毁(F毀)",
+        "char": "毁(毀)",
         "definition": "destroy",
         "charForm": [{
                 "char": "殳",
@@ -64966,7 +64966,7 @@
     },
     {
         "pinyin": "cōng",
-        "char": "聪(F聰)",
+        "char": "聪(聰)",
         "definition": "intelligent, clever, bright",
         "charForm": [{
                 "char": "耳",
@@ -65008,7 +65008,7 @@
     },
     {
         "pinyin": "biàn",
-        "char": "辩(F辯)",
+        "char": "辩(辯)",
         "definition": "dispute, argue, debate, discuss",
         "charForm": [{
                 "char": "辛",
@@ -65097,7 +65097,7 @@
     },
     {
         "pinyin": "è",
-        "char": "饿(F餓)",
+        "char": "饿(餓)",
         "definition": "hungry; greedy for; hunger",
         "charForm": [{
                 "char": "饣",
@@ -65307,7 +65307,7 @@
     },
     {
         "pinyin": "fēng",
-        "char": "枫(F楓)",
+        "char": "枫(楓)",
         "definition": "maple tree",
         "charForm": [{
                 "char": "木",
@@ -65527,7 +65527,7 @@
     },
     {
         "pinyin": "zhèng",
-        "char": "挣(F掙)",
+        "char": "挣(掙)",
         "definition": "strive, endeavor, struggle",
         "charForm": [{
                 "char": "扌",
@@ -65606,7 +65606,7 @@
     },
     {
         "pinyin": "wān",
-        "char": "弯(F彎)",
+        "char": "弯(彎)",
         "definition": "bend, curve",
         "charForm": [{
                 "char": "亦",
@@ -65774,7 +65774,7 @@
     },
     {
         "pinyin": "Jiǎng",
-        "char": "蒋(F蔣)",
+        "char": "蒋(蔣)",
         "definition": "surname; hydropyrum latifalium",
         "charForm": [{
                 "char": "艹",
@@ -65905,7 +65905,7 @@
     },
     {
         "pinyin": "wéi",
-        "char": "违(F違)",
+        "char": "违(違)",
         "definition": "disobey, violate, defy; be apart from",
         "charForm": [{
                 "char": "辶",
@@ -65947,7 +65947,7 @@
     },
     {
         "pinyin": "kuī",
-        "char": "亏(F虧)",
+        "char": "亏(虧)",
         "definition": "lose, fail; damage; deficient",
         "charForm": [{
             "char": "二",
@@ -65983,7 +65983,7 @@
     },
     {
         "pinyin": "diū",
-        "char": "丢(F丟)",
+        "char": "丢(丟)",
         "definition": "discard",
         "charForm": [{
                 "char": "王",
@@ -66428,7 +66428,7 @@
     },
     {
         "pinyin": "rào",
-        "char": "绕(F繞)",
+        "char": "绕(繞)",
         "definition": "entwine; wind around; surround",
         "charForm": [{
                 "char": "纟",
@@ -66716,7 +66716,7 @@
     },
     {
         "pinyin": "zàn",
-        "char": "暂(F暫)",
+        "char": "暂(暫)",
         "definition": "temporary",
         "charForm": [{
                 "char": "斩",
@@ -66884,7 +66884,7 @@
     },
     {
         "pinyin": "dì",
-        "char": "递(F遞)",
+        "char": "递(遞)",
         "definition": "hand over, deliver; substitute",
         "charForm": [{
                 "char": "辶",
@@ -66968,7 +66968,7 @@
     },
     {
         "pinyin": "qián",
-        "char": "潜(F潛)",
+        "char": "潜(潛)",
         "definition": "hide; hidden, secret, latent",
         "charForm": [{
                 "char": "氵",
@@ -67010,7 +67010,7 @@
     },
     {
         "pinyin": "hóng",
-        "char": "鸿(F鴻)",
+        "char": "鸿(鴻)",
         "definition": "species of wild swan; vast",
         "charForm": [{
                 "char": "江",
@@ -67052,7 +67052,7 @@
     },
     {
         "pinyin": "jì",
-        "char": "绩(F績)",
+        "char": "绩(績)",
         "definition": "spin; achievements",
         "charForm": [{
                 "char": "纟",
@@ -67136,7 +67136,7 @@
     },
     {
         "pinyin": "tú",
-        "char": "涂(F塗)",
+        "char": "涂(塗)",
         "definition": "surname; name of certain rivers",
         "charForm": [{
                 "char": "氵",
@@ -67272,7 +67272,7 @@
     },
     {
         "pinyin": "mēn",
-        "char": "闷(F悶)",
+        "char": "闷(悶)",
         "definition": "gloomy, depressed, melancholy",
         "charForm": [{
                 "char": "门",
@@ -67413,7 +67413,7 @@
     },
     {
         "pinyin": "lì",
-        "char": "励(F勵)",
+        "char": "励(勵)",
         "definition": "strive; encourage",
         "charForm": [{
                 "char": "厉",
@@ -67665,7 +67665,7 @@
     },
     {
         "pinyin": "jiàn",
-        "char": "舰(F艦)",
+        "char": "舰(艦)",
         "definition": "warship",
         "charForm": [{
                 "char": "舟",
@@ -67749,7 +67749,7 @@
     },
     {
         "pinyin": "qiān",
-        "char": "牵(F牽)",
+        "char": "牵(牽)",
         "definition": "drag, pull, lead by hand",
         "charForm": [{
                 "char": "大",
@@ -67838,7 +67838,7 @@
     },
     {
         "pinyin": "sù",
-        "char": "肃(F肅)",
+        "char": "肃(肅)",
         "definition": "pay respects; reverently",
         "charForm": [{
             "char": "肀",
@@ -68036,7 +68036,7 @@
     },
     {
         "pinyin": "jiā",
-        "char": "夹(F夾)",
+        "char": "夹(夾)",
         "definition": "be wedged or inserted between",
         "charForm": [{
                 "char": "夫",
@@ -68120,7 +68120,7 @@
     },
     {
         "pinyin": "fēng",
-        "char": "疯(F瘋)",
+        "char": "疯(瘋)",
         "definition": "crazy, insane, mentally ill",
         "charForm": [{
                 "char": "疒",
@@ -68204,7 +68204,7 @@
     },
     {
         "pinyin": "nǎo",
-        "char": "恼(F惱)",
+        "char": "恼(惱)",
         "definition": "angered, filled with hate",
         "charForm": [{
                 "char": "忄",
@@ -68466,7 +68466,7 @@
     },
     {
         "pinyin": "chàn",
-        "char": "颤(F顫)",
+        "char": "颤(顫)",
         "definition": "shiver, tremble; trembling",
         "charForm": [{
                 "char": "亶",
@@ -69107,7 +69107,7 @@
     },
     {
         "pinyin": "jiān",
-        "char": "艰(F艱)",
+        "char": "艰(艱)",
         "definition": "difficult, hard; distressing",
         "charForm": [{
                 "char": "又",
@@ -69233,7 +69233,7 @@
     },
     {
         "pinyin": "cāng",
-        "char": "苍(F蒼)",
+        "char": "苍(蒼)",
         "definition": "blue; green",
         "charForm": [{
                 "char": "艹",
@@ -69443,7 +69443,7 @@
     },
     {
         "pinyin": "lián",
-        "char": "莲(F蓮)",
+        "char": "莲(蓮)",
         "definition": "lotus, water lily; paradise",
         "charForm": [{
                 "char": "艹",
@@ -69485,7 +69485,7 @@
     },
     {
         "pinyin": "zuān",
-        "char": "钻(F鑽)",
+        "char": "钻(鑽)",
         "definition": "drill, bore; pierce; diamond",
         "charForm": [{
                 "char": "钅",
@@ -69647,7 +69647,7 @@
     },
     {
         "pinyin": "xiá",
-        "char": "峡(F峽)",
+        "char": "峡(峽)",
         "definition": "gorge, strait, ravine; isthmus",
         "charForm": [{
                 "char": "山",
@@ -69689,7 +69689,7 @@
     },
     {
         "pinyin": "liáo",
-        "char": "辽(F遼)",
+        "char": "辽(遼)",
         "definition": "distant, far",
         "charForm": [{
                 "char": "辶",
@@ -69773,7 +69773,7 @@
     },
     {
         "pinyin": "kǎi",
-        "char": "凯(F凱)",
+        "char": "凯(凱)",
         "definition": "triumphant; triumph, victory",
         "charForm": [{
                 "char": "岂",
@@ -70009,7 +70009,7 @@
     },
     {
         "pinyin": "māo",
-        "char": "猫(F貓)",
+        "char": "猫(貓)",
         "definition": "cat",
         "charForm": [{
                 "char": "犭",
@@ -70051,7 +70051,7 @@
     },
     {
         "pinyin": "tāo",
-        "char": "涛(F濤)",
+        "char": "涛(濤)",
         "definition": "large waves",
         "charForm": [{
                 "char": "氵",
@@ -70177,7 +70177,7 @@
     },
     {
         "pinyin": "guō",
-        "char": "锅(F鍋)",
+        "char": "锅(鍋)",
         "definition": "cooking-pot, saucepan",
         "charForm": [{
                 "char": "钅",
@@ -70261,7 +70261,7 @@
     },
     {
         "pinyin": "fá",
-        "char": "罚(F罰)",
+        "char": "罚(罰)",
         "definition": "penalty, fine; punish, penalize",
         "charForm": [{
                 "char": "罒",
@@ -70355,7 +70355,7 @@
     },
     {
         "pinyin": "nóng",
-        "char": "浓(F濃)",
+        "char": "浓(濃)",
         "definition": "thick, strong, concentrated",
         "charForm": [{
                 "char": "氵",
@@ -70397,7 +70397,7 @@
     },
     {
         "pinyin": "jiàn",
-        "char": "键(F鍵)",
+        "char": "键(鍵)",
         "definition": "door bolt, lock bolt; key",
         "charForm": [{
                 "char": "钅",
@@ -70439,7 +70439,7 @@
     },
     {
         "pinyin": "mài",
-        "char": "脉(F脈)",
+        "char": "脉(脈)",
         "definition": "blood vessels, veins, arteries",
         "charForm": [{
                 "char": "⺼",
@@ -70481,7 +70481,7 @@
     },
     {
         "pinyin": "suǒ",
-        "char": "锁(F鎖)",
+        "char": "锁(鎖)",
         "definition": "lock, padlock; shackles, chains",
         "charForm": [{
                 "char": "钅",
@@ -70528,7 +70528,7 @@
     },
     {
         "pinyin": "lín",
-        "char": "邻(F鄰)",
+        "char": "邻(鄰)",
         "definition": "neighbor; neighborhood",
         "charForm": [{
                 "char": "令",
@@ -70864,7 +70864,7 @@
     },
     {
         "pinyin": "jià",
-        "char": "驾(F駕)",
+        "char": "驾(駕)",
         "definition": "to drive, sail, fly; a cart, carriage",
         "charForm": [{
                 "char": "加",
@@ -70990,7 +70990,7 @@
     },
     {
         "pinyin": "huò",
-        "char": "祸(F禍)",
+        "char": "祸(禍)",
         "definition": "misfortune, calamity, disaster",
         "charForm": [{
                 "char": "礻",
@@ -71194,7 +71194,7 @@
     },
     {
         "pinyin": "lǎn",
-        "char": "览(F覽)",
+        "char": "览(覽)",
         "definition": "look at, inspect; perceive",
         "charForm": [{
             "char": "见",
@@ -71356,7 +71356,7 @@
     },
     {
         "pinyin": "tóng",
-        "char": "铜(F銅)",
+        "char": "铜(銅)",
         "definition": "copper, brass, bronze",
         "charForm": [{
                 "char": "钅",
@@ -71440,7 +71440,7 @@
     },
     {
         "pinyin": "dàng",
-        "char": "档(F檔)",
+        "char": "档(檔)",
         "definition": "shelf; frame, crosspiece",
         "charForm": [{
                 "char": "木",
@@ -71482,7 +71482,7 @@
     },
     {
         "pinyin": "pāo",
-        "char": "抛(F拋)",
+        "char": "抛(拋)",
         "definition": "throw (away)",
         "charForm": [{
                 "char": "扌",
@@ -71660,7 +71660,7 @@
     },
     {
         "pinyin": "qū",
-        "char": "驱(F驅)",
+        "char": "驱(驅)",
         "definition": "spur a horse on; expel, drive away",
         "charForm": [{
                 "char": "马",
@@ -71702,7 +71702,7 @@
     },
     {
         "pinyin": "wō",
-        "char": "窝(F窩)",
+        "char": "窝(窩)",
         "definition": "nest; cave, den; hiding place",
         "charForm": [{
                 "char": "穴",
@@ -71744,7 +71744,7 @@
     },
     {
         "pinyin": "kù",
-        "char": "裤(F褲)",
+        "char": "裤(褲)",
         "definition": "trousers, pants",
         "charForm": [{
                 "char": "衤",
@@ -71912,7 +71912,7 @@
     },
     {
         "pinyin": "kuò",
-        "char": "阔(F闊)",
+        "char": "阔(闊)",
         "definition": "broad, ample, wide; be apart",
         "charForm": [{
                 "char": "门",
@@ -72112,7 +72112,7 @@
     },
     {
         "pinyin": "mǎ",
-        "char": "玛(F瑪)",
+        "char": "玛(瑪)",
         "definition": "agate; cornelian",
         "charForm": [{
                 "char": "王",
@@ -72201,7 +72201,7 @@
     },
     {
         "pinyin": "pín",
-        "char": "频(F頻)",
+        "char": "频(頻)",
         "definition": "frequently, again and again",
         "charForm": [{
                 "char": "步",
@@ -72243,7 +72243,7 @@
     },
     {
         "pinyin": "chán",
-        "char": "禅(F禪)",
+        "char": "禅(禪)",
         "definition": "meditation, contemplation (DKW: 24787')",
         "charForm": [{
                 "char": "礻",
@@ -72327,7 +72327,7 @@
     },
     {
         "pinyin": "lái",
-        "char": "莱(F萊)",
+        "char": "莱(萊)",
         "definition": "goosefoot, weed; fallow field",
         "charForm": [{
                 "char": "艹",
@@ -72569,7 +72569,7 @@
     },
     {
         "pinyin": "cháng",
-        "char": "尝(F嘗)",
+        "char": "尝(嘗)",
         "definition": "taste; experience, experiment",
         "charForm": [{
                 "char": "尚",
@@ -72737,7 +72737,7 @@
     },
     {
         "pinyin": "dào",
-        "char": "盗(F盜)",
+        "char": "盗(盜)",
         "definition": "rob, steal; thief, bandit",
         "charForm": [{
                 "char": "次",
@@ -72779,7 +72779,7 @@
     },
     {
         "pinyin": "chóu",
-        "char": "筹(F籌)",
+        "char": "筹(籌)",
         "definition": "chip, tally, token; raise money",
         "charForm": [{
                 "char": "⺮",
@@ -72905,7 +72905,7 @@
     },
     {
         "pinyin": "qiǎn",
-        "char": "浅(F淺)",
+        "char": "浅(淺)",
         "definition": "shallow, not deep; superficial",
         "charForm": [{
                 "char": "氵",
@@ -73199,7 +73199,7 @@
     },
     {
         "pinyin": "yàn",
-        "char": "厌(F厭)",
+        "char": "厌(厭)",
         "definition": "dislike, detest, reject; satiate",
         "charForm": [{
                 "char": "厂",
@@ -73277,7 +73277,7 @@
     },
     {
         "pinyin": "shòu",
-        "char": "寿(F壽)",
+        "char": "寿(壽)",
         "definition": "old age, long life; lifespan",
         "charForm": [{
                 "char": "丰",
@@ -73445,7 +73445,7 @@
     },
     {
         "pinyin": "jǐn",
-        "char": "锦(F錦)",
+        "char": "锦(錦)",
         "definition": "brocade, tapestry; embroidered",
         "charForm": [{
                 "char": "钅",
@@ -73487,7 +73487,7 @@
     },
     {
         "pinyin": "jiàn",
-        "char": "鉴(F鑒)",
+        "char": "鉴(鑒)",
         "definition": "mirror, looking glass; reflect",
         "charForm": [{
             "char": "金",
@@ -73575,7 +73575,7 @@
     },
     {
         "pinyin": "qū",
-        "char": "趋(F趨)",
+        "char": "趋(趨)",
         "definition": "hasten, hurry; be attracted to",
         "charForm": [{
                 "char": "走",
@@ -73701,7 +73701,7 @@
     },
     {
         "pinyin": "guàn",
-        "char": "贯(F貫)",
+        "char": "贯(貫)",
         "definition": "a string of 1000 coins; to go through",
         "charForm": [{
                 "char": "毌",
@@ -73795,7 +73795,7 @@
     },
     {
         "pinyin": "bō",
-        "char": "拨(F撥)",
+        "char": "拨(撥)",
         "definition": "move; dispel; distribute",
         "charForm": [{
                 "char": "扌",
@@ -73837,7 +73837,7 @@
     },
     {
         "pinyin": "xùn",
-        "char": "逊(F遜)",
+        "char": "逊(遜)",
         "definition": "humble, modest; yield",
         "charForm": [{
                 "char": "辶",
@@ -73921,7 +73921,7 @@
     },
     {
         "pinyin": "péi",
-        "char": "赔(F賠)",
+        "char": "赔(賠)",
         "definition": "indemnify, suffer loss",
         "charForm": [{
                 "char": "贝",
@@ -74005,7 +74005,7 @@
     },
     {
         "pinyin": "qiān",
-        "char": "迁(F遷)",
+        "char": "迁(遷)",
         "definition": "move, shift, change; transfer; relocate a capital city",
         "charForm": [{
                 "char": "辶",
@@ -74177,7 +74177,7 @@
     },
     {
         "pinyin": "xí",
-        "char": "袭(F襲)",
+        "char": "袭(襲)",
         "definition": "raid, attack; inherit",
         "charForm": [{
                 "char": "龙",
@@ -74513,7 +74513,7 @@
     },
     {
         "pinyin": "shǐ",
-        "char": "驶(F駛)",
+        "char": "驶(駛)",
         "definition": "sail, drive, pilot; fast, quick",
         "charForm": [{
                 "char": "马",
@@ -74624,7 +74624,7 @@
     },
     {
         "pinyin": "jù",
-        "char": "惧(F懼)",
+        "char": "惧(懼)",
         "definition": "fear, be afraid of, dread",
         "charForm": [{
                 "char": "忄",
@@ -74666,7 +74666,7 @@
     },
     {
         "pinyin": "niǔ",
-        "char": "纽(F紐)",
+        "char": "纽(紐)",
         "definition": "knot; button; handle, knob; tie",
         "charForm": [{
                 "char": "纟",
@@ -74834,7 +74834,7 @@
     },
     {
         "pinyin": "zōng",
-        "char": "踪(F蹤)",
+        "char": "踪(蹤)",
         "definition": "footprints, traces, tracks",
         "charForm": [{
                 "char": "足",
@@ -74876,7 +74876,7 @@
     },
     {
         "pinyin": "cóng",
-        "char": "丛(F叢)",
+        "char": "丛(叢)",
         "definition": "bush, shrub; thicket; collection",
         "charForm": [{
                 "char": "从",
@@ -74960,7 +74960,7 @@
     },
     {
         "pinyin": "ruì",
-        "char": "锐(F銳)",
+        "char": "锐(銳)",
         "definition": "sharp, keen, acute, pointed",
         "charForm": [{
                 "char": "钅",
@@ -75118,7 +75118,7 @@
     },
     {
         "pinyin": "shī",
-        "char": "湿(F濕)",
+        "char": "湿(濕)",
         "definition": "wet, moist, humid, damp; illness",
         "charForm": [{
                 "char": "氵",
@@ -75160,7 +75160,7 @@
     },
     {
         "pinyin": "zhēng",
-        "char": "睁(F睜)",
+        "char": "睁(睜)",
         "definition": "open eyes; stare",
         "charForm": [{
                 "char": "目",
@@ -75328,7 +75328,7 @@
     },
     {
         "pinyin": "gōu",
-        "char": "沟(F溝)",
+        "char": "沟(溝)",
         "definition": "ditch, drain, narrow waterway",
         "charForm": [{
                 "char": "氵",
@@ -75543,7 +75543,7 @@
     },
     {
         "pinyin": "gòng",
-        "char": "贡(F貢)",
+        "char": "贡(貢)",
         "definition": "offer tribute; tribute, gifts",
         "charForm": [{
                 "char": "工",
@@ -75585,7 +75585,7 @@
     },
     {
         "pinyin": "hún",
-        "char": "浑(F渾)",
+        "char": "浑(渾)",
         "definition": "muddy, turbid; blend, merge, mix",
         "charForm": [{
                 "char": "氵",
@@ -75627,7 +75627,7 @@
     },
     {
         "pinyin": "yíng",
-        "char": "赢(F贏)",
+        "char": "赢(贏)",
         "definition": "win; surplus, gain, profit",
         "charForm": [{
                 "char": "吂",
@@ -75721,7 +75721,7 @@
     },
     {
         "pinyin": "chí",
-        "char": "驰(F馳)",
+        "char": "驰(馳)",
         "definition": "go quickly or swiftly; hurry",
         "charForm": [{
                 "char": "马",
@@ -75889,7 +75889,7 @@
     },
     {
         "pinyin": "héng",
-        "char": "恒(F恆)",
+        "char": "恒(恆)",
         "definition": "constant, regular, persistent",
         "charForm": [{
                 "char": "忄",
@@ -76099,7 +76099,7 @@
     },
     {
         "pinyin": "xián",
-        "char": "贤(F賢)",
+        "char": "贤(賢)",
         "definition": "virtuous, worthy, good; able",
         "charForm": [{
                 "char": "⿰又",
@@ -76146,7 +76146,7 @@
     },
     {
         "pinyin": "shì",
-        "char": "饰(F飾)",
+        "char": "饰(飾)",
         "definition": "decorate, ornament, adorn",
         "charForm": [{
                 "char": "饣",
@@ -76188,7 +76188,7 @@
     },
     {
         "pinyin": "cháng",
-        "char": "偿(F償)",
+        "char": "偿(償)",
         "definition": "repay, recompense; restitution",
         "charForm": [{
                 "char": "亻",
@@ -76272,7 +76272,7 @@
     },
     {
         "pinyin": "chán",
-        "char": "缠(F纏)",
+        "char": "缠(纏)",
         "definition": "wrap, wind around; tie, bind",
         "charForm": [{
                 "char": "纟",
@@ -76314,7 +76314,7 @@
     },
     {
         "pinyin": "shè",
-        "char": "摄(F攝)",
+        "char": "摄(攝)",
         "definition": "take in, absorb; act as deputy",
         "charForm": [{
                 "char": "扌",
@@ -76356,7 +76356,7 @@
     },
     {
         "pinyin": "nǐ",
-        "char": "拟(F擬)",
+        "char": "拟(擬)",
         "definition": "draft; intend, plan, propose",
         "charForm": [{
                 "char": "扌",
@@ -76509,7 +76509,7 @@
     },
     {
         "pinyin": "chuǎng",
-        "char": "闯(F闖)",
+        "char": "闯(闖)",
         "definition": "rush in, burst in, charge in",
         "charForm": [{
                 "char": "门",
@@ -76551,7 +76551,7 @@
     },
     {
         "pinyin": "hè",
-        "char": "贺(F賀)",
+        "char": "贺(賀)",
         "definition": "congratulate; send present",
         "charForm": [{
                 "char": "加",
@@ -76635,7 +76635,7 @@
     },
     {
         "pinyin": "féng",
-        "char": "缝(F縫)",
+        "char": "缝(縫)",
         "definition": "sew, mend",
         "charForm": [{
                 "char": "纟",
@@ -76677,7 +76677,7 @@
     },
     {
         "pinyin": "bǎo",
-        "char": "饱(F飽)",
+        "char": "饱(飽)",
         "definition": "eat heartily; eat one's fill",
         "charForm": [{
                 "char": "饣",
@@ -76761,7 +76761,7 @@
     },
     {
         "pinyin": "fǔ",
-        "char": "抚(F撫)",
+        "char": "抚(撫)",
         "definition": "pat, console, comfort; pacify",
         "charForm": [{
                 "char": "扌",
@@ -76845,7 +76845,7 @@
     },
     {
         "pinyin": "cè",
-        "char": "册(F冊)",
+        "char": "册(冊)",
         "definition": "book, volume, register, list",
         "charForm": [{
                 "char": "⿰冂冂",
@@ -77023,7 +77023,7 @@
     },
     {
         "pinyin": "liàn",
-        "char": "炼(F煉)",
+        "char": "炼(煉)",
         "definition": "smelt, refine; distill, condense",
         "charForm": [{
                 "char": "火",
@@ -77065,7 +77065,7 @@
     },
     {
         "pinyin": "xiàn",
-        "char": "宪(F憲)",
+        "char": "宪(憲)",
         "definition": "constitution, statute, law",
         "charForm": [{
                 "char": "宀",
@@ -77107,7 +77107,7 @@
     },
     {
         "pinyin": "miào",
-        "char": "庙(F廟)",
+        "char": "庙(廟)",
         "definition": "temple, shrine; imperial court",
         "charForm": [{
                 "char": "广",
@@ -77233,7 +77233,7 @@
     },
     {
         "pinyin": "yì",
-        "char": "谊(F誼)",
+        "char": "谊(誼)",
         "definition": "friendship; appropriate, suitable",
         "charForm": [{
                 "char": "讠",
@@ -77275,7 +77275,7 @@
     },
     {
         "pinyin": "chǔ",
-        "char": "储(F儲)",
+        "char": "储(儲)",
         "definition": "save money, store, reserve; heir",
         "charForm": [{
                 "char": "亻",
@@ -77317,7 +77317,7 @@
     },
     {
         "pinyin": "píng",
-        "char": "冯(F馮)",
+        "char": "冯(馮)",
         "definition": "surname; gallop; by dint of",
         "charForm": [{
                 "char": "冫",
@@ -77359,7 +77359,7 @@
     },
     {
         "pinyin": "huàn",
-        "char": "唤(F喚)",
+        "char": "唤(喚)",
         "definition": "call",
         "charForm": [{
                 "char": "口",
@@ -77401,7 +77401,7 @@
     },
     {
         "pinyin": "tān",
-        "char": "贪(F貪)",
+        "char": "贪(貪)",
         "definition": "be greedy, covet; covetous",
         "charForm": [{
                 "char": "今",
@@ -77443,7 +77443,7 @@
     },
     {
         "pinyin": "wò",
-        "char": "卧(F臥)",
+        "char": "卧(臥)",
         "definition": "lie down; crouch",
         "charForm": [{
                 "char": "臣",
@@ -77527,7 +77527,7 @@
     },
     {
         "pinyin": "rǎo",
-        "char": "扰(F擾)",
+        "char": "扰(擾)",
         "definition": "disturb, annoy, agitate",
         "charForm": [{
                 "char": "扌",
@@ -77569,7 +77569,7 @@
     },
     {
         "pinyin": "xié",
-        "char": "胁(F脅)",
+        "char": "胁(脅)",
         "definition": "ribs, armpits; flank; threaten",
         "charForm": [{
                 "char": "⺼",
@@ -77821,7 +77821,7 @@
     },
     {
         "pinyin": "pǔ",
-        "char": "谱(F譜)",
+        "char": "谱(譜)",
         "definition": "list, table; musical score",
         "charForm": [{
                 "char": "讠",
@@ -77947,7 +77947,7 @@
     },
     {
         "pinyin": "gé",
-        "char": "阁(F閣)",
+        "char": "阁(閣)",
         "definition": "chamber, pavilion; cabinet",
         "charForm": [{
                 "char": "门",
@@ -78036,7 +78036,7 @@
     },
     {
         "pinyin": "péng",
-        "char": "鹏(F鵬)",
+        "char": "鹏(鵬)",
         "definition": "fabulous bird of enormous size",
         "charForm": [{
                 "char": "朋",
@@ -78246,7 +78246,7 @@
     },
     {
         "pinyin": "Lú",
-        "char": "卢(F盧)",
+        "char": "卢(盧)",
         "definition": "cottage, hut; surname; black",
         "charForm": [{
                 "char": "⺊",
@@ -78272,7 +78272,7 @@
             {
                 "char": "图卢斯",
                 "pinyin": "tú lú sī",
-                "definition": ": Toulouse (France)"
+                "definition": ": Toulouse (rance)"
             },
             {
                 "char": "图卢兹",
@@ -78288,7 +78288,7 @@
     },
     {
         "pinyin": "ài",
-        "char": "碍(F礙)",
+        "char": "碍(礙)",
         "definition": "obstruct, hinder, block, deter",
         "charForm": [{
                 "char": "石",
@@ -78330,7 +78330,7 @@
     },
     {
         "pinyin": "zōng",
-        "char": "综(F綜)",
+        "char": "综(綜)",
         "definition": "arrange threads for weaving",
         "charForm": [{
                 "char": "纟",
@@ -78414,7 +78414,7 @@
     },
     {
         "pinyin": "yūn",
-        "char": "晕(F暈)",
+        "char": "晕(暈)",
         "definition": "halo in sky; fog; dizzy, faint",
         "charForm": [{
                 "char": "日",
@@ -78456,7 +78456,7 @@
     },
     {
         "pinyin": "lán",
-        "char": "拦(F攔)",
+        "char": "拦(攔)",
         "definition": "obstruct, impede, bar, hinder",
         "charForm": [{
                 "char": "扌",
@@ -78834,7 +78834,7 @@
     },
     {
         "pinyin": "wù",
-        "char": "雾(F霧)",
+        "char": "雾(霧)",
         "definition": "fog, mist, vapor, fine spray",
         "charForm": [{
                 "char": "雨",
@@ -78923,7 +78923,7 @@
     },
     {
         "pinyin": "chǐ",
-        "char": "耻(F恥)",
+        "char": "耻(恥)",
         "definition": "shame, humiliation; ashamed",
         "charForm": [{
                 "char": "耳",
@@ -79007,7 +79007,7 @@
     },
     {
         "pinyin": "tān",
-        "char": "摊(F攤)",
+        "char": "摊(攤)",
         "definition": "spread out, open; apportion",
         "charForm": [{
                 "char": "扌",
@@ -79338,7 +79338,7 @@
     },
     {
         "pinyin": "dàn",
-        "char": "诞(F誕)",
+        "char": "诞(誕)",
         "definition": "bear children, give birth; birth",
         "charForm": [{
                 "char": "讠",
@@ -79380,7 +79380,7 @@
     },
     {
         "pinyin": "xuán",
-        "char": "悬(F懸)",
+        "char": "悬(懸)",
         "definition": "hang, suspend, hoist; be hung",
         "charForm": [{
                 "char": "县",
@@ -79558,7 +79558,7 @@
     },
     {
         "pinyin": "còu",
-        "char": "凑(F湊)",
+        "char": "凑(湊)",
         "definition": "piece together, assemble",
         "charForm": [{
                 "char": "冫",
@@ -79884,7 +79884,7 @@
     },
     {
         "pinyin": "lóng",
-        "char": "笼(F籠)",
+        "char": "笼(籠)",
         "definition": "cage; cage-like basket",
         "charForm": [{
                 "char": "⺮",
@@ -79926,7 +79926,7 @@
     },
     {
         "pinyin": "diān",
-        "char": "颠(F顛)",
+        "char": "颠(顛)",
         "definition": "top, peak, summit; upset",
         "charForm": [{
                 "char": "真",
@@ -80010,7 +80010,7 @@
     },
     {
         "pinyin": "xié",
-        "char": "携(F攜)",
+        "char": "携(攜)",
         "definition": "lead by hand, take with; carry",
         "charForm": [{
                 "char": "扌",
@@ -80262,7 +80262,7 @@
     },
     {
         "pinyin": "zhì",
-        "char": "掷(F擲)",
+        "char": "掷(擲)",
         "definition": "throw, hurl, cast, fling",
         "charForm": [{
                 "char": "扌",
@@ -80403,7 +80403,7 @@
     },
     {
         "pinyin": "jiū",
-        "char": "纠(F糾)",
+        "char": "纠(糾)",
         "definition": "investigate, inspect",
         "charForm": [{
                 "char": "纟",
@@ -80660,7 +80660,7 @@
     },
     {
         "pinyin": "sū",
-        "char": "稣(F穌)",
+        "char": "稣(穌)",
         "definition": "revive, to rise again; collect",
         "charForm": [{
                 "char": "鱼",
@@ -81080,7 +81080,7 @@
     },
     {
         "pinyin": "dūn",
-        "char": "吨(F噸)",
+        "char": "吨(噸)",
         "definition": "metric ton; (Cant.) to babble, gibberish",
         "charForm": [{
                 "char": "口",
@@ -81122,7 +81122,7 @@
     },
     {
         "pinyin": "chóng",
-        "char": "虫(F蟲)",
+        "char": "虫(蟲)",
         "definition": "insects, worms; KangXi radical 142",
         "charForm": [{
             "char": "中",
@@ -81158,7 +81158,7 @@
     },
     {
         "pinyin": "shéng",
-        "char": "绳(F繩)",
+        "char": "绳(繩)",
         "definition": "rope, string, cord; control",
         "charForm": [{
                 "char": "纟",
@@ -81200,7 +81200,7 @@
     },
     {
         "pinyin": "chú",
-        "char": "厨(F廚)",
+        "char": "厨(廚)",
         "definition": "kitchen; closet; cupboard",
         "charForm": [{
                 "char": "厂",
@@ -81294,7 +81294,7 @@
     },
     {
         "pinyin": "zhǎng",
-        "char": "涨(F漲)",
+        "char": "涨(漲)",
         "definition": "rise in price",
         "charForm": [{
                 "char": "氵",
@@ -81336,7 +81336,7 @@
     },
     {
         "pinyin": "zhòu",
-        "char": "皱(F皺)",
+        "char": "皱(皺)",
         "definition": "wrinkles, creases, folds",
         "charForm": [{
                 "char": "刍",
@@ -81420,7 +81420,7 @@
     },
     {
         "pinyin": "dǔ",
-        "char": "赌(F賭)",
+        "char": "赌(賭)",
         "definition": "bet, gamble, wager; compete",
         "charForm": [{
                 "char": "贝",
@@ -81462,7 +81462,7 @@
     },
     {
         "pinyin": "ráo",
-        "char": "饶(F饒)",
+        "char": "饶(饒)",
         "definition": "bountiful, abundant, plentiful",
         "charForm": [{
                 "char": "饣",
@@ -81504,7 +81504,7 @@
     },
     {
         "pinyin": "kuàng",
-        "char": "矿(F礦)",
+        "char": "矿(礦)",
         "definition": "mine; mineral, ore",
         "charForm": [{
                 "char": "石",
@@ -81546,7 +81546,7 @@
     },
     {
         "pinyin": "chàng",
-        "char": "畅(F暢)",
+        "char": "畅(暢)",
         "definition": "smoothly, freely, unrestrained",
         "charForm": [{
                 "char": "申",
@@ -81672,7 +81672,7 @@
     },
     {
         "pinyin": "pēn",
-        "char": "喷(F噴)",
+        "char": "喷(噴)",
         "definition": "spurt, blow out, puff out",
         "charForm": [{
                 "char": "口",
@@ -81892,7 +81892,7 @@
     },
     {
         "pinyin": "biāo",
-        "char": "镖(F鏢)",
+        "char": "镖(鏢)",
         "definition": "dart, spear, harpoon; escort",
         "charForm": [{
                 "char": "钅",
@@ -82181,7 +82181,7 @@
     },
     {
         "pinyin": "chēng",
-        "char": "撑(F撐)",
+        "char": "撑(撐)",
         "definition": "prop up, support; brace",
         "charForm": [{
                 "char": "扌",
@@ -82223,7 +82223,7 @@
     },
     {
         "pinyin": "lú",
-        "char": "炉(F爐)",
+        "char": "炉(爐)",
         "definition": "fireplace, stove, oven, furnace",
         "charForm": [{
                 "char": "火",
@@ -82522,7 +82522,7 @@
     },
     {
         "pinyin": "wěi",
-        "char": "伪(F偽)",
+        "char": "伪(偽)",
         "definition": "false, counterfeit, bogus",
         "charForm": [{
                 "char": "亻",
@@ -82642,7 +82642,7 @@
     },
     {
         "pinyin": "liàng",
-        "char": "谅(F諒)",
+        "char": "谅(諒)",
         "definition": "excuse, forgive; guess, presume",
         "charForm": [{
                 "char": "讠",
@@ -82837,7 +82837,7 @@
     },
     {
         "pinyin": "diào",
-        "char": "钓(F釣)",
+        "char": "钓(釣)",
         "definition": "fish; fishhook; tempt, lure",
         "charForm": [{
                 "char": "钅",
@@ -82879,7 +82879,7 @@
     },
     {
         "pinyin": "cháng",
-        "char": "肠(F腸)",
+        "char": "肠(腸)",
         "definition": "intestines; emotions; sausage",
         "charForm": [{
                 "char": "⺼",
@@ -82963,7 +82963,7 @@
     },
     {
         "pinyin": "bāo",
-        "char": "剥(F剝)",
+        "char": "剥(剝)",
         "definition": "peel",
         "charForm": [{
                 "char": "录",
@@ -83047,7 +83047,7 @@
     },
     {
         "pinyin": "zhuàn",
-        "char": "赚(F賺)",
+        "char": "赚(賺)",
         "definition": "make money, earn; gain, profit",
         "charForm": [{
                 "char": "贝",
@@ -83383,7 +83383,7 @@
     },
     {
         "pinyin": "zhú",
-        "char": "烛(F燭)",
+        "char": "烛(燭)",
         "definition": "candle, taper; shine, illuminate",
         "charForm": [{
                 "char": "火",
@@ -83425,7 +83425,7 @@
     },
     {
         "pinyin": "shà",
-        "char": "厦(F廈)",
+        "char": "厦(廈)",
         "definition": "big building, mansion",
         "charForm": [{
                 "char": "厂",
@@ -83692,7 +83692,7 @@
     },
     {
         "pinyin": "mài",
-        "char": "迈(F邁)",
+        "char": "迈(邁)",
         "definition": "take a big stride; pass by",
         "charForm": [{
                 "char": "辶",
@@ -83734,7 +83734,7 @@
     },
     {
         "pinyin": "chǐ",
-        "char": "齿(F齒)",
+        "char": "齿(齒)",
         "definition": "teeth; gears, cogs; age; simplified form of the KangXi radical number 211",
         "charForm": [{
                 "char": "止",
@@ -83786,7 +83786,7 @@
     },
     {
         "pinyin": "jǐn",
-        "char": "谨(F謹)",
+        "char": "谨(謹)",
         "definition": "prudent, cautious; attentive",
         "charForm": [{
                 "char": "讠",
@@ -83954,7 +83954,7 @@
     },
     {
         "pinyin": "mí",
-        "char": "弥(F彌)",
+        "char": "弥(彌)",
         "definition": "extensive, full; fill; complete",
         "charForm": [{
                 "char": "弓",
@@ -84248,7 +84248,7 @@
     },
     {
         "pinyin": "kuā",
-        "char": "夸(F誇)",
+        "char": "夸(誇)",
         "definition": "extravagant, luxurious; handsome",
         "charForm": [{
                 "char": "大",
@@ -84552,7 +84552,7 @@
     },
     {
         "pinyin": "zhài",
-        "char": "债(F債)",
+        "char": "债(債)",
         "definition": "debt, loan, liabilities",
         "charForm": [{
                 "char": "亻",
@@ -84720,7 +84720,7 @@
     },
     {
         "pinyin": "shā",
-        "char": "刹(F剎)",
+        "char": "刹(剎)",
         "definition": "temple, shrine, monastary",
         "charForm": [{
                 "char": "杀",
@@ -84856,7 +84856,7 @@
     },
     {
         "pinyin": "fū",
-        "char": "肤(F膚)",
+        "char": "肤(膚)",
         "definition": "skin; superficial, shallow",
         "charForm": [{
                 "char": "⺼",
@@ -85014,7 +85014,7 @@
     },
     {
         "pinyin": "zhèng",
-        "char": "症(F癥)",
+        "char": "症(癥)",
         "definition": "disease, illness, ailment",
         "charForm": [{
                 "char": "疒",
@@ -85098,7 +85098,7 @@
     },
     {
         "pinyin": "qīn",
-        "char": "钦(F欽)",
+        "char": "钦(欽)",
         "definition": "respect, admire; respectful",
         "charForm": [{
                 "char": "钅",
@@ -85140,7 +85140,7 @@
     },
     {
         "pinyin": "mián",
-        "char": "绵(F綿)",
+        "char": "绵(綿)",
         "definition": "cotton wad; wool; soft, downy",
         "charForm": [{
                 "char": "纟",
@@ -85203,7 +85203,7 @@
     },
     {
         "pinyin": "yòu",
-        "char": "诱(F誘)",
+        "char": "诱(誘)",
         "definition": "persuade, entice, induce; guide",
         "charForm": [{
                 "char": "讠",
@@ -85581,7 +85581,7 @@
     },
     {
         "pinyin": "jìn",
-        "char": "晋(F晉)",
+        "char": "晋(晉)",
         "definition": "advance, increase; promote",
         "charForm": [{
                 "char": "亚",
@@ -85665,7 +85665,7 @@
     },
     {
         "pinyin": "yuè",
-        "char": "悦(F悅)",
+        "char": "悦(悅)",
         "definition": "pleased, contented, gratified",
         "charForm": [{
                 "char": "忄",
@@ -85749,7 +85749,7 @@
     },
     {
         "pinyin": "yàn",
-        "char": "艳(F艷)",
+        "char": "艳(艷)",
         "definition": "beautiful, sexy, voluptuous",
         "charForm": [{
                 "char": "丰",
@@ -86211,7 +86211,7 @@
     },
     {
         "pinyin": "dài",
-        "char": "贷(F貸)",
+        "char": "贷(貸)",
         "definition": "lend; borrow; pardon",
         "charForm": [{
                 "char": "代",
@@ -86337,7 +86337,7 @@
     },
     {
         "pinyin": "jǐng",
-        "char": "颈(F頸)",
+        "char": "颈(頸)",
         "definition": "neck, throat",
         "charForm": [{
             "char": "页",
@@ -86373,7 +86373,7 @@
     },
     {
         "pinyin": "jiàn",
-        "char": "践(F踐)",
+        "char": "践(踐)",
         "definition": "trample, tread upon, walk on",
         "charForm": [{
                 "char": "足",
@@ -86457,7 +86457,7 @@
     },
     {
         "pinyin": "gǔ",
-        "char": "贾(F賈)",
+        "char": "贾(賈)",
         "definition": "surname; merchant; buy, trade",
         "charForm": [{
                 "char": "覀",
@@ -86499,7 +86499,7 @@
     },
     {
         "pinyin": "jiào",
-        "char": "轿(F轎)",
+        "char": "轿(轎)",
         "definition": "sedan-chair, palanquin",
         "charForm": [{
                 "char": "车",
@@ -86625,7 +86625,7 @@
     },
     {
         "pinyin": "jiāo",
-        "char": "娇(F嬌)",
+        "char": "娇(嬌)",
         "definition": "seductive and loveable; tender",
         "charForm": [{
                 "char": "女",
@@ -86751,7 +86751,7 @@
     },
     {
         "pinyin": "xiāo",
-        "char": "潇(F瀟)",
+        "char": "潇(瀟)",
         "definition": "sound of beating wind and rain",
         "charForm": [{
                 "char": "氵",
@@ -86788,7 +86788,7 @@
     },
     {
         "pinyin": "cì",
-        "char": "赐(F賜)",
+        "char": "赐(賜)",
         "definition": "give, bestow favors; appoint",
         "charForm": [{
                 "char": "贝",
@@ -86914,7 +86914,7 @@
     },
     {
         "pinyin": "fén",
-        "char": "坟(F墳)",
+        "char": "坟(墳)",
         "definition": "grave, mound; bulge; bulging",
         "charForm": [{
                 "char": "土",
@@ -86956,7 +86956,7 @@
     },
     {
         "pinyin": "sòng",
-        "char": "颂(F頌)",
+        "char": "颂(頌)",
         "definition": "laud, acclaim; hymn; ode",
         "charForm": [{
                 "char": "公",
@@ -87124,7 +87124,7 @@
     },
     {
         "pinyin": "zhuān",
-        "char": "砖(F磚)",
+        "char": "砖(磚)",
         "definition": "tile, brick",
         "charForm": [{
                 "char": "石",
@@ -87208,7 +87208,7 @@
     },
     {
         "pinyin": "hè",
-        "char": "鹤(F鶴)",
+        "char": "鹤(鶴)",
         "definition": "crane; Grus species (various)",
         "charForm": [{
                 "char": "隺",
@@ -87302,7 +87302,7 @@
     },
     {
         "pinyin": "yú",
-        "char": "渔(F漁)",
+        "char": "渔(漁)",
         "definition": "to fish; seize; pursue; surname",
         "charForm": [{
                 "char": "氵",
@@ -87542,7 +87542,7 @@
     },
     {
         "pinyin": "yǎ",
-        "char": "哑(F啞)",
+        "char": "哑(啞)",
         "definition": "dumb, mute; become hoarse",
         "charForm": [{
                 "char": "口",
@@ -87626,7 +87626,7 @@
     },
     {
         "pinyin": "bǐng",
-        "char": "饼(F餅)",
+        "char": "饼(餅)",
         "definition": "rice-cakes, biscuits",
         "charForm": [{
                 "char": "饣",
@@ -87668,7 +87668,7 @@
     },
     {
         "pinyin": "xī",
-        "char": "牺(F犧)",
+        "char": "牺(犧)",
         "definition": "sacrifice, give up; sacrificial",
         "charForm": [{
                 "char": "牛",
@@ -87710,7 +87710,7 @@
     },
     {
         "pinyin": "tān",
-        "char": "滩(F灘)",
+        "char": "滩(灘)",
         "definition": "bank, a sandbar, shoal; rapids",
         "charForm": [{
                 "char": "氵",
@@ -87752,7 +87752,7 @@
     },
     {
         "pinyin": "dīng",
-        "char": "钉(F釘)",
+        "char": "钉(釘)",
         "definition": "nail, spike; pursue closely",
         "charForm": [{
                 "char": "钅",
@@ -87831,7 +87831,7 @@
     },
     {
         "pinyin": "xī",
-        "char": "锡(F錫)",
+        "char": "锡(錫)",
         "definition": "tin, stannum; bestow, confer",
         "charForm": [{
                 "char": "钅",
@@ -87873,7 +87873,7 @@
     },
     {
         "pinyin": "zèng",
-        "char": "赠(F贈)",
+        "char": "赠(贈)",
         "definition": "give present; bestow, confer",
         "charForm": [{
                 "char": "贝",
@@ -87957,7 +87957,7 @@
     },
     {
         "pinyin": "líng",
-        "char": "铃(F鈴)",
+        "char": "铃(鈴)",
         "definition": "bell",
         "charForm": [{
                 "char": "钅",
@@ -87999,7 +87999,7 @@
     },
     {
         "pinyin": "wán",
-        "char": "顽(F頑)",
+        "char": "顽(頑)",
         "definition": "obstinate, stubborn; recalcitrant",
         "charForm": [{
                 "char": "元",
@@ -88083,7 +88083,7 @@
     },
     {
         "pinyin": "yīng",
-        "char": "鹰(F鷹)",
+        "char": "鹰(鷹)",
         "definition": "falcon; Accipiter species (various)",
         "charForm": [{
                 "char": "⿸广倠",
@@ -88335,7 +88335,7 @@
     },
     {
         "pinyin": "guǐ",
-        "char": "轨(F軌)",
+        "char": "轨(軌)",
         "definition": "track, rut, path",
         "charForm": [{
                 "char": "车",
@@ -88377,7 +88377,7 @@
     },
     {
         "pinyin": "yō",
-        "char": "哟(F喲)",
+        "char": "哟(喲)",
         "definition": "ah, final particle",
         "charForm": [{
                 "char": "口",
@@ -88482,7 +88482,7 @@
     },
     {
         "pinyin": "shuò",
-        "char": "硕(F碩)",
+        "char": "硕(碩)",
         "definition": "great, eminent; large, big",
         "charForm": [{
                 "char": "石",
@@ -88660,7 +88660,7 @@
     },
     {
         "pinyin": "shuài",
-        "char": "帅(F帥)",
+        "char": "帅(帥)",
         "definition": "commander, commander-in-chief",
         "charForm": [{
                 "char": "刂",
@@ -88786,7 +88786,7 @@
     },
     {
         "pinyin": "lǎn",
-        "char": "懒(F懶)",
+        "char": "懒(懶)",
         "definition": "lazy, languid, listless",
         "charForm": [{
                 "char": "忄",
@@ -88912,7 +88912,7 @@
     },
     {
         "pinyin": "shòu",
-        "char": "兽(F獸)",
+        "char": "兽(獸)",
         "definition": "beast, animal; bestial",
         "charForm": [{
                 "char": "丷",
@@ -89048,7 +89048,7 @@
     },
     {
         "pinyin": "liè",
-        "char": "猎(F獵)",
+        "char": "猎(獵)",
         "definition": "hunt; field sports",
         "charForm": [{
                 "char": "犭",
@@ -89132,7 +89132,7 @@
     },
     {
         "pinyin": "yán",
-        "char": "盐(F鹽)",
+        "char": "盐(鹽)",
         "definition": "salt",
         "charForm": [{
                 "char": "圤",
@@ -89174,7 +89174,7 @@
     },
     {
         "pinyin": "jī",
-        "char": "饥(F飢)",
+        "char": "饥(飢)",
         "definition": "hunger, starving; hungry; a famine",
         "charForm": [{
                 "char": "饣",
@@ -89552,7 +89552,7 @@
     },
     {
         "pinyin": "luó",
-        "char": "逻(F邏)",
+        "char": "逻(邏)",
         "definition": "patrol; inspect; watch; patrol",
         "charForm": [{
                 "char": "辶",
@@ -89720,7 +89720,7 @@
     },
     {
         "pinyin": "jiāo",
-        "char": "骄(F驕)",
+        "char": "骄(驕)",
         "definition": "spirited horse; haughty",
         "charForm": [{
                 "char": "马",
@@ -89762,7 +89762,7 @@
     },
     {
         "pinyin": "fàn",
-        "char": "贩(F販)",
+        "char": "贩(販)",
         "definition": "peddler, hawker, street merchant",
         "charForm": [{
                 "char": "贝",
@@ -89804,7 +89804,7 @@
     },
     {
         "pinyin": "huì",
-        "char": "绘(F繪)",
+        "char": "绘(繪)",
         "definition": "draw, sketch, paint",
         "charForm": [{
                 "char": "纟",
@@ -90130,7 +90130,7 @@
     },
     {
         "pinyin": "mán",
-        "char": "蛮(F蠻)",
+        "char": "蛮(蠻)",
         "definition": "barbarians; barbarous, savage",
         "charForm": [{
                 "char": "亦",
@@ -90587,7 +90587,7 @@
     },
     {
         "pinyin": "xù",
-        "char": "叙(F敘)",
+        "char": "叙(敘)",
         "definition": "express, state, relate, narrate",
         "charForm": [{
                 "char": "余",
@@ -91217,7 +91217,7 @@
     },
     {
         "pinyin": "zhǎn",
-        "char": "斩(F斬)",
+        "char": "斩(斬)",
         "definition": "cut, chop, sever; behead",
         "charForm": [{
                 "char": "车",
@@ -91301,7 +91301,7 @@
     },
     {
         "pinyin": "Lǚ",
-        "char": "吕(F呂)",
+        "char": "吕(呂)",
         "definition": "surname; a musical note",
         "charForm": [{
                 "char": "口",
@@ -91620,7 +91620,7 @@
     },
     {
         "pinyin": "tán",
-        "char": "谭(F譚)",
+        "char": "谭(譚)",
         "definition": "surname",
         "charForm": [{
                 "char": "讠",
@@ -91841,7 +91841,7 @@
     },
     {
         "pinyin": "dòng",
-        "char": "冻(F凍)",
+        "char": "冻(凍)",
         "definition": "freeze; cold, congeal; jelly",
         "charForm": [{
                 "char": "冫",
@@ -91967,7 +91967,7 @@
     },
     {
         "pinyin": "luò",
-        "char": "骆(F駱)",
+        "char": "骆(駱)",
         "definition": "a white horse with black mane; a camel",
         "charForm": [{
                 "char": "马",
@@ -92009,7 +92009,7 @@
     },
     {
         "pinyin": "pō",
-        "char": "泼(F潑)",
+        "char": "泼(潑)",
         "definition": "pour, splash, water, sprinkle",
         "charForm": [{
                 "char": "氵",
@@ -92135,7 +92135,7 @@
     },
     {
         "pinyin": "qiān",
-        "char": "谦(F謙)",
+        "char": "谦(謙)",
         "definition": "humble, modest",
         "charForm": [{
                 "char": "讠",
@@ -92261,7 +92261,7 @@
     },
     {
         "pinyin": "cè",
-        "char": "厕(F廁)",
+        "char": "厕(廁)",
         "definition": "mingle with; toilet, lavatory",
         "charForm": [{
                 "char": "厂",
@@ -92387,7 +92387,7 @@
     },
     {
         "pinyin": "lǐng",
-        "char": "岭(F嶺)",
+        "char": "岭(嶺)",
         "definition": "mountain ridge, mountain peak",
         "charForm": [{
                 "char": "山",
@@ -92681,7 +92681,7 @@
     },
     {
         "pinyin": "bào",
-        "char": "鲍(F鮑)",
+        "char": "鲍(鮑)",
         "definition": "abalone; dried fish; surname",
         "charForm": [{
                 "char": "鱼",
@@ -92849,7 +92849,7 @@
     },
     {
         "pinyin": "tū",
-        "char": "秃(F禿)",
+        "char": "秃(禿)",
         "definition": "bald",
         "charForm": [{
                 "char": "禾",
@@ -92933,7 +92933,7 @@
     },
     {
         "pinyin": "cāng",
-        "char": "仓(F倉)",
+        "char": "仓(倉)",
         "definition": "granary; berth; sea",
         "charForm": [{
                 "char": "人",
@@ -93017,7 +93017,7 @@
     },
     {
         "pinyin": "bǎng",
-        "char": "绑(F綁)",
+        "char": "绑(綁)",
         "definition": "bind, tie, fasten",
         "charForm": [{
                 "char": "纟",
@@ -93101,7 +93101,7 @@
     },
     {
         "pinyin": "jiàn",
-        "char": "荐(F薦)",
+        "char": "荐(薦)",
         "definition": "repeat, reoccur; recommend",
         "charForm": [{
                 "char": "艹",
@@ -93269,7 +93269,7 @@
     },
     {
         "pinyin": "yā",
-        "char": "鸭(F鴨)",
+        "char": "鸭(鴨)",
         "definition": "duck; Anas species (various)",
         "charForm": [{
                 "char": "甲",
@@ -93353,7 +93353,7 @@
     },
     {
         "pinyin": "zhěn",
-        "char": "诊(F診)",
+        "char": "诊(診)",
         "definition": "examine patient, diagnose",
         "charForm": [{
                 "char": "讠",
@@ -93563,7 +93563,7 @@
     },
     {
         "pinyin": "wén",
-        "char": "纹(F紋)",
+        "char": "纹(紋)",
         "definition": "line, streak, stripe; wrinkle",
         "charForm": [{
                 "char": "纟",
@@ -93689,7 +93689,7 @@
     },
     {
         "pinyin": "páng",
-        "char": "庞(F龐)",
+        "char": "庞(龐)",
         "definition": "disorderly, messy; huge, big",
         "charForm": [{
                 "char": "广",
@@ -93773,7 +93773,7 @@
     },
     {
         "pinyin": "sāo",
-        "char": "骚(F騷)",
+        "char": "骚(騷)",
         "definition": "harass, bother, annoy, disturb",
         "charForm": [{
                 "char": "马",
@@ -93916,7 +93916,7 @@
     },
     {
         "pinyin": "huá",
-        "char": "哗(F嘩)",
+        "char": "哗(嘩)",
         "definition": "rushing sound; gush forward",
         "charForm": [{
                 "char": "口",
@@ -93958,7 +93958,7 @@
     },
     {
         "pinyin": "mǔ",
-        "char": "亩(F畝)",
+        "char": "亩(畝)",
         "definition": "Chinese land measure; fields",
         "charForm": [{
                 "char": "亠",
@@ -94168,7 +94168,7 @@
     },
     {
         "pinyin": "huǎng",
-        "char": "谎(F謊)",
+        "char": "谎(謊)",
         "definition": "lie",
         "charForm": [{
                 "char": "讠",
@@ -94284,7 +94284,7 @@
     },
     {
         "pinyin": "lán",
-        "char": "篮(F籃)",
+        "char": "篮(籃)",
         "definition": "basket",
         "charForm": [{
                 "char": "⺮",
@@ -94368,7 +94368,7 @@
     },
     {
         "pinyin": "gē",
-        "char": "搁(F擱)",
+        "char": "搁(擱)",
         "definition": "place, put, lay down; delay",
         "charForm": [{
                 "char": "扌",
@@ -94452,7 +94452,7 @@
     },
     {
         "pinyin": "xiāng",
-        "char": "厢(F廂)",
+        "char": "厢(廂)",
         "definition": "side-room, wing; theatre box",
         "charForm": [{
                 "char": "厂",
@@ -94641,7 +94641,7 @@
     },
     {
         "pinyin": "mán",
-        "char": "瞒(F瞞)",
+        "char": "瞒(瞞)",
         "definition": "deceive, lie; eyes half-closed",
         "charForm": [{
                 "char": "目",
@@ -94730,7 +94730,7 @@
     },
     {
         "pinyin": "zhǒng",
-        "char": "肿(F腫)",
+        "char": "肿(腫)",
         "definition": "swell; swollen; swelling",
         "charForm": [{
                 "char": "⺼",
@@ -94940,7 +94940,7 @@
     },
     {
         "pinyin": "qiáo",
-        "char": "侨(F僑)",
+        "char": "侨(僑)",
         "definition": "sojourn, lodge",
         "charForm": [{
                 "char": "亻",
@@ -94982,7 +94982,7 @@
     },
     {
         "pinyin": "dié",
-        "char": "叠(F疊)",
+        "char": "叠(疊)",
         "definition": "pile; be piled up; fold up",
         "charForm": [{
                 "char": "叒",
@@ -95024,7 +95024,7 @@
     },
     {
         "pinyin": "xiào",
-        "char": "啸(F嘯)",
+        "char": "啸(嘯)",
         "definition": "roar, howl, scream; whistle",
         "charForm": [{
                 "char": "口",
@@ -95234,7 +95234,7 @@
     },
     {
         "pinyin": "zhàng",
-        "char": "胀(F脹)",
+        "char": "胀(脹)",
         "definition": "swell, inflate, expand",
         "charForm": [{
                 "char": "⺼",
@@ -95276,7 +95276,7 @@
     },
     {
         "pinyin": "fù",
-        "char": "赋(F賦)",
+        "char": "赋(賦)",
         "definition": "tax; give; endow; army; diffuse",
         "charForm": [{
                 "char": "贝",
@@ -95486,7 +95486,7 @@
     },
     {
         "pinyin": "kěn",
-        "char": "恳(F懇)",
+        "char": "恳(懇)",
         "definition": "sincere, earnest, cordial",
         "charForm": [{
                 "char": "艮",
@@ -95612,7 +95612,7 @@
     },
     {
         "pinyin": "yīng",
-        "char": "婴(F嬰)",
+        "char": "婴(嬰)",
         "definition": "baby, infant; bother",
         "charForm": [{
                 "char": "⿰贝贝",
@@ -95748,7 +95748,7 @@
     },
     {
         "pinyin": "bì",
-        "char": "毙(F斃)",
+        "char": "毙(斃)",
         "definition": "kill; die violent death",
         "charForm": [{
                 "char": "比",
@@ -95958,7 +95958,7 @@
     },
     {
         "pinyin": "mí",
-        "char": "谜(F謎)",
+        "char": "谜(謎)",
         "definition": "riddle, conundrum; puzzle",
         "charForm": [{
                 "char": "讠",
@@ -96105,7 +96105,7 @@
     },
     {
         "pinyin": "qióng",
-        "char": "琼(F瓊)",
+        "char": "琼(瓊)",
         "definition": "jade; rare, precious; elegant; (Cant.) to coagulate",
         "charForm": [{
                 "char": "王",
@@ -96189,7 +96189,7 @@
     },
     {
         "pinyin": "wū",
-        "char": "呜(F嗚)",
+        "char": "呜(嗚)",
         "definition": "sound of crying, sobbing",
         "charForm": [{
                 "char": "口",
@@ -96231,7 +96231,7 @@
     },
     {
         "pinyin": "cuàn",
-        "char": "窜(F竄)",
+        "char": "窜(竄)",
         "definition": "run away; revise, edit; expel",
         "charForm": [{
                 "char": "穴",
@@ -96273,7 +96273,7 @@
     },
     {
         "pinyin": "bān",
-        "char": "颁(F頒)",
+        "char": "颁(頒)",
         "definition": "confer, bestow; publish, promulgate",
         "charForm": [{
                 "char": "分",
@@ -96441,7 +96441,7 @@
     },
     {
         "pinyin": "jiá",
-        "char": "颊(F頰)",
+        "char": "颊(頰)",
         "definition": "cheeks, jaw",
         "charForm": [{
                 "char": "夹",
@@ -96729,7 +96729,7 @@
     },
     {
         "pinyin": "zhǔ",
-        "char": "嘱(F囑)",
+        "char": "嘱(囑)",
         "definition": "order, tell, instruct, leave word",
         "charForm": [{
                 "char": "口",
@@ -96855,7 +96855,7 @@
     },
     {
         "pinyin": "bó",
-        "char": "驳(F駁)",
+        "char": "驳(駁)",
         "definition": "varicolored, variegated; mixed",
         "charForm": [{
                 "char": "马",
@@ -97364,7 +97364,7 @@
     },
     {
         "pinyin": "Hù",
-        "char": "沪(F滬)",
+        "char": "沪(滬)",
         "definition": "Shanghai; river near Shanghai",
         "charForm": [{
                 "char": "氵",
@@ -97406,7 +97406,7 @@
     },
     {
         "pinyin": "jiàn",
-        "char": "贱(F賤)",
+        "char": "贱(賤)",
         "definition": "mean, low; cheap, worthless",
         "charForm": [{
                 "char": "贝",
@@ -97868,7 +97868,7 @@
     },
     {
         "pinyin": "gōu",
-        "char": "钩(F鉤)",
+        "char": "钩(鉤)",
         "definition": "hook, barb; sickle; stroke with",
         "charForm": [{
                 "char": "钅",
@@ -98172,7 +98172,7 @@
     },
     {
         "pinyin": "shù",
-        "char": "竖(F豎)",
+        "char": "竖(豎)",
         "definition": "perpendicular, vertical; erect",
         "charForm": [{
                 "char": "⿰刂又",
@@ -98224,7 +98224,7 @@
     },
     {
         "pinyin": "chéng",
-        "char": "惩(F懲)",
+        "char": "惩(懲)",
         "definition": "punish, reprimand; warn",
         "charForm": [{
                 "char": "征",
@@ -98350,7 +98350,7 @@
     },
     {
         "pinyin": "xiù",
-        "char": "绣(F繡)",
+        "char": "绣(繡)",
         "definition": "embroider; embroidery; ornament",
         "charForm": [{
                 "char": "纟",
@@ -98434,7 +98434,7 @@
     },
     {
         "pinyin": "yà",
-        "char": "讶(F訝)",
+        "char": "讶(訝)",
         "definition": "express surprise, be surprised",
         "charForm": [{
                 "char": "讠",
@@ -98513,7 +98513,7 @@
     },
     {
         "pinyin": "gāng",
-        "char": "纲(F綱)",
+        "char": "纲(綱)",
         "definition": "heavy rope, hawser; main points",
         "charForm": [{
                 "char": "纟",
@@ -98597,7 +98597,7 @@
     },
     {
         "pinyin": "bīn",
-        "char": "滨(F濱)",
+        "char": "滨(濱)",
         "definition": "beach, sea coast; river bank",
         "charForm": [{
                 "char": "氵",
@@ -98713,7 +98713,7 @@
     },
     {
         "pinyin": "cāng",
-        "char": "舱(F艙)",
+        "char": "舱(艙)",
         "definition": "hold of ship; cabin",
         "charForm": [{
                 "char": "舟",
@@ -98755,7 +98755,7 @@
     },
     {
         "pinyin": "yú",
-        "char": "娱(F娛)",
+        "char": "娱(娛)",
         "definition": "pleasure, enjoyment, amusement",
         "charForm": [{
                 "char": "女",
@@ -98839,7 +98839,7 @@
     },
     {
         "pinyin": "yā",
-        "char": "鸦(F鴉)",
+        "char": "鸦(鴉)",
         "definition": "crow; Corvus species (various)",
         "charForm": [{
                 "char": "牙",
@@ -98965,7 +98965,7 @@
     },
     {
         "pinyin": "shī",
-        "char": "狮(F獅)",
+        "char": "狮(獅)",
         "definition": "lion",
         "charForm": [{
                 "char": "犭",
@@ -99076,7 +99076,7 @@
     },
     {
         "pinyin": "lǐn",
-        "char": "凛(F凜)",
+        "char": "凛(凜)",
         "definition": "to shiver with cold or fear",
         "charForm": [{
                 "char": "冫",
@@ -99118,7 +99118,7 @@
     },
     {
         "pinyin": "guī",
-        "char": "龟(F龜)",
+        "char": "龟(龜)",
         "definition": "turtle or tortoise; cuckold",
         "charForm": [{
                 "char": "⺈",
@@ -99281,7 +99281,7 @@
     },
     {
         "pinyin": "yáo",
-        "char": "窑(F窯)",
+        "char": "窑(窯)",
         "definition": "kiln; coal mine pit",
         "charForm": [{
                 "char": "穴",
@@ -99365,7 +99365,7 @@
     },
     {
         "pinyin": "xiān",
-        "char": "纤(F纖)",
+        "char": "纤(纖)",
         "definition": "fine, delicate; minute; graceful",
         "charForm": [{
                 "char": "纟",
@@ -99397,7 +99397,7 @@
     },
     {
         "pinyin": "chǒng",
-        "char": "宠(F寵)",
+        "char": "宠(寵)",
         "definition": "favorite, concubine; favor",
         "charForm": [{
                 "char": "宀",
@@ -99439,7 +99439,7 @@
     },
     {
         "pinyin": "liàn",
-        "char": "链(F鏈)",
+        "char": "链(鏈)",
         "definition": "chain, wire, cable; chain, shack",
         "charForm": [{
                 "char": "钅",
@@ -99597,7 +99597,7 @@
     },
     {
         "pinyin": "bà",
-        "char": "坝(F壩)",
+        "char": "坝(壩)",
         "definition": "embankment; dam",
         "charForm": [{
                 "char": "土",
@@ -99639,7 +99639,7 @@
     },
     {
         "pinyin": "xiá",
-        "char": "狭(F狹)",
+        "char": "狭(狹)",
         "definition": "narrow, limited; narrow-minded",
         "charForm": [{
                 "char": "犭",
@@ -99681,7 +99681,7 @@
     },
     {
         "pinyin": "míng",
-        "char": "铭(F銘)",
+        "char": "铭(銘)",
         "definition": "inscribe, engrave",
         "charForm": [{
                 "char": "钅",
@@ -99975,7 +99975,7 @@
     },
     {
         "pinyin": "yuān",
-        "char": "渊(F淵)",
+        "char": "渊(淵)",
         "definition": "surge up, bubble up, gush forth",
         "charForm": [{
                 "char": "氵",
@@ -100347,7 +100347,7 @@
     },
     {
         "pinyin": "chèn",
-        "char": "衬(F襯)",
+        "char": "衬(襯)",
         "definition": "underwear; inner garments",
         "charForm": [{
                 "char": "衤",
@@ -100473,7 +100473,7 @@
     },
     {
         "pinyin": "miǎn",
-        "char": "缅(F緬)",
+        "char": "缅(緬)",
         "definition": "distant, remote; think of",
         "charForm": [{
                 "char": "纟",
@@ -100499,7 +100499,7 @@
             {
                 "char": "印缅褐头雀鹛",
                 "pinyin": "yìn miǎn hè tóu què méi",
-                "definition": ": (bird species of China) manipur fulvetta (Fulvetta manipurensis)"
+                "definition": ": (bird species of China) manipur fulvetta (ulvetta manipurensis)"
             },
             {
                 "char": "东缅高原",
@@ -100653,7 +100653,7 @@
     },
     {
         "pinyin": "lǒu",
-        "char": "搂(F摟)",
+        "char": "搂(摟)",
         "definition": "hug, embrace; drag, pull",
         "charForm": [{
                 "char": "扌",
@@ -100758,7 +100758,7 @@
     },
     {
         "pinyin": "fù",
-        "char": "缚(F縛)",
+        "char": "缚(縛)",
         "definition": "to tie",
         "charForm": [{
                 "char": "纟",
@@ -100800,7 +100800,7 @@
     },
     {
         "pinyin": "càn",
-        "char": "灿(F燦)",
+        "char": "灿(燦)",
         "definition": "vivid, illuminating; bright",
         "charForm": [{
                 "char": "火",
@@ -100842,7 +100842,7 @@
     },
     {
         "pinyin": "yú",
-        "char": "舆(F輿)",
+        "char": "舆(輿)",
         "definition": "cart, palanquin, sedan chair",
         "charForm": [{
                 "char": "舁",
@@ -101010,7 +101010,7 @@
     },
     {
         "pinyin": "yùn",
-        "char": "韵(F韻)",
+        "char": "韵(韻)",
         "definition": "rhyme; vowel",
         "charForm": [{
                 "char": "音",
@@ -101178,7 +101178,7 @@
     },
     {
         "pinyin": "qiè",
-        "char": "窃(F竊)",
+        "char": "窃(竊)",
         "definition": "secretly, stealthily; steal; thief",
         "charForm": [{
                 "char": "穴",
@@ -101351,7 +101351,7 @@
     },
     {
         "pinyin": "zhēn",
-        "char": "侦(F偵)",
+        "char": "侦(偵)",
         "definition": "spy, reconnoiter; detective",
         "charForm": [{
                 "char": "亻",
@@ -101393,7 +101393,7 @@
     },
     {
         "pinyin": "Shǎn",
-        "char": "陕(F陝)",
+        "char": "陕(陝)",
         "definition": "mountain pass; Shanxi province",
         "charForm": [{
                 "char": "阝",
@@ -101613,7 +101613,7 @@
     },
     {
         "pinyin": "sǒng",
-        "char": "耸(F聳)",
+        "char": "耸(聳)",
         "definition": "urge on; rise up; stir, excite",
         "charForm": [{
                 "char": "从",
@@ -101697,7 +101697,7 @@
     },
     {
         "pinyin": "jiàng",
-        "char": "酱(F醬)",
+        "char": "酱(醬)",
         "definition": "any jam-like or paste-like food",
         "charForm": [{
                 "char": "⿰丬夕",
@@ -101749,7 +101749,7 @@
     },
     {
         "pinyin": "hú",
-        "char": "壶(F壺)",
+        "char": "壶(壺)",
         "definition": "jar, pot, jug, vase; surname",
         "charForm": [{
                 "char": "士",
@@ -101880,7 +101880,7 @@
     },
     {
         "pinyin": "yǎng",
-        "char": "痒(F癢)",
+        "char": "痒(癢)",
         "definition": "itch",
         "charForm": [{
                 "char": "疒",
@@ -101964,7 +101964,7 @@
     },
     {
         "pinyin": "ké",
-        "char": "壳(F殼)",
+        "char": "壳(殼)",
         "definition": "casing, shell, husk",
         "charForm": [{
                 "char": "士",
@@ -102006,7 +102006,7 @@
     },
     {
         "pinyin": "zhēn",
-        "char": "贞(F貞)",
+        "char": "贞(貞)",
         "definition": "virtuous, chaste, pure; loyal",
         "charForm": [{
                 "char": "⺊",
@@ -102142,7 +102142,7 @@
     },
     {
         "pinyin": "lú",
-        "char": "芦(F蘆)",
+        "char": "芦(蘆)",
         "definition": "rushes, reeds",
         "charForm": [{
                 "char": "艹",
@@ -102394,7 +102394,7 @@
     },
     {
         "pinyin": "fǔ",
-        "char": "辅(F輔)",
+        "char": "辅(輔)",
         "definition": "cheek bone; protective; assist",
         "charForm": [{
                 "char": "车",
@@ -102436,7 +102436,7 @@
     },
     {
         "pinyin": "zhàng",
-        "char": "账(F賬)",
+        "char": "账(賬)",
         "definition": "accounts; bill, debt; credit",
         "charForm": [{
                 "char": "贝",
@@ -102730,7 +102730,7 @@
     },
     {
         "pinyin": "jiǎn",
-        "char": "捡(F撿)",
+        "char": "捡(撿)",
         "definition": "to pick up",
         "charForm": [{
                 "char": "扌",
@@ -102846,7 +102846,7 @@
     },
     {
         "pinyin": "fèn",
-        "char": "粪(F糞)",
+        "char": "粪(糞)",
         "definition": "manure, dung, shit, excrement, night soil",
         "charForm": [{
                 "char": "米",
@@ -103014,7 +103014,7 @@
     },
     {
         "pinyin": "làn",
-        "char": "滥(F濫)",
+        "char": "滥(濫)",
         "definition": "flood, overflow; excessive",
         "charForm": [{
                 "char": "氵",
@@ -103098,7 +103098,7 @@
     },
     {
         "pinyin": "kuì",
-        "char": "溃(F潰)",
+        "char": "溃(潰)",
         "definition": "flooding river; militarily defeat",
         "charForm": [{
                 "char": "氵",
@@ -103140,7 +103140,7 @@
     },
     {
         "pinyin": "lì",
-        "char": "隶(F隸)",
+        "char": "隶(隸)",
         "definition": "subservient; servant; KangXi radical 171",
         "charForm": [{
                 "char": "彐",
@@ -103340,7 +103340,7 @@
     },
     {
         "pinyin": "kuàng",
-        "char": "旷(F曠)",
+        "char": "旷(曠)",
         "definition": "extensive, wide, broad; empty",
         "charForm": [{
                 "char": "日",
@@ -103875,7 +103875,7 @@
     },
     {
         "pinyin": "jiǎo",
-        "char": "缴(F繳)",
+        "char": "缴(繳)",
         "definition": "deliver, submit; hand over",
         "charForm": [{
                 "char": "纟",
@@ -104001,7 +104001,7 @@
     },
     {
         "pinyin": "yǐng",
-        "char": "颖(F穎)",
+        "char": "颖(穎)",
         "definition": "rice tassel; sharp point; clever",
         "charForm": [{
                 "char": "页",
@@ -104132,7 +104132,7 @@
     },
     {
         "pinyin": "zhuāng",
-        "char": "妆(F妝)",
+        "char": "妆(妝)",
         "definition": "to adorn oneself, dress up, use make-up",
         "charForm": [{
                 "char": "丬",
@@ -104300,7 +104300,7 @@
     },
     {
         "pinyin": "là",
-        "char": "蜡(F蠟)",
+        "char": "蜡(蠟)",
         "definition": "wax; candle; waxy, glazed; maggot; as a non-simplified form sometimes used as an equivalent to U+410D 䄍 䄍, meaning imperial harvest",
         "charForm": [{
                 "char": "虫",
@@ -104384,7 +104384,7 @@
     },
     {
         "pinyin": "jì",
-        "char": "剂(F劑)",
+        "char": "剂(劑)",
         "definition": "medicinal preparation",
         "charForm": [{
                 "char": "齐",
@@ -104468,7 +104468,7 @@
     },
     {
         "pinyin": "zhòu",
-        "char": "骤(F驟)",
+        "char": "骤(驟)",
         "definition": "procedure; gallop; sudden(ly)",
         "charForm": [{
                 "char": "马",
@@ -104594,7 +104594,7 @@
     },
     {
         "pinyin": "lú",
-        "char": "庐(F廬)",
+        "char": "庐(廬)",
         "definition": "hut, cottage; name of a mountain",
         "charForm": [{
                 "char": "广",
@@ -104636,7 +104636,7 @@
     },
     {
         "pinyin": "píng",
-        "char": "苹(F蘋)",
+        "char": "苹(蘋)",
         "definition": "artemisia; duckweed; apple",
         "charForm": [{
                 "char": "艹",
@@ -104678,7 +104678,7 @@
     },
     {
         "pinyin": "shài",
-        "char": "晒(F曬)",
+        "char": "晒(曬)",
         "definition": "dry in sun, expose to sun",
         "charForm": [{
                 "char": "日",
@@ -104804,7 +104804,7 @@
     },
     {
         "pinyin": "lǒng",
-        "char": "拢(F攏)",
+        "char": "拢(攏)",
         "definition": "collect, bring together",
         "charForm": [{
                 "char": "扌",
@@ -104888,7 +104888,7 @@
     },
     {
         "pinyin": "lóng",
-        "char": "胧(F朧)",
+        "char": "胧(朧)",
         "definition": "condition or appearance of moon",
         "charForm": [{
                 "char": "月",
@@ -104930,7 +104930,7 @@
     },
     {
         "pinyin": "jiāo",
-        "char": "胶(F膠)",
+        "char": "胶(膠)",
         "definition": "glue, gum, resin, rubber; sound; shin bone",
         "charForm": [{
                 "char": "⺼",
@@ -105051,7 +105051,7 @@
     },
     {
         "pinyin": "fěng",
-        "char": "讽(F諷)",
+        "char": "讽(諷)",
         "definition": "recite, incant; satirize",
         "charForm": [{
                 "char": "讠",
@@ -105261,7 +105261,7 @@
     },
     {
         "pinyin": "jiǎn",
-        "char": "拣(F揀)",
+        "char": "拣(揀)",
         "definition": "choose; select; pick up; gather",
         "charForm": [{
                 "char": "扌",
@@ -105372,7 +105372,7 @@
     },
     {
         "pinyin": "zhuāng",
-        "char": "桩(F樁)",
+        "char": "桩(樁)",
         "definition": "stake, post; affair, matter",
         "charForm": [{
                 "char": "木",
@@ -105446,7 +105446,7 @@
     },
     {
         "pinyin": "yáo",
-        "char": "谣(F謠)",
+        "char": "谣(謠)",
         "definition": "sing; folksong, ballad; rumor",
         "charForm": [{
                 "char": "讠",
@@ -105488,7 +105488,7 @@
     },
     {
         "pinyin": "zhuì",
-        "char": "坠(F墜)",
+        "char": "坠(墜)",
         "definition": "fall down, drop, sink, go to ruin",
         "charForm": [{
                 "char": "队",
@@ -105530,7 +105530,7 @@
     },
     {
         "pinyin": "zhì",
-        "char": "滞(F滯)",
+        "char": "滞(滯)",
         "definition": "block up, obstruct; stagnant",
         "charForm": [{
                 "char": "氵",
@@ -105614,7 +105614,7 @@
     },
     {
         "pinyin": "sòng",
-        "char": "诵(F誦)",
+        "char": "诵(誦)",
         "definition": "recite, chant, repeat",
         "charForm": [{
                 "char": "讠",
@@ -105698,7 +105698,7 @@
     },
     {
         "pinyin": "gāng",
-        "char": "冈(F岡)",
+        "char": "冈(岡)",
         "definition": "ridge or crest of hill",
         "charForm": [{
                 "char": "冂",
@@ -105908,7 +105908,7 @@
     },
     {
         "pinyin": "shā",
-        "char": "纱(F紗)",
+        "char": "纱(紗)",
         "definition": "gauze, thin silk; yarn, thread",
         "charForm": [{
                 "char": "纟",
@@ -105950,7 +105950,7 @@
     },
     {
         "pinyin": "xián",
-        "char": "衔(F銜)",
+        "char": "衔(銜)",
         "definition": "bit; hold in mouth, bite; gag",
         "charForm": [{
                 "char": "行",
@@ -105992,7 +105992,7 @@
     },
     {
         "pinyin": "nì",
-        "char": "腻(F膩)",
+        "char": "腻(膩)",
         "definition": "greasy, oily, dirty; smooth",
         "charForm": [{
                 "char": "⺼",
@@ -106354,7 +106354,7 @@
     },
     {
         "pinyin": "lāo",
-        "char": "捞(F撈)",
+        "char": "捞(撈)",
         "definition": "scoop out of water; dredge, fish",
         "charForm": [{
                 "char": "扌",
@@ -106396,7 +106396,7 @@
     },
     {
         "pinyin": "jiǎo",
-        "char": "搅(F攪)",
+        "char": "搅(攪)",
         "definition": "disturb, agitate, stir up",
         "charForm": [{
                 "char": "扌",
@@ -106480,7 +106480,7 @@
     },
     {
         "pinyin": "sǎn",
-        "char": "伞(F傘)",
+        "char": "伞(傘)",
         "definition": "umbrella, parasol, parachute",
         "charForm": [{
             "char": "人",
@@ -106558,7 +106558,7 @@
     },
     {
         "pinyin": "zhù",
-        "char": "铸(F鑄)",
+        "char": "铸(鑄)",
         "definition": "melt, cast; coin, mint",
         "charForm": [{
                 "char": "钅",
@@ -106600,7 +106600,7 @@
     },
     {
         "pinyin": "qū",
-        "char": "躯(F軀)",
+        "char": "躯(軀)",
         "definition": "body",
         "charForm": [{
                 "char": "身",
@@ -106810,7 +106810,7 @@
     },
     {
         "pinyin": "tàng",
-        "char": "烫(F燙)",
+        "char": "烫(燙)",
         "definition": "scald, heat; wash; iron clothes",
         "charForm": [{
                 "char": "汤",
@@ -106915,7 +106915,7 @@
     },
     {
         "pinyin": "jiāng",
-        "char": "浆(F漿)",
+        "char": "浆(漿)",
         "definition": "any thick fluid; starch; broth",
         "charForm": [{
                 "char": "⿰丬夕",
@@ -107271,7 +107271,7 @@
     },
     {
         "pinyin": "niàng",
-        "char": "酿(F釀)",
+        "char": "酿(釀)",
         "definition": "brew, ferment",
         "charForm": [{
                 "char": "酉",
@@ -107313,7 +107313,7 @@
     },
     {
         "pinyin": "é",
-        "char": "鹅(F鵝)",
+        "char": "鹅(鵝)",
         "definition": "goose",
         "charForm": [{
                 "char": "我",
@@ -107355,7 +107355,7 @@
     },
     {
         "pinyin": "zī",
-        "char": "兹(F茲)",
+        "char": "兹(茲)",
         "definition": "now, here; this; time, year",
         "charForm": [{
                 "char": "八",
@@ -107412,7 +107412,7 @@
     },
     {
         "pinyin": "dǎo",
-        "char": "捣(F搗)",
+        "char": "捣(搗)",
         "definition": "hull; thresh; beat, attack",
         "charForm": [{
                 "char": "扌",
@@ -107454,7 +107454,7 @@
     },
     {
         "pinyin": "dòng",
-        "char": "栋(F棟)",
+        "char": "栋(棟)",
         "definition": "main beams supporting house",
         "charForm": [{
                 "char": "木",
@@ -107622,7 +107622,7 @@
     },
     {
         "pinyin": "lǎn",
-        "char": "缆(F纜)",
+        "char": "缆(纜)",
         "definition": "hawser, heavy-duty rope, cable",
         "charForm": [{
                 "char": "纟",
@@ -107664,7 +107664,7 @@
     },
     {
         "pinyin": "shuò",
-        "char": "烁(F爍)",
+        "char": "烁(爍)",
         "definition": "shine, glitter, sparkle",
         "charForm": [{
                 "char": "火",
@@ -107748,7 +107748,7 @@
     },
     {
         "pinyin": "zhà",
-        "char": "诈(F詐)",
+        "char": "诈(詐)",
         "definition": "cheat, defraud, swindle; trick",
         "charForm": [{
                 "char": "讠",
@@ -108205,7 +108205,7 @@
     },
     {
         "pinyin": "fǎng",
-        "char": "纺(F紡)",
+        "char": "纺(紡)",
         "definition": "spin, reel, weave; reeled pongee",
         "charForm": [{
                 "char": "纟",
@@ -108289,7 +108289,7 @@
     },
     {
         "pinyin": "chuí",
-        "char": "锤(F錘)",
+        "char": "锤(錘)",
         "definition": "balance weight on scale; hammer",
         "charForm": [{
                 "char": "钅",
@@ -108331,7 +108331,7 @@
     },
     {
         "pinyin": "duì",
-        "char": "兑(F兌)",
+        "char": "兑(兌)",
         "definition": "cash; exchange",
         "charForm": [{
                 "char": "丷",
@@ -108373,7 +108373,7 @@
     },
     {
         "pinyin": "biàn",
-        "char": "辫(F辮)",
+        "char": "辫(辮)",
         "definition": "braid; pigtail, plait, queue",
         "charForm": [{
                 "char": "辛",
@@ -108420,7 +108420,7 @@
     },
     {
         "pinyin": "duò",
-        "char": "堕(F墮)",
+        "char": "堕(墮)",
         "definition": "fall, sink, let fall; degenerate",
         "charForm": [{
                 "char": "陏",
@@ -108504,7 +108504,7 @@
     },
     {
         "pinyin": "mì",
-        "char": "觅(F覓)",
+        "char": "觅(覓)",
         "definition": "seek; search",
         "charForm": [{
                 "char": "爫",
@@ -108588,7 +108588,7 @@
     },
     {
         "pinyin": "xié",
-        "char": "谐(F諧)",
+        "char": "谐(諧)",
         "definition": "harmonize, agree; joke, jest",
         "charForm": [{
                 "char": "讠",
@@ -109217,7 +109217,7 @@
     },
     {
         "pinyin": "chóu",
-        "char": "绸(F綢)",
+        "char": "绸(綢)",
         "definition": "silk cloth, satin damask",
         "charForm": [{
                 "char": "纟",
@@ -109343,7 +109343,7 @@
     },
     {
         "pinyin": "jiāo",
-        "char": "浇(F澆)",
+        "char": "浇(澆)",
         "definition": "spray, water, sprinkle",
         "charForm": [{
                 "char": "氵",
@@ -109948,7 +109948,7 @@
     },
     {
         "pinyin": "lún",
-        "char": "沦(F淪)",
+        "char": "沦(淪)",
         "definition": "be lost; sink, be submerged",
         "charForm": [{
                 "char": "氵",
@@ -109990,7 +109990,7 @@
     },
     {
         "pinyin": "lǚ",
-        "char": "缕(F縷)",
+        "char": "缕(縷)",
         "definition": "thread; detailed, precise",
         "charForm": [{
                 "char": "纟",
@@ -110200,7 +110200,7 @@
     },
     {
         "pinyin": "luó",
-        "char": "萝(F蘿)",
+        "char": "萝(蘿)",
         "definition": "type of creeping plant; turnip",
         "charForm": [{
                 "char": "艹",
@@ -110368,7 +110368,7 @@
     },
     {
         "pinyin": "yìn",
-        "char": "荫(F蔭)",
+        "char": "荫(蔭)",
         "definition": "shade, shelter; protect",
         "charForm": [{
                 "char": "艹",
@@ -110410,7 +110410,7 @@
     },
     {
         "pinyin": "jī",
-        "char": "讥(F譏)",
+        "char": "讥(譏)",
         "definition": "ridicule, jeer, mock; inspect",
         "charForm": [{
                 "char": "讠",
@@ -110452,7 +110452,7 @@
     },
     {
         "pinyin": "cōng",
-        "char": "葱(F蔥)",
+        "char": "葱(蔥)",
         "definition": "scallions, leeks, green onions",
         "charForm": [{
                 "char": "艹",
@@ -110494,7 +110494,7 @@
     },
     {
         "pinyin": "gǒng",
-        "char": "巩(F鞏)",
+        "char": "巩(鞏)",
         "definition": "bind; firm, secure, strong",
         "charForm": [{
                 "char": "工",
@@ -110583,7 +110583,7 @@
     },
     {
         "pinyin": "zhāi",
-        "char": "斋(F齋)",
+        "char": "斋(齋)",
         "definition": "vegetarian diet; study",
         "charForm": [{
                 "char": "文",
@@ -110662,7 +110662,7 @@
     },
     {
         "pinyin": "zhì",
-        "char": "帜(F幟)",
+        "char": "帜(幟)",
         "definition": "flag, pennant; sign; fasten",
         "charForm": [{
                 "char": "巾",
@@ -110746,7 +110746,7 @@
     },
     {
         "pinyin": "qiān",
-        "char": "铅(F鉛)",
+        "char": "铅(鉛)",
         "definition": "lead",
         "charForm": [{
                 "char": "钅",
@@ -110793,7 +110793,7 @@
     },
     {
         "pinyin": "huì",
-        "char": "贿(F賄)",
+        "char": "贿(賄)",
         "definition": "bribe; bribes; riches, wealth",
         "charForm": [{
                 "char": "贝",
@@ -110835,7 +110835,7 @@
     },
     {
         "pinyin": "róng",
-        "char": "绒(F絨)",
+        "char": "绒(絨)",
         "definition": "silk, cotton, or woolen fabric",
         "charForm": [{
                 "char": "纟",
@@ -110877,7 +110877,7 @@
     },
     {
         "pinyin": "lǚ",
-        "char": "侣(F侶)",
+        "char": "侣(侶)",
         "definition": "companion; associate with",
         "charForm": [{
                 "char": "亻",
@@ -110919,7 +110919,7 @@
     },
     {
         "pinyin": "duàn",
-        "char": "锻(F鍛)",
+        "char": "锻(鍛)",
         "definition": "forge metal; temper, refine",
         "charForm": [{
                 "char": "钅",
@@ -110961,7 +110961,7 @@
     },
     {
         "pinyin": "qiǎn",
-        "char": "谴(F譴)",
+        "char": "谴(譴)",
         "definition": "reprimand, scold, abuse",
         "charForm": [{
                 "char": "讠",
@@ -111003,7 +111003,7 @@
     },
     {
         "pinyin": "xiōng",
-        "char": "汹(F洶)",
+        "char": "汹(洶)",
         "definition": "turbulent; noisy, restless",
         "charForm": [{
                 "char": "氵",
@@ -111129,7 +111129,7 @@
     },
     {
         "pinyin": "huì",
-        "char": "讳(F諱)",
+        "char": "讳(諱)",
         "definition": "conceal; shun; regard as taboo",
         "charForm": [{
                 "char": "讠",
@@ -111171,7 +111171,7 @@
     },
     {
         "pinyin": "luó",
-        "char": "锣(F鑼)",
+        "char": "锣(鑼)",
         "definition": "gong",
         "charForm": [{
                 "char": "钅",
@@ -111460,7 +111460,7 @@
     },
     {
         "pinyin": "yún",
-        "char": "匀(F勻)",
+        "char": "匀(勻)",
         "definition": "equal",
         "charForm": [{
                 "char": "勹",
@@ -111743,7 +111743,7 @@
     },
     {
         "pinyin": "chuò",
-        "char": "绰(F綽)",
+        "char": "绰(綽)",
         "definition": "graceful, delicate; spacious",
         "charForm": [{
                 "char": "纟",
@@ -111802,7 +111802,7 @@
     },
     {
         "pinyin": "jiǎo",
-        "char": "绞(F絞)",
+        "char": "绞(絞)",
         "definition": "twist, wring; intertwine; winch",
         "charForm": [{
                 "char": "纟",
@@ -111844,7 +111844,7 @@
     },
     {
         "pinyin": "zhóu",
-        "char": "轴(F軸)",
+        "char": "轴(軸)",
         "definition": "axle, axletree; pivot; axis",
         "charForm": [{
                 "char": "车",
@@ -111886,7 +111886,7 @@
     },
     {
         "pinyin": "lěi",
-        "char": "垒(F壘)",
+        "char": "垒(壘)",
         "definition": "rampart, military wall",
         "charForm": [{
                 "char": "厽",
@@ -111970,7 +111970,7 @@
     },
     {
         "pinyin": "yùn",
-        "char": "蕴(F蘊)",
+        "char": "蕴(蘊)",
         "definition": "to collect, gather, store; profound",
         "charForm": [{
                 "char": "艹",
@@ -112138,7 +112138,7 @@
     },
     {
         "pinyin": "yōng",
-        "char": "佣(F傭)",
+        "char": "佣(傭)",
         "definition": "commission fee",
         "charForm": [{
                 "char": "亻",
@@ -112216,7 +112216,7 @@
     },
     {
         "pinyin": "zhòu",
-        "char": "昼(F晝)",
+        "char": "昼(晝)",
         "definition": "daytime, daylight",
         "charForm": [{
                 "char": "尺",
@@ -112453,7 +112453,7 @@
     },
     {
         "pinyin": "shí",
-        "char": "蚀(F蝕)",
+        "char": "蚀(蝕)",
         "definition": "nibble away; erode; eclipse",
         "charForm": [{
                 "char": "饣",
@@ -112537,7 +112537,7 @@
     },
     {
         "pinyin": "xiā",
-        "char": "虾(F蝦)",
+        "char": "虾(蝦)",
         "definition": "shrimp, prawn",
         "charForm": [{
                 "char": "虫",
@@ -112579,7 +112579,7 @@
     },
     {
         "pinyin": "miù",
-        "char": "谬(F謬)",
+        "char": "谬(謬)",
         "definition": "error, exaggeration; erroneous",
         "charForm": [{
                 "char": "讠",
@@ -112621,7 +112621,7 @@
     },
     {
         "pinyin": "shēn",
-        "char": "绅(F紳)",
+        "char": "绅(紳)",
         "definition": "girdle; tie, bind; gentry",
         "charForm": [{
                 "char": "纟",
@@ -112663,7 +112663,7 @@
     },
     {
         "pinyin": "xiāng",
-        "char": "镶(F鑲)",
+        "char": "镶(鑲)",
         "definition": "insert, inlay, set, mount; fill",
         "charForm": [{
                 "char": "钅",
@@ -112705,7 +112705,7 @@
     },
     {
         "pinyin": "lóng",
-        "char": "聋(F聾)",
+        "char": "聋(聾)",
         "definition": "deaf",
         "charForm": [{
                 "char": "龙",
@@ -112789,7 +112789,7 @@
     },
     {
         "pinyin": "lǒng",
-        "char": "垄(F壟)",
+        "char": "垄(壟)",
         "definition": "grave, mound; ridge in field",
         "charForm": [{
                 "char": "龙",
@@ -112831,7 +112831,7 @@
     },
     {
         "pinyin": "yàn",
-        "char": "彦(F彥)",
+        "char": "彦(彥)",
         "definition": "elegant",
         "charForm": [{
                 "char": "产",
@@ -112873,7 +112873,7 @@
     },
     {
         "pinyin": "qiào",
-        "char": "翘(F翹)",
+        "char": "翘(翹)",
         "definition": "turn up, lift, elevate, raise",
         "charForm": [{
                 "char": "尧",
@@ -113036,7 +113036,7 @@
     },
     {
         "pinyin": "chǎn",
-        "char": "阐(F闡)",
+        "char": "阐(闡)",
         "definition": "explain, clarify, elucidate",
         "charForm": [{
                 "char": "门",
@@ -113078,7 +113078,7 @@
     },
     {
         "pinyin": "sòng",
-        "char": "讼(F訟)",
+        "char": "讼(訟)",
         "definition": "accuse; argue, dispute; litigate",
         "charForm": [{
                 "char": "讠",
@@ -113120,7 +113120,7 @@
     },
     {
         "pinyin": "shū",
-        "char": "枢(F樞)",
+        "char": "枢(樞)",
         "definition": "door hinge; pivot; center of power",
         "charForm": [{
                 "char": "木",
@@ -113162,7 +113162,7 @@
     },
     {
         "pinyin": "zhǎn",
-        "char": "崭(F嶄)",
+        "char": "崭(嶄)",
         "definition": "high, steep, precipitous; new",
         "charForm": [{
                 "char": "山",
@@ -113246,7 +113246,7 @@
     },
     {
         "pinyin": "xiè",
-        "char": "泻(F瀉)",
+        "char": "泻(瀉)",
         "definition": "drain off, leak; flow, pour down",
         "charForm": [{
                 "char": "氵",
@@ -113288,7 +113288,7 @@
     },
     {
         "pinyin": "jiǎn",
-        "char": "俭(F儉)",
+        "char": "俭(儉)",
         "definition": "temperate, frugal, economical",
         "charForm": [{
                 "char": "亻",
