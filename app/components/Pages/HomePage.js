@@ -12,6 +12,7 @@ import Answers from "../Components/Answers";
 import CharPreview from "../Components/CharPreview"
 import RangeSlider from "../Components/CharacterFormation"
 import HanziWriter from 'hanzi-writer';
+import SettingsModal from "../Components/SettingsModal";
 
 class HomePage extends Component {
   constructor(props) {
@@ -183,7 +184,7 @@ class HomePage extends Component {
         </div>
         
         <Score numCorrect={numCorrect} numRounds={numRounds} />
-        <DifficultySetter />
+        <SettingsModal />
       </div>
     );
   }
