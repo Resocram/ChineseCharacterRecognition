@@ -1,4 +1,4 @@
-import { Box, Slider } from "@mui/material";
+import { Box, Slider, Button } from "@mui/material";
 
 const MIN_DISTANCE = 1;
 
@@ -35,6 +35,7 @@ export default function DifficultySetter(props) {
                     min={0}
                     max={2000}
                 />
+                <Button type="reset" className="button" id="reset">Reset</Button>
             </Box>
         </div>
     );
