@@ -17,7 +17,7 @@ const style = {
   p: 4,
 };
 
-export default function SettingsModal() {
+export default function SettingsModal(props) {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -47,7 +47,7 @@ export default function SettingsModal() {
       >
         <Box sx={style}>
             <h2 className="header">Settings</h2>
-            <DifficultySetter />
+            <DifficultySetter setDifficulty={props.setDifficulty} difficulty={props.difficulty} />
             <Button onClick={handleClose}>Close</Button> 
         </Box>
       </Modal>

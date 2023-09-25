@@ -1,6 +1,19 @@
-import { Box, Button, TextField } from "@mui/material";
+import { Box, Slider } from "@mui/material";
+
+const MIN_DISTANCE = 1;
 
 export default function DifficultySetter(props) {
+    const handleChange = (event, newValue, activeThumb) => {
+        if (!Array.isArray(newValue)) {
+          return;
+        }
+    
+        if (activeThumb === 0) {
+            props.setDifficulty([Math.min(newValue[0], props.difficulty[1] - MIN_DISTANCE), props.difficulty[1]]);
+        } else {
+            props.setDifficulty([props.difficulty[0], Math.max(newValue[1], props.difficulty[0] + MIN_DISTANCE)]);
+        }
+    };
 
     return (
         <div>
@@ -12,33 +25,17 @@ export default function DifficultySetter(props) {
                 noValidate
                 autoComplete="off"
             >
-                <TextField
-                    id="outlined-number"
-                    label="Difficulty"
-                    type="number"
-                    defaultValue="1000"
-                    InputLabelProps={{
-                        shrink: true,
-                    }}
+                <h4>Difficulty</h4>
+                <Slider
+                    value={props.difficulty}
+                    onChange={handleChange}
+                    valueLabelDisplay="auto"
+                    disableSwap
+                    step={100}
+                    min={0}
+                    max={2000}
                 />
-                <TextField
-                    id="outlined-number"
-                    label="Lower Bound"
-                    type="number"
-                    defaultValue="1"
-                    InputLabelProps={{
-                        shrink: true,
-                    }}
-                />
-                <Button type="reset" className="button" id="reset">Reset</Button>
             </Box>
-            {/* <form>
-                <label htmlFor="difficulty" className="test">Difficulty (How many characters to test, 1-1000):</label>
-                <input type ="text" className="test" id="difficulty" name="difficulty"></input>
-                <label htmlFor="lowerbound" className="test">Lower Bound (dev usage):</label>
-                <input type ="text" className="test" id="lowerbound" name="lowerbound"></input>
-                <button type="reset" className="button" id="reset">Reset</button>
-            </form> */}
         </div>
     );
 }
