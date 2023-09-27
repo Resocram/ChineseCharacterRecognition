@@ -22,6 +22,10 @@ export default function SettingsModal(props) {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
+  const handleResetAndClose = () => {
+    props.onReset();
+    handleClose();
+  }
   return (
     <div>
       <Button onClick={handleOpen}>
@@ -46,9 +50,14 @@ export default function SettingsModal(props) {
         onClose={handleClose}
       >
         <Box sx={style}>
-            <h2 className="header">Settings</h2>
+            <h2 className="difficulty-header">Difficulty</h2>
             <DifficultySetter setDifficulty={props.setDifficulty} difficulty={props.difficulty} />
-            <Button onClick={handleClose}>Close</Button> 
+            <button type="button" className="button" onClick={handleResetAndClose}>
+              Reset
+            </button>
+            <button type="button" className="button" onClick={handleClose}>
+              Close
+            </button>
         </Box>
       </Modal>
     </div>

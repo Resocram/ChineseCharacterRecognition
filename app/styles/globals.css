@@ -41,21 +41,10 @@ a {
   margin-left: 15px;
 }
 
-.pinyin-definition-container {
+.pinyin-definition-examplewords-container {
   display: flex;
   align-items: stretch;
-  justify-content: space-between;
-}
-.pinyin-definition-container > div:nth-child(1) {
-  flex: 0 0 10%; /* 10% of the available space */
-}
-
-.pinyin-definition-container > div:nth-child(2) {
-  flex: 0 0 20%; /* 10% of the available space */
-}
-
-.pinyin-definition-container > div:nth-child(3) {
-  flex: 0 0 70%; /* 80% of the available space */
+  justify-content: flex-start;
 }
 
 
@@ -176,11 +165,46 @@ p {
 
 .char-preview-container {
   display: flex;
-  align-items: center; /* Vertically center the items */
+  align-items: center; 
 }
 
 #char-preview {
   display: flex;
   justify-content: center; 
   align-items: center; 
+}
+
+.difficulty-header {
+  margin-bottom: 10%;
+}
+
+
+/* Add this CSS for small screens */
+@media screen and (max-width: 768px) {
+  .outer-canvas-buttons-guesses-container {
+    flex-direction: column; /* Stack elements vertically on small screens */
+  }
+
+  .guesses-container {
+    margin-top: 10px; /* Add spacing between Guesses and other elements */
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .half-width {
+    width: 100%; /* Set the desired width for larger screens */
+  }
+}
+
+/* For screens 768px or smaller, stack CharPreview below Answers */
+@media screen and (max-width: 768px) {
+  .answers-animate-container {
+    flex-direction: column;
+    align-items: left; /* Center align both CharPreview and Answers */
+  }
+
+  .char-preview-container {
+    width: 100%; /* Take up full width on smaller screens */
+  }
+
 }

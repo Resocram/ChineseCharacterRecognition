@@ -2,7 +2,7 @@
 import React from "react";
 export default function Answers({ prevAnswers, onPrevChar }) {
     return (
-        <div className="half-width">
+        <div className="answers-container half-width">
             <h2 className="header">Previous Answers</h2>
             <div className="horizontal-list">
                             {

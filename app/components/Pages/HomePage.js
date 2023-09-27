@@ -37,12 +37,9 @@ class HomePage extends Component {
   };
 
   setDifficulty = (newDifficulty) => {
-    console.log(newDifficulty);
     this.setState({ 
       difficulty: newDifficulty,
-      problems: this.shuffleArray(DATA.slice(this.state.difficulty[0], this.state.difficulty[1]))
     })
-    console.log(this.state.problems.length);
   }
 
   guess = (char) => {
@@ -90,9 +87,23 @@ class HomePage extends Component {
     this.setState((prevState) => ({
       numRounds: prevState.numRounds + 1,
       strokes: [],
-      prevAnswers: [...prevState.prevAnswers,{answer:problems[numRounds-1],correct:false}]
+      prevAnswers: [...prevState.prevAnswers,{answer:problems[(numRounds-1)%problems.length],correct:false}]
     }));
     this.clearButton()
+  }
+
+  resetButton = () => {
+    this.setState((prevState) => ({
+      difficulty: prevState.difficulty,
+      problems: this.shuffleArray(DATA.slice(prevState.difficulty[0], prevState.difficulty[1])),
+      numCorrect: 0,
+      numRounds: 1,
+      strokes: [],
+      isCorrectGuess: false,
+      showResults: false,
+      prevAnswers: [],
+      showPreview: false
+    }));
   }
 
   prevChar = (char, trad) => {
@@ -144,11 +155,10 @@ class HomePage extends Component {
 
     this.setState(
       {
-        // problems: this.shuffleArray(DATA.slice(this.state.difficulty[0], this.state.difficulty[1])),
+        problems: this.shuffleArray(DATA.slice(this.state.difficulty[0], this.state.difficulty[1])),
         hanziWriter: new HanziWriter('char-preview',options)
       }
     )
-    console.log(this.state.difficulty);
   }
 
 
@@ -170,10 +180,14 @@ class HomePage extends Component {
     return (
       <div>
         <h1>Chinese Character Recognition</h1>
-        <div className="pinyin-definition-container">
-          <Pinyin pinyin={problems[(numRounds - 1) % this.state.problems.length].pinyin} />
-          <Definition definition={problems[(numRounds - 1) % this.state.problems.length].definition} />
-          <ExampleWords char={problems[(numRounds-1) % this.state.problems.length].char} words={problems[(numRounds - 1) % this.state.problems.length].exampleWord} />
+        <div className="pinyin-definition-examplewords-container">
+          <div className="pinyin-definition-container">
+            <Pinyin pinyin={problems[(numRounds - 1) % this.state.problems.length].pinyin} />
+            <Definition definition={problems[(numRounds - 1) % this.state.problems.length].definition} />
+          </div>
+          <div className="examplewords-container">
+            <ExampleWords char={problems[(numRounds-1) % this.state.problems.length].char} words={problems[(numRounds - 1) % this.state.problems.length].exampleWord} />
+          </div>
         </div>
         
         <div className="outer-canvas-buttons-guesses-container">
@@ -181,9 +195,8 @@ class HomePage extends Component {
             <Canvas ref={this.canvasRef} strokes={strokes} setStrokes={this.setStrokes} showResults={showResults} isCorrectGuess={isCorrectGuess}/>
             <Buttons onUndo={this.undoButton} onClear={this.clearButton} onNext={this.nextButton} />
           </div>
-          <div>
+          <div className="guesses-container">
             <Guesses strokes={strokes} guess={this.guess} />
-
           </div> 
         </div>
         <div className="answers-animate-container">
@@ -192,7 +205,7 @@ class HomePage extends Component {
         </div>
         
         <Score numCorrect={numCorrect} numRounds={numRounds} />
-        <SettingsModal setDifficulty={this.setDifficulty} difficulty={this.state.difficulty} />
+        <SettingsModal setDifficulty={this.setDifficulty} difficulty={this.state.difficulty} onReset={this.resetButton}/>
       </div>
     );
   }

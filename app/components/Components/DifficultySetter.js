@@ -1,4 +1,4 @@
-import { Box, Slider, Button } from "@mui/material";
+import { Box, Slider } from "@mui/material";
 
 const MIN_DISTANCE = 1;
 
@@ -25,17 +25,16 @@ export default function DifficultySetter(props) {
                 noValidate
                 autoComplete="off"
             >
-                <h4>Difficulty</h4>
                 <Slider
                     value={props.difficulty}
                     onChange={handleChange}
-                    valueLabelDisplay="auto"
+                    valueLabelDisplay="on"
                     disableSwap
-                    step={100}
+                    step={10}
                     min={0}
-                    max={2000}
+                    max={2500}
                 />
-                <Button type="reset" className="button" id="reset">Reset</Button>
+                
             </Box>
         </div>
     );
