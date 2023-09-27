@@ -3,6 +3,7 @@ const nextConfig = {
   reactStrictMode: false,
   swcMinify: true,
   output: "export",
+  basePath: '/app'
 }
 
 module.exports = nextConfig
