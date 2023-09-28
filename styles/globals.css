@@ -1,0 +1,239 @@
+html,
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+}
+
+.horizontal-list {
+    display: flex;
+    flex-direction: row;
+}
+
+.chinese {
+    padding: 5px;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+#canvas {
+  border: 2px solid black; 
+  display: inline-block; 
+  cursor: crosshair;
+}
+
+#main{
+  margin-left: 15px;
+}
+
+.pinyin-definition-examplewords-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.pinyin-definition-container {
+  display: flex;
+  flex-direction: row; 
+  align-self: flex-start;
+}
+
+#recognized-characters{
+  margin-left:0%
+}
+
+h1{
+  font-size: 35px;
+}
+
+h2 {
+  font-size: 28px;
+  margin: 0;
+}
+
+p {
+  margin-top: 5px;
+  font-size:20px;
+  text-align: left;
+  margin-left: 27px;
+}
+
+.canvas-buttons-container, h2, .horizontal-list {
+  margin-left: 20px;
+}
+
+.canvas-buttons-container{
+  display:inline-block;
+}
+
+.outer-canvas-buttons-guesses-container {
+  display: flex; 
+  flex-direction: row; 
+  align-items: flex-start; 
+}
+
+.button {
+  padding: 6px 15px;
+  font-size: 15px; 
+  background-color: #F0F0F0; 
+  color: #000; 
+  border: 2px solid #000; 
+  cursor: pointer;
+}
+
+.commands {
+  justify-content: space-between;
+  display: flex;
+}
+
+.chinese:hover {
+  background-color: #f0f0f0; 
+}
+
+.popup{
+  font-size: 28px;
+  margin: 0;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+
+}
+
+.correct-popup {
+  color: green; 
+}
+.incorrect-popup {
+  color: red; 
+}
+
+
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.5s linear;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s linear;
+}
+
+.underline-green {
+  text-decoration: underline green;
+}
+
+.underline-red {
+  text-decoration: underline red;
+}
+.horizontal-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.answers-animate-container {
+  display: flex; 
+  justify-content: space-between; 
+}
+
+.half-width {
+  flex: 0 0 50%;
+}
+
+.hidden {
+  display: none;
+}
+
+.char-preview-container {
+  display: flex;
+  align-items: center; 
+}
+
+#char-preview {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+}
+
+.difficulty-header {
+  margin-bottom: 10%;
+}
+
+
+/* Add this CSS for small screens */
+@media screen and (max-width: 768px) {
+  .outer-canvas-buttons-guesses-container {
+    flex-direction: column; 
+  }
+
+  .guesses-container {
+    margin-top: 10px; 
+  }
+
+  .answers-animate-container {
+    flex-direction: column;
+    align-items: left;
+  }
+
+  .char-preview-container {
+    width: 100%; 
+  }
+  
+  .pinyin-definition-examplewords-container {
+    display: flex;
+    flex-direction: column; /* Display elements in a column for small screens */
+    align-items: flex-start; /* Align the container to the right */
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .half-width {
+    width: 100%; /* Set the desired width for larger screens */
+  }
+}
+
+#canvas{
+  background-image: linear-gradient(45deg, transparent 49.5%, rgba(0, 0, 0, 0.2) 50%, transparent 50.5%, transparent 100%),
+  linear-gradient(-45deg, transparent 49.5%, rgba(0, 0, 0, 0.2) 50%, transparent 50.5%, transparent 100%),
+  linear-gradient(0deg, transparent 49.5%, rgba(0, 0, 0, 0.2) 50%, transparent 50.5%, transparent 100%),
+  linear-gradient(90deg, transparent 49.5%, rgba(0, 0, 0, 0.2) 50%, transparent 50.5%, transparent 100%);
+}
+
+
+
+button:hover {
+  background-color: #2980b9; /* Reset hover styles */
+}
+
+
+/* Have to combo these two css, on mobile if I click a button it stays in hover state, so I 
+have to remove the hover colour and add my own touch-active class for the colour*/
+@media (hover: none) {
+  .button:hover {
+      background-color: initial; /* Set it back to the normal state color */
+  }
+}
+
+.touch-active {
+  background-color: #2980b9;
+}
