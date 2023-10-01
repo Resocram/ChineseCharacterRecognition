@@ -1,9 +1,12 @@
 import { useRouter } from 'next/router';
-import RoomPage from '../../components/Pages/RoomPage';
+import RoomIdPage from '../../components/Pages/RoomIdPage';
 
 export default function Room() {
   const router = useRouter();
   const { id } = router.query;
+  if (!router.isReady) {
+    return <div>Loading...</div>; 
+  }
 
-  return <RoomPage roomId={id} />;
+  return <RoomIdPage roomId={id} />;
 }
