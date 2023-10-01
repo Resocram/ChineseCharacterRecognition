@@ -7,18 +7,14 @@ class RoomPage extends React.Component {
     try {
       const response = await fetch(`${backendApiUrl}/api/create-multiplayer`, {
         method: 'POST',
-        credentials: 'include', // Include credentials in the request
       });
 
       if (response.ok) {
         // Check if the response includes a redirect URL
         const data = await response.json();
-        if (data.redirectUrl) {
-          // Append the 'id' to the redirect URL and redirect the user
-          window.location.href = `${data.redirectUrl}/${id}`;
-        } else {
-          console.error('No redirect URL provided');
-        }
+        const { gameUrl } = data;
+        window.location.href = `${gameUrl}`;
+
       } else {
         console.error('Failed to create a new game');
       }
