@@ -19,7 +19,6 @@ app.use(
   })
 );
 
-// Create a new game room and return its URL
 app.post('/api/create-multiplayer', (req, res) => {
   const roomId = generateRoomId();
   gameRooms.set(roomId, new Map());
@@ -28,9 +27,17 @@ app.post('/api/create-multiplayer', (req, res) => {
   res.send({ gameUrl });
 });
 
-wss.on('connection', (ws,req) => {
+app.get('/api/check-room/:roomId', (req, res) => {
+  const roomId = req.params.roomId;
+  const exists = gameRooms.has(roomId)
+  res.send({ exists });
+});
+
+
+
+wss.on('connection', (ws, req) => {
   const roomId = req.url.split('/')[1]
-  if(!gameRooms.has(roomId)){
+  if (!gameRooms.has(roomId)) {
     console.log("Room not found")
     return
   }
@@ -38,7 +45,7 @@ wss.on('connection', (ws,req) => {
   clients.set(ws, new Map())
   const gameRoom = clients.get(ws)
 
-  
+
   ws.on('message', (message) => {
 
     const data = JSON.parse(message);
@@ -46,7 +53,7 @@ wss.on('connection', (ws,req) => {
     switch (data.type) {
       case 'update_player':
         const username = data.username;
-        gameRoom.set('username',username)
+        gameRoom.set('username', username)
         broadcastPlayers(getAllPlayers());
         break;
       case 'get_players':
@@ -70,16 +77,16 @@ wss.on('connection', (ws,req) => {
 
   // Function to broadcast updated lobby players to all clients in the room
   function broadcastPlayers(players) {
-    clients.forEach((value,client) => {
+    clients.forEach((value, client) => {
       if (client.readyState === WebSocket.OPEN) {
         client.send(JSON.stringify({ type: 'update_players', players: players }));
       }
     })
   }
 
-  function getAllPlayers(){
+  function getAllPlayers() {
     const players = []
-    clients.forEach((value,client) => {
+    clients.forEach((value, client) => {
       players.push(value.get('username'))
     })
     return players
