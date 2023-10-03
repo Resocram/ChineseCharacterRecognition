@@ -33,18 +33,25 @@ app.get('/api/check-room/:roomId', (req, res) => {
   res.send({ exists });
 });
 
-
-
 wss.on('connection', (ws, req) => {
-  const roomId = req.url.split('/')[1]
+  const params = req.url.split('/')
+  const roomId = params[1]
+  const sessionId = params[2]
   if (!gameRooms.has(roomId)) {
     console.log("Room not found")
     return
   }
-  const clients = gameRooms.get(roomId)
-  clients.set(ws, new Map())
-  const gameRoom = clients.get(ws)
+  const sessions = gameRooms.get(roomId)
 
+  if (!sessions.has(sessionId)) {
+    sessions.set(sessionId, new Map())
+  }
+  const session = sessions.get(sessionId)
+  if (!session.has('ws')) {
+    session.set('ws', [ws])
+  } else {
+    session.get('ws').push(ws)
+  }
 
   ws.on('message', (message) => {
 
@@ -53,7 +60,7 @@ wss.on('connection', (ws, req) => {
     switch (data.type) {
       case 'update_player':
         const username = data.username;
-        gameRoom.set('username', username)
+        session.set('username', username)
         broadcastPlayers(getAllPlayers());
         break;
       case 'get_players':
@@ -70,28 +77,42 @@ wss.on('connection', (ws, req) => {
 
   // Remove websocket connection upon close
   ws.on('close', () => {
-    clients.delete(ws)
+    const index = session.get('ws').indexOf(ws)
+    session.get('ws').splice(index, 1)
+    if (session.get('ws').length === 0) {
+      sessions.delete(sessionId)
+    }
+    if (gameRooms.get(roomId).size === 0) {
+      gameRooms.delete(roomId)
+    }
+
     broadcastPlayers(getAllPlayers())
   });
 
 
   // Function to broadcast updated lobby players to all clients in the room
   function broadcastPlayers(players) {
-    clients.forEach((value, client) => {
-      if (client.readyState === WebSocket.OPEN) {
-        client.send(JSON.stringify({ type: 'update_players', players: players }));
-      }
-    })
+    sessions.forEach((session) => {
+      session.get('ws').forEach((client) => {
+        if (client.readyState === WebSocket.OPEN) {
+          client.send(JSON.stringify({ type: 'update_players', players: players }));
+        }
+      })
+    }
+    )
   }
-
   function getAllPlayers() {
     const players = []
-    clients.forEach((value, client) => {
-      players.push(value.get('username'))
+    sessions.forEach((session) => {
+      players.push(session.get('username'))
     })
     return players
   }
+
 });
+
+
+
 
 server.listen(5000, () => {
   console.log('Server started on port 5000');
