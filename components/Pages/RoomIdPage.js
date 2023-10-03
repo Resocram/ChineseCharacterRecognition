@@ -2,7 +2,7 @@ import React from 'react';
 import Cookies from 'js-cookie';
 
 const backendApiUrl = 'http://localhost:5000';
-
+const { v4: uuidv4 } = require('uuid');
 class RoomIdPage extends React.Component {
   constructor(props) {
     super(props);
@@ -10,9 +10,9 @@ class RoomIdPage extends React.Component {
       roomId: props.roomId, // Initialize roomId from props
       username: Cookies.get('username') || '', // Retrieve username from cookie
       players: [],
-      ws: null,
+      sessionId: Cookies.get('sessionId') || '',
       roomExists: false,
-
+      ws: null,
     };
   }
 
@@ -20,51 +20,48 @@ class RoomIdPage extends React.Component {
     const response = await fetch(`${backendApiUrl}/api/check-room/${this.state.roomId}`);
     const data = await response.json();
     if (data.exists) {
-      this.setState({ roomExists: true }, () => {
-        this.initializeWebSocket();
-      });
+      if (this.state.sessionId === '') {
+        const sessionId = uuidv4()
+        this.setState({ sessionId: sessionId }, () => {
+          this.initializeWebSocket()
+        })
+        Cookies.set('sessionId', sessionId)
+      } else {
+        this.initializeWebSocket()
+      }
+      this.setState({ roomExists: true })
+
     }
   }
 
   initializeWebSocket() {
-    const ws = new WebSocket(`ws://localhost:5000/${this.state.roomId}`);
+    const ws = new WebSocket(`ws://localhost:5000/${this.state.roomId}/${this.state.sessionId}`);
     ws.onmessage = (event) => {
       const data = JSON.parse(event.data);
-
       if (data.type === 'update_players') {
-        console.log("updating players")
-        console.log(data.players)
-        // Update the players state with the received user list
-        console.log("Updating it with all players")
         this.setState({ players: data.players });
       }
     };
 
     ws.onopen = () => {
-      this.setState({ ws }, () => {
-        let username = this.state.username;
-
-
-        if (!username) {
-          while (!username || username.trim() === '') {
-            username = prompt('Enter your username:');
-          }
-          this.setState({ username: username });
-          Cookies.set('username', username)
-
+      let username = this.state.username;
+      if (!username) {
+        while (!username || username.trim() === '') {
+          username = prompt('Enter your username:');
         }
-        this.updatePlayer(username);
-        this.setState({ ws: ws })
-      });
-
+        this.setState({ username: username })
+        Cookies.set('username', username)
+      }
+      this.updatePlayer(username)
     }
+    this.setState({ ws: ws })
   }
 
 
   updatePlayer = (username) => {
     const updatePlayer = {
       type: 'update_player',
-      username: username, // Include the username
+      username: username,
     };
     this.state.ws.send(JSON.stringify(updatePlayer));
   }
