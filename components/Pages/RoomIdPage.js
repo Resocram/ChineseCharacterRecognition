@@ -3,6 +3,12 @@ import Cookies from 'js-cookie';
 
 const backendApiUrl = 'http://localhost:5000';
 const { v4: uuidv4 } = require('uuid');
+const PRE_LOBBY = "PRE_LOBBY";
+const LOBBY = "LOBBY";
+const PLAY = "PLAY";
+
+
+
 class RoomIdPage extends React.Component {
   constructor(props) {
     super(props);
@@ -11,8 +17,9 @@ class RoomIdPage extends React.Component {
       username: Cookies.get('username') || '', // Retrieve username from cookie
       players: [],
       sessionId: Cookies.get('sessionId') || '',
-      roomExists: false,
       ws: null,
+      position: 0,
+      gameState: Cookies.get(`gameState_${props.roomId}`) || PRE_LOBBY
     };
   }
 
@@ -29,7 +36,12 @@ class RoomIdPage extends React.Component {
       } else {
         this.initializeWebSocket()
       }
-      this.setState({ roomExists: true })
+      console.log(this.state.gameState)
+      if (this.state.gameState === PRE_LOBBY) {
+        this.setState({ gameState: LOBBY })
+        Cookies.set(`gameState_${this.state.roomId}`, LOBBY)
+      }
+
 
     }
   }
@@ -40,6 +52,11 @@ class RoomIdPage extends React.Component {
       const data = JSON.parse(event.data);
       if (data.type === 'update_players') {
         this.setState({ players: data.players });
+        this.setState({ position: data.position })
+      }
+      else if (data.type === 'start_game') {
+        this.setState({ gameState: PLAY })
+        Cookies.set(`gameState_${this.state.roomId}`, PLAY)
       }
     };
 
@@ -74,16 +91,21 @@ class RoomIdPage extends React.Component {
     this.state.ws.send(JSON.stringify(getPlayers));
   }
 
+  startGame = () => {
+    const startGame = {
+      type: 'start_game',
+    };
+    this.state.ws.send(JSON.stringify(startGame));
+  }
+
 
 
   componentWillUnmount() {
-    // Close the WebSocket connection when the component unmounts
     if (this.state.ws) {
       this.state.ws.close();
     }
   }
 
-  // Function to update the user's own username
   updateUsername = () => {
     let newUsername = ''
     while (newUsername.trim() === '') {
@@ -100,27 +122,56 @@ class RoomIdPage extends React.Component {
 
   };
 
-  render() {
-    const { roomExists, roomId, username, players } = this.state;
+  handleCopyClick = () => {
+    const roomUrl = `${window.location.origin}/room/${this.state.roomId}`;
 
-    if (!roomExists) {
-      return <h1>Room doesn't exist</h1>
+    // Create a temporary element to copy the text
+    const tempInput = document.createElement('input');
+    tempInput.value = roomUrl;
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    document.execCommand('copy');
+    document.body.removeChild(tempInput);
+
+  };
+
+
+
+  render() {
+    const { gameState, roomId, username, players, position } = this.state;
+    console.log(gameState)
+    console.log(LOBBY)
+    console.log(gameState === LOBBY)
+    switch (gameState) {
+      case PRE_LOBBY:
+        return <h1>Room doesn't exist</h1>
+      case LOBBY:
+        return (
+          <div>
+            <h1>Room Page</h1>
+            <p>Room ID: {roomId}</p>
+
+            <h2>Players:</h2>
+            <ul>
+              {players.map((user, index) => (
+                <li key={index} style={{ fontWeight: index === position ? 'bold' : 'normal' }}>{user}</li>
+              ))}
+            </ul>
+            <button className="button" onClick={this.updateUsername}>Change Username</button>
+            <button className="button" onClick={this.handleCopyClick}>Copy URL</button>
+            <button className="button" onClick={this.startGame} disabled={position !== 0}>Start Game</button>
+
+          </div>
+        );
+      case PLAY:
+        return <h1>Playing</h1>
+      default:
+        console.log(gameState)
+
+        return <h1>Room doesn't exist</h1>
     }
 
-    return (
-      <div>
-        <h1>Room Page</h1>
-        <p>Room ID: {roomId}</p>
 
-        <h2>Players:</h2>
-        <ul>
-          {players.map((user, index) => (
-            <li key={index}>{user}</li>
-          ))}
-        </ul>
-        <button onClick={this.updateUsername}>Change Username</button>
-      </div>
-    );
   }
 }
 

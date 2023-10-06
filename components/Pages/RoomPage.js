@@ -27,7 +27,7 @@ class RoomPage extends React.Component {
     return (
       <div>
         <h1>Room Page</h1>
-        <button onClick={this.createNewGame}>Create New Game</button>
+        <button className="button" onClick={this.createNewGame}>Create New Game</button>
       </div>
     );
   }
