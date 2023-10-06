@@ -11,19 +11,26 @@ const cors = require('cors');
 const gameRooms = new Map();
 
 function generateRoomId() {
-  return Math.random().toString(36).substring(2, 6).toUpperCase();
+  const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  let result = '';
+
+  for (let i = 0; i < 4; i++) {
+    const randomIndex = Math.floor(Math.random() * letters.length);
+    result += letters.charAt(randomIndex);
+  }
+
+  return result;
 }
 app.use(
   cors({
-    origin: 'http://localhost:3000', // Update with your frontend URL
+    origin: 'http://localhost:3000',
   })
 );
 
 app.post('/api/create-multiplayer', (req, res) => {
   const roomId = generateRoomId();
   gameRooms.set(roomId, new Map());
-  const gameUrl = `/room/${roomId}`; // Construct the URL without the base domain
-
+  const gameUrl = `/room/${roomId}`;
   res.send({ gameUrl });
 });
 
@@ -61,7 +68,7 @@ wss.on('connection', (ws, req) => {
       case 'update_player':
         const username = data.username;
         session.set('username', username)
-        broadcastPlayers(getAllPlayers());
+        broadcastPlayers();
         break;
       case 'get_players':
         let response = {
@@ -69,6 +76,9 @@ wss.on('connection', (ws, req) => {
           players: getAllPlayers()
         }
         ws.send(JSON.stringify(response));
+        break;
+      case 'start_game':
+        broadcastStart()
         break;
       default:
         break;
@@ -86,18 +96,33 @@ wss.on('connection', (ws, req) => {
       gameRooms.delete(roomId)
     }
 
-    broadcastPlayers(getAllPlayers())
+    broadcastPlayers()
   });
 
-
   // Function to broadcast updated lobby players to all clients in the room
-  function broadcastPlayers(players) {
+  function broadcastStart() {
     sessions.forEach((session) => {
       session.get('ws').forEach((client) => {
         if (client.readyState === WebSocket.OPEN) {
-          client.send(JSON.stringify({ type: 'update_players', players: players }));
+          client.send(JSON.stringify({ type: 'start_game' }));
         }
       })
+    }
+    )
+  }
+
+
+  // Function to broadcast updated lobby players to all clients in the room
+  function broadcastPlayers() {
+    let position = 0
+    const players = getAllPlayers()
+    sessions.forEach((session) => {
+      session.get('ws').forEach((client) => {
+        if (client.readyState === WebSocket.OPEN) {
+          client.send(JSON.stringify({ type: 'update_players', players: players, position: position }));
+        }
+      })
+      position += 1
     }
     )
   }
