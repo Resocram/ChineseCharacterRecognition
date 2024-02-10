@@ -7,7 +7,7 @@ export default function ExampleWordCard(props) {
     }
     return (
         <div>
-            <p>{props.exampleWordChar.replace(simpAnswer,"__").replace(tradAnswer, "__")} {props.pinyin + props.definition}</p>
+            <p>{props.exampleWordChar.replace(simpAnswer, "__").replace(tradAnswer, "__")} {props.pinyin + props.definition.replace(simpAnswer, "__").replace(tradAnswer, "__")}</p>
         </div>
     );
 }
