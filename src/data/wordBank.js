@@ -3149,7 +3149,7 @@
 },
 {
     "pinyin": "shí",
-    "char": "十(A拾)",
+    "char": "十(拾)",
     "definition": "ten, tenth; complete; perfect",
     "charForm": [{
         "char": "一",
@@ -3794,7 +3794,7 @@
 },
 {
     "pinyin": "sān",
-    "char": "三(A叁)",
+    "char": "三(叁)",
     "definition": "three",
     "charForm": [{
         "char": "一",
@@ -4869,7 +4869,7 @@
 },
 {
     "pinyin": "èr",
-    "char": "二(A贰)",
+    "char": "二(贰)",
     "definition": "two; twice",
     "charForm": [{
         "char": "一",
@@ -6598,7 +6598,7 @@
 },
 {
     "pinyin": "sì",
-    "char": "四(A肆)",
+    "char": "四(肆)",
     "definition": "four",
     "charForm": [{
         "char": "囗",
@@ -7998,7 +7998,7 @@
 },
 {
     "pinyin": "wǔ",
-    "char": "五(A伍)",
+    "char": "五(伍)",
     "definition": "five; surname",
     "charForm": [{
         "char": "二",
@@ -8687,7 +8687,7 @@
 },
 {
     "pinyin": "jiǔ",
-    "char": "九(A玖)",
+    "char": "九(玖)",
     "definition": "nine",
     "charForm": [{
         "char": "丿",
@@ -11610,7 +11610,7 @@
 },
 {
     "pinyin": "bā",
-    "char": "八(A捌)",
+    "char": "八(捌)",
     "definition": "eight; all around, all sides",
     "charForm": [],
     "exampleWord": [{
@@ -14725,7 +14725,7 @@
 },
 {
     "pinyin": "qī",
-    "char": "七(A柒)",
+    "char": "七(柒)",
     "definition": "seven",
     "charForm": [{
         "char": "一",
