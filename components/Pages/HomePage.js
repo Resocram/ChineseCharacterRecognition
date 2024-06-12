@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { DATA } from "../../src/data/wordBank";
+import DATA from "../../src/data/wordBank.json";
 import Pinyin from "../Components/Pinyin";
 import Definition from "../Components/Definition";
 import ExampleWords from "../Components/ExampleWords";

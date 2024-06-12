@@ -1,4 +1,7 @@
-import React from 'react';
+import React, { Component } from "react";
+import SettingsModal from "../Components/SettingsModal";
+
+import Multiplayer_Game from "./Multiplayer_Game"
 import Cookies from 'js-cookie';
 
 const backendApiUrl = 'http://localhost:5000';
@@ -9,7 +12,7 @@ const PLAY = "PLAY";
 
 
 
-class RoomIdPage extends React.Component {
+class RoomIdPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -19,7 +22,9 @@ class RoomIdPage extends React.Component {
       sessionId: Cookies.get('sessionId') || '',
       ws: null,
       position: 0,
-      gameState: Cookies.get(`gameState_${props.roomId}`) || PRE_LOBBY
+      gameState: Cookies.get(`gameState_${props.roomId}`) || PRE_LOBBY,
+      difficulty: [0, 1000],
+      characters: []
     };
   }
 
@@ -55,7 +60,7 @@ class RoomIdPage extends React.Component {
         this.setState({ position: data.position })
       }
       else if (data.type === 'start_game') {
-        this.setState({ gameState: PLAY })
+        this.setState({ gameState: PLAY, characters: data.characters })
         Cookies.set(`gameState_${this.state.roomId}`, PLAY)
       }
     };
@@ -94,6 +99,7 @@ class RoomIdPage extends React.Component {
   startGame = () => {
     const startGame = {
       type: 'start_game',
+      difficulty: this.state.difficulty
     };
     this.state.ws.send(JSON.stringify(startGame));
   }
@@ -134,14 +140,23 @@ class RoomIdPage extends React.Component {
     document.body.removeChild(tempInput);
 
   };
+  
+  setDifficulty = (newDifficulty) => {
+    this.setState({ 
+      difficulty: newDifficulty,
+    })
+  }
+
+  resetButton = () => {
+    this.setState(() => ({
+      difficulty: [0, 1000],
+    }));
+  }
 
 
 
   render() {
-    const { gameState, roomId, username, players, position } = this.state;
-    console.log(gameState)
-    console.log(LOBBY)
-    console.log(gameState === LOBBY)
+    const { gameState, roomId, characters, username, players, position } = this.state;
     switch (gameState) {
       case PRE_LOBBY:
         return <h1>Room doesn't exist</h1>
@@ -160,14 +175,12 @@ class RoomIdPage extends React.Component {
             <button className="button" onClick={this.updateUsername}>Change Username</button>
             <button className="button" onClick={this.handleCopyClick}>Copy URL</button>
             <button className="button" onClick={this.startGame} disabled={position !== 0}>Start Game</button>
-
+            {position === 0 && <SettingsModal setDifficulty={this.setDifficulty} difficulty={this.state.difficulty} onReset={this.resetButton}/>}
           </div>
         );
       case PLAY:
-        return <h1>Playing</h1>
+        return <Multiplayer_Game characters={characters} />
       default:
-        console.log(gameState)
-
         return <h1>Room doesn't exist</h1>
     }
 

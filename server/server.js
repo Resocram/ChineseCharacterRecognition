@@ -6,7 +6,7 @@ const app = express();
 const server = http.createServer(app);
 const wss = new WebSocket.Server({ server });
 const cors = require('cors');
-
+const DATA = require("../src/data/wordBank.json")
 // Create an array to store game rooms
 const gameRooms = new Map();
 
@@ -78,7 +78,8 @@ wss.on('connection', (ws, req) => {
         ws.send(JSON.stringify(response));
         break;
       case 'start_game':
-        broadcastStart()
+        let difficulty = data.difficulty
+        broadcastStart(difficulty)
         break;
       default:
         break;
@@ -100,11 +101,12 @@ wss.on('connection', (ws, req) => {
   });
 
   // Function to broadcast updated lobby players to all clients in the room
-  function broadcastStart() {
+  function broadcastStart(difficulty) {
+    const characters = shuffleArray(DATA.slice(difficulty[0], difficulty[1]))
     sessions.forEach((session) => {
       session.get('ws').forEach((client) => {
         if (client.readyState === WebSocket.OPEN) {
-          client.send(JSON.stringify({ type: 'start_game' }));
+          client.send(JSON.stringify({ type: 'start_game', characters: characters }));
         }
       })
     }
@@ -126,12 +128,24 @@ wss.on('connection', (ws, req) => {
     }
     )
   }
+
   function getAllPlayers() {
     const players = []
     sessions.forEach((session) => {
       players.push(session.get('username'))
     })
     return players
+  }
+  
+  function shuffleArray(array) {
+    const slicedArray = [...array];
+  
+    for (let i = slicedArray.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [slicedArray[i], slicedArray[j]] = [slicedArray[j], slicedArray[i]];
+    }
+  
+    return slicedArray;
   }
 
 });
