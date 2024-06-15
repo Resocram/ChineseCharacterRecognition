@@ -24,7 +24,8 @@ class RoomIdPage extends Component {
       position: 0,
       gameState: Cookies.get(`gameState_${props.roomId}`) || PRE_LOBBY,
       difficulty: [0, 1000],
-      characters: []
+      characters: [],
+      strokeMap: {}
     };
   }
 
@@ -41,7 +42,6 @@ class RoomIdPage extends Component {
       } else {
         this.initializeWebSocket()
       }
-      console.log(this.state.gameState)
       if (this.state.gameState === PRE_LOBBY) {
         this.setState({ gameState: LOBBY })
         Cookies.set(`gameState_${this.state.roomId}`, LOBBY)
@@ -62,6 +62,15 @@ class RoomIdPage extends Component {
       else if (data.type === 'start_game') {
         this.setState({ gameState: PLAY, characters: data.characters })
         Cookies.set(`gameState_${this.state.roomId}`, PLAY)
+      }
+      else if (data.type === 'update_strokes'){
+        this.setState((prevState) => ({
+          strokeMap: {
+              ...prevState.strokeMap,
+              [data.strokeUsername]: data.strokes
+          }
+      }));
+
       }
     };
 
@@ -156,7 +165,7 @@ class RoomIdPage extends Component {
 
 
   render() {
-    const { gameState, roomId, characters, username, players, position } = this.state;
+    const { gameState, roomId, characters, username, players, position, ws, strokeMap } = this.state;
     switch (gameState) {
       case PRE_LOBBY:
         return <h1>Room doesn't exist</h1>
@@ -179,7 +188,7 @@ class RoomIdPage extends Component {
           </div>
         );
       case PLAY:
-        return <Multiplayer_Game characters={characters} />
+        return <Multiplayer_Game characters={characters} ws={ws} username={username} strokeMap={strokeMap} players={players}/>
       default:
         return <h1>Room doesn't exist</h1>
     }

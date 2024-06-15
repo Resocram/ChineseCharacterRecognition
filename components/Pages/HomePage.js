@@ -77,7 +77,6 @@ class HomePage extends Component {
     this.canvasRef.current.clearButton();
   };
 
-  // Add a method to undo the last stroke
   undoButton = () => {
     this.canvasRef.current.undoButton();
   };
