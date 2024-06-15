@@ -81,6 +81,11 @@ wss.on('connection', (ws, req) => {
         let difficulty = data.difficulty
         broadcastStart(difficulty)
         break;
+      case 'send_strokes':
+        let strokeUsername = data.username
+        let strokes = data.strokes
+        broadcastStrokes(strokeUsername, strokes)
+        break;
       default:
         break;
     }
@@ -125,6 +130,17 @@ wss.on('connection', (ws, req) => {
         }
       })
       position += 1
+    }
+    )
+  }
+
+  function broadcastStrokes(strokeUsername, strokes) {
+    sessions.forEach((session) => {
+      session.get('ws').forEach((client) => {
+        if (client.readyState === WebSocket.OPEN) {
+          client.send(JSON.stringify({ type: 'update_strokes', strokeUsername: strokeUsername, strokes: strokes }));
+        }
+      })
     }
     )
   }

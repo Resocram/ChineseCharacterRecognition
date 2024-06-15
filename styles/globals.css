@@ -41,8 +41,8 @@ a {
 #main {
   margin-left: 15px;
 }
-
-.pinyin-definition-examplewords-container {
+ 
+.pinyin-definition-examplewords-container { 
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -89,7 +89,6 @@ h2,
   flex-direction: row;
   align-items: flex-start;
 }
-
 .button {
   padding: 6px 15px;
   font-size: 15px;
@@ -253,4 +252,23 @@ have to remove the hover colour and add my own touch-active class for the colour
   opacity: 0.5;
   background-color: #ccc;
   cursor: not-allowed;
+}
+
+/* Multiplayer */
+
+.multiplayer-container{
+  display: flex;
+  width: 100%;
+}
+
+.left-box, .right-box {
+  width: 50%;
+  height: 100%;
+}
+
+.right-box{
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns of equal width */
+  grid-template-rows: 1fr 1fr; /* Two rows of equal height */
+  gap: 10px
 }
