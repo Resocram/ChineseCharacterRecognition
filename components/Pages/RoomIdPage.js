@@ -97,13 +97,6 @@ class RoomIdPage extends Component {
     this.state.ws.send(JSON.stringify(updatePlayer));
   }
 
-  getPlayers = () => {
-    const getPlayers = {
-      type: 'get_players',
-    };
-
-    this.state.ws.send(JSON.stringify(getPlayers));
-  }
 
   startGame = () => {
     const startGame = {
