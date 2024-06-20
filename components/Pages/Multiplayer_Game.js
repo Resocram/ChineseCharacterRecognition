@@ -89,6 +89,7 @@ class Multiplayer_Game extends Component {
       showResults,
       sessionMap,
     } = this.state;
+    console.log(sessionMap)
     return (
 
       <div className="multiplayer-container">
@@ -122,10 +123,6 @@ class Multiplayer_Game extends Component {
               </div>
             )
           ))}
-
-
-
-
         </div>
       </div>
     );
