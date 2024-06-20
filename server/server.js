@@ -58,8 +58,12 @@ wss.on('connection', (ws, req) => {
         game.broadcastStart(difficulty[0], difficulty[1])
         break;
       case 'send_strokes':
-        let strokeUsername = data.username
-        let strokes = data.strokes
+        const strokes = data.strokes
+        const userSessionId = data.sessionId
+        game.broadcastStrokes(userSessionId, strokes)
+        break;
+      case 'correct_guess':
+        player.incrementScore()
         game.broadcastStrokes(strokeUsername, strokes)
         break;
       default:

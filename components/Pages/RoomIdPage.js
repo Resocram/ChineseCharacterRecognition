@@ -18,14 +18,14 @@ class RoomIdPage extends Component {
     this.state = {
       roomId: props.roomId, // Initialize roomId from props
       username: Cookies.get('username') || '', // Retrieve username from cookie
-      players: [],
       sessionId: Cookies.get('sessionId') || '',
       ws: null,
       position: 0,
       gameState: Cookies.get(`gameState_${props.roomId}`) || PRE_LOBBY,
       difficulty: [0, 1000],
       characters: [],
-      strokeMap: {}
+      sessionMap: {},
+      round: 0
     };
   }
 
@@ -50,26 +50,26 @@ class RoomIdPage extends Component {
 
     }
   }
-
   initializeWebSocket() {
     const ws = new WebSocket(`ws://localhost:5000/${this.state.roomId}/${this.state.sessionId}`);
     ws.onmessage = (event) => {
       const data = JSON.parse(event.data);
       if (data.type === 'update_players') {
-        this.setState({ players: data.players });
-        this.setState({ position: data.position })
+        this.setState({ sessionMap: JSON.parse(data.sessions), position: data.position });
       }
       else if (data.type === 'start_game') {
-        this.setState({ gameState: PLAY, characters: data.characters })
+        this.setState({ gameState: PLAY, characters: data.characters, round: data.round })
         Cookies.set(`gameState_${this.state.roomId}`, PLAY)
       }
-      else if (data.type === 'update_strokes'){
-        this.setState((prevState) => ({
-          strokeMap: {
-              ...prevState.strokeMap,
-              [data.strokeUsername]: data.strokes
+      else if (data.type === 'update_strokes') {
+
+        this.setState((prevState) => {
+          const nestedMap = prevState.sessionMap[data.sessionId];
+          if (nestedMap){
+            nestedMap["strokes"] = data.strokes
           }
-      }));
+          return { sessionMap: prevState.sessionMap };
+        });
 
       }
     };
@@ -106,6 +106,14 @@ class RoomIdPage extends Component {
     this.state.ws.send(JSON.stringify(startGame));
   }
 
+  sendStrokes = (strokes) => {
+    const sendStrokes = {
+      type: 'send_strokes',
+      sessionId: this.state.sessionId,
+      strokes: strokes
+    };
+    this.state.ws.send(JSON.stringify(sendStrokes));
+  };
 
 
   componentWillUnmount() {
@@ -142,9 +150,9 @@ class RoomIdPage extends Component {
     document.body.removeChild(tempInput);
 
   };
-  
+
   setDifficulty = (newDifficulty) => {
-    this.setState({ 
+    this.setState({
       difficulty: newDifficulty,
     })
   }
@@ -158,7 +166,7 @@ class RoomIdPage extends Component {
 
 
   render() {
-    const { gameState, roomId, characters, username, players, position, ws, strokeMap } = this.state;
+    const { gameState, roomId, characters, username, sessionMap, position, round, sessionId } = this.state;
     switch (gameState) {
       case PRE_LOBBY:
         return <h1>Room doesn't exist</h1>
@@ -170,18 +178,21 @@ class RoomIdPage extends Component {
 
             <h2>Players:</h2>
             <ul>
-              {players.map((user, index) => (
-                <li key={index} style={{ fontWeight: index === position ? 'bold' : 'normal' }}>{user}</li>
+              {Object.entries(sessionMap).map(([sessionId, player], index) => (
+                <li key={sessionId} style={{ fontWeight: index === position ? 'bold' : 'normal' }}>
+                  {player.username}
+                </li>
               ))}
             </ul>
+
             <button className="button" onClick={this.updateUsername}>Change Username</button>
             <button className="button" onClick={this.handleCopyClick}>Copy URL</button>
             <button className="button" onClick={this.startGame} disabled={position !== 0}>Start Game</button>
-            {position === 0 && <SettingsModal setDifficulty={this.setDifficulty} difficulty={this.state.difficulty} onReset={this.resetButton}/>}
+            {position === 0 && <SettingsModal setDifficulty={this.setDifficulty} difficulty={this.state.difficulty} onReset={this.resetButton} />}
           </div>
         );
       case PLAY:
-        return <Multiplayer_Game characters={characters} ws={ws} username={username} strokeMap={strokeMap} players={players}/>
+        return <Multiplayer_Game characters={characters} username={username} sessionMap={sessionMap} sessionId={sessionId} round={round} sendStrokes={this.sendStrokes}/>
       default:
         return <h1>Room doesn't exist</h1>
     }

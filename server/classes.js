@@ -53,6 +53,7 @@ class Game {
         this.difficultyStart = 0
         this.difficultyEnd = 1000
         this.characters = []
+        this.round = 0
         // Key is sessionId, Value is Player
         this.sessions = new Map()
     }
@@ -103,14 +104,21 @@ class Game {
         return slicedArray;
     }
 
+    incrementRound() {
+        this.round += 1
+    }
+
     // BROADCAST FUNCTIONS
     broadcastUpdatePlayers() {
         let position = 0
-        const players = this.getAllPlayers()
+        const sessionsObj = {};
+        this.sessions.forEach((player, sessionId) => {
+            sessionsObj[sessionId] = player;
+        });
         this.sessions.forEach((player) => {
             player.ws.forEach((client) => {
                 if (client.readyState === WebSocket.OPEN) {
-                    client.send(JSON.stringify({ type: 'update_players', players: players, position: position }));
+                    client.send(JSON.stringify({ type: 'update_players', sessions: JSON.stringify(sessionsObj), position: position }));
                 }
             })
             position += 1
@@ -122,17 +130,27 @@ class Game {
         this.sessions.forEach((player) => {
             player.ws.forEach((client) => {
                 if (client.readyState === WebSocket.OPEN) {
-                    client.send(JSON.stringify({ type: 'start_game', characters: this.characters }));
+                    client.send(JSON.stringify({ type: 'start_game', characters: this.characters, round: this.round }));
                 }
             })
         })
     }
 
-    broadcastStrokes(username, strokes) {
+    broadcastStrokes(sessionId, strokes) {
         this.sessions.forEach((player) => {
             player.ws.forEach((client) => {
                 if (client.readyState === WebSocket.OPEN) {
-                    client.send(JSON.stringify({ type: 'update_strokes', strokeUsername: username, strokes: strokes }));
+                    client.send(JSON.stringify({ type: 'update_strokes', sessionId: sessionId, strokes: strokes }));
+                }
+            })
+        })
+    }
+
+    broadcastRound() {
+        this.sessions.forEach((player) => {
+            player.ws.forEach((client) => {
+                if (client.readyState === WebSocket.OPEN) {
+                    client.send(JSON.stringify({ type: 'update_round', strokeUsername: username, strokes: strokes }));
                 }
             })
         })
@@ -147,6 +165,7 @@ class Player {
         this.username = ""
         this.score = 0
         this.ws = []
+        this.strokes = []
     }
 
     addConnection(connection) {
@@ -163,6 +182,10 @@ class Player {
     updateUsername(username) {
         this.username = username
         return
+    }
+
+    incrementScore() {
+        this.score += 1
     }
 }
 
