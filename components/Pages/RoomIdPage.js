@@ -9,6 +9,7 @@ const { v4: uuidv4 } = require('uuid');
 const PRE_LOBBY = "PRE_LOBBY";
 const LOBBY = "LOBBY";
 const PLAY = "PLAY";
+const GAME_OVER = "GAME_OVER"
 
 
 
@@ -22,7 +23,7 @@ class RoomIdPage extends Component {
       ws: null,
       position: 0,
       gameState: Cookies.get(`gameState_${props.roomId}`) || PRE_LOBBY,
-      difficulty: [0, 1000],
+      difficulty: [0, 10],
       characters: [],
       sessionMap: {},
       round: 0
@@ -65,13 +66,22 @@ class RoomIdPage extends Component {
 
         this.setState((prevState) => {
           const nestedMap = prevState.sessionMap[data.sessionId];
-          if (nestedMap){
+          if (nestedMap) {
             nestedMap["strokes"] = data.strokes
           }
           return { sessionMap: prevState.sessionMap };
         });
+      }
+      else if (data.type === 'update_round') {
+        if (data.gameOver) {
+          this.setState({ sessionMap: JSON.parse(data.sessions), gameState: GAME_OVER });
+        } else {
+          this.setState({ sessionMap: JSON.parse(data.sessions), round: data.round });
+        }
 
       }
+
+
     };
 
     ws.onopen = () => {
@@ -112,6 +122,20 @@ class RoomIdPage extends Component {
       strokes: strokes
     };
     this.state.ws.send(JSON.stringify(sendStrokes));
+  };
+
+  correctGuess = () => {
+    const correctGuessType = {
+      type: 'correct_guess',
+    };
+    this.state.ws.send(JSON.stringify(correctGuessType));
+  };
+
+  voteNext = () => {
+    const voteNextType = {
+      type: 'vote_next',
+    };
+    this.state.ws.send(JSON.stringify(voteNextType));
   };
 
 
@@ -191,7 +215,9 @@ class RoomIdPage extends Component {
           </div>
         );
       case PLAY:
-        return <Multiplayer_Game characters={characters} username={username} sessionMap={sessionMap} sessionId={sessionId} round={round} sendStrokes={this.sendStrokes}/>
+        return <Multiplayer_Game characters={characters} username={username} sessionMap={sessionMap} sessionId={sessionId} round={round} sendStrokes={this.sendStrokes} correctGuess={this.correctGuess} voteNext={this.voteNext} />
+      case GAME_OVER:
+        return <div>Game Over ily stella</div>
       default:
         return <h1>Room doesn't exist</h1>
     }
