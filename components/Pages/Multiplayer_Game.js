@@ -5,6 +5,7 @@ import ExampleWords from "../Components/ExampleWords";
 import Canvas from "../Components/Canvas";
 import Guesses from "../Components/Guesses";
 import Buttons from "../Components/Buttons";
+import PlayerCard from "../Components/PlayerCard"
 import MultiplayerCanvas from "../Components/MultiplayerCanvas";
 
 class Multiplayer_Game extends Component {
@@ -29,6 +30,11 @@ class Multiplayer_Game extends Component {
         sessionMap: this.props.sessionMap,
       });
     }
+    if (prevProps.round !== this.props.round){
+      this.setState({
+        round: this.props.round,
+      });
+    }
   }
   setStrokes = (newStrokes) => {
     this.setState({ strokes: newStrokes }, () => {
@@ -47,8 +53,7 @@ class Multiplayer_Game extends Component {
   };
 
   nextButton = () => {
-    // Add voting next button if no one can get it
-    this.clearButton()
+    this.props.voteNext()
   }
 
   guess = (char) => {
@@ -69,6 +74,7 @@ class Multiplayer_Game extends Component {
       this.setState((prevState) => ({
         strokes: [],
       }));
+      this.props.correctGuess()
       this.clearButton()
     }
 
@@ -89,12 +95,11 @@ class Multiplayer_Game extends Component {
       showResults,
       sessionMap,
     } = this.state;
-    console.log(sessionMap)
     return (
 
       <div className="multiplayer-container">
-        <div className="left-box" style={{ border: '2px solid green' }}>
-          <div className="pinyin-definition-examplewords-container" style={{ border: '2px solid red' }}>
+        <div className="left-box">
+          <div className="pinyin-definition-examplewords-container">
             <div className="pinyin-definition-container">
               <Pinyin pinyin={this.characters[round].pinyin} />
               <Definition definition={this.characters[round].definition} />
@@ -104,22 +109,25 @@ class Multiplayer_Game extends Component {
             </div>
           </div>
 
-          <div className="outer-canvas-buttons-guesses-container" style={{ border: '2px solid red' }}>
+          <div className="outer-canvas-buttons-guesses-container">
             <div className="canvas-buttons-container">
               <Canvas ref={this.canvasRef} strokes={strokes} setStrokes={this.setStrokes} showResults={showResults} isCorrectGuess={isCorrectGuess} />
-              <Buttons onUndo={this.undoButton} onClear={this.clearButton} onNext={this.nextButton} />
+              <Buttons onUndo={this.undoButton} onClear={this.clearButton} onNext={this.nextButton} disableNextAfterClick={true} round={round}/>
+              <PlayerCard player={sessionMap[this.sessionId]} />
             </div>
             <div className="guesses-container">
               <Guesses strokes={strokes} guess={this.guess} />
             </div>
+            
           </div>
+          
         </div>
-        <div className="right-box" style={{ border: '2px solid green' }}>
+        <div className="right-box">
           {Object.entries(sessionMap).map(([sessionId, playerMap]) => (
             sessionId !== this.sessionId && (
               <div key={sessionId}>
                 <MultiplayerCanvas strokes={playerMap.strokes} />
-                <div>Player: {playerMap.username}</div>
+                <PlayerCard player={playerMap} />
               </div>
             )
           ))}

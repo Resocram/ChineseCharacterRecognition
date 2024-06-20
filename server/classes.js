@@ -108,6 +108,19 @@ class Game {
         this.round += 1
     }
 
+    shouldNext() {
+        return Array.from(this.sessions.values()).every(player => player.next === true);
+    }
+    resetNext(){
+        this.sessions.forEach(player => {
+            player.next = false;
+        });
+    }
+
+    isGameOver(){
+        return this.characters.length === this.round
+    }
+
     // BROADCAST FUNCTIONS
     broadcastUpdatePlayers() {
         let position = 0
@@ -147,10 +160,14 @@ class Game {
     }
 
     broadcastRound() {
+        const sessionsObj = {};
+        this.sessions.forEach((player, sessionId) => {
+            sessionsObj[sessionId] = player;
+        });
         this.sessions.forEach((player) => {
             player.ws.forEach((client) => {
                 if (client.readyState === WebSocket.OPEN) {
-                    client.send(JSON.stringify({ type: 'update_round', strokeUsername: username, strokes: strokes }));
+                    client.send(JSON.stringify({ type: 'update_round', sessions: JSON.stringify(sessionsObj), round: this.round, gameOver: this.isGameOver() }));
                 }
             })
         })
@@ -166,6 +183,7 @@ class Player {
         this.score = 0
         this.ws = []
         this.strokes = []
+        this.next = false
     }
 
     addConnection(connection) {
@@ -186,6 +204,10 @@ class Player {
 
     incrementScore() {
         this.score += 1
+    }
+
+    goNext() {
+        this.next = true
     }
 }
 

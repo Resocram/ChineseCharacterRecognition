@@ -63,7 +63,16 @@ wss.on('connection', (ws, req) => {
         break;
       case 'correct_guess':
         player.incrementScore()
-        game.broadcastStrokes(strokeUsername, strokes)
+        game.incrementRound()
+        game.broadcastRound()
+        break;
+      case 'vote_next':
+        player.goNext()
+        if (game.shouldNext()) {
+          game.resetNext()
+          game.incrementRound()
+          game.broadcastRound()
+        }
         break;
       default:
         break;
