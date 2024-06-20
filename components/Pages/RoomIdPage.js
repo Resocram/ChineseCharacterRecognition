@@ -109,7 +109,6 @@ class RoomIdPage extends Component {
   sendStrokes = (strokes) => {
     const sendStrokes = {
       type: 'send_strokes',
-      sessionId: this.state.sessionId,
       strokes: strokes
     };
     this.state.ws.send(JSON.stringify(sendStrokes));

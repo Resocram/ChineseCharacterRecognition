@@ -59,8 +59,7 @@ wss.on('connection', (ws, req) => {
         break;
       case 'send_strokes':
         const strokes = data.strokes
-        const userSessionId = data.sessionId
-        game.broadcastStrokes(userSessionId, strokes)
+        game.broadcastStrokes(sessionId, strokes)
         break;
       case 'correct_guess':
         player.incrementScore()
