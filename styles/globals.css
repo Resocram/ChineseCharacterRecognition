@@ -14,6 +14,7 @@ a {
   html {
     color-scheme: dark;
   }
+
   body {
     color: white;
     background: black;
@@ -21,27 +22,27 @@ a {
 }
 
 .horizontal-list {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .chinese {
-    padding: 5px;
-    font-size: 35px;
-    cursor: pointer;
+  padding: 5px;
+  font-size: 35px;
+  cursor: pointer;
 }
 
 #canvas {
-  border: 2px solid black; 
-  display: inline-block; 
+  border: 2px solid black;
+  display: inline-block;
   cursor: crosshair;
 }
 
-#main{
+#main {
   margin-left: 15px;
 }
-
-.pinyin-definition-examplewords-container {
+ 
+.pinyin-definition-examplewords-container { 
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -49,15 +50,15 @@ a {
 
 .pinyin-definition-container {
   display: flex;
-  flex-direction: row; 
+  flex-direction: row;
   align-self: flex-start;
 }
 
-#recognized-characters{
-  margin-left:0%
+#recognized-characters {
+  margin-left: 0%
 }
 
-h1{
+h1 {
   font-size: 35px;
 }
 
@@ -68,31 +69,32 @@ h2 {
 
 p {
   margin-top: 5px;
-  font-size:20px;
+  font-size: 20px;
   text-align: left;
   margin-left: 27px;
 }
 
-.canvas-buttons-container, h2, .horizontal-list {
+.canvas-buttons-container,
+h2,
+.horizontal-list {
   margin-left: 20px;
 }
 
-.canvas-buttons-container{
-  display:inline-block;
+.canvas-buttons-container {
+  display: inline-block;
 }
 
 .outer-canvas-buttons-guesses-container {
-  display: flex; 
-  flex-direction: row; 
-  align-items: flex-start; 
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
 }
-
 .button {
   padding: 6px 15px;
-  font-size: 15px; 
-  background-color: #F0F0F0; 
-  color: #000; 
-  border: 2px solid #000; 
+  font-size: 15px;
+  background-color: #F0F0F0;
+  color: #000;
+  border: 2px solid #000;
   cursor: pointer;
 }
 
@@ -102,13 +104,13 @@ p {
 }
 
 .chinese:hover {
-  background-color: #f0f0f0; 
+  background-color: #f0f0f0;
 }
 
-.popup{
+.popup {
   font-size: 28px;
   margin: 0;
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
 
@@ -122,10 +124,11 @@ p {
 }
 
 .correct-popup {
-  color: green; 
+  color: green;
 }
+
 .incorrect-popup {
-  color: red; 
+  color: red;
 }
 
 
@@ -146,14 +149,15 @@ p {
 .underline-red {
   text-decoration: underline red;
 }
+
 .horizontal-list {
   display: flex;
   flex-wrap: wrap;
 }
 
 .answers-animate-container {
-  display: flex; 
-  justify-content: space-between; 
+  display: flex;
+  justify-content: space-between;
 }
 
 .half-width {
@@ -166,13 +170,13 @@ p {
 
 .char-preview-container {
   display: flex;
-  align-items: center; 
+  align-items: center;
 }
 
 #char-preview {
   display: flex;
-  justify-content: center; 
-  align-items: center; 
+  justify-content: center;
+  align-items: center;
 }
 
 .difficulty-header {
@@ -183,11 +187,11 @@ p {
 /* Add this CSS for small screens */
 @media screen and (max-width: 768px) {
   .outer-canvas-buttons-guesses-container {
-    flex-direction: column; 
+    flex-direction: column;
   }
 
   .guesses-container {
-    margin-top: 10px; 
+    margin-top: 10px;
   }
 
   .answers-animate-container {
@@ -196,34 +200,38 @@ p {
   }
 
   .char-preview-container {
-    width: 100%; 
+    width: 100%;
   }
-  
+
   .pinyin-definition-examplewords-container {
     display: flex;
-    flex-direction: column; /* Display elements in a column for small screens */
-    align-items: flex-start; /* Align the container to the right */
+    flex-direction: column;
+    /* Display elements in a column for small screens */
+    align-items: flex-start;
+    /* Align the container to the right */
   }
 }
 
 @media screen and (min-width: 769px) {
   .half-width {
-    width: 100%; /* Set the desired width for larger screens */
+    width: 100%;
+    /* Set the desired width for larger screens */
   }
 }
 
-#canvas{
+#canvas {
   background: white;
   background-image: linear-gradient(45deg, transparent 49.5%, rgba(0, 0, 0, 0.2) 50%, transparent 50.5%, transparent 100%),
-  linear-gradient(-45deg, transparent 49.5%, rgba(0, 0, 0, 0.2) 50%, transparent 50.5%, transparent 100%),
-  linear-gradient(0deg, transparent 49.5%, rgba(0, 0, 0, 0.2) 50%, transparent 50.5%, transparent 100%),
-  linear-gradient(90deg, transparent 49.5%, rgba(0, 0, 0, 0.2) 50%, transparent 50.5%, transparent 100%);
+    linear-gradient(-45deg, transparent 49.5%, rgba(0, 0, 0, 0.2) 50%, transparent 50.5%, transparent 100%),
+    linear-gradient(0deg, transparent 49.5%, rgba(0, 0, 0, 0.2) 50%, transparent 50.5%, transparent 100%),
+    linear-gradient(90deg, transparent 49.5%, rgba(0, 0, 0, 0.2) 50%, transparent 50.5%, transparent 100%);
 }
 
 
 
 button:hover {
-  background-color: #2980b9; /* Reset hover styles */
+  background-color: #2980b9;
+  /* Reset hover styles */
 }
 
 
@@ -231,10 +239,36 @@ button:hover {
 have to remove the hover colour and add my own touch-active class for the colour*/
 @media (hover: none) {
   .button:hover {
-      background-color: initial; /* Set it back to the normal state color */
+    background-color: initial;
+    /* Set it back to the normal state color */
   }
 }
 
 .touch-active {
   background-color: #2980b9;
+}
+
+.button[disabled] {
+  opacity: 0.5;
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Multiplayer */
+
+.multiplayer-container{
+  display: flex;
+  width: 100%;
+}
+
+.left-box, .right-box {
+  width: 50%;
+  height: 100%;
+}
+
+.right-box{
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns of equal width */
+  grid-template-rows: 1fr 1fr; /* Two rows of equal height */
+  gap: 10px
 }

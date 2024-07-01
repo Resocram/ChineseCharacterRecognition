@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { DATA } from "../../src/data/wordBank";
+import DATA from "../../src/data/wordBank.json";
 import Pinyin from "../Components/Pinyin";
 import Definition from "../Components/Definition";
 import ExampleWords from "../Components/ExampleWords";
@@ -77,7 +77,6 @@ class HomePage extends Component {
     this.canvasRef.current.clearButton();
   };
 
-  // Add a method to undo the last stroke
   undoButton = () => {
     this.canvasRef.current.undoButton();
   };
