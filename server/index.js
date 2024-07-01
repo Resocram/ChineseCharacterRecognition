@@ -12,7 +12,7 @@ const gameRoomManager = new GameRoomManager();
 
 app.use(
   cors({
-    origin: 'http://localhost:3000',
+    origin: ['http://localhost:3000', 'https://chinese-character-recognition-client.vercel.app'],
   })
 );
 
@@ -96,6 +96,6 @@ wss.on('connection', (ws, req) => {
 
 
 
-app.listen(5000, () => {
+server.listen(5000, () => {
   console.log('Server started on port 5000');
 });
