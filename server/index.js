@@ -36,6 +36,9 @@ wss.on('connection', (ws, req) => {
   const params = req.url.split('/')
   const roomId = params[1]
   const sessionId = params[2]
+  console.log("receiving a connection")
+  console.log("room id is ")
+  console.log(roomId)
 
   const game = gameRoomManager.getRoom(roomId)
 
