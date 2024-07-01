@@ -16,6 +16,10 @@ app.use(
   })
 );
 
+app.get('/', (req, res) => {
+  res.send("SERVER IS RUNNING")
+})
+
 app.post('/api/create-multiplayer', (req, res) => {
   const roomId = gameRoomManager.createRoom();
   const gameUrl = `/room/${roomId}`;
