@@ -1,4 +1,4 @@
-const DATA = require("../src/data/wordBank.json")
+const DATA = require("../public/data/wordBank.json")
 
 class GameRoomManager {
     constructor() {
