@@ -17,7 +17,9 @@ app.use(
 );
 
 app.get('/', (req, res) => {
+  console.log("Test server")
   res.send("SERVER IS RUNNING")
+
 })
 
 app.post('/api/create-multiplayer', (req, res) => {
