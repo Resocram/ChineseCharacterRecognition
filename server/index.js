@@ -96,6 +96,10 @@ wss.on('connection', (ws, req) => {
     game.broadcastUpdatePlayers();
   });
 
+  ws.on('error', (error) => {
+    console.error("WebSocket error:", error);
+  });
+
 });
 
 
