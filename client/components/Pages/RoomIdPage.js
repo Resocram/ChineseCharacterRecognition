@@ -52,7 +52,7 @@ class RoomIdPage extends Component {
     }
   }
   initializeWebSocket() {
-    const ws = new WebSocket(`ws://chinese-character-recognition-server.vercel.app/${this.state.roomId}/${this.state.sessionId}`);
+    const ws = new WebSocket(`wss://chinese-character-recognition-server.vercel.app/${this.state.roomId}/${this.state.sessionId}`);
     ws.onmessage = (event) => {
       const data = JSON.parse(event.data);
       if (data.type === 'update_players') {
