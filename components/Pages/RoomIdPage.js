@@ -4,7 +4,7 @@ import SettingsModal from "../Components/SettingsModal";
 import Multiplayer_Game from "./Multiplayer_Game"
 import Cookies from 'js-cookie';
 
-const backendApiUrl = 'https://chinese-character-recognition-server.vercel.app';
+const backendApiUrl = 'https://chinese-server-0947b7b24ff4.herokuapp.com';
 const { v4: uuidv4 } = require('uuid');
 const PRE_LOBBY = "PRE_LOBBY";
 const LOBBY = "LOBBY";
@@ -52,7 +52,8 @@ class RoomIdPage extends Component {
     }
   }
   initializeWebSocket() {
-    const ws = new WebSocket(`wss://chinese-character-recognition-server.vercel.app/${this.state.roomId}/${this.state.sessionId}`);
+    console.log("INITIALIZTING")
+    const ws = new WebSocket(`wss://chinese-server-0947b7b24ff4.herokuapp.com/${this.state.roomId}/${this.state.sessionId}`);
     ws.onmessage = (event) => {
       const data = JSON.parse(event.data);
       if (data.type === 'update_players') {

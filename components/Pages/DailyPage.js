@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { DATA } from "../../src/data/wordBank";
+import { DATA } from "../../wordBank";
 import Pinyin from "../Components/Pinyin";
 import Definition from "../Components/Definition";
 import ExampleWords from "../Components/ExampleWords";
@@ -13,11 +13,11 @@ export default function DailyPage() {
 
     return (
         <div>
-            <Pinyin pinyin={dailyProblem.pinyin}/>
-            <Definition definition={dailyProblem.definition}/>
-            <ExampleWords words={dailyProblem.exampleWord}/>
+            <Pinyin pinyin={dailyProblem.pinyin} />
+            <Definition definition={dailyProblem.definition} />
+            <ExampleWords words={dailyProblem.exampleWord} />
             <Guesser />
-            <DailyScore correct={correct}/>
+            <DailyScore correct={correct} />
         </div>
     );
 }

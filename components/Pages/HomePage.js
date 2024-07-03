@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import DATA from "../../src/data/wordBank.json";
+import DATA from "../../wordBank.json";
 import Pinyin from "../Components/Pinyin";
 import Definition from "../Components/Definition";
 import ExampleWords from "../Components/ExampleWords";
@@ -37,14 +37,14 @@ class HomePage extends Component {
   };
 
   setDifficulty = (newDifficulty) => {
-    this.setState({ 
+    this.setState({
       difficulty: newDifficulty,
     })
   }
 
   guess = (char) => {
     const { problems, numRounds } = this.state;
-    
+
     const isCorrect = problems[numRounds - 1].char.includes(char);
 
     if (this.fadeTimeout) {
@@ -61,7 +61,7 @@ class HomePage extends Component {
         numCorrect: prevState.numCorrect + 1,
         numRounds: prevState.numRounds + 1,
         strokes: [],
-        prevAnswers: [...prevState.prevAnswers,{answer:problems[numRounds-1],correct:true}]
+        prevAnswers: [...prevState.prevAnswers, { answer: problems[numRounds - 1], correct: true }]
       }));
       this.clearButton()
     }
@@ -81,12 +81,12 @@ class HomePage extends Component {
     this.canvasRef.current.undoButton();
   };
 
-  nextButton =() => {
+  nextButton = () => {
     const { problems, numRounds } = this.state;
     this.setState((prevState) => ({
       numRounds: prevState.numRounds + 1,
       strokes: [],
-      prevAnswers: [...prevState.prevAnswers,{answer:problems[(numRounds-1)%problems.length],correct:false}]
+      prevAnswers: [...prevState.prevAnswers, { answer: problems[(numRounds - 1) % problems.length], correct: false }]
     }));
     this.clearButton()
   }
@@ -109,7 +109,7 @@ class HomePage extends Component {
     let word = char.answer.char.charAt(0);
     if (trad) {
       word = trad;
-      
+
     }
     this.setState(() => ({
       showPreview: true,
@@ -119,7 +119,7 @@ class HomePage extends Component {
 
   };
 
-  hideButton =() => {
+  hideButton = () => {
     this.setState(() => ({
       showPreview: false
     }));
@@ -131,12 +131,12 @@ class HomePage extends Component {
   }
   shuffleArray(array) {
     const slicedArray = [...array];
-  
+
     for (let i = slicedArray.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [slicedArray[i], slicedArray[j]] = [slicedArray[j], slicedArray[i]];
     }
-  
+
     return slicedArray;
   }
 
@@ -153,8 +153,8 @@ class HomePage extends Component {
     this.setState(
       {
         problems: this.shuffleArray(DATA.slice(this.state.difficulty[0], this.state.difficulty[1])),
-        hanziWriter: new HanziWriter('char-preview',options)
-      },() => {
+        hanziWriter: new HanziWriter('char-preview', options)
+      }, () => {
         // Load Google Tag Manager after the component is mounted
         this.loadGoogleTagManager();
       }
@@ -212,7 +212,7 @@ class HomePage extends Component {
       numCorrect,
       isCorrectGuess,
       showResults,
-      prevAnswers,    
+      prevAnswers,
       showPreview,
       charPreview,
     } = this.state;
@@ -226,26 +226,26 @@ class HomePage extends Component {
             <Definition definition={problems[(numRounds - 1) % this.state.problems.length].definition} />
           </div>
           <div className="examplewords-container">
-            <ExampleWords char={problems[(numRounds-1) % this.state.problems.length].char} words={problems[(numRounds - 1) % this.state.problems.length].exampleWord} />
+            <ExampleWords char={problems[(numRounds - 1) % this.state.problems.length].char} words={problems[(numRounds - 1) % this.state.problems.length].exampleWord} />
           </div>
         </div>
-        
+
         <div className="outer-canvas-buttons-guesses-container">
           <div className="canvas-buttons-container">
-            <Canvas ref={this.canvasRef} strokes={strokes} setStrokes={this.setStrokes} showResults={showResults} isCorrectGuess={isCorrectGuess}/>
+            <Canvas ref={this.canvasRef} strokes={strokes} setStrokes={this.setStrokes} showResults={showResults} isCorrectGuess={isCorrectGuess} />
             <Buttons onUndo={this.undoButton} onClear={this.clearButton} onNext={this.nextButton} />
           </div>
           <div className="guesses-container">
             <Guesses strokes={strokes} guess={this.guess} />
-          </div> 
+          </div>
         </div>
         <div className="answers-animate-container">
           <Answers prevAnswers={prevAnswers} onPrevChar={this.prevChar} />
-          <CharPreview showPreview={showPreview} onHide={this.hideButton} onAnimate={this.animateButton} char={charPreview}/>
+          <CharPreview showPreview={showPreview} onHide={this.hideButton} onAnimate={this.animateButton} char={charPreview} />
         </div>
-        
+
         <Score numCorrect={numCorrect} numRounds={numRounds} />
-        <SettingsModal setDifficulty={this.setDifficulty} difficulty={this.state.difficulty} onReset={this.resetButton}/>
+        <SettingsModal setDifficulty={this.setDifficulty} difficulty={this.state.difficulty} onReset={this.resetButton} />
       </div>
     );
   }

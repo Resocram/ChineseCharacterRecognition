@@ -1,5 +1,5 @@
 import React from 'react';
-const backendApiUrl = 'https://chinese-character-recognition-server.vercel.app';
+const backendApiUrl = 'https://chinese-server-0947b7b24ff4.herokuapp.com';
 class RoomPage extends React.Component {
   createNewGame = async () => {
     const { id } = this.props; // Add 'id' prop
