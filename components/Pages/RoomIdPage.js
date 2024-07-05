@@ -4,13 +4,13 @@ import SettingsModal from "../Components/SettingsModal";
 import Multiplayer_Game from "./Multiplayer_Game"
 import Cookies from 'js-cookie';
 
-const backendApiUrl = 'https://chinese-server-0947b7b24ff4.herokuapp.com';
 const { v4: uuidv4 } = require('uuid');
 const PRE_LOBBY = "PRE_LOBBY";
 const LOBBY = "LOBBY";
 const PLAY = "PLAY";
 const GAME_OVER = "GAME_OVER"
-
+const WSS_BACKEND_URL = "wss://chinese-server-0947b7b24ff4.herokuapp.com"
+const HTTPS_BACKEND_URL = "https://chinese-server-0947b7b24ff4.herokuapp.com"
 
 
 class RoomIdPage extends Component {
@@ -31,7 +31,7 @@ class RoomIdPage extends Component {
   }
 
   async componentDidMount() {
-    const response = await fetch(`${backendApiUrl}/api/check-room/${this.state.roomId}`);
+    const response = await fetch(`${HTTPS_BACKEND_URL}/api/check-room/${this.state.roomId}`);
     const data = await response.json();
     if (data.exists) {
       if (this.state.sessionId === '') {
@@ -52,8 +52,7 @@ class RoomIdPage extends Component {
     }
   }
   initializeWebSocket() {
-    console.log("INITIALIZTING")
-    const ws = new WebSocket(`wss://chinese-server-0947b7b24ff4.herokuapp.com/${this.state.roomId}/${this.state.sessionId}`);
+    const ws = new WebSocket(`${WSS_BACKEND_URL}/${this.state.roomId}/${this.state.sessionId}`);
     ws.onmessage = (event) => {
       const data = JSON.parse(event.data);
       if (data.type === 'update_players') {
