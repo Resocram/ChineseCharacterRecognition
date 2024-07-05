@@ -24,7 +24,7 @@
     "react-icons": "^4.11.0",
     "react-router-dom": "^6.24.1",
     "uuid": "^9.0.1",
-    "ws": "^8.14.2",
+    "ws": "^8.17.1",
     "yarn": "^1.22.19"
   },
   "devDependencies": {
