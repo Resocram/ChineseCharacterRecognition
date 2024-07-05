@@ -208,7 +208,6 @@ class HomePage extends Component {
       problems,
       numRounds,
       strokes,
-      difficulty,
       numCorrect,
       isCorrectGuess,
       showResults,

@@ -5,7 +5,7 @@ export default function Room() {
   const router = useRouter();
   const { id } = router.query;
   if (!router.isReady) {
-    return <div>Loading...</div>; 
+    return <div>Loading...</div>;
   }
 
   return <RoomIdPage roomId={id} />;

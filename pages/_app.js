@@ -1,12 +1,31 @@
-import '../styles/globals.css'
-import Layout from '../components/Layout/Layout';
+// pages/_app.js
 
-function MyApp({ Component, pageProps }) {
+import '../styles/globals.css';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import HomePage from "../components/Pages/HomePage"
+import RoomPage from "../components/Pages/RoomPage"
+import RoomIdPage from "../components/Pages/RoomIdPage"
+function MyApp() {
+  const [isBrowser, setIsBrowser] = useState(false);
+
+  useEffect(() => {
+    setIsBrowser(true);
+  }, []);
+
+  if (!isBrowser) {
+    return null; // Or a loading spinner, or nothing
+  }
+
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/room" element={<RoomPage />} />
+        <Route path="/room/:code" element={<RoomIdPage />} />
+      </Routes>
+    </Router >
   );
 }
 
-export default MyApp
+export default MyApp;

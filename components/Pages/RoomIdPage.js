@@ -17,7 +17,7 @@ class RoomIdPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      roomId: props.roomId, // Initialize roomId from props
+      roomId: window.location.hash.substring(2).split('/').pop(), // Initialize roomId from props
       username: Cookies.get('username') || '', // Retrieve username from cookie
       sessionId: Cookies.get('sessionId') || '',
       ws: null,
