@@ -7,21 +7,23 @@ import Guesses from "../Components/Guesses";
 import Buttons from "../Components/Buttons";
 import PlayerCard from "../Components/PlayerCard"
 import MultiplayerCanvas from "../Components/MultiplayerCanvas";
+import CharPreview from "../Components/CharPreview";
+import Answers from "../Components/Answers";
 
 class Multiplayer_Game extends Component {
   constructor(props) {
     super(props);
     this.canvasRef = React.createRef();
     this.username = props.username;
-    this.characters = props.characters;
+    this.problems = props.problems;
     this.sessionId = props.sessionId;
     this.state = {
       sessionMap: props.sessionMap,
+      prevAnswers: props.prevAnswers,
       round: props.round,
       strokes: [],
       showResults: false,
-      isCorrectGuess: false,
-
+      isCorrectGuess: false
     }
   }
   componentDidUpdate(prevProps) {
@@ -33,6 +35,11 @@ class Multiplayer_Game extends Component {
     if (prevProps.round !== this.props.round){
       this.setState({
         round: this.props.round,
+      });
+    }
+    if (prevProps.prevAnswers !== this.props.prevAnswers){
+      this.setState({
+        prevAnswers: this.props.prevAnswers,
       });
     }
   }
@@ -57,9 +64,9 @@ class Multiplayer_Game extends Component {
   }
 
   guess = (char) => {
-    const { round } = this.state;
-
-    const isCorrect = this.characters[round].char.includes(char);
+    const {round} = this.state;
+    const elemInArray = this.problems[(round - 1)];
+    const isCorrect = elemInArray.char.includes(char);
 
     if (this.fadeTimeout) {
       clearTimeout(this.fadeTimeout);
@@ -94,6 +101,7 @@ class Multiplayer_Game extends Component {
       isCorrectGuess,
       showResults,
       sessionMap,
+      prevAnswers,
     } = this.state;
     return (
 
@@ -101,11 +109,11 @@ class Multiplayer_Game extends Component {
         <div className="left-box">
           <div className="pinyin-definition-examplewords-container">
             <div className="pinyin-definition-container">
-              <Pinyin pinyin={this.characters[round].pinyin} />
-              <Definition definition={this.characters[round].definition} />
+              <Pinyin pinyin={this.problems[round-1].pinyin} />
+              <Definition definition={this.problems[round-1].definition} />
             </div>
             <div className="examplewords-container">
-              <ExampleWords char={this.characters[round].char} words={this.characters[round].exampleWord} />
+              <ExampleWords char={this.problems[round-1].char} words={this.problems[round-1].exampleWord} />
             </div>
           </div>
 
@@ -120,7 +128,10 @@ class Multiplayer_Game extends Component {
             </div>
             
           </div>
-          
+          <div className="answers-animate-container">
+            <Answers prevAnswers={prevAnswers} onPrevChar={this.prevChar} />
+            {/* <CharPreview showPreview={showPreview} onHide={this.hideButton} onAnimate={this.animateButton} char={charPreview} /> */}
+          </div>
         </div>
         <div className="right-box">
           {Object.entries(sessionMap).map(([sessionId, playerMap]) => (

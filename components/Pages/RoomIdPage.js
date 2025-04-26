@@ -12,6 +12,9 @@ const GAME_OVER = "GAME_OVER"
 const WSS_BACKEND_URL = "wss://chinese-server-0947b7b24ff4.herokuapp.com"
 const HTTPS_BACKEND_URL = "https://chinese-server-0947b7b24ff4.herokuapp.com"
 
+// const WSS_BACKEND_URL = "ws://localhost:5000"
+// const HTTPS_BACKEND_URL = "http://localhost:5000"
+
 
 class RoomIdPage extends Component {
   constructor(props) {
@@ -24,9 +27,10 @@ class RoomIdPage extends Component {
       position: 0,
       gameState: Cookies.get(`gameState_${props.roomId}`) || PRE_LOBBY,
       difficulty: [0, 10],
-      characters: [],
+      problems: [],
       sessionMap: {},
-      round: 0
+      round: 0,
+      prevAnswers: []
     };
   }
 
@@ -59,7 +63,7 @@ class RoomIdPage extends Component {
         this.setState({ sessionMap: JSON.parse(data.sessions), position: data.position });
       }
       else if (data.type === 'start_game') {
-        this.setState({ gameState: PLAY, characters: data.characters, round: data.round })
+        this.setState({ gameState: PLAY, problems: data.problems, round: data.round })
         Cookies.set(`gameState_${this.state.roomId}`, PLAY)
       }
       else if (data.type === 'update_strokes') {
@@ -74,9 +78,16 @@ class RoomIdPage extends Component {
       }
       else if (data.type === 'update_round') {
         if (data.gameOver) {
-          this.setState({ sessionMap: JSON.parse(data.sessions), gameState: GAME_OVER });
+          this.setState((prevState) => ({ 
+            sessionMap: JSON.parse(data.sessions), 
+            gameState: GAME_OVER,
+          }));
         } else {
-          this.setState({ sessionMap: JSON.parse(data.sessions), round: data.round });
+          this.setState((prevState) => ({ 
+            sessionMap: JSON.parse(data.sessions), 
+            round: data.round,
+            prevAnswers: [...prevState.prevAnswers, { answer: this.state.problems[(prevState.round - 1)], colour:  data.correct_player ? data.correct_player.colour : null }]
+          }));
         }
 
       }
@@ -189,7 +200,7 @@ class RoomIdPage extends Component {
 
 
   render() {
-    const { gameState, roomId, characters, username, sessionMap, position, round, sessionId } = this.state;
+    const { gameState, roomId, problems, username, sessionMap, position, round, sessionId, prevAnswers } = this.state;
     switch (gameState) {
       case PRE_LOBBY:
         return <h1>Room doesn't exist</h1>
@@ -202,7 +213,10 @@ class RoomIdPage extends Component {
             <h2>Players:</h2>
             <ul>
               {Object.entries(sessionMap).map(([sessionId, player], index) => (
-                <li key={sessionId} style={{ fontWeight: index === position ? 'bold' : 'normal' }}>
+                <li key={sessionId} style={{ 
+                  fontWeight: index === position ? 'bold' : 'normal',
+                  color: player.colour
+                  }}>
                   {player.username}
                 </li>
               ))}
@@ -215,9 +229,9 @@ class RoomIdPage extends Component {
           </div>
         );
       case PLAY:
-        return <Multiplayer_Game characters={characters} username={username} sessionMap={sessionMap} sessionId={sessionId} round={round} sendStrokes={this.sendStrokes} correctGuess={this.correctGuess} voteNext={this.voteNext} />
+        return <Multiplayer_Game problems={problems} username={username} sessionMap={sessionMap} sessionId={sessionId} round={round} prevAnswers = {prevAnswers} sendStrokes={this.sendStrokes} correctGuess={this.correctGuess} voteNext={this.voteNext} />
       case GAME_OVER:
-        return <div>Game Over ily stella</div>
+        return <div>Game Over</div>
       default:
         return <h1>Room doesn't exist</h1>
     }

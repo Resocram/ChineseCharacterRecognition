@@ -9,7 +9,11 @@ export default function Answers({ prevAnswers, onPrevChar }) {
                     prevAnswers.map((item, index) => (
                         item.answer.char.includes("(") ? (
                           <React.Fragment key={index}>
-                            <span className={`chinese underline-${item.correct ? "green" : "red"} `} onClick={() =>{onPrevChar(item,null)}}>
+                            <span 
+                              className="chinese" 
+                              style={{ textDecoration: item.colour ? `underline ${item.colour}` : "none" }} 
+                              onClick={() => { onPrevChar(item, null); }}
+                            >
                               {item.answer.char.charAt(0)}
                             </span>
                             <span className={`chinese`} onClick={() =>{onPrevChar(item,item.answer.char[item.answer.char.indexOf("(") + 1])}}>
@@ -21,7 +25,11 @@ export default function Answers({ prevAnswers, onPrevChar }) {
                           </React.Fragment>
                         ) : (
                             <React.Fragment key={index}>
-                          <span className={`chinese underline-${item.correct ? "green" : "red"}`} onClick={() =>{onPrevChar(item,null)}}>
+                            <span 
+                              className="chinese" 
+                              style={{ textDecoration: item.colour ? `underline ${item.colour}` : "none" }} 
+                              onClick={() => { onPrevChar(item, null); }}
+                            >                            
                             {item.answer.char.charAt(0)}
                             {index < prevAnswers.length - 1 && ","}
                           </span>

@@ -142,13 +142,6 @@ h2,
   transition: opacity 0.5s linear;
 }
 
-.underline-green {
-  text-decoration: underline green;
-}
-
-.underline-red {
-  text-decoration: underline red;
-}
 
 .horizontal-list {
   display: flex;

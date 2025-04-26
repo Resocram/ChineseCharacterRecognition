@@ -44,8 +44,8 @@ class HomePage extends Component {
 
   guess = (char) => {
     const { problems, numRounds } = this.state;
-
-    const isCorrect = problems[numRounds - 1].char.includes(char);
+    const elemInArray = problems[(numRounds - 1) % problems.length];
+    const isCorrect = elemInArray.char.includes(char);
 
     if (this.fadeTimeout) {
       clearTimeout(this.fadeTimeout);
@@ -61,8 +61,9 @@ class HomePage extends Component {
         numCorrect: prevState.numCorrect + 1,
         numRounds: prevState.numRounds + 1,
         strokes: [],
-        prevAnswers: [...prevState.prevAnswers, { answer: problems[numRounds - 1], correct: true }]
+        prevAnswers: [...prevState.prevAnswers, { answer: elemInArray , colour: "green" }]
       }));
+
       this.clearButton()
     }
 
@@ -86,7 +87,7 @@ class HomePage extends Component {
     this.setState((prevState) => ({
       numRounds: prevState.numRounds + 1,
       strokes: [],
-      prevAnswers: [...prevState.prevAnswers, { answer: problems[(numRounds - 1) % problems.length], correct: false }]
+      prevAnswers: [...prevState.prevAnswers, { answer: problems[(numRounds - 1) % problems.length], colour: "red" }]
     }));
     this.clearButton()
   }
@@ -213,7 +214,7 @@ class HomePage extends Component {
       showResults,
       prevAnswers,
       showPreview,
-      charPreview,
+      charPreview, 
     } = this.state;
 
     return (

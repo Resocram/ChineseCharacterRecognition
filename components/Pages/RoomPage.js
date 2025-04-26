@@ -1,6 +1,6 @@
 import React from 'react';
 const BACKEND_URL = "https://chinese-server-0947b7b24ff4.herokuapp.com"
-
+// const BACKEND_URL = "http://localhost:5000"
 class RoomPage extends React.Component {
   createNewGame = async () => {
     try {
