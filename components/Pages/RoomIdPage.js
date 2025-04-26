@@ -173,7 +173,7 @@ class RoomIdPage extends Component {
   };
 
   handleCopyClick = () => {
-    const roomUrl = `${window.location.origin}/room/${this.state.roomId}`;
+    const roomUrl = `${window.location.origin}${window.location.pathname}#/room/${this.state.roomId}`;
 
     // Create a temporary element to copy the text
     const tempInput = document.createElement('input');
