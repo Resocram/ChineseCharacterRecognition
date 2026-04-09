@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chinese Character Recognition - Mock Design</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg-primary: #0f172a;
+      --bg-secondary: #1e293b;
+      --bg-card: #334155;
+      --bg-canvas: #fafafa;
+      --text-primary: #f8fafc;
+      --text-secondary: #94a3b8;
+      --text-muted: #64748b;
+      --accent-primary: #6366f1;
+      --accent-secondary: #818cf8;
+      --accent-success: #22c55e;
+      --accent-error: #ef4444;
+      --accent-warning: #f59e0b;
+      --border-color: #475569;
+      --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -2px rgba(0, 0, 0, 0.2);
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --radius-xl: 24px;
+    }
+
+    body {
+      font-family: 'Inter', 'Noto Sans SC', sans-serif;
+      background: var(--bg-primary);
+      min-height: 100vh;
+      color: var(--text-primary);
+      padding: 20px;
+    }
+
+    .app-container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    /* Header */
+    .header {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .header h1 {
+      font-size: 28px;
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 8px;
+    }
+
+    .header p {
+      color: var(--text-secondary);
+      font-size: 14px;
+    }
+
+    /* Score Bar */
+    .score-bar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 24px;
+      margin-bottom: 24px;
+      padding: 16px 24px;
+      background: var(--bg-secondary);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-color);
+    }
+
+    .score-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .score-item .label {
+      color: var(--text-muted);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .score-item .value {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--accent-primary);
+    }
+
+    .score-item .value.streak {
+      color: var(--accent-warning);
+    }
+
+    .score-divider {
+      width: 1px;
+      height: 32px;
+      background: var(--border-color);
+    }
+
+    /* Main Game Area */
+    .game-area {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 24px;
+      margin-bottom: 24px;
+    }
+
+    /* Hint Card */
+    .hint-card {
+      background: var(--bg-secondary);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      border: 1px solid var(--border-color);
+      margin-bottom: 24px;
+    }
+
+    .hint-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .hint-label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-muted);
+    }
+
+    .hint-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .hint-item {
+      padding: 16px;
+      background: var(--bg-card);
+      border-radius: var(--radius-md);
+    }
+
+    .hint-item .label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    .hint-item .pinyin {
+      font-size: 20px;
+      font-weight: 500;
+      color: var(--accent-secondary);
+    }
+
+    .hint-item .definition {
+      font-size: 15px;
+      color: var(--text-primary);
+      line-height: 1.5;
+    }
+
+    .example-words {
+      grid-column: 1 / -1;
+      padding-top: 16px;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .example-words .label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    .example-word-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .example-word {
+      padding: 8px 16px;
+      background: var(--bg-card);
+      border-radius: var(--radius-sm);
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .example-word .char {
+      font-family: 'Noto Sans SC', sans-serif;
+      font-size: 18px;
+    }
+
+    .example-word .def {
+      color: var(--text-muted);
+      font-size: 12px;
+    }
+
+    /* Canvas Section */
+    .canvas-section {
+      background: var(--bg-secondary);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      border: 1px solid var(--border-color);
+    }
+
+    .canvas-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    .canvas-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .canvas-actions {
+      display: flex;
+      gap: 8px;
+    }
+
+    .canvas-btn {
+      width: 36px;
+      height: 36px;
+      border: none;
+      border-radius: var(--radius-sm);
+      background: var(--bg-card);
+      color: var(--text-secondary);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+    }
+
+    .canvas-btn:hover {
+      background: var(--accent-primary);
+      color: white;
+    }
+
+    .canvas-wrapper {
+      position: relative;
+      background: var(--bg-canvas);
+      border-radius: var(--radius-md);
+      padding: 16px;
+    }
+
+    .drawing-canvas {
+      width: 100%;
+      aspect-ratio: 1;
+      max-width: 300px;
+      margin: 0 auto;
+      display: block;
+      border-radius: var(--radius-sm);
+      border: 2px dashed #cbd5e1;
+      cursor: crosshair;
+    }
+
+    .canvas-hint {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 13px;
+      margin-top: 12px;
+    }
+
+    /* Feedback Overlay */
+    .feedback-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 16px 32px;
+      border-radius: var(--radius-md);
+      font-size: 20px;
+      font-weight: 700;
+      opacity: 0;
+      transition: opacity 0.3s;
+      pointer-events: none;
+    }
+
+    .feedback-overlay.show {
+      opacity: 1;
+    }
+
+    .feedback-overlay.correct {
+      background: var(--accent-success);
+      color: white;
+    }
+
+    .feedback-overlay.incorrect {
+      background: var(--accent-error);
+      color: white;
+    }
+
+    /* Guesses Section */
+    .guesses-section {
+      background: var(--bg-secondary);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      border: 1px solid var(--border-color);
+    }
+
+    .guesses-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    .guesses-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .guesses-hint {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .guesses-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    .guess-item {
+      padding: 16px;
+      background: var(--bg-card);
+      border-radius: var(--radius-md);
+      text-align: center;
+      font-size: 32px;
+      font-family: 'Noto Sans SC', sans-serif;
+      cursor: pointer;
+      transition: all 0.2s;
+      border: 2px solid transparent;
+    }
+
+    .guess-item:hover {
+      background: var(--accent-primary);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+    }
+
+    .guess-item.empty {
+      color: var(--text-muted);
+      font-size: 20px;
+    }
+
+    .guess-item.empty:hover {
+      background: var(--bg-card);
+      transform: none;
+      box-shadow: none;
+      cursor: default;
+    }
+
+    /* History Section */
+    .history-section {
+      background: var(--bg-secondary);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      border: 1px solid var(--border-color);
+    }
+
+    .history-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    .history-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .history-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .history-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 12px 16px;
+      background: var(--bg-card);
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .history-item:hover {
+      background: var(--bg-card);
+      transform: translateX(4px);
+    }
+
+    .history-char {
+      font-size: 28px;
+      font-family: 'Noto Sans SC', sans-serif;
+    }
+
+    .history-info {
+      flex: 1;
+    }
+
+    .history-pinyin {
+      font-size: 13px;
+      color: var(--accent-secondary);
+    }
+
+    .history-def {
+      font-size: 13px;
+      color: var(--text-secondary);
+      margin-top: 2px;
+    }
+
+    .history-status {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+
+    .history-status.correct {
+      background: var(--accent-success);
+    }
+
+    .history-status.incorrect {
+      background: var(--accent-error);
+    }
+
+    /* Character Preview Modal */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(4px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s;
+    }
+
+    .modal-overlay.show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .modal-content {
+      background: var(--bg-secondary);
+      border-radius: var(--radius-xl);
+      padding: 32px;
+      max-width: 400px;
+      width: 90%;
+      border: 1px solid var(--border-color);
+      text-align: center;
+    }
+
+    .modal-char {
+      font-size: 120px;
+      font-family: 'Noto Sans SC', sans-serif;
+      margin-bottom: 16px;
+    }
+
+    .modal-pinyin {
+      font-size: 24px;
+      color: var(--accent-secondary);
+      margin-bottom: 8px;
+    }
+
+    .modal-def {
+      font-size: 16px;
+      color: var(--text-secondary);
+      margin-bottom: 24px;
+    }
+
+    .modal-actions {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+    }
+
+    .modal-btn {
+      padding: 12px 24px;
+      border: none;
+      border-radius: var(--radius-md);
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .modal-btn.primary {
+      background: var(--accent-primary);
+      color: white;
+    }
+
+    .modal-btn.primary:hover {
+      background: var(--accent-secondary);
+    }
+
+    .modal-btn.secondary {
+      background: var(--bg-card);
+      color: var(--text-primary);
+    }
+
+    .modal-btn.secondary:hover {
+      background: var(--border-color);
+    }
+
+    /* Navigation */
+    .nav-bar {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+
+    .nav-btn {
+      padding: 10px 20px;
+      border: none;
+      border-radius: var(--radius-md);
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+      background: var(--bg-secondary);
+      color: var(--text-secondary);
+      border: 1px solid var(--border-color);
+    }
+
+    .nav-btn:hover {
+      background: var(--bg-card);
+      color: var(--text-primary);
+    }
+
+    .nav-btn.active {
+      background: var(--accent-primary);
+      color: white;
+      border-color: var(--accent-primary);
+    }
+
+    /* Footer Actions */
+    .footer-actions {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .action-btn {
+      padding: 14px 32px;
+      border: none;
+      border-radius: var(--radius-md);
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .action-btn.skip {
+      background: var(--bg-card);
+      color: var(--text-primary);
+    }
+
+    .action-btn.skip:hover {
+      background: var(--border-color);
+    }
+
+    .action-btn.hint {
+      background: linear-gradient(135deg, var(--accent-warning), #d97706);
+      color: white;
+    }
+
+    .action-btn.hint:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .game-area {
+        grid-template-columns: 1fr;
+      }
+
+      .hint-content {
+        grid-template-columns: 1fr;
+      }
+
+      .guesses-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .score-bar {
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+
+      .score-divider {
+        display: none;
+      }
+    }
+
+    /* Animation */
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.7; }
+    }
+
+    .pulse {
+      animation: pulse 2s infinite;
+    }
+  </style>
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header -->
+    <header class="header">
+      <h1>Hanzi Practice</h1>
+      <p>Draw the character based on the hints below</p>
+    </header>
+
+    <!-- Navigation -->
+    <div class="nav-bar">
+      <button class="nav-btn active">Practice</button>
+      <button class="nav-btn">Multiplayer</button>
+      <button class="nav-btn">Settings</button>
+    </div>
+
+    <!-- Score Bar -->
+    <div class="score-bar">
+      <div class="score-item">
+        <span class="label">Round</span>
+        <span class="value" id="round">7</span>
+      </div>
+      <div class="score-divider"></div>
+      <div class="score-item">
+        <span class="label">Score</span>
+        <span class="value">5/6</span>
+      </div>
+      <div class="score-divider"></div>
+      <div class="score-item">
+        <span class="label">Streak</span>
+        <span class="value streak">3</span>
+      </div>
+    </div>
+
+    <!-- Hint Card -->
+    <div class="hint-card">
+      <div class="hint-header">
+        <span class="hint-label">Character Hints</span>
+      </div>
+      <div class="hint-content">
+        <div class="hint-item">
+          <div class="label">Pinyin</div>
+          <div class="pinyin">zhong</div>
+        </div>
+        <div class="hint-item">
+          <div class="label">Definition</div>
+          <div class="definition">middle, center, mid(dle)</div>
+        </div>
+        <div class="example-words">
+          <div class="label">Example Words</div>
+          <div class="example-word-list">
+            <div class="example-word">
+              <span class="char">中国</span>
+              <span class="def">zhongguo (China)</span>
+            </div>
+            <div class="example-word">
+              <span class="char">中间</span>
+              <span class="def">zhongjian (middle)</span>
+            </div>
+            <div class="example-word">
+              <span class="char">中午</span>
+              <span class="def">zhongwu (noon)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Game Area -->
+    <div class="game-area">
+      <!-- Canvas Section -->
+      <div class="canvas-section">
+        <div class="canvas-header">
+          <span class="canvas-title">Draw the character</span>
+          <div class="canvas-actions">
+            <button class="canvas-btn" title="Undo">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 10h10a5 5 0 0 1 5 5v2M3 10l5-5M3 10l5 5"/>
+              </svg>
+            </button>
+            <button class="canvas-btn" title="Clear">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 6h18M8 6V4h8v2M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="canvas-wrapper">
+          <canvas class="drawing-canvas" id="canvas"></canvas>
+          <div class="canvas-hint">Draw strokes here</div>
+          <div class="feedback-overlay correct" id="feedback">Correct!</div>
+        </div>
+      </div>
+
+      <!-- Guesses Section -->
+      <div class="guesses-section">
+        <div class="guesses-header">
+          <span class="guesses-title">Recognized</span>
+          <span class="guesses-hint">Tap to guess</span>
+        </div>
+        <div class="guesses-grid" id="guesses">
+          <div class="guess-item chinese-char">中</div>
+          <div class="guess-item chinese-char">串</div>
+          <div class="guess-item chinese-char">丰</div>
+          <div class="guess-item chinese-char">聿</div>
+          <div class="guess-item empty">?</div>
+          <div class="guess-item empty">?</div>
+          <div class="guess-item empty">?</div>
+          <div class="guess-item empty">?</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- History Section -->
+    <div class="history-section">
+      <div class="history-header">
+        <span class="history-title">Recent Answers</span>
+      </div>
+      <div class="history-list">
+        <div class="history-item" onclick="showPreview('中', 'zhong', 'middle, center')">
+          <span class="history-char">中</span>
+          <div class="history-info">
+            <div class="history-pinyin">zhong</div>
+            <div class="history-def">middle, center</div>
+          </div>
+          <div class="history-status correct"></div>
+        </div>
+        <div class="history-item" onclick="showPreview('人', 'ren', 'person, people')">
+          <span class="history-char">人</span>
+          <div class="history-info">
+            <div class="history-pinyin">ren</div>
+            <div class="history-def">person, people</div>
+          </div>
+          <div class="history-status correct"></div>
+        </div>
+        <div class="history-item" onclick="showPreview('大', 'da', 'big, large')">
+          <span class="history-char">大</span>
+          <div class="history-info">
+            <div class="history-pinyin">da</div>
+            <div class="history-def">big, large</div>
+          </div>
+          <div class="history-status incorrect"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Actions -->
+    <div class="footer-actions">
+      <button class="action-btn skip">Skip</button>
+      <button class="action-btn hint">Show Stroke Order</button>
+    </div>
+  </div>
+
+  <!-- Character Preview Modal -->
+  <div class="modal-overlay" id="modal">
+    <div class="modal-content">
+      <div class="modal-char" id="modal-char">中</div>
+      <div class="modal-pinyin" id="modal-pinyin">zhong</div>
+      <div class="modal-def" id="modal-def">middle, center, mid(dle)</div>
+      <div class="modal-actions">
+        <button class="modal-btn secondary" onclick="hideModal()">Close</button>
+        <button class="modal-btn primary" onclick="animateChar()">Animate</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Mock drawing functionality
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    let isDrawing = false;
+    let lastX = 0;
+    let lastY = 0;
+
+    // Set canvas size
+    canvas.width = 300;
+    canvas.height = 300;
+    ctx.lineWidth = 8;
+    ctx.lineCap = 'round';
+    ctx.lineJoin = 'round';
+    ctx.strokeStyle = '#1e293b';
+
+    canvas.addEventListener('mousedown', startDrawing);
+    canvas.addEventListener('mousemove', draw);
+    canvas.addEventListener('mouseup', stopDrawing);
+    canvas.addEventListener('mouseout', stopDrawing);
+
+    canvas.addEventListener('touchstart', (e) => {
+      e.preventDefault();
+      const touch = e.touches[0];
+      startDrawing(touch);
+    });
+    canvas.addEventListener('touchmove', (e) => {
+      e.preventDefault();
+      const touch = e.touches[0];
+      draw(touch);
+    });
+    canvas.addEventListener('touchend', stopDrawing);
+
+    function startDrawing(e) {
+      isDrawing = true;
+      [lastX, lastY] = getPos(e);
+    }
+
+    function draw(e) {
+      if (!isDrawing) return;
+      const [x, y] = getPos(e);
+      ctx.beginPath();
+      ctx.moveTo(lastX, lastY);
+      ctx.lineTo(x, y);
+      ctx.stroke();
+      [lastX, lastY] = [x, y];
+    }
+
+    function stopDrawing() {
+      isDrawing = false;
+    }
+
+    function getPos(e) {
+      const rect = canvas.getBoundingClientRect();
+      return [
+        e.clientX - rect.left,
+        e.clientY - rect.top
+      ];
+    }
+
+    // Modal functions
+    function showPreview(char, pinyin, def) {
+      document.getElementById('modal-char').textContent = char;
+      document.getElementById('modal-pinyin').textContent = pinyin;
+      document.getElementById('modal-def').textContent = def;
+      document.getElementById('modal').classList.add('show');
+    }
+
+    function hideModal() {
+      document.getElementById('modal').classList.remove('show');
+    }
+
+    function animateChar() {
+      // This would trigger the HanziWriter animation
+      alert('Animation would play here!');
+    }
+
+    // Close modal on backdrop click
+    document.getElementById('modal').addEventListener('click', (e) => {
+      if (e.target.id === 'modal') hideModal();
+    });
+
+    // Demo feedback
+    function showFeedback(correct) {
+      const feedback = document.getElementById('feedback');
+      feedback.textContent = correct ? 'Correct!' : 'Try Again';
+      feedback.className = 'feedback-overlay ' + (correct ? 'correct' : 'incorrect') + ' show';
+      setTimeout(() => {
+        feedback.classList.remove('show');
+      }, 1000);
+    }
+
+    // Guess click handlers
+    document.querySelectorAll('.guess-item.chinese-char').forEach(item => {
+      item.addEventListener('click', () => {
+        if (item.textContent === '中') {
+          showFeedback(true);
+        } else {
+          showFeedback(false);
+        }
+      });
+    });
+  </script>
+</body>
+</html>

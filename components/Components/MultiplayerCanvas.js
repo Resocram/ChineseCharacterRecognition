@@ -5,12 +5,14 @@ class MultiplayerCanvas extends Component {
         super(props);
         this.canvasRef = React.createRef();
         this.state = {
-            strokes: props.strokes
+            strokes: props.strokes || []
         };
     }
 
     renderStrokes = () => {
         const { strokes } = this.props;
+        if (!strokes || strokes.length === 0) return;
+        
         strokes.forEach((stroke) => {
             for (let i = 0; i < stroke.length - 1; i++) {
                 const startPoint = { x: stroke[i][0], y: stroke[i][1] };
@@ -22,23 +24,27 @@ class MultiplayerCanvas extends Component {
 
     clearCanvas = () => {
         const canvas = this.canvasRef.current;
+        if (!canvas) return;
         const ctx = canvas.getContext('2d');
         ctx.clearRect(0, 0, canvas.width, canvas.height);
     };
 
     componentDidMount() {
         this.canvas = this.canvasRef.current;
-        this.ctx = this.canvas.getContext("2d");
-        this.ctx.lineWidth = 4; // Set pen thickness
-        this.ctx.strokeStyle = "black"; // Set pen color
+        if (this.canvas) {
+            this.ctx = this.canvas.getContext("2d");
+            this.ctx.lineWidth = 4;
+            this.ctx.strokeStyle = "#1e293b";
+            this.ctx.lineCap = 'round';
+            this.ctx.lineJoin = 'round';
+            this.renderStrokes();
+        }
     }
 
     componentDidUpdate(prevProps) {
         if (prevProps.strokes !== this.props.strokes) {
-            this.setState({ strokes: this.props.strokes }, () => {
-                this.clearCanvas();
-                this.renderStrokes();
-            });
+            this.clearCanvas();
+            this.renderStrokes();
         }
     }
 
@@ -53,13 +59,18 @@ class MultiplayerCanvas extends Component {
 
     render() {
         return (
-            <div style={{ position: 'relative' }}>
-                <div className="canvas-background"></div>
-                <canvas id="canvas" ref={this.canvasRef} width={300} height={300}></canvas>
-                <div className={`popup ${this.props.showResults ? "fade-in" : "fade-out"} ${this.props.isCorrectGuess ? "correct-popup" : "incorrect-popup"}`}>
-                    {this.props.isCorrectGuess ? "Correct" : "Try Again"}
-                </div>
-            </div>
+            <canvas 
+                className="drawing-canvas"
+                ref={this.canvasRef} 
+                width={260} 
+                height={260}
+                style={{
+                    display: 'block',
+                    borderRadius: 'var(--radius-sm)',
+                    border: '2px dashed var(--border-color)',
+                    background: 'white'
+                }}
+            />
         );
     }
 }

@@ -1,8 +1,8 @@
 export default function Pinyin({pinyin}) {
     return (
-        <div>
-            <h2 className="header">Pinyin</h2>
-            <p>{pinyin}</p>
+        <div className="hint-item">
+            <div className="label">Pinyin</div>
+            <div className="pinyin">{pinyin}</div>
         </div>
     );
 }

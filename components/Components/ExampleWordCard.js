@@ -5,9 +5,14 @@ export default function ExampleWordCard(props) {
     if (answers.indexOf("(") !== -1) {
         tradAnswer = answers[answers.indexOf("(") + 1]
     }
+    
+    const highlightedWord = props.exampleWordChar;
+    const def = props.definition;
+    
     return (
-        <div>
-            <p>{props.exampleWordChar.replace(simpAnswer, "__").replace(tradAnswer, "__")} {props.pinyin + props.definition.replace(simpAnswer, "__").replace(tradAnswer, "__")}</p>
+        <div className="example-word">
+            <span className="char">{highlightedWord}</span>
+            <span className="def">{props.pinyin}</span>
         </div>
     );
 }

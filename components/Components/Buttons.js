@@ -11,27 +11,29 @@ export default function Buttons({ onUndo, onClear, onNext, disableNextAfterClick
   };
 
   useEffect(() => {
-    setIsNextClicked(false); // Reset the button state when the round changes
+    setIsNextClicked(false);
   }, [round]);
 
   return (
-    <div>
-      <div className="commands">
-        <button type="button" className="button" onClick={onUndo}>
-          Undo
-        </button>
-        <button type="button" className="button" onClick={onClear}>
-          Clear
-        </button>
-        <button
-          type="button"
-          className="button"
-          onClick={handleNextClick}
-          disabled={disableNextAfterClick && isNextClicked}
-        >
-          Next
-        </button>
-      </div>
+    <div className="commands">
+      <button type="button" className="canvas-btn" onClick={onUndo} title="Undo">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="M3 10h10a5 5 0 0 1 5 5v2M3 10l5-5M3 10l5 5"/>
+        </svg>
+      </button>
+      <button type="button" className="canvas-btn" onClick={onClear} title="Clear">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="M3 6h18M8 6V4h8v2M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/>
+        </svg>
+      </button>
+      <button
+        type="button"
+        className="action-btn skip"
+        onClick={handleNextClick}
+        disabled={disableNextAfterClick && isNextClicked}
+      >
+        Skip
+      </button>
     </div>
   );
 }

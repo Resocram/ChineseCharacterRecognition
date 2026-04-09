@@ -6,7 +6,7 @@ class Canvas extends Component {
         this.canvasRef = React.createRef();
         this.state = {
             isDrawing: false,
-            currentStrokes: [], // Array to store the current strokes being drawn
+            currentStrokes: [],
             strokes: [],
             position: { clientX: 0, clientY: 0 },
         };
@@ -15,30 +15,30 @@ class Canvas extends Component {
     componentDidMount() {
         this.canvas = this.canvasRef.current;
         this.ctx = this.canvas.getContext("2d");
-        this.ctx.lineWidth = 4; // Set pen thickness
-        this.ctx.strokeStyle = "black"; // Set pen color
+        this.ctx.lineWidth = 8;
+        this.ctx.lineCap = 'round';
+        this.ctx.lineJoin = 'round';
+        this.ctx.strokeStyle = "#1e293b";
         this.canvas.addEventListener("mousedown", this.startDrawing);
         this.canvas.addEventListener("mousemove", this.draw);
         this.canvas.addEventListener("mouseup", this.stopDrawing);
         this.canvas.addEventListener("mouseout", this.stopDrawing);
-        this.captureInterval = null; // Interval for capturing points
+        this.captureInterval = null;
 
-        // Touch events
         this.canvas.addEventListener("touchstart", this.handleTouchStart);
         this.canvas.addEventListener("touchmove", this.handleTouchMove);
         this.canvas.addEventListener("touchend", this.handleTouchEnd);
-        this.canvas.addEventListener("touchcancel", this.handleTouchEnd)
-
+        this.canvas.addEventListener("touchcancel", this.handleTouchEnd);
     }
 
     handleTouchStart = (event) => {
-        event.preventDefault(); // Prevent default touch behavior like scrolling
+        event.preventDefault();
         const touch = event.touches[0];
         this.startDrawing(touch);
     };
 
     handleTouchMove = (event) => {
-        event.preventDefault(); // Prevent default touch behavior like scrolling
+        event.preventDefault();
         const touch = event.touches[0];
         this.draw(touch);
     };
@@ -52,7 +52,7 @@ class Canvas extends Component {
         this.canvas.removeEventListener("mousemove", this.draw);
         this.canvas.removeEventListener("mouseup", this.stopDrawing);
         this.canvas.removeEventListener("mouseout", this.stopDrawing);
-        clearInterval(this.captureInterval); // Clear the capture interval
+        clearInterval(this.captureInterval);
     }
 
     startDrawing = (event) => {
@@ -67,7 +67,7 @@ class Canvas extends Component {
             currentStrokes: [...prevState.currentStrokes,[currentPoint]],
             strokes: [...this.props.strokes,[[currentPoint.x,currentPoint.y],[currentPoint.x,currentPoint.y]]]
         }));
-        this.captureInterval = setInterval(() => this.capturePoint(), 50); // Capture points every 50ms
+        this.captureInterval = setInterval(() => this.capturePoint(), 50);
     };
 
     draw = (event) => {
@@ -79,7 +79,6 @@ class Canvas extends Component {
             const lastStroke = prevState.currentStrokes[prevState.currentStrokes.length - 1];
             const lastPoint = lastStroke[lastStroke.length - 1];
     
-            // Check if the current point is different from the last point
             if (
                 lastPoint.x !== currentPoint.x ||
                 lastPoint.y !== currentPoint.y
@@ -108,8 +107,7 @@ class Canvas extends Component {
 
     stopDrawing = () => {
         if (this.state.isDrawing) {
-            clearInterval(this.captureInterval); // Stop capturing points
-            // Add the completed stroke to the strokes array
+            clearInterval(this.captureInterval);
             this.setState(() => ({
                 isDrawing: false,
             }));
@@ -152,11 +150,11 @@ class Canvas extends Component {
         this.clearCanvas();
         this.setState({
             isDrawing: false,
-            currentStrokes: [], // Clear the current stroke
+            currentStrokes: [],
             strokes: []
         });
         
-        clearInterval(this.captureInterval); // Stop capturing points
+        clearInterval(this.captureInterval);
     };
     clearCanvas = () => {
         const canvas = this.canvasRef.current;
@@ -187,10 +185,14 @@ class Canvas extends Component {
     render() {
         return (
             <div style={{ position: 'relative' }}>
-                <div className="canvas-background"></div>
-                <canvas id="canvas" ref={this.canvasRef} width={300} height={300}></canvas>
-                <div className={`popup ${this.props.showResults ? "fade-in" : "fade-out"} ${this.props.isCorrectGuess ? "correct-popup" : "incorrect-popup"}`}>
-                    {this.props.isCorrectGuess ? "Correct" : "Try Again"}
+                <canvas 
+                    className="drawing-canvas" 
+                    ref={this.canvasRef} 
+                    width={300} 
+                    height={300}
+                ></canvas>
+                <div className={`feedback-overlay ${this.props.showResults ? "show" : ""} ${this.props.isCorrectGuess ? "correct" : "incorrect"}`}>
+                    {this.props.isCorrectGuess ? "Correct!" : "Try Again"}
                 </div>
             </div>
         );

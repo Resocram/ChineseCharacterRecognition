@@ -1,12 +1,19 @@
 import ExampleWordCard from "./ExampleWordCard";
 
 export default function ExampleWords(props) {
+    if (!props.words || props.words.length === 0) return null;
+    
     return (
-        <div>
-            <h2 className="header">Example Words</h2>
+        <>
             {props.words.slice(0, Math.min(3, props.words.length)).map((word, i) => (
-                <ExampleWordCard key={i} char={props.char} exampleWordChar={word.char} pinyin={word.pinyin} definition={word.definition}/>
+                <ExampleWordCard 
+                    key={i} 
+                    char={props.char} 
+                    exampleWordChar={word.char} 
+                    pinyin={word.pinyin} 
+                    definition={word.definition}
+                />
             ))}
-        </div>
+        </>
     );
 }

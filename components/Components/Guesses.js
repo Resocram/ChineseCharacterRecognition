@@ -5,17 +5,12 @@ class Guesses extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            results: new Array(8).fill(' ')
+            results: []
         };
     }
 
     componentDidMount() {
-        // Fetch matches initially
         this.fetchMatches(this.props.strokes);
-    }
-
-    componentWillUnmount() {
-        // Cleanup or teardown logic can be placed here
     }
 
     componentDidUpdate(prevProps) {
@@ -25,20 +20,17 @@ class Guesses extends Component {
     }
 
     fetchMatches(strokes) {
-        if (strokes.length === 0 ){
-            this.setState({results:[]})
+        if (!strokes || strokes.length === 0){
+            this.setState({results: []});
+            return;
         }
         let analyzedChar = new HanziLookup.AnalyzedCharacter(strokes);
-        // Look up with original HanziLookup data
         var matcherOrig = new HanziLookup.Matcher("orig");
         matcherOrig.match(analyzedChar, 8, (matches) => {
             let first = matches.map((char) => char.character);
-            // Look up with MMAH data
             var matcherMMAH = new HanziLookup.Matcher("mmah");
             matcherMMAH.match(analyzedChar, 8, (matches) => {
                 let second = matches.map((char) => char.character);
-
-                // Call showResults with the newest first and second arrays
                 this.showResults(first, second);
             });
         });
@@ -48,33 +40,58 @@ class Guesses extends Component {
         const uniqueSet = new Set();
         let i = 0;
         let j = 0;
-            while (uniqueSet.size < 8 && (i < first.length || j < second.length)) {
+        while (uniqueSet.size < 8 && (i < first.length || j < second.length)) {
             if (i < first.length) {
                 uniqueSet.add(first[i]);
                 i++;
             }
+            if (uniqueSet.size >= 8) break;
             if (j < second.length) {
                 uniqueSet.add(second[j]);
                 j++;
             }
         }
-        this.setState({results:[...uniqueSet]});
-    
+        this.setState({results: [...uniqueSet].slice(0, 8)});
     }
     
     render() {
-        return (
-            <div>
-                <div id="recognized-characters">
-                    <h2>Recognized Characters</h2>
-                    <div className="horizontal-list">
-                        {this.state.results.map((char, index) => (
-                            <span key={index} className="chinese" onClick={() => this.props.guess(char)}>
-                                {char}
-                            </span>
-                        ))}
-                    </div>
+        const { results } = this.state;
+        const { singleRow } = this.props;
+        
+        const placeholders = Array(8).fill(null).map((_, i) => (
+            <div key={`empty-${i}`} className={`guess-item empty ${singleRow ? 'single-row' : ''}`}>?</div>
+        ));
+        
+        const guessItems = results.slice(0, 8).map((char, index) => (
+            <div 
+                key={index} 
+                className={`guess-item chinese-char ${singleRow ? 'single-row' : ''}`}
+                onClick={() => this.props.guess?.(char)}
+            >
+                {char}
+            </div>
+        ));
+        
+        const filled = [...guessItems];
+        while (filled.length < 8) {
+            filled.push(placeholders[filled.length]);
+        }
+        
+        if (singleRow) {
+            return (
+                <div style={{ 
+                    display: 'flex', 
+                    gap: '4px', 
+                    width: '100%'
+                }}>
+                    {filled}
                 </div>
+            );
+        }
+        
+        return (
+            <div className="guesses-grid">
+                {filled}
             </div>
         );
     }

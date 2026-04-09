@@ -1,4 +1,4 @@
-import { Box, Slider } from "@mui/material";
+import Slider from "@mui/material/Slider";
 
 const MIN_DISTANCE = 1;
 
@@ -17,25 +17,30 @@ export default function DifficultySetter(props) {
 
     return (
         <div>
-            <Box
-                component="form"
+            <Slider
+                value={props.difficulty}
+                onChange={handleChange}
+                valueLabelDisplay="auto"
+                disableSwap
+                step={10}
+                min={0}
+                max={2500}
                 sx={{
-                    '& .MuiTextField-root': { m: 1, width: '25ch' },
+                    color: 'var(--accent-primary)',
+                    '& .MuiSlider-thumb': {
+                        backgroundColor: 'var(--accent-primary)',
+                    },
+                    '& .MuiSlider-track': {
+                        backgroundColor: 'var(--accent-primary)',
+                    },
+                    '& .MuiSlider-rail': {
+                        backgroundColor: 'var(--border-color)',
+                    },
                 }}
-                noValidate
-                autoComplete="off"
-            >
-                <Slider
-                    value={props.difficulty}
-                    onChange={handleChange}
-                    valueLabelDisplay="on"
-                    disableSwap
-                    step={10}
-                    min={0}
-                    max={2500}
-                />
-                
-            </Box>
+            />
+            <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '8px', fontSize: '13px', color: 'var(--text-muted)' }}>
+                <span>Character range: {props.difficulty[0]} - {props.difficulty[1]}</span>
+            </div>
         </div>
     );
 }

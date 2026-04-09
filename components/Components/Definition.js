@@ -1,8 +1,8 @@
 export default function Definition(props) {
     return (
-        <div>
-            <h2 className="header">Definition</h2>
-            <p>{props.definition}</p>
+        <div className="hint-item">
+            <div className="label">Definition</div>
+            <div className="definition">{props.definition}</div>
         </div>
     );
 }
