@@ -194,7 +194,7 @@ class RoomIdPage extends Component {
   };
 
   handlePlayAgain = () => {
-    window.location.href = '/';
+    window.location.href = window.location.origin + window.location.pathname;
   };
 
   setDifficulty = (newDifficulty) => {
