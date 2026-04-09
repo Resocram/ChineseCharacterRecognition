@@ -6,13 +6,12 @@ export default function ExampleWordCard(props) {
         tradAnswer = answers[answers.indexOf("(") + 1]
     }
     
-    const highlightedWord = props.exampleWordChar;
-    const def = props.definition;
+    const def = props.definition.replace(simpAnswer, "__").replace(tradAnswer, "__");
     
     return (
         <div className="example-word">
-            <span className="char">{highlightedWord}</span>
-            <span className="def">{props.pinyin}</span>
+            <span className="char">{props.exampleWordChar.replace(simpAnswer, "__").replace(tradAnswer, "__")}</span>
+            <span className="def">{props.pinyin} {def}</span>
         </div>
     );
 }

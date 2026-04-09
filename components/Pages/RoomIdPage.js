@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import SettingsModal from "../Components/SettingsModal";
 
 import Multiplayer_Game from "./Multiplayer_Game"
+import GameOver from "./GameOver"
 import Cookies from 'js-cookie';
 
 const { v4: uuidv4 } = require('uuid');
@@ -26,11 +27,13 @@ class RoomIdPage extends Component {
       ws: null,
       position: 0,
       gameState: Cookies.get(`gameState_${props.roomId}`) || PRE_LOBBY,
-      difficulty: [0, 10],
+      difficulty: [0, 1000],
       problems: [],
       sessionMap: {},
       round: 0,
-      prevAnswers: []
+      prevAnswers: [],
+      showSettings: false,
+      skipVotes: { skipped: 0, total: 0 }
     };
   }
 
@@ -81,15 +84,20 @@ class RoomIdPage extends Component {
           this.setState((prevState) => ({ 
             sessionMap: JSON.parse(data.sessions), 
             gameState: GAME_OVER,
+            skipVotes: { skipped: 0, total: 0 }
           }));
         } else {
           this.setState((prevState) => ({ 
             sessionMap: JSON.parse(data.sessions), 
             round: data.round,
-            prevAnswers: [...prevState.prevAnswers, { answer: this.state.problems[(prevState.round - 1)], colour:  data.correct_player ? data.correct_player.colour : null }]
+            prevAnswers: [...prevState.prevAnswers, { answer: this.state.problems[(prevState.round - 1)], colour:  data.correct_player ? data.correct_player.colour : null }],
+            skipVotes: { skipped: 0, total: 0 }
           }));
         }
 
+      }
+      else if (data.type === 'update_skip_votes') {
+        this.setState({ skipVotes: { skipped: data.skippedCount, total: data.totalCount } });
       }
 
 
@@ -185,15 +193,27 @@ class RoomIdPage extends Component {
 
   };
 
+  handlePlayAgain = () => {
+    window.location.href = '/';
+  };
+
   setDifficulty = (newDifficulty) => {
     this.setState({
       difficulty: newDifficulty,
     })
   }
 
+  openSettings = () => {
+    this.setState({ showSettings: true });
+  }
+
+  closeSettings = () => {
+    this.setState({ showSettings: false });
+  }
+
   resetButton = () => {
     this.setState(() => ({
-      difficulty: [0, 1000],
+      difficulty: [0, 2500],
     }));
   }
 
@@ -206,32 +226,80 @@ class RoomIdPage extends Component {
         return <h1>Room doesn't exist</h1>
       case LOBBY:
         return (
-          <div>
-            <h1>Room Page</h1>
-            <p>Room ID: {roomId}</p>
+          <div className="lobby-container">
+            <header className="lobby-header">
+              <h1>Multiplayer Lobby</h1>
+              <p>Wait for the host to start the game</p>
+            </header>
 
-            <h2>Players:</h2>
-            <ul>
-              {Object.entries(sessionMap).map(([sessionId, player], index) => (
-                <li key={sessionId} style={{ 
-                  fontWeight: index === position ? 'bold' : 'normal',
-                  color: player.colour
-                  }}>
-                  {player.username}
-                </li>
-              ))}
-            </ul>
+            <div className="lobby-room-id">
+              <div className="label">Room Code</div>
+              <div className="room-code">{roomId}</div>
+            </div>
 
-            <button className="button" onClick={this.updateUsername}>Change Username</button>
-            <button className="button" onClick={this.handleCopyClick}>Copy URL</button>
-            <button className="button" onClick={this.startGame} disabled={position !== 0}>Start Game</button>
-            {position === 0 && <SettingsModal setDifficulty={this.setDifficulty} difficulty={this.state.difficulty} onReset={this.resetButton} />}
+            <div className="lobby-card">
+              <div className="lobby-card-title">Players ({Object.keys(sessionMap).length})</div>
+              <div className="lobby-players">
+                {Object.entries(sessionMap).map(([sessionId, player], index) => (
+                  <div key={sessionId} className={`lobby-player ${index === position ? 'current' : ''}`}>
+                    <div className="lobby-player-color" style={{ backgroundColor: player.colour }}></div>
+                    <span className="lobby-player-name">{player.username}</span>
+                    {index === 0 && <span className="lobby-player-host">Host</span>}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {position === 0 && (
+              <div className="lobby-card">
+                <div className="lobby-card-title">Difficulty Settings</div>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                  <div>
+                    <div style={{ fontSize: '13px', color: 'var(--text-muted)', marginBottom: '4px' }}>Character Range</div>
+                    <div style={{ fontSize: '16px', color: 'var(--accent-secondary)' }}>
+                      {this.state.difficulty[0]} - {this.state.difficulty[1]}
+                    </div>
+                  </div>
+                  <button className="settings-btn" onClick={this.openSettings}>
+                    Adjust
+                  </button>
+                </div>
+                <div style={{ marginTop: '12px' }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '11px', color: 'var(--text-muted)' }}>
+                    <span>Beginner (0-500)</span>
+                    <span>Advanced (2000+)</span>
+                  </div>
+                </div>
+                <SettingsModal 
+                  show={this.state.showSettings}
+                  onClose={this.closeSettings}
+                  setDifficulty={this.setDifficulty} 
+                  difficulty={this.state.difficulty} 
+                  onReset={this.resetButton}
+                  onApply={() => {}}
+                />
+              </div>
+            )}
+
+            <div className="lobby-actions">
+              <button className="lobby-btn secondary" onClick={this.handleCopyClick}>Copy Room Link</button>
+              <button className="lobby-btn secondary" onClick={this.updateUsername}>Change Username</button>
+              {position === 0 && (
+                <>
+                  <button className="lobby-btn primary" onClick={this.startGame}>Start Game</button>
+                </>
+              )}
+              {position !== 0 && (
+                <div className="lobby-waiting">Waiting for host to start the game...</div>
+              )}
+            </div>
           </div>
         );
       case PLAY:
-        return <Multiplayer_Game problems={problems} username={username} sessionMap={sessionMap} sessionId={sessionId} round={round} prevAnswers = {prevAnswers} sendStrokes={this.sendStrokes} correctGuess={this.correctGuess} voteNext={this.voteNext} />
+        return <Multiplayer_Game problems={problems} username={username} sessionMap={sessionMap} sessionId={sessionId} round={round} prevAnswers = {prevAnswers} sendStrokes={this.sendStrokes} correctGuess={this.correctGuess} voteNext={this.voteNext} skipVotes={this.state.skipVotes} />
       case GAME_OVER:
-        return <div>Game Over</div>
+        const sessionMapWithMyId = { ...sessionMap, mySessionId: sessionId };
+        return <GameOver sessionMap={sessionMapWithMyId} onPlayAgain={this.handlePlayAgain} />
       default:
         return <h1>Room doesn't exist</h1>
     }

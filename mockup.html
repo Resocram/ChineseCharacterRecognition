@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multiplayer Race - Mockup</title>
+  <style>
+    :root {
+      --bg-primary: #0f172a;
+      --bg-secondary: #1e293b;
+      --bg-card: #334155;
+      --bg-canvas: #fafafa;
+      --text-primary: #f8fafc;
+      --text-secondary: #94a3b8;
+      --text-muted: #64748b;
+      --accent-primary: #6366f1;
+      --accent-secondary: #818cf8;
+      --accent-success: #22c55e;
+      --accent-error: #ef4444;
+      --accent-warning: #f59e0b;
+      --border-color: #475569;
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      padding: 20px;
+    }
+    .container { max-width: 1200px; margin: 0 auto; }
+    
+    /* Header */
+    h1 { font-size: 28px; font-weight: 700; background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 8px; }
+    .subtitle { color: var(--text-secondary); font-size: 14px; margin-bottom: 24px; }
+    
+    /* Score Bar */
+    .score-bar {
+      display: flex;
+      gap: 24px;
+      padding: 16px 24px;
+      background: var(--bg-secondary);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-color);
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+    .score-item { display: flex; align-items: center; gap: 8px; }
+    .score-item .label { color: var(--text-muted); font-size: 13px; text-transform: uppercase; }
+    .score-item .value { font-size: 20px; font-weight: 700; color: var(--accent-primary); }
+    .score-divider { width: 1px; height: 32px; background: var(--border-color); }
+    .player-score { display: flex; align-items: center; gap: 8px; padding: 8px 16px; background: var(--bg-card); border-radius: var(--radius-md); }
+    .player-score .dot { width: 10px; height: 10px; border-radius: 50%; }
+    .player-score .name { font-size: 14px; }
+    .player-score .score { font-size: 18px; font-weight: 700; color: var(--accent-secondary); margin-left: auto; }
+    
+    /* Hint Card */
+    .hint-card {
+      background: var(--bg-secondary);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      border: 1px solid var(--border-color);
+      margin-bottom: 24px;
+    }
+    .hint-label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      display: block;
+    }
+    .hint-content { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .hint-item { padding: 16px; background: var(--bg-card); border-radius: var(--radius-md); }
+    .hint-item .label { font-size: 11px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 6px; display: block; }
+    .hint-item .pinyin { font-size: 20px; font-weight: 500; color: var(--accent-secondary); }
+    .hint-item .definition { font-size: 15px; color: var(--text-primary); }
+    .example-words { grid-column: 1 / -1; padding-top: 16px; border-top: 1px solid var(--border-color); }
+    .example-words .label { font-size: 11px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 12px; display: block; }
+    .example-word-list { display: flex; flex-wrap: wrap; gap: 8px; }
+    .example-word { padding: 8px 16px; background: var(--bg-card); border-radius: var(--radius-sm); display: flex; gap: 8px; font-size: 14px; }
+    .example-word .char { font-size: 18px; }
+    .example-word .def { color: var(--text-muted); font-size: 12px; }
+    
+    /* All Canvases Container */
+    .all-canvases-container {
+      display: flex;
+      gap: 16px;
+      padding: 8px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+    .canvas-section {
+      flex-shrink: 0;
+      background: var(--bg-secondary);
+      border-radius: var(--radius-lg);
+      padding: 16px;
+      border: 1px solid var(--border-color);
+    }
+    .canvas-section.your-canvas { 
+      width: 340px; 
+      flex-shrink: 0;
+    }
+    .canvas-section.opponent-canvas { 
+      flex: 1; 
+      min-width: 180px;
+      max-width: 250px;
+    }
+    .canvas-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+    .canvas-title {
+      font-size: 14px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .canvas-title .dot { width: 10px; height: 10px; border-radius: 50%; }
+    .canvas-actions { display: flex; gap: 8px; }
+    .canvas-btn {
+      width: 32px; height: 32px;
+      border: none; border-radius: var(--radius-sm);
+      background: var(--bg-card); color: var(--text-secondary);
+      cursor: pointer; display: flex; align-items: center; justify-content: center;
+    }
+    .action-btn.skip {
+      padding: 8px 16px; border: none; border-radius: var(--radius-sm);
+      font-size: 13px; font-weight: 600; cursor: pointer;
+      background: var(--bg-card); color: var(--text-primary);
+    }
+    .canvas-wrapper {
+      position: relative;
+      background: var(--bg-canvas);
+      border-radius: var(--radius-md);
+      padding: 12px;
+    }
+    .drawing-canvas {
+      width: 100%;
+      aspect-ratio: 1;
+      display: block;
+      border-radius: var(--radius-sm);
+      border: 2px dashed var(--border-color);
+      background: white;
+    }
+    .canvas-hint {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 12px;
+      margin-top: 8px;
+    }
+    
+    /* Recognized/Guesses */
+    .guesses-section {
+      background: var(--bg-secondary);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      border: 1px solid var(--border-color);
+      margin-bottom: 24px;
+    }
+    .guesses-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+    .guesses-title { font-size: 14px; font-weight: 600; }
+    .guesses-hint { font-size: 12px; color: var(--text-muted); }
+    .guesses-grid {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      gap: 10px;
+    }
+    .guess-item {
+      padding: 16px;
+      background: var(--bg-card);
+      border-radius: var(--radius-md);
+      text-align: center;
+      font-size: 32px;
+      font-family: 'Noto Sans SC', sans-serif;
+      cursor: pointer;
+    }
+    .guess-item:hover { background: var(--accent-primary); }
+    .guess-item.empty { color: var(--text-muted); font-size: 20px; }
+    
+    /* History */
+    .history-section {
+      background: var(--bg-secondary);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      border: 1px solid var(--border-color);
+    }
+    .history-header { margin-bottom: 16px; }
+    .history-title { font-size: 14px; font-weight: 600; }
+    .history-list { display: flex; flex-wrap: wrap; gap: 10px; }
+    .history-item {
+      display: flex; align-items: center; gap: 8px;
+      padding: 12px 16px;
+      background: var(--bg-card);
+      border-radius: var(--radius-md);
+    }
+    .history-char { font-size: 24px; font-family: 'Noto Sans SC', sans-serif; }
+    .history-info { display: flex; flex-direction: column; }
+    .history-pinyin { font-size: 13px; color: var(--accent-secondary); }
+    .history-def { font-size: 13px; color: var(--text-secondary); margin-top: 2px; }
+    .history-status { width: 10px; height: 10px; border-radius: 50%; margin-left: 8px; }
+    .history-status.correct { background: var(--accent-success); }
+    .history-status.incorrect { background: var(--accent-error); }
+    .history-player { font-size: 11px; color: var(--text-muted); margin-left: 4px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Multiplayer Race</h1>
+    <p class="subtitle">Race to draw the correct character first!</p>
+
+    <!-- Round & Scores -->
+    <div class="score-bar">
+      <div class="score-item">
+        <span class="label">Round</span>
+        <span class="value">3/10</span>
+      </div>
+      <div class="score-divider"></div>
+      <div class="player-score">
+        <span class="dot" style="background: #52d017;"></span>
+        <span class="name">You</span>
+        <span class="score">2</span>
+      </div>
+      <div class="player-score">
+        <span class="dot" style="background: #ef4444;"></span>
+        <span class="name">Bob</span>
+        <span class="score">1</span>
+      </div>
+      <div class="player-score">
+        <span class="dot" style="background: #3b82f6;"></span>
+        <span class="name">Alice</span>
+        <span class="score">2</span>
+      </div>
+      <div class="player-score">
+        <span class="dot" style="background: #f59e0b;"></span>
+        <span class="name">John</span>
+        <span class="score">0</span>
+      </div>
+    </div>
+
+    <!-- Character Hints -->
+    <div class="hint-card">
+    <span class="hint-label">Character Hints</span>
+    <div class="hint-content">
+      <div class="hint-item">
+        <span class="label">Pinyin</span>
+        <span class="pinyin">zhōng</span>
+      </div>
+      <div class="hint-item">
+        <span class="label">Definition</span>
+        <span class="definition">middle, center, China</span>
+      </div>
+      <div class="example-words">
+        <span class="label">Example Words</span>
+        <div class="example-word-list">
+          <div class="example-word">
+            <span class="char">国</span>
+            <span class="def">guó</span>
+          </div>
+          <div class="example-word">
+            <span class="char">间</span>
+            <span class="def">jiān</span>
+          </div>
+          <div class="example-word">
+            <span class="char">心</span>
+            <span class="def">xīn</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <!-- Drawing Stage -->
+    <div class="all-canvases-container">
+      <!-- Your Canvas -->
+      <div class="canvas-section your-canvas">
+        <div class="canvas-header">
+          <span class="canvas-title">You</span>
+          <div class="canvas-actions">
+            <button class="canvas-btn">↩</button>
+            <button class="canvas-btn">🗑</button>
+            <button class="action-btn skip">Skip</button>
+          </div>
+        </div>
+        <div class="canvas-wrapper">
+          <canvas class="drawing-canvas" width="300" height="300" style="border: 2px dashed #cbd5e1; border-radius: 8px;"></canvas>
+        </div>
+      </div>
+
+      <!-- Opponent 1 -->
+      <div class="canvas-section opponent-canvas">
+        <div class="canvas-header">
+          <span class="canvas-title">
+            <span class="dot" style="background: #ef4444;"></span>
+            Bob
+          </span>
+        </div>
+        <div class="canvas-wrapper">
+          <canvas class="drawing-canvas" width="240" height="240" style="border: 2px dashed #cbd5e1; border-radius: 8px;"></canvas>
+        </div>
+      </div>
+
+      <!-- Opponent 2 -->
+      <div class="canvas-section opponent-canvas">
+        <div class="canvas-header">
+          <span class="canvas-title">
+            <span class="dot" style="background: #3b82f6;"></span>
+            Alice
+          </span>
+        </div>
+        <div class="canvas-wrapper">
+          <canvas class="drawing-canvas" width="240" height="240" style="border: 2px dashed #cbd5e1; border-radius: 8px;"></canvas>
+        </div>
+      </div>
+
+      <!-- Opponent 3 -->
+      <div class="canvas-section opponent-canvas">
+        <div class="canvas-header">
+          <span class="canvas-title">
+            <span class="dot" style="background: #f59e0b;"></span>
+            John
+          </span>
+        </div>
+        <div class="canvas-wrapper">
+          <canvas class="drawing-canvas" width="240" height="240" style="border: 2px dashed #cbd5e1; border-radius: 8px;"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <!-- Recognized Characters -->
+    <div class="guesses-section">
+      <div class="guesses-header">
+        <span class="guesses-title">Recognized</span>
+        <span class="guesses-hint">Tap to guess</span>
+      </div>
+      <div class="guesses-grid">
+        <div class="guess-item">中</div>
+        <div class="guess-item">国</div>
+        <div class="guess-item">申</div>
+        <div class="guess-item">甲</div>
+        <div class="guess-item">由</div>
+        <div class="guess-item">田</div>
+        <div class="guess-item empty">?</div>
+        <div class="guess-item empty">?</div>
+      </div>
+    </div>
+
+    <!-- History -->
+    <div class="history-section">
+      <div class="history-header">
+        <span class="history-title">Recent Answers</span>
+      </div>
+      <div class="history-list">
+        <div class="history-item">
+          <span class="history-char">水</span>
+          <div class="history-info">
+            <span class="history-pinyin">shuǐ</span>
+            <span class="history-def">water</span>
+          </div>
+          <span class="history-status correct"></span>
+          <span class="history-player" style="color: #52d017;">You</span>
+        </div>
+        <div class="history-item">
+          <span class="history-char">火</span>
+          <div class="history-info">
+            <span class="history-pinyin">huǒ</span>
+            <span class="history-def">fire</span>
+          </div>
+          <span class="history-status correct"></span>
+          <span class="history-player" style="color: #3b82f6;">Alice</span>
+        </div>
+        <div class="history-item">
+          <span class="history-char">土</span>
+          <div class="history-info">
+            <span class="history-pinyin">tǔ</span>
+            <span class="history-def">earth</span>
+          </div>
+          <span class="history-status incorrect"></span>
+          <span class="history-player" style="color: #ef4444;">Bob</span>
+        </div>
+        <div class="history-item">
+          <span class="history-char">金</span>
+          <div class="history-info">
+            <span class="history-pinyin">jīn</span>
+            <span class="history-def">gold</span>
+          </div>
+          <span class="history-status correct"></span>
+          <span class="history-player" style="color: #52d017;">You</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
