@@ -154,7 +154,9 @@ class Multiplayer_Game extends Component {
     const otherPlayers = Object.entries(sessionMap)
       .filter(([sessionId]) => sessionId !== this.sessionId)
       .map(([sessionId, playerMap]) => ({ sessionId, ...playerMap }));
-    
+    if (!currentProblem || !sessionMap) {
+      return "Loading...";
+    }
     return (
       <div className="multiplayer-container">
         <header className="header">

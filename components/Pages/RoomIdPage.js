@@ -26,7 +26,7 @@ class RoomIdPage extends Component {
       sessionId: Cookies.get('sessionId') || '',
       ws: null,
       position: 0,
-      gameState: Cookies.get(`gameState_${props.roomId}`) || PRE_LOBBY,
+      gameState: PRE_LOBBY,
       difficulty: [0, 1000],
       problems: [],
       sessionMap: {},
@@ -38,28 +38,17 @@ class RoomIdPage extends Component {
   }
 
   async componentDidMount() {
-    const response = await fetch(`${HTTPS_BACKEND_URL}/api/check-room/${this.state.roomId}`);
-    const data = await response.json();
-    if (data.exists) {
-      if (this.state.sessionId === '') {
-        const sessionId = uuidv4()
-        this.setState({ sessionId: sessionId }, () => {
-          this.initializeWebSocket()
-        })
-        Cookies.set('sessionId', sessionId)
-      } else {
-        this.initializeWebSocket()
-      }
-      if (this.state.gameState === PRE_LOBBY) {
-        this.setState({ gameState: LOBBY })
-        Cookies.set(`gameState_${this.state.roomId}`, LOBBY)
-      }
 
-
+    let sessionId = Cookies.get('sessionId');
+    if (!sessionId) {
+      sessionId = uuidv4();
+      Cookies.set('sessionId', sessionId)
     }
+    this.setState({ sessionId: sessionId })
+    this.initializeWebSocket()
   }
   initializeWebSocket() {
-    const ws = new WebSocket(`${WSS_BACKEND_URL}/${this.state.roomId}/${this.state.sessionId}`);
+    const ws = new WebSocket(`${WSS_BACKEND_URL}/${this.state.roomId}/${Cookies.get('sessionId')}`);
     ws.onmessage = (event) => {
       const data = JSON.parse(event.data);
       if (data.type === 'update_players') {
@@ -98,9 +87,16 @@ class RoomIdPage extends Component {
       }
       else if (data.type === 'update_skip_votes') {
         this.setState({ skipVotes: { skipped: data.skippedCount, total: data.totalCount } });
+      } else if (data.type === 'init_state') {
+        this.setState({
+          difficulty: [data.game.difficultyStart, data.game.difficultyEnd],
+          sessionMap: data.game.sessions,
+          round: data.game.round,
+          problems: data.game.problems,
+          gameState: data.game.state,
+          position: data.position
+        });
       }
-
-
     };
 
     ws.onopen = () => {
