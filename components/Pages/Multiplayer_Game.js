@@ -204,6 +204,14 @@ class Multiplayer_Game extends Component {
           </div>
         </div>
 
+        <div className="guesses-section">
+          <div className="guesses-header">
+            <span className="guesses-title">Recognized</span>
+            <span className="guesses-hint">Tap to guess</span>
+          </div>
+          <Guesses strokes={strokes} guess={this.guess} singleRow={true} />
+        </div>
+
         <div className="all-canvases-container">
           <div className="canvas-section your-canvas">
             <div className="canvas-header">
@@ -252,14 +260,6 @@ class Multiplayer_Game extends Component {
         <button className="multiplayer-skip-btn" onClick={this.nextButton}>
           Skip {skipVotes.total > 0 ? `(${skipVotes.skipped}/${skipVotes.total})` : ''}
         </button>  
-        
-        <div className="guesses-section">
-          <div className="guesses-header">
-            <span className="guesses-title">Recognized</span>
-            <span className="guesses-hint">Tap to guess</span>
-          </div>
-          <Guesses strokes={strokes} guess={this.guess} singleRow={true} />
-        </div>
 
         <div className="history-section">
           <div className="history-header">
