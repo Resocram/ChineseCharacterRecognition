@@ -10,8 +10,12 @@ const PRE_LOBBY = "PRE_LOBBY";
 const LOBBY = "LOBBY";
 const PLAY = "PLAY";
 const GAME_OVER = "GAME_OVER"
-const WSS_BACKEND_URL = "wss://chinese-server-0947b7b24ff4.herokuapp.com"
-const HTTPS_BACKEND_URL = "https://chinese-server-0947b7b24ff4.herokuapp.com"
+
+const WSS_BACKEND_URL = "wss://chinesecharacterrecognitionbackend.onrender.com"
+const HTTPS_BACKEND_URL = "https://chinesecharacterrecognitionbackend.onrender.com"
+
+// const WSS_BACKEND_URL = "wss://chinese-server-0947b7b24ff4.herokuapp.com"
+// const HTTPS_BACKEND_URL = "https://chinese-server-0947b7b24ff4.herokuapp.com"
 
 // const WSS_BACKEND_URL = "ws://localhost:5000"
 // const HTTPS_BACKEND_URL = "http://localhost:5000"
