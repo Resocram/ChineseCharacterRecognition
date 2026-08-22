@@ -1618,6 +1618,21 @@ a:hover {
   cursor: not-allowed;
 }
 
+.username-input {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 16px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  background: var(--bg-card);
+  color: var(--text-primary);
+}
+
+.username-input:focus {
+  outline: none;
+  border-color: var(--accent-secondary);
+}
+
 .loading-spinner {
   margin-top: 24px;
   display: flex;

@@ -1,24 +1,21 @@
 import React, { Component } from "react";
 import SettingsModal from "../Components/SettingsModal";
+import UsernameModal from "../Components/UsernameModal";
 
 import Multiplayer_Game from "./Multiplayer_Game"
 import GameOver from "./GameOver"
 import Cookies from 'js-cookie';
 
 const { v4: uuidv4 } = require('uuid');
-const PRE_LOBBY = "PRE_LOBBY";
+const JOIN_USERNAME = "JOIN_USERNAME";
+const CONNECTING = "CONNECTING";
 const LOBBY = "LOBBY";
 const PLAY = "PLAY";
 const GAME_OVER = "GAME_OVER"
 
-const WSS_BACKEND_URL = "wss://chinesecharacterrecognitionbackend.onrender.com"
-const HTTPS_BACKEND_URL = "https://chinesecharacterrecognitionbackend.onrender.com"
-
-// const WSS_BACKEND_URL = "wss://chinese-server-0947b7b24ff4.herokuapp.com"
-// const HTTPS_BACKEND_URL = "https://chinese-server-0947b7b24ff4.herokuapp.com"
-
-// const WSS_BACKEND_URL = "ws://localhost:5000"
-// const HTTPS_BACKEND_URL = "http://localhost:5000"
+// Falls back to the deployed backend; override locally via .env.local (see README).
+const WSS_BACKEND_URL = process.env.NEXT_PUBLIC_WSS_URL || "wss://chinesecharacterrecognitionbackend.onrender.com"
+const HTTPS_BACKEND_URL = process.env.NEXT_PUBLIC_HTTPS_URL || "https://chinesecharacterrecognitionbackend.onrender.com"
 
 
 class RoomIdPage extends Component {
@@ -30,13 +27,14 @@ class RoomIdPage extends Component {
       sessionId: Cookies.get('sessionId') || '',
       ws: null,
       position: 0,
-      gameState: PRE_LOBBY,
+      gameState: Cookies.get('username') ? CONNECTING : JOIN_USERNAME,
       difficulty: [0, 1000],
       problems: [],
       sessionMap: {},
       round: 0,
       prevAnswers: [],
       showSettings: false,
+      showUsernameEdit: false,
       skipVotes: { skipped: 0, total: 0 }
     };
   }
@@ -49,9 +47,23 @@ class RoomIdPage extends Component {
       Cookies.set('sessionId', sessionId)
     }
     this.setState({ sessionId: sessionId })
-    this.initializeWebSocket()
+
+    // Non-interactive clients (e.g. link-preview crawlers) won't fill in the
+    // username form, so they never open a socket / register a "ghost" session.
+    const username = Cookies.get('username');
+    if (username) {
+      this.setState({ username: username })
+      this.initializeWebSocket(username)
+    }
   }
-  initializeWebSocket() {
+
+  handleUsernameJoin = (username) => {
+    Cookies.set('username', username)
+    this.setState({ username: username, gameState: CONNECTING })
+    this.initializeWebSocket(username)
+  }
+
+  initializeWebSocket(username) {
     const ws = new WebSocket(`${WSS_BACKEND_URL}/${this.state.roomId}/${Cookies.get('sessionId')}`);
     ws.onmessage = (event) => {
       const data = JSON.parse(event.data);
@@ -104,14 +116,6 @@ class RoomIdPage extends Component {
     };
 
     ws.onopen = () => {
-      let username = this.state.username;
-      if (!username) {
-        while (!username || username.trim() === '') {
-          username = prompt('Enter your username:');
-        }
-        this.setState({ username: username })
-        Cookies.set('username', username)
-      }
       this.updatePlayer(username)
     }
     this.setState({ ws: ws })
@@ -165,19 +169,17 @@ class RoomIdPage extends Component {
   }
 
   updateUsername = () => {
-    let newUsername = ''
-    while (newUsername.trim() === '') {
-      newUsername = prompt('Enter your username:');
-      if (newUsername === null) {
-        break;
-      }
-    }
-    // If they click the cancel button
-    if (newUsername !== null) {
-      Cookies.set('username', newUsername);
-      this.updatePlayer(newUsername)
-    }
+    this.setState({ showUsernameEdit: true });
+  };
 
+  handleUsernameEdit = (newUsername) => {
+    Cookies.set('username', newUsername);
+    this.setState({ username: newUsername, showUsernameEdit: false });
+    this.updatePlayer(newUsername)
+  };
+
+  closeUsernameEdit = () => {
+    this.setState({ showUsernameEdit: false });
   };
 
   handleCopyClick = () => {
@@ -222,8 +224,27 @@ class RoomIdPage extends Component {
   render() {
     const { gameState, roomId, problems, username, sessionMap, position, round, sessionId, prevAnswers } = this.state;
     switch (gameState) {
-      case PRE_LOBBY:
-        return <h1>Room doesn't exist</h1>
+      case JOIN_USERNAME:
+        return (
+          <UsernameModal
+            show
+            standalone
+            initialValue={username}
+            onSubmit={this.handleUsernameJoin}
+          />
+        );
+      case CONNECTING:
+        return (
+          <div className="loading-container">
+            <div className="loading-card">
+              <h1>Joining Room</h1>
+              <div className="loading-spinner">
+                <div className="spinner"></div>
+                <p>Connecting to the room...</p>
+              </div>
+            </div>
+          </div>
+        );
       case LOBBY:
         return (
           <div className="lobby-container">
@@ -238,9 +259,12 @@ class RoomIdPage extends Component {
             </div>
 
             <div className="lobby-card">
-              <div className="lobby-card-title">Players ({Object.keys(sessionMap).length})</div>
+              <div className="lobby-card-title">Players ({Object.values(sessionMap).filter(p => p.username).length})</div>
               <div className="lobby-players">
-                {Object.entries(sessionMap).map(([sessionId, player], index) => (
+                {Object.entries(sessionMap)
+                  .map(([sessionId, player], index) => ({ sessionId, player, index }))
+                  .filter(({ player }) => player.username)
+                  .map(({ sessionId, player, index }) => (
                   <div key={sessionId} className={`lobby-player ${index === position ? 'current' : ''}`}>
                     <div className="lobby-player-color" style={{ backgroundColor: player.colour }}></div>
                     <span className="lobby-player-name">{player.username}</span>
@@ -293,6 +317,12 @@ class RoomIdPage extends Component {
                 <div className="lobby-waiting">Waiting for host to start the game...</div>
               )}
             </div>
+            <UsernameModal
+              show={this.state.showUsernameEdit}
+              initialValue={username}
+              onSubmit={this.handleUsernameEdit}
+              onCancel={this.closeUsernameEdit}
+            />
           </div>
         );
       case PLAY:
@@ -301,7 +331,13 @@ class RoomIdPage extends Component {
         const sessionMapWithMyId = { ...sessionMap, mySessionId: sessionId };
         return <GameOver sessionMap={sessionMapWithMyId} onPlayAgain={this.handlePlayAgain} />
       default:
-        return <h1>Room doesn't exist</h1>
+        return (
+          <div className="loading-container">
+            <div className="loading-card">
+              <h1>Room doesn't exist</h1>
+            </div>
+          </div>
+        );
     }
 
 

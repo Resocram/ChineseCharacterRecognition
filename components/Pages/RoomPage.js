@@ -1,7 +1,6 @@
 import React from 'react';
-const BACKEND_URL = "https://chinesecharacterrecognitionbackend.onrender.com"
-// const BACKEND_URL = "https://chinese-server-0947b7b24ff4.herokuapp.com"
-// const BACKEND_URL = "http://localhost:5000"
+// Falls back to the deployed backend; override locally via .env.local (see README).
+const BACKEND_URL = process.env.NEXT_PUBLIC_HTTPS_URL || "https://chinesecharacterrecognitionbackend.onrender.com"
 class RoomPage extends React.Component {
   constructor(props) {
     super(props);
