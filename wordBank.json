@@ -2119,8 +2119,8 @@
     },
     {
        "pinyin":"hòu",
-       "char":"后",
-       "definition":"queen, empress, sovereign; (simp. for 後) behind, rear, after",
+       "char":"后(後)",
+      "definition":"queen, empress, sovereign; behind, rear, after",
        "charForm":[
           {
              "char":"口",
@@ -15296,7 +15296,7 @@
     {
        "pinyin":"yùn",
        "char":"运(運)",
-       "definition":"run; simplified form of 運 luck, fortune; ship, transport",
+      "definition":"run; luck, fortune; ship, transport",
        "charForm":[
           {
              "char":"辶",
