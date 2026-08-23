@@ -540,7 +540,40 @@ a:hover {
 .modal-char {
   font-size: 120px;
   font-family: 'Noto Sans SC', sans-serif;
-  margin-bottom: 16px;
+}
+
+.modal-char-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.char-variant-arrow {
+  background: var(--bg-card);
+  color: var(--accent-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.char-variant-arrow:hover {
+  background: var(--accent-primary);
+  color: white;
+}
+
+.char-variant-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-muted);
+  margin-bottom: 12px;
 }
 
 .modal-pinyin {

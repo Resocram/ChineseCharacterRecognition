@@ -1,9 +1,23 @@
-import React, { useEffect, useRef, forwardRef, useImperativeHandle } from 'react';
+import React, { useEffect, useRef, useState, forwardRef, useImperativeHandle } from 'react';
 import CharacterFormation from "../Components/CharacterFormation";
 import HanziWriter from 'hanzi-writer';
 
+// wordBank char field format: "simplified(traditional)" or "simplified(Afinancial,traditional)"
+
+function parseCharVariants(rawChar) {
+  const match = rawChar.match(/^([^(]+)(?:\(([^)]+)\))?/);
+  const simplified = match ? match[1].charAt(0) : rawChar.charAt(0);
+  const parenContent = match && match[2] ? match[2] : '';
+  const traditional = parenContent
+    .split(',')
+    .map((s) => s.trim())
+    .find((s) => s && !s.startsWith('A')) || '';
+  return { simplified, traditional };
+}
+
 const CharPreview = forwardRef(({ showPreview, char, onHide }, ref) => {
   const modalWriterRef = useRef(null);
+  const [showTraditional, setShowTraditional] = useState(false);
 
   const clearModal = () => {
     modalWriterRef.current = null;
@@ -25,9 +39,19 @@ const CharPreview = forwardRef(({ showPreview, char, onHide }, ref) => {
     }
   }));
 
+  // Reset back to the simplified form whenever a different character is opened
+  useEffect(() => {
+    setShowTraditional(false);
+  }, [char]);
+
+  const { simplified: simplifiedChar, traditional: traditionalChar } = char
+    ? parseCharVariants(char.answer.char)
+    : { simplified: '', traditional: '' };
+  const hasTraditionalVariant = !!traditionalChar && traditionalChar !== simplifiedChar;
+
   useEffect(() => {
     if (showPreview && char) {
-      const charToShow = char.answer.char.charAt(0);
+      const charToShow = showTraditional && hasTraditionalVariant ? traditionalChar : simplifiedChar;
       const modalEl = document.getElementById('char-preview-modal');
       
       if (modalEl) {
@@ -46,14 +70,34 @@ const CharPreview = forwardRef(({ showPreview, char, onHide }, ref) => {
         }
       }
     }
-  }, [showPreview, char]);
+  }, [showPreview, char, showTraditional]);
+
+  const toggleVariant = () => {
+    if (hasTraditionalVariant) {
+      setShowTraditional((prev) => !prev);
+    }
+  };
 
   return (
     <div className={`modal-overlay ${showPreview ? 'show' : ''}`} onClick={() => ref.current?.hide()}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
         {char && ( 
           <>
-            <div className="modal-char" id="char-preview-modal"></div>
+            <div className="modal-char-row">
+              <div className="modal-char" id="char-preview-modal"></div>
+              {hasTraditionalVariant && (
+                <button
+                  className="char-variant-arrow"
+                  title={showTraditional ? 'Switch to simplified form' : 'Switch to traditional form'}
+                  onClick={toggleVariant}
+                >
+                  {showTraditional ? '‹' : '›'}
+                </button>
+              )}
+            </div>
+            {hasTraditionalVariant && (
+              <div className="char-variant-label">{showTraditional ? 'Traditional' : 'Simplified'}</div>
+            )}
             <div className="modal-pinyin">{char.answer.pinyin}</div>
             <div className="modal-def">{char.answer.definition}</div>
             <CharacterFormation charFormation={char.answer.charForm} />
@@ -69,3 +113,4 @@ const CharPreview = forwardRef(({ showPreview, char, onHide }, ref) => {
 });
 
 export default CharPreview;
+
