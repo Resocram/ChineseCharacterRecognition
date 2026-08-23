@@ -29,6 +29,7 @@ class RoomIdPage extends Component {
       position: 0,
       gameState: Cookies.get('username') ? CONNECTING : JOIN_USERNAME,
       difficulty: [0, 1000],
+      numRounds: Infinity, // Infinity = play through every word in the difficulty range
       problems: [],
       sessionMap: {},
       round: 0,
@@ -103,6 +104,16 @@ class RoomIdPage extends Component {
       }
       else if (data.type === 'update_skip_votes') {
         this.setState({ skipVotes: { skipped: data.skippedCount, total: data.totalCount } });
+      } else if (data.type === 'return_to_lobby') {
+        this.setState({
+          sessionMap: JSON.parse(data.sessions),
+          gameState: LOBBY,
+          round: 0,
+          problems: [],
+          prevAnswers: [],
+          skipVotes: { skipped: 0, total: 0 }
+        });
+        Cookies.set(`gameState_${this.state.roomId}`, LOBBY)
       } else if (data.type === 'init_state') {
         this.setState({
           difficulty: [data.game.difficultyStart, data.game.difficultyEnd],
@@ -110,7 +121,8 @@ class RoomIdPage extends Component {
           round: data.game.round,
           problems: data.game.problems,
           gameState: data.game.state,
-          position: data.position
+          position: data.position,
+          prevAnswers: data.game.history || []
         });
       }
     };
@@ -134,7 +146,8 @@ class RoomIdPage extends Component {
   startGame = () => {
     const startGame = {
       type: 'start_game',
-      difficulty: this.state.difficulty
+      difficulty: this.state.difficulty,
+      numRounds: Number.isFinite(this.state.numRounds) ? this.state.numRounds : undefined
     };
     this.state.ws.send(JSON.stringify(startGame));
   }
@@ -147,9 +160,10 @@ class RoomIdPage extends Component {
     this.state.ws.send(JSON.stringify(sendStrokes));
   };
 
-  correctGuess = () => {
+  correctGuess = (round) => {
     const correctGuessType = {
       type: 'correct_guess',
+      round,
     };
     this.state.ws.send(JSON.stringify(correctGuessType));
   };
@@ -196,12 +210,18 @@ class RoomIdPage extends Component {
   };
 
   handlePlayAgain = () => {
-    window.location.href = window.location.origin + window.location.pathname;
+    this.state.ws.send(JSON.stringify({ type: 'play_again' }));
   };
 
   setDifficulty = (newDifficulty) => {
     this.setState({
       difficulty: newDifficulty,
+    })
+  }
+
+  setNumRounds = (newNumRounds) => {
+    this.setState({
+      numRounds: newNumRounds,
     })
   }
 
@@ -216,6 +236,7 @@ class RoomIdPage extends Component {
   resetButton = () => {
     this.setState(() => ({
       difficulty: [0, 2500],
+      numRounds: Infinity,
     }));
   }
 
@@ -283,6 +304,10 @@ class RoomIdPage extends Component {
                     <div style={{ fontSize: '16px', color: 'var(--accent-secondary)' }}>
                       {this.state.difficulty[0]} - {this.state.difficulty[1]}
                     </div>
+                    <div style={{ fontSize: '13px', color: 'var(--text-muted)', marginTop: '8px', marginBottom: '4px' }}>Words to Play</div>
+                    <div style={{ fontSize: '16px', color: 'var(--accent-secondary)' }}>
+                      {Math.min(this.state.numRounds, this.state.difficulty[1] - this.state.difficulty[0])}
+                    </div>
                   </div>
                   <button className="settings-btn" onClick={this.openSettings}>
                     Adjust
@@ -299,6 +324,8 @@ class RoomIdPage extends Component {
                   onClose={this.closeSettings}
                   setDifficulty={this.setDifficulty} 
                   difficulty={this.state.difficulty} 
+                  numRounds={this.state.numRounds}
+                  setNumRounds={this.setNumRounds}
                   onReset={this.resetButton}
                   onApply={() => {}}
                 />

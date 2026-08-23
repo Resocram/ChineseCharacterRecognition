@@ -1,5 +1,6 @@
 import React from 'react';
 import DifficultySetter from './DifficultySetter';
+import RoundsSetter from './RoundsSetter';
 
 export default function SettingsModal(props) {
   const handleReset = () => {
@@ -39,6 +40,13 @@ export default function SettingsModal(props) {
           Adjust the range of characters based on frequency
         </p>
         <DifficultySetter setDifficulty={props.setDifficulty} difficulty={props.difficulty} />
+        {props.numRounds !== undefined && (
+          <RoundsSetter
+            numRounds={props.numRounds}
+            setNumRounds={props.setNumRounds}
+            maxRounds={props.difficulty[1] - props.difficulty[0]}
+          />
+        )}
         <div style={{ display: 'flex', gap: '12px', marginTop: '24px' }}>
           <button 
             type="button" 

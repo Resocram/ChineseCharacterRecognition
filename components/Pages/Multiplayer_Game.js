@@ -124,7 +124,7 @@ class Multiplayer_Game extends Component {
       this.setState((prevState) => ({
         strokes: [],
       }));
-      this.props.correctGuess()
+      this.props.correctGuess(round)
       this.clearButton()
     }
 
