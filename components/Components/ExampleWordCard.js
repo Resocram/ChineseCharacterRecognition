@@ -11,7 +11,10 @@ export default function ExampleWordCard(props) {
     return (
         <div className="example-word">
             <span className="char">{props.exampleWordChar.replaceAll(simpAnswer, "__").replaceAll(tradAnswer, "__")}</span>
-            <span className="def">{props.pinyin} {def}</span>
+            <span className="def">
+                <span className="example-pinyin">{props.pinyin}</span>{" "}
+                <span className="example-definition">{def}</span>
+            </span>
         </div>
     );
 }

@@ -192,7 +192,7 @@ class Canvas extends Component {
                     height={300}
                 ></canvas>
                 <div className={`feedback-overlay ${this.props.showResults ? "show" : ""} ${this.props.isCorrectGuess ? "correct" : "incorrect"}`}>
-                    {this.props.isCorrectGuess ? "Correct!" : "Try Again"}
+                    {this.props.feedbackText || (this.props.isCorrectGuess ? "Correct!" : "Try Again")}
                 </div>
             </div>
         );

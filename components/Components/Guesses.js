@@ -28,7 +28,7 @@ class Guesses extends Component {
         var matcherOrig = new HanziLookup.Matcher("orig");
         matcherOrig.match(analyzedChar, 8, (matches) => {
             let first = matches.map((char) => char.character);
-            var matcherMMAH = new HanziLookup.Matcher("mmah");
+            var matcherMMAH = new HanziLookup.Matcher("mmah", 0.2);
             matcherMMAH.match(analyzedChar, 8, (matches) => {
                 let second = matches.map((char) => char.character);
                 this.showResults(first, second);

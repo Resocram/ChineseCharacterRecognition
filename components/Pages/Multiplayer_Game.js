@@ -23,6 +23,7 @@ class Multiplayer_Game extends Component {
       strokes: [],
       showResults: false,
       isCorrectGuess: false,
+      feedbackText: null,
       skipVotes: props.skipVotes || { skipped: 0, total: 0 },
       showPreview: false,
       charPreview: null
@@ -44,9 +45,26 @@ class Multiplayer_Game extends Component {
   }
   componentDidUpdate(prevProps) {
     if (prevProps.sessionMap !== this.props.sessionMap) {
+      const winner = Object.entries(this.props.sessionMap).find(([sessionId, player]) =>
+        sessionId !== this.sessionId &&
+        player.score > (prevProps.sessionMap[sessionId]?.score || 0)
+      );
+
       this.setState({
         sessionMap: this.props.sessionMap,
+        ...(winner && {
+          showResults: true,
+          isCorrectGuess: true,
+          feedbackText: `${winner[1].username} got it!`,
+        }),
       });
+
+      if (winner) {
+        clearTimeout(this.fadeTimeout);
+        this.fadeTimeout = setTimeout(() => {
+          this.setState({ showResults: false, feedbackText: null });
+        }, 1000);
+      }
     }
     if (prevProps.round !== this.props.round){
       this.setState({
@@ -118,6 +136,7 @@ class Multiplayer_Game extends Component {
     this.setState({
       isCorrectGuess: isCorrect,
       showResults: true,
+      feedbackText: null,
     });
 
     if (isCorrect) {
@@ -147,7 +166,8 @@ class Multiplayer_Game extends Component {
       prevAnswers,
       skipVotes,
       showPreview,
-      charPreview
+      charPreview,
+      feedbackText
     } = this.state;
     const currentProblem = this.problems[round-1];
     
@@ -237,6 +257,7 @@ class Multiplayer_Game extends Component {
                 setStrokes={this.setStrokes} 
                 showResults={showResults} 
                 isCorrectGuess={isCorrectGuess} 
+                feedbackText={feedbackText}
               />
               <div className="canvas-hint">Draw strokes here</div>
             </div>

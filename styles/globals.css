@@ -691,14 +691,113 @@ a:hover {
 
   .game-area {
     grid-template-columns: 1fr;
+    gap: 12px;
   }
 
   .hint-content {
+    grid-template-columns: minmax(80px, 0.4fr) 1fr;
+    gap: 8px;
+  }
+
+  .app-container > .hint-card {
+    padding: 12px;
+    margin-bottom: 12px;
+    box-shadow: var(--shadow);
+  }
+
+  .hint-header {
+    margin-bottom: 8px;
+  }
+
+  .hint-item {
+    padding: 10px;
+  }
+
+  .hint-item .pinyin {
+    font-size: 18px;
+  }
+
+  .hint-item .definition {
+    font-size: 13px;
+    line-height: 1.35;
+  }
+
+  .example-words {
+    padding-top: 10px;
+  }
+
+  .example-words .label {
+    margin-bottom: 8px;
+  }
+
+  .example-word-list {
+    display: grid;
     grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .example-word {
+    min-width: 0;
+    max-width: none;
+    padding: 8px;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .example-word .def {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    white-space: normal;
+    line-height: 1.25;
+  }
+
+  .example-word .char {
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+
+  .example-word .example-definition {
+    display: inline;
+  }
+
+  .example-word .example-pinyin {
+    color: var(--accent-secondary);
+    font-weight: 500;
+  }
+
+  .canvas-section,
+  .guesses-section {
+    padding: 12px;
+  }
+
+  .canvas-wrapper {
+    padding: 8px;
   }
 
   .guesses-grid {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  .app-container .guesses-grid {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    gap: 4px;
+  }
+
+  .app-container .guess-item {
+    min-width: 0;
+    height: 48px;
+    padding: 6px 0;
+    font-size: 18px;
+    border-radius: var(--radius-sm);
+  }
+
+  .app-container .guess-item.empty {
+    font-size: 14px;
   }
 
   .score-bar {
@@ -1437,12 +1536,118 @@ a:hover {
 
 /* Multiplayer Responsive */
 @media (max-width: 768px) {
+  .multiplayer-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .multiplayer-container > .header,
+  .multiplayer-container > .score-bar,
+  .multiplayer-container > .hint-card,
+  .multiplayer-container > .guesses-section,
+  .multiplayer-container > .multiplayer-skip-btn,
+  .multiplayer-container > .history-section,
+  .multiplayer-container .canvas-section.your-canvas {
+    grid-column: 1 / -1;
+  }
+
+  .multiplayer-container > .header {
+    order: 1;
+  }
+
+  .multiplayer-container > .score-bar {
+    order: 2;
+  }
+
+  .multiplayer-container > .hint-card {
+    order: 3;
+    padding: 12px;
+    margin-bottom: 0;
+    box-shadow: var(--shadow);
+  }
+
   .multiplayer-container .hint-content {
+    grid-template-columns: minmax(80px, 0.4fr) 1fr;
+    gap: 8px;
+  }
+
+  .multiplayer-container .hint-item {
+    padding: 10px;
+  }
+
+  .multiplayer-container .example-words {
+    padding-top: 10px;
+  }
+
+  .multiplayer-container .example-word-list {
+    display: grid;
     grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .multiplayer-container .example-word {
+    min-width: 0;
+    max-width: none;
+    padding: 8px;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .multiplayer-container .example-word .def {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    white-space: normal;
+    line-height: 1.25;
+  }
+
+  .multiplayer-container > .guesses-section {
+    order: 5;
+    padding: 12px;
+  }
+
+  .multiplayer-container > .all-canvases-container {
+    display: contents;
+  }
+
+  .multiplayer-container .canvas-section.your-canvas {
+    order: 4;
+    width: 100%;
+    padding: 12px;
+  }
+
+  .multiplayer-container .canvas-section.opponent-canvas {
+    order: 7;
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+    padding: 10px;
+  }
+
+  .multiplayer-container > .multiplayer-skip-btn {
+    order: 6;
+    margin-bottom: 0;
+  }
+
+  .multiplayer-container > .history-section {
+    order: 8;
+    padding: 12px;
   }
 
   .multiplayer-container .guesses-grid {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  .multiplayer-container .guesses-section .guess-item.single-row {
+    min-width: 0;
+    height: 48px;
+    padding: 6px 0;
+    font-size: 18px;
   }
 }
 

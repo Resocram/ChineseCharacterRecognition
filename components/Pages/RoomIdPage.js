@@ -21,6 +21,8 @@ const HTTPS_BACKEND_URL = process.env.NEXT_PUBLIC_HTTPS_URL || "https://chinesec
 class RoomIdPage extends Component {
   constructor(props) {
     super(props);
+    this.reconnectTimer = null;
+    this.shouldReconnect = true;
     this.state = {
       roomId: window.location.hash.substring(2).split('/').pop(), // Initialize roomId from props
       username: Cookies.get('username') || '', // Retrieve username from cookie
@@ -128,7 +130,14 @@ class RoomIdPage extends Component {
     };
 
     ws.onopen = () => {
-      this.updatePlayer(username)
+      ws.send(JSON.stringify({ type: 'update_player', username }))
+    }
+    ws.onclose = () => {
+      if (this.shouldReconnect && this.state.ws === ws) {
+        this.reconnectTimer = setTimeout(() => {
+          this.initializeWebSocket(this.state.username)
+        }, 1000)
+      }
     }
     this.setState({ ws: ws })
   }
@@ -177,6 +186,8 @@ class RoomIdPage extends Component {
 
 
   componentWillUnmount() {
+    this.shouldReconnect = false;
+    clearTimeout(this.reconnectTimer);
     if (this.state.ws) {
       this.state.ws.close();
     }
