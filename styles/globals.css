@@ -775,8 +775,20 @@ a:hover {
     padding: 12px;
   }
 
+  .canvas-section .canvas-header {
+    margin-bottom: 8px;
+  }
+
   .canvas-wrapper {
-    padding: 8px;
+    padding: 6px;
+  }
+
+  .app-container .canvas-section .drawing-canvas {
+    max-width: 220px;
+  }
+
+  .canvas-section .canvas-hint {
+    margin-top: 4px;
   }
 
   .guesses-grid {
@@ -788,9 +800,17 @@ a:hover {
     gap: 4px;
   }
 
+  .app-container .guesses-section {
+    padding: 8px;
+  }
+
+  .app-container .guesses-header {
+    margin-bottom: 8px;
+  }
+
   .app-container .guess-item {
     min-width: 0;
-    height: 48px;
+    height: 44px;
     padding: 6px 0;
     font-size: 18px;
     border-radius: var(--radius-sm);
@@ -1619,6 +1639,11 @@ a:hover {
     order: 4;
     width: 100%;
     padding: 12px;
+  }
+
+  .multiplayer-container .canvas-section.your-canvas .drawing-canvas {
+    max-width: 250px;
+    margin: 0 auto;
   }
 
   .multiplayer-container .canvas-section.opponent-canvas {
