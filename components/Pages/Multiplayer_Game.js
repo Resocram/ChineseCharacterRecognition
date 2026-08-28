@@ -62,7 +62,7 @@ class Multiplayer_Game extends Component {
       if (winner) {
         clearTimeout(this.fadeTimeout);
         this.fadeTimeout = setTimeout(() => {
-          this.setState({ showResults: false, feedbackText: null });
+          this.setState({ showResults: false });
         }, 1000);
       }
     }
