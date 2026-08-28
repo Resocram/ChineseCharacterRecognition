@@ -140,8 +140,8 @@ class Canvas extends Component {
     getMousePosition(event) {
         const rect = this.canvas.getBoundingClientRect();
         return {
-            offsetX: event.clientX - rect.left,
-            offsetY: event.clientY - rect.top,
+            offsetX: (event.clientX - rect.left) * (this.canvas.width / rect.width),
+            offsetY: (event.clientY - rect.top) * (this.canvas.height / rect.height),
         };
     }
 

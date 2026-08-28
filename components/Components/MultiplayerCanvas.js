@@ -62,8 +62,8 @@ class MultiplayerCanvas extends Component {
             <canvas 
                 className="drawing-canvas"
                 ref={this.canvasRef} 
-                width={260} 
-                height={260}
+                width={300} 
+                height={300}
                 style={{
                     display: 'block',
                     borderRadius: 'var(--radius-sm)',
